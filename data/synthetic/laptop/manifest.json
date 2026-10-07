@@ -1,0 +1,43 @@
+{
+  "snapshot_id": "synthetic-laptop-2026-10-03",
+  "tenant_id": "wisedo",
+  "category": "laptop",
+  "now": "2026-10-03T12:00:00.000Z",
+  "seed": 20261004,
+  "source": "synthetic",
+  "note": "SAMPLE DATA. Every record is synthetic: prices, specs, retailers, banks and finance companies are invented and must not be presented as real. Retailers and plans are shared with the mobile dataset (data/synthetic/retailers.json, plans.json).",
+  "counts": {
+    "products": 35,
+    "offers": 141,
+    "brands": 8
+  },
+  "edgeCases": {
+    "missingSpec": {
+      "product": "laptop-dell-inspiron-3520",
+      "attr": "battery_hours"
+    },
+    "staleSpecs": {
+      "product": "laptop-lenovo-v15-g4",
+      "checkedDaysAgo": 75,
+      "note": "specs older than freshness.specsDays (60): product excluded"
+    },
+    "allOffersStale": "laptop-hp-250-g10",
+    "outOfStock": [
+      "o-laptop-hp-victus-15-lotus"
+    ],
+    "staleOffers": [
+      "o-laptop-lenovo-ideapad-slim-3-pharos"
+    ],
+    "staleExtras": [
+      "o-laptop-asus-vivobook-s14-oled-sphinx"
+    ],
+    "importOffers": "every offer from khan (official: false); khan carries Apple, Dell and HP only",
+    "sharedPlans": "offers carry no plan_ids: the shared retailer plans of data/synthetic/plans.json apply (nile-sahla-promo ends 2026-10-12, oasis-horus-promo-18 expired, sphinx-qest-18 stale, khan-store and delta-sahla need a down payment)",
+    "productOverridePlan": "pharos-horus-samsung is limited to Samsung phones, so it never applies to a laptop",
+    "zoneGaps": [
+      "delta: no alexandria",
+      "khan: greater_cairo only",
+      "sphinx: no other governorates"
+    ]
+  }
+}

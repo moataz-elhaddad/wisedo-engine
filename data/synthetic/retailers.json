@@ -1,0 +1,79 @@
+[
+  {
+    "id": "nile",
+    "tenant_id": "wisedo",
+    "name": "Nile Electro",
+    "trust": 9,
+    "return_days": 14,
+    "cod": true,
+    "base_url": "https://nile.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  },
+  {
+    "id": "pharos",
+    "tenant_id": "wisedo",
+    "name": "Pharos Digital",
+    "trust": 9,
+    "return_days": 14,
+    "cod": true,
+    "base_url": "https://pharos.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  },
+  {
+    "id": "lotus",
+    "tenant_id": "wisedo",
+    "name": "Lotus Market",
+    "trust": 8,
+    "return_days": 14,
+    "cod": true,
+    "base_url": "https://lotus.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  },
+  {
+    "id": "oasis",
+    "tenant_id": "wisedo",
+    "name": "Oasis Online",
+    "trust": 8,
+    "return_days": 7,
+    "cod": false,
+    "base_url": "https://oasis.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  },
+  {
+    "id": "delta",
+    "tenant_id": "wisedo",
+    "name": "Delta Mobile",
+    "trust": 7,
+    "return_days": 7,
+    "cod": true,
+    "base_url": "https://delta.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  },
+  {
+    "id": "khan",
+    "tenant_id": "wisedo",
+    "name": "Khan Market Shop",
+    "trust": 5,
+    "return_days": 0,
+    "cod": true,
+    "base_url": "https://khan.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  },
+  {
+    "id": "sphinx",
+    "tenant_id": "wisedo",
+    "name": "Sphinx Store",
+    "trust": 8,
+    "return_days": 14,
+    "cod": true,
+    "base_url": "https://sphinx.example.invalid",
+    "affiliate_tag": null,
+    "source": "synthetic"
+  }
+]

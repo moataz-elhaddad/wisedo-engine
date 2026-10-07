@@ -1,0 +1,460 @@
+{
+  "id": "mobile",
+  "version": "1.0.0",
+  "aliases": ["phone"],
+  "label": { "ar": "موبايل", "en": "Mobile phone" },
+  "note": "Rules follow Technical Design v4. Every threshold, weight and score basis below is a starting assumption to review with a phone reviewer (BRD section 8).",
+  "currency": "EGP",
+  "maxMonths": 24,
+  "tcoYears": 5,
+  "freshness": { "priceStockHours": 24, "deliveryGiftsHours": 72, "plansDays": 35, "specsDays": 60 },
+  "zones": {
+    "ids": ["greater_cairo", "alexandria", "other"],
+    "labels": {
+      "greater_cairo": { "ar": "القاهرة الكبرى", "en": "Greater Cairo" },
+      "alexandria": { "ar": "إسكندرية", "en": "Alexandria" },
+      "other": { "ar": "باقي المحافظات", "en": "Other governorates" }
+    },
+    "cities": {
+      "cairo": "greater_cairo",
+      "giza": "greater_cairo",
+      "qalyubia": "greater_cairo",
+      "alexandria": "alexandria",
+      "dakahlia": "other",
+      "gharbia": "other",
+      "sharqia": "other",
+      "monufia": "other",
+      "beheira": "other",
+      "ismailia": "other",
+      "port_said": "other",
+      "suez": "other",
+      "fayoum": "other",
+      "minya": "other",
+      "assiut": "other",
+      "sohag": "other",
+      "qena": "other",
+      "luxor": "other",
+      "aswan": "other",
+      "red_sea": "other",
+      "south_sinai": "other",
+      "other": "other"
+    }
+  },
+
+  "attributes": [
+    { "id": "perf", "label": { "ar": "الأداء", "en": "Performance" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "أداء {value} من 10", "en": "Performance {value}/10" } },
+    { "id": "camera", "label": { "ar": "الكاميرا", "en": "Camera" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "كاميرا {value} من 10", "en": "Camera {value}/10" } },
+    { "id": "battery_mah", "label": { "ar": "البطارية", "en": "Battery" }, "unit": "mAh", "type": "number", "higherIsBetter": true, "basis": { "min": 3000, "max": 7000 },
+      "explain": { "ar": "بطارية {value} مللي أمبير", "en": "{value} mAh battery" } },
+    { "id": "screen", "label": { "ar": "الشاشة", "en": "Screen" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "شاشة {value} من 10", "en": "Screen {value}/10" } },
+    { "id": "storage_gb", "label": { "ar": "المساحة", "en": "Storage" }, "unit": "GB", "type": "number", "higherIsBetter": true, "basis": { "min": 64, "max": 512 },
+      "explain": { "ar": "مساحة {value} جيجا", "en": "{value} GB storage" } },
+    { "id": "ram_gb", "label": { "ar": "الرامات", "en": "RAM" }, "unit": "GB", "type": "number", "higherIsBetter": true, "basis": { "min": 3, "max": 16 },
+      "explain": { "ar": "رامات {value} جيجا", "en": "{value} GB RAM" } },
+    { "id": "updates_years", "label": { "ar": "سنين التحديثات", "en": "Software updates" }, "unit": "years", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 7 },
+      "explain": { "ar": "تحديثات {value} سنين", "en": "{value} years of updates" } },
+    { "id": "service", "label": { "ar": "الصيانة والضمان في مصر", "en": "Service network in Egypt" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "صيانة في مصر {value} من 10", "en": "Service in Egypt {value}/10" } },
+    { "id": "ease", "label": { "ar": "سهولة الاستخدام", "en": "Ease of use" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "سهولة استخدام {value} من 10", "en": "Ease of use {value}/10" } },
+    { "id": "warranty_months", "label": { "ar": "الضمان", "en": "Warranty" }, "unit": "months", "type": "number", "higherIsBetter": true, "basis": { "min": 12, "max": 24 },
+      "explain": { "ar": "ضمان {value} شهر", "en": "{value}-month warranty" } },
+    { "id": "weight_g", "label": { "ar": "الخفة", "en": "Lightness" }, "unit": "g", "type": "number", "higherIsBetter": false, "basis": { "min": 150, "max": 230 },
+      "explain": { "ar": "وزنه {value} جرام", "en": "Weighs {value} g" } },
+    { "id": "charging_w", "label": { "ar": "سرعة الشحن", "en": "Charging speed" }, "unit": "W", "type": "number", "higherIsBetter": true, "basis": { "min": 10, "max": 120 },
+      "explain": { "ar": "شحن {value} وات", "en": "{value} W charging" } },
+    { "id": "os", "label": { "ar": "نظام التشغيل", "en": "Operating system" }, "type": "category", "values": ["android", "ios"] },
+    { "id": "has_5g", "label": { "ar": "5G", "en": "5G" }, "type": "boolean", "higherIsBetter": true, "basis": { "min": 0, "max": 1 },
+      "explain": { "ar": "بيدعم 5G", "en": "Supports 5G" } },
+    { "id": "series", "label": { "ar": "الفئة", "en": "Series" }, "type": "category", "values": ["entry", "mid", "flagship"] }
+  ],
+
+  "baseWeights": {
+    "perf": 1, "camera": 1, "battery_mah": 1, "screen": 0.6, "storage_gb": 0.4, "ram_gb": 0.3,
+    "updates_years": 0.5, "service": 0.6, "ease": 0, "warranty_months": 0.2, "weight_g": 0, "charging_w": 0.2, "has_5g": 0
+  },
+
+  "slots": [
+    { "id": "who", "group": "who", "always": true, "default": "me", "factors": ["who_for"],
+      "label": { "ar": "لمين", "en": "Who it is for" },
+      "question": { "ar": "الموبايل ده ليك ولا لحد تاني؟", "en": "Is the phone for you or someone else?" },
+      "options": [
+        { "id": "me", "label": { "ar": "ليّا", "en": "For me" } },
+        { "id": "parent", "label": { "ar": "لحد كبير في السن", "en": "For an older relative" },
+          "effects": { "weights": { "service": 1.2, "ease": 1.5, "battery_mah": 0.8, "screen": 0.4, "perf": -0.6, "camera": -0.4 } } },
+        { "id": "kid", "label": { "ar": "لابني أو بنتي", "en": "For my child" },
+          "effects": { "weights": { "battery_mah": 0.6, "service": 0.5, "ease": 0.5 } } }
+      ] },
+
+    { "id": "use", "group": "core", "always": true, "multi": true, "dependsOn": { "who": ["me", "kid"] }, "factors": ["main_use_intensity"],
+      "label": { "ar": "الاستخدام", "en": "Main use" },
+      "question": { "ar": "هيتستخدم في إيه أكتر؟ اختار كل اللي ينطبق", "en": "What will it be used for most? Pick all that apply" },
+      "options": [
+        { "id": "social", "label": { "ar": "سوشيال وفيديوهات", "en": "Social media and videos" }, "effects": { "weights": { "battery_mah": 0.5, "screen": 0.4 } } },
+        { "id": "photo", "label": { "ar": "تصوير", "en": "Photos" }, "effects": { "weights": { "camera": 1.5 } } },
+        { "id": "gaming", "label": { "ar": "ألعاب", "en": "Gaming" }, "effects": { "weights": { "perf": 1, "screen": 0.3, "ram_gb": 0.3 } } },
+        { "id": "work", "label": { "ar": "شغل ومكالمات كتير", "en": "Work and lots of calls" }, "effects": { "weights": { "battery_mah": 1, "updates_years": 0.4 } } },
+        { "id": "basic", "label": { "ar": "مكالمات وواتساب بس", "en": "Calls and WhatsApp only" }, "effects": { "weights": { "ease": 0.5, "battery_mah": 0.5, "perf": -0.3 } } }
+      ] },
+
+    { "id": "intensity", "group": "core", "default": "normal", "askIf": { "slot": "use", "answered": true }, "factors": ["main_use_intensity"],
+      "label": { "ar": "كثافة الاستخدام", "en": "How heavy the use is" },
+      "question": { "ar": "بتستخدمه قد إيه في اليوم؟", "en": "How much do you use it each day?" },
+      "options": [
+        { "id": "light", "label": { "ar": "قليل", "en": "Lightly" }, "effects": { "weights": { "perf": -0.3 } } },
+        { "id": "normal", "label": { "ar": "عادي", "en": "Normally" } },
+        { "id": "heavy", "label": { "ar": "طول اليوم", "en": "All day" }, "effects": { "weights": { "battery_mah": 0.8, "perf": 0.4, "charging_w": 0.4 } } }
+      ] },
+
+    { "id": "gameLevel", "group": "followup", "always": true, "dependsOn": { "use": ["gaming"] }, "factors": ["main_use_intensity"],
+      "label": { "ar": "نوع الألعاب", "en": "Game level" },
+      "question": { "ar": "بتلعب ألعاب تقيلة؟", "en": "Do you play heavy games?" },
+      "options": [
+        { "id": "heavy", "label": { "ar": "أيوه، زي PUBG على جرافيك عالي", "en": "Yes, heavy games on high graphics" },
+          "effects": { "weights": { "perf": 2, "battery_mah": 0.4 },
+            "must": [ { "attr": "ram_gb", "op": ">=", "value": 8, "why": { "ar": "الألعاب التقيلة محتاجة 8 جيجا رامات على الأقل", "en": "Heavy games need at least 8 GB RAM" } } ] } },
+        { "id": "light", "label": { "ar": "لأ، ألعاب خفيفة", "en": "No, light games" }, "effects": { "weights": { "perf": 0.3 } } }
+      ] },
+
+    { "id": "photoType", "group": "followup", "always": true, "multi": true, "dependsOn": { "use": ["photo"] }, "factors": ["main_use_intensity"],
+      "label": { "ar": "نوع التصوير", "en": "Photo type" },
+      "question": { "ar": "بتصوّر إيه أكتر؟", "en": "What do you shoot most?" },
+      "options": [
+        { "id": "people", "label": { "ar": "ناس وسيلفي", "en": "People and selfies" }, "effects": { "weights": { "camera": 0.5 } } },
+        { "id": "night", "label": { "ar": "بالليل وفي الإضاءة الضعيفة", "en": "Night and low light" }, "effects": { "weights": { "camera": 1.2 } } },
+        { "id": "video", "label": { "ar": "فيديوهات وريلز", "en": "Video and reels" }, "effects": { "weights": { "camera": 0.8, "storage_gb": 0.8, "perf": 0.4 } } }
+      ] },
+
+    { "id": "parentUse", "group": "followup", "always": true, "dependsOn": { "who": ["parent"] }, "factors": ["main_use_intensity"],
+      "label": { "ar": "استخدام الشخص الكبير", "en": "What they will use it for" },
+      "question": { "ar": "هيستخدمه في إيه غالباً؟", "en": "What will they mostly use it for?" },
+      "options": [
+        { "id": "basic", "label": { "ar": "واتساب ومكالمات بس", "en": "WhatsApp and calls only" }, "effects": { "weights": { "battery_mah": 0.5, "ease": 0.5 } } },
+        { "id": "more", "label": { "ar": "فيسبوك ويوتيوب وصور العيلة", "en": "Facebook, YouTube and family photos" }, "effects": { "weights": { "screen": 0.8, "camera": 0.5 } } }
+      ] },
+
+    { "id": "pain", "group": "followup", "multi": true, "dependsOn": { "who": ["me", "kid"] }, "factors": ["current_device_problem"],
+      "label": { "ar": "مشكلة الموبايل الحالي", "en": "Problem with the current phone" },
+      "question": { "ar": "إيه أكتر حاجة بتضايقك في الموبايل الحالي؟", "en": "What bothers you most about your current phone?" },
+      "options": [
+        { "id": "battery", "label": { "ar": "البطارية بتخلص بسرعة", "en": "Battery runs out fast" }, "effects": { "weights": { "battery_mah": 1.2 } } },
+        { "id": "slow", "label": { "ar": "بقى بطيء وبيهنّج", "en": "It is slow and hangs" }, "effects": { "weights": { "perf": 1, "ram_gb": 0.3, "updates_years": 0.4 } } },
+        { "id": "storage", "label": { "ar": "المساحة بتتملي", "en": "Storage keeps filling up" },
+          "effects": { "weights": { "storage_gb": 1.5 },
+            "must": [ { "attr": "storage_gb", "op": ">=", "value": 128, "why": { "ar": "عايز مساحة أكبر من 64 جيجا", "en": "You need more than 64 GB" } } ] } },
+        { "id": "camera", "label": { "ar": "الصور وحشة", "en": "Photos look bad" }, "effects": { "weights": { "camera": 1 } } },
+        { "id": "broke", "label": { "ar": "بيعطل والصيانة وحشة", "en": "It breaks and service is bad" }, "effects": { "weights": { "service": 1.2, "warranty_months": 0.5 } } }
+      ] },
+
+    { "id": "storageNeed", "group": "core", "default": "any", "factors": ["main_use_intensity"],
+      "label": { "ar": "المساحة المطلوبة", "en": "Storage needed" },
+      "question": { "ar": "محتاج مساحة قد إيه؟", "en": "How much storage do you need?" },
+      "options": [
+        { "id": "any", "label": { "ar": "مش فارقة", "en": "Any" } },
+        { "id": "s128", "label": { "ar": "128 جيجا أو أكتر", "en": "128 GB or more" },
+          "effects": { "must": [ { "attr": "storage_gb", "op": ">=", "value": 128, "why": { "ar": "إنت عايز 128 جيجا أو أكتر", "en": "You asked for 128 GB or more" } } ] } },
+        { "id": "s256", "label": { "ar": "256 جيجا أو أكتر", "en": "256 GB or more" },
+          "effects": { "must": [ { "attr": "storage_gb", "op": ">=", "value": 256, "why": { "ar": "إنت عايز 256 جيجا أو أكتر", "en": "You asked for 256 GB or more" } } ] } },
+        { "id": "s512", "label": { "ar": "512 جيجا", "en": "512 GB" },
+          "effects": { "must": [ { "attr": "storage_gb", "op": ">=", "value": 512, "why": { "ar": "إنت عايز 512 جيجا", "en": "You asked for 512 GB" } } ] } }
+      ] },
+
+    { "id": "compat", "group": "who", "manual": true, "multi": true, "default": "none", "factors": ["compatibility"],
+      "note": "Asked only when the text names a device (tech-spec 4.1). No full ecosystem model.",
+      "label": { "ar": "أجهزة تانية عندك", "en": "Devices you already own" },
+      "question": { "ar": "عندك أجهزة لازم الموبايل يشتغل معاها؟", "en": "Do you have devices the phone must work with?" },
+      "options": [
+        { "id": "none", "label": { "ar": "لأ", "en": "No" } },
+        { "id": "mac", "label": { "ar": "ماك أو آيباد", "en": "A Mac or iPad" },
+          "effects": { "prefer": [ { "attr": "os", "op": "in", "value": ["ios"], "why": { "ar": "عندك ماك أو آيباد", "en": "You use a Mac or iPad" } } ] } },
+        { "id": "apple_watch", "label": { "ar": "ساعة أبل", "en": "An Apple Watch" },
+          "effects": { "must": [ { "attr": "os", "op": "in", "value": ["ios"], "why": { "ar": "ساعة أبل بتشتغل مع آيفون بس", "en": "An Apple Watch works only with an iPhone" } } ] } },
+        { "id": "galaxy_watch", "label": { "ar": "ساعة سامسونج", "en": "A Galaxy Watch" },
+          "effects": { "prefer": [ { "attr": "brand", "op": "in", "value": ["Samsung"], "why": { "ar": "ساعة سامسونج بتشتغل أحسن مع سامسونج", "en": "A Galaxy Watch works best with a Samsung phone" } } ] } }
+      ] },
+
+    { "id": "keep", "group": "core", "factors": ["resale_value", "software_updates"],
+      "label": { "ar": "هتقعد بيه قد إيه", "en": "How long you will keep it" },
+      "question": { "ar": "ناوي تقعد بيه قد إيه؟", "en": "How long will you keep it?" },
+      "options": [
+        { "id": "short", "label": { "ar": "سنة أو اتنين", "en": "One or two years" }, "effects": { "set": { "derived.keepShort": true } } },
+        { "id": "long", "label": { "ar": "3 سنين أو أكتر", "en": "Three years or more" }, "effects": { "weights": { "updates_years": 1.2, "perf": 0.4, "service": 0.4 } } }
+      ] },
+
+    { "id": "os", "group": "preferences", "default": "any", "dependsOn": { "who": ["me"] },
+      "askIf": { "path": "derived.maxPrice", "gte": 30000 }, "factors": ["brand_status"],
+      "label": { "ar": "آيفون ولا أندرويد", "en": "iPhone or Android" },
+      "question": { "ar": "آيفون ولا أندرويد؟", "en": "iPhone or Android?" },
+      "options": [
+        { "id": "any", "label": { "ar": "مش فارقة", "en": "Either" } },
+        { "id": "ios", "label": { "ar": "آيفون بس", "en": "iPhone only" },
+          "effects": { "must": [ { "attr": "os", "op": "in", "value": ["ios"], "why": { "ar": "إنت عايز آيفون", "en": "You want an iPhone" } } ] } },
+        { "id": "android", "label": { "ar": "أندرويد بس", "en": "Android only" },
+          "effects": { "must": [ { "attr": "os", "op": "in", "value": ["android"], "why": { "ar": "إنت عايز أندرويد", "en": "You want Android" } } ] } }
+      ] },
+
+    { "id": "pay", "group": "money", "always": true, "factors": ["payment_way"],
+      "label": { "ar": "طريقة الدفع", "en": "Payment way" },
+      "question": { "ar": "هتدفع إزاي؟", "en": "How will you pay?" },
+      "options": [
+        { "id": "cash", "label": { "ar": "كاش", "en": "Cash" }, "effects": { "set": { "money.pay": "cash" } } },
+        { "id": "card", "label": { "ar": "تقسيط بالكريديت كارد", "en": "Credit card installments" }, "effects": { "set": { "money.pay": "card" } } },
+        { "id": "finance", "label": { "ar": "تقسيط من شركة تمويل", "en": "Consumer-finance company" }, "effects": { "set": { "money.pay": "finance" } } }
+      ] },
+
+    { "id": "provider", "group": "money", "dependsOn": { "pay": ["card", "finance"] }, "askIf": { "signal": "providerMatters" }, "factors": ["payment_way", "installment_cost"],
+      "label": { "ar": "البنك أو شركة التقسيط", "en": "Your bank or finance company" },
+      "question": { "ar": "كارتك من أنهي بنك، أو بتقسّط مع أنهي شركة؟", "en": "Which bank is your card from, or which finance company do you use?" },
+      "optionsSource": "plans.provider",
+      "options": [
+        { "id": "nilebank", "kind": "card", "label": { "ar": "بنك النيل (عينة)", "en": "Nile Bank (sample)" }, "effects": { "set": { "money.provider": "nilebank" } } },
+        { "id": "horusbank", "kind": "card", "label": { "ar": "بنك حورس (عينة)", "en": "Horus Bank (sample)" }, "effects": { "set": { "money.provider": "horusbank" } } },
+        { "id": "sahla", "kind": "finance", "label": { "ar": "سهلة للتمويل (عينة)", "en": "Sahla Finance (sample)" }, "effects": { "set": { "money.provider": "sahla" } } },
+        { "id": "qest", "kind": "finance", "label": { "ar": "قسط باي (عينة)", "en": "Qest Pay (sample)" }, "effects": { "set": { "money.provider": "qest" } } }
+      ] },
+
+    { "id": "budget", "group": "money", "always": true, "dependsOn": { "pay": ["cash"] }, "factors": ["budget_monthly_down", "cash_price"],
+      "numeric": { "path": "money.budget", "unit": "EGP", "min": 1000, "max": 300000 },
+      "label": { "ar": "الميزانية", "en": "Budget" },
+      "question": { "ar": "ميزانيتك في حدود كام؟", "en": "What is your budget?" },
+      "options": [
+        { "id": "b8000", "value": 8000, "label": { "ar": "لحد 8,000", "en": "Up to 8,000" } },
+        { "id": "b12000", "value": 12000, "label": { "ar": "لحد 12,000", "en": "Up to 12,000" } },
+        { "id": "b18000", "value": 18000, "label": { "ar": "لحد 18,000", "en": "Up to 18,000" } },
+        { "id": "b25000", "value": 25000, "label": { "ar": "لحد 25,000", "en": "Up to 25,000" } },
+        { "id": "b40000", "value": 40000, "label": { "ar": "لحد 40,000", "en": "Up to 40,000" } },
+        { "id": "b60000", "value": 60000, "label": { "ar": "لحد 60,000", "en": "Up to 60,000" } },
+        { "id": "b90000", "value": 90000, "label": { "ar": "أكتر من 60,000", "en": "Over 60,000" } }
+      ] },
+
+    { "id": "monthlyCap", "group": "money", "always": true, "dependsOn": { "pay": ["card", "finance"] }, "factors": ["budget_monthly_down"],
+      "numeric": { "path": "money.monthlyCap", "unit": "EGP/month", "min": 100, "max": 50000 },
+      "label": { "ar": "القسط الشهري", "en": "Monthly cap" },
+      "question": { "ar": "تقدر تدفع كام في الشهر؟", "en": "How much can you pay per month?" },
+      "options": [
+        { "id": "m500", "value": 500, "label": { "ar": "لحد 500 في الشهر", "en": "Up to 500 a month" } },
+        { "id": "m1000", "value": 1000, "label": { "ar": "لحد 1,000 في الشهر", "en": "Up to 1,000 a month" } },
+        { "id": "m1500", "value": 1500, "label": { "ar": "لحد 1,500 في الشهر", "en": "Up to 1,500 a month" } },
+        { "id": "m2500", "value": 2500, "label": { "ar": "لحد 2,500 في الشهر", "en": "Up to 2,500 a month" } },
+        { "id": "m4000", "value": 4000, "label": { "ar": "لحد 4,000 في الشهر", "en": "Up to 4,000 a month" } }
+      ] },
+
+    { "id": "down", "group": "money", "default": "d0", "dependsOn": { "pay": ["card", "finance"] }, "askIf": { "signal": "downChangesPick" }, "factors": ["budget_monthly_down"],
+      "numeric": { "path": "money.down", "unit": "EGP", "min": 0, "max": 200000 },
+      "label": { "ar": "المقدم", "en": "Down payment" },
+      "question": { "ar": "تقدر تدفع مقدم قد إيه؟", "en": "How much can you pay up front?" },
+      "options": [
+        { "id": "d0", "value": 0, "label": { "ar": "مفيش مقدم", "en": "No down payment" } },
+        { "id": "d2000", "value": 2000, "label": { "ar": "حوالي 2,000", "en": "About 2,000" } },
+        { "id": "d5000", "value": 5000, "label": { "ar": "حوالي 5,000", "en": "About 5,000" } },
+        { "id": "d10000", "value": 10000, "label": { "ar": "حوالي 10,000", "en": "About 10,000" } }
+      ] },
+
+    { "id": "urgentDays", "group": "logistics", "default": "none",
+      "alwaysIf": { "signal": "saleWeeks", "between": [1, 10] }, "askIf": { "signal": "urgencyMatters" }, "factors": ["urgency", "delivery_time_fee", "timing_sales"],
+      "label": { "ar": "محتاجه إمتى", "en": "Needed by" },
+      "question": { "ar": "محتاجه إمتى؟", "en": "When do you need it?" },
+      "options": [
+        { "id": "today", "label": { "ar": "النهارده أو بكرة", "en": "Today or tomorrow" }, "effects": { "set": { "logistics.urgentDays": 1 } } },
+        { "id": "week", "label": { "ar": "خلال أسبوع", "en": "Within a week" }, "effects": { "set": { "logistics.urgentDays": 7 } } },
+        { "id": "none", "label": { "ar": "مش مستعجل", "en": "No rush" }, "effects": { "set": { "logistics.urgentDays": null } } }
+      ] },
+
+    { "id": "acceptImports", "group": "logistics", "default": "no", "askIf": { "signal": "importCheaper" }, "factors": ["official_vs_import", "warranty_length"],
+      "label": { "ar": "نسخ مستوردة", "en": "Imported units" },
+      "question": { "ar": "في نسخ مستوردة أرخص، بس من غير ضمان الوكيل. تقبل بيها؟", "en": "Imported units are cheaper but have no agent warranty. Accept them?" },
+      "options": [
+        { "id": "no", "label": { "ar": "لأ، ضمان الوكيل بس", "en": "No, official warranty only" }, "effects": { "set": { "logistics.acceptImports": false } } },
+        { "id": "yes", "label": { "ar": "أيوه لو أرخص", "en": "Yes, if cheaper" }, "effects": { "set": { "logistics.acceptImports": true } } },
+        { "id": "warranty", "label": { "ar": "لازم ضمان رسمي", "en": "I insist on official warranty" },
+          "effects": { "set": { "logistics.acceptImports": false }, "weights": { "service": 0.5, "warranty_months": 0.5 } } }
+      ] },
+
+    { "id": "city", "group": "logistics", "askIf": { "signal": "zoneMatters" }, "factors": ["delivery_time_fee"],
+      "note": "Missing city = nationwide, shown as assumed (BR-43). The option id is the city key in zones.cities.",
+      "label": { "ar": "المحافظة", "en": "City" },
+      "question": { "ar": "هيتوصل فين؟", "en": "Where should it be delivered?" },
+      "options": [
+        { "id": "cairo", "label": { "ar": "القاهرة", "en": "Cairo" }, "effects": { "set": { "logistics.city": "cairo" } } },
+        { "id": "giza", "label": { "ar": "الجيزة", "en": "Giza" }, "effects": { "set": { "logistics.city": "giza" } } },
+        { "id": "qalyubia", "label": { "ar": "القليوبية", "en": "Qalyubia" }, "effects": { "set": { "logistics.city": "qalyubia" } } },
+        { "id": "alexandria", "label": { "ar": "إسكندرية", "en": "Alexandria" }, "effects": { "set": { "logistics.city": "alexandria" } } },
+        { "id": "dakahlia", "label": { "ar": "الدقهلية", "en": "Dakahlia" }, "effects": { "set": { "logistics.city": "dakahlia" } } },
+        { "id": "gharbia", "label": { "ar": "الغربية", "en": "Gharbia" }, "effects": { "set": { "logistics.city": "gharbia" } } },
+        { "id": "sharqia", "label": { "ar": "الشرقية", "en": "Sharqia" }, "effects": { "set": { "logistics.city": "sharqia" } } },
+        { "id": "monufia", "label": { "ar": "المنوفية", "en": "Monufia" }, "effects": { "set": { "logistics.city": "monufia" } } },
+        { "id": "beheira", "label": { "ar": "البحيرة", "en": "Beheira" }, "effects": { "set": { "logistics.city": "beheira" } } },
+        { "id": "ismailia", "label": { "ar": "الإسماعيلية", "en": "Ismailia" }, "effects": { "set": { "logistics.city": "ismailia" } } },
+        { "id": "port_said", "label": { "ar": "بورسعيد", "en": "Port Said" }, "effects": { "set": { "logistics.city": "port_said" } } },
+        { "id": "suez", "label": { "ar": "السويس", "en": "Suez" }, "effects": { "set": { "logistics.city": "suez" } } },
+        { "id": "fayoum", "label": { "ar": "الفيوم", "en": "Fayoum" }, "effects": { "set": { "logistics.city": "fayoum" } } },
+        { "id": "minya", "label": { "ar": "المنيا", "en": "Minya" }, "effects": { "set": { "logistics.city": "minya" } } },
+        { "id": "assiut", "label": { "ar": "أسيوط", "en": "Assiut" }, "effects": { "set": { "logistics.city": "assiut" } } },
+        { "id": "sohag", "label": { "ar": "سوهاج", "en": "Sohag" }, "effects": { "set": { "logistics.city": "sohag" } } },
+        { "id": "qena", "label": { "ar": "قنا", "en": "Qena" }, "effects": { "set": { "logistics.city": "qena" } } },
+        { "id": "luxor", "label": { "ar": "الأقصر", "en": "Luxor" }, "effects": { "set": { "logistics.city": "luxor" } } },
+        { "id": "aswan", "label": { "ar": "أسوان", "en": "Aswan" }, "effects": { "set": { "logistics.city": "aswan" } } },
+        { "id": "red_sea", "label": { "ar": "البحر الأحمر", "en": "Red Sea" }, "effects": { "set": { "logistics.city": "red_sea" } } },
+        { "id": "south_sinai", "label": { "ar": "جنوب سينا", "en": "South Sinai" }, "effects": { "set": { "logistics.city": "south_sinai" } } },
+        { "id": "other", "label": { "ar": "محافظة تانية", "en": "Another governorate" }, "effects": { "set": { "logistics.city": "other" } } }
+      ] },
+
+    { "id": "cod", "group": "logistics", "manual": true, "default": "no", "factors": ["cod"],
+      "note": "Never asked; set from text or 'Add a detail'. 'only' is a must, 'prefer' is relaxable.",
+      "label": { "ar": "الدفع عند الاستلام", "en": "Cash on delivery" },
+      "question": { "ar": "عايز تدفع عند الاستلام؟", "en": "Do you want to pay on delivery?" },
+      "options": [
+        { "id": "must", "label": { "ar": "أيوه، بس كده", "en": "Yes, only that" }, "effects": { "set": { "logistics.cod": "must" } } },
+        { "id": "prefer", "label": { "ar": "يفضّل", "en": "Preferably" }, "effects": { "set": { "logistics.cod": "prefer" } } },
+        { "id": "no", "label": { "ar": "مش فارقة", "en": "Does not matter" }, "effects": { "set": { "logistics.cod": null } } }
+      ] },
+
+    { "id": "shops", "group": "preferences", "manual": true, "factors": ["retailer_trust_returns"],
+      "valueShape": "shops",
+      "optionsSource": "retailers",
+      "note": "Value is {prefer: [retailerId], avoid: [retailerId]}. Avoided shops are dropped; preferred shops are a prefer-filter M6 can relax.",
+      "label": { "ar": "محلات بتفضّلها أو مش عايزها", "en": "Shops you like or avoid" },
+      "question": { "ar": "في محلات بتفضّلها أو مش عايز تشتري منها؟", "en": "Any shops you prefer or want to avoid?" },
+      "options": [] },
+
+    { "id": "brand", "group": "preferences", "tiebreak": true, "multi": true, "factors": ["brand_status", "brand_reputation"],
+      "note": "Asked only on a near tie (top 2 from different brands, under 3 points apart). Each liked brand gets a +5 score bonus.",
+      "optionsSource": "products.brand",
+      "label": { "ar": "البراند", "en": "Brand" },
+      "question": { "ar": "الترشيحات قريبة جداً من بعض. تفضّل براند معين؟", "en": "The picks are very close. Do you prefer a brand?" },
+      "options": [
+        { "id": "apple", "label": { "ar": "أبل", "en": "Apple" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Apple"], "points": 5 } ] } },
+        { "id": "samsung", "label": { "ar": "سامسونج", "en": "Samsung" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Samsung"], "points": 5 } ] } },
+        { "id": "xiaomi", "label": { "ar": "شاومي", "en": "Xiaomi" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Xiaomi"], "points": 5 } ] } },
+        { "id": "oppo", "label": { "ar": "أوبو", "en": "Oppo" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Oppo"], "points": 5 } ] } },
+        { "id": "realme", "label": { "ar": "ريلمي", "en": "Realme" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Realme"], "points": 5 } ] } },
+        { "id": "honor", "label": { "ar": "هونر", "en": "Honor" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Honor"], "points": 5 } ] } },
+        { "id": "infinix", "label": { "ar": "إنفينكس", "en": "Infinix" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Infinix"], "points": 5 } ] } },
+        { "id": "tecno", "label": { "ar": "تكنو", "en": "Tecno" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Tecno"], "points": 5 } ] } },
+        { "id": "vivo", "label": { "ar": "فيفو", "en": "Vivo" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Vivo"], "points": 5 } ] } },
+        { "id": "motorola", "label": { "ar": "موتورولا", "en": "Motorola" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Motorola"], "points": 5 } ] } },
+        { "id": "hmd", "label": { "ar": "HMD", "en": "HMD" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["HMD"], "points": 5 } ] } }
+      ] },
+
+    { "id": "brandAvoid", "group": "preferences", "manual": true, "multi": true, "factors": ["brand_status"],
+      "note": "Brands the buyer avoids become a prefer-filter (relaxable), not a must.",
+      "optionsSource": "products.brand",
+      "label": { "ar": "براند مش عايزه", "en": "Brand to avoid" },
+      "question": { "ar": "في براند مش عايزه؟", "en": "Any brand you want to avoid?" },
+      "options": [
+        { "id": "apple", "label": { "ar": "أبل", "en": "Apple" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Apple"], "why": { "ar": "مش عايز أبل", "en": "You avoid Apple" } } ] } },
+        { "id": "samsung", "label": { "ar": "سامسونج", "en": "Samsung" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Samsung"], "why": { "ar": "مش عايز سامسونج", "en": "You avoid Samsung" } } ] } },
+        { "id": "xiaomi", "label": { "ar": "شاومي", "en": "Xiaomi" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Xiaomi"], "why": { "ar": "مش عايز شاومي", "en": "You avoid Xiaomi" } } ] } },
+        { "id": "oppo", "label": { "ar": "أوبو", "en": "Oppo" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Oppo"], "why": { "ar": "مش عايز أوبو", "en": "You avoid Oppo" } } ] } },
+        { "id": "realme", "label": { "ar": "ريلمي", "en": "Realme" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Realme"], "why": { "ar": "مش عايز ريلمي", "en": "You avoid Realme" } } ] } },
+        { "id": "honor", "label": { "ar": "هونر", "en": "Honor" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Honor"], "why": { "ar": "مش عايز هونر", "en": "You avoid Honor" } } ] } },
+        { "id": "infinix", "label": { "ar": "إنفينكس", "en": "Infinix" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Infinix"], "why": { "ar": "مش عايز إنفينكس", "en": "You avoid Infinix" } } ] } },
+        { "id": "tecno", "label": { "ar": "تكنو", "en": "Tecno" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Tecno"], "why": { "ar": "مش عايز تكنو", "en": "You avoid Tecno" } } ] } },
+        { "id": "vivo", "label": { "ar": "فيفو", "en": "Vivo" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Vivo"], "why": { "ar": "مش عايز فيفو", "en": "You avoid Vivo" } } ] } },
+        { "id": "motorola", "label": { "ar": "موتورولا", "en": "Motorola" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Motorola"], "why": { "ar": "مش عايز موتورولا", "en": "You avoid Motorola" } } ] } },
+        { "id": "hmd", "label": { "ar": "HMD", "en": "HMD" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["HMD"], "why": { "ar": "مش عايز HMD", "en": "You avoid HMD" } } ] } }
+      ] },
+
+    { "id": "modelInMind", "group": "preferences", "manual": true, "factors": ["model_in_mind"],
+      "valueShape": "product",
+      "optionsSource": "products",
+      "note": "Value is a product id (preferred) or a model name; Layer 2 matches id, name or alias, case-insensitive, and gives a verdict.",
+      "label": { "ar": "موديل في دماغك", "en": "Model in mind" },
+      "question": { "ar": "في موديل معين في دماغك؟", "en": "Do you have a model in mind?" },
+      "options": [] }
+  ],
+
+  "derive": [
+    { "id": "maxPrice", "type": "max_price", "target": "derived.maxPrice",
+      "note": "Rough max price the buyer can reach: cash budget, or down + the most a monthly cap can finance under the reference plans. Used by checks and askIf only; ranking always quotes real plans.",
+      "refPlans": [
+        { "kind": "card", "months": 12, "monthlyRate": 0, "adminShare": 0.05 },
+        { "kind": "finance", "months": 18, "monthlyRate": 0.02, "adminShare": 0 },
+        { "kind": "finance", "months": 24, "monthlyRate": 0.02, "adminShare": 0 }
+      ] }
+  ],
+
+  "checks": [
+    { "id": "heavy_gaming_low_budget",
+      "when": { "all": [ { "slot": "gameLevel", "in": ["heavy"] }, { "path": "derived.maxPrice", "lte": 12000 } ] },
+      "message": { "ar": "في الميزانية دي الألعاب التقيلة هتشتغل، بس على جرافيك متوسط أو واطي.", "en": "At this budget heavy games will run, but on medium or low graphics." } },
+    { "id": "night_photo_low_budget",
+      "when": { "all": [ { "slot": "photoType", "in": ["night"] }, { "path": "derived.maxPrice", "lte": 12000 } ] },
+      "message": { "ar": "التصوير بالليل محتاج كاميرا قوية، والفرق بيبان في الفئة المتوسطة وما فوقها.", "en": "Night photos need a strong camera; the difference shows from the mid tier up." } },
+    { "id": "iphone_low_budget",
+      "when": { "all": [ { "any": [ { "slot": "os", "in": ["ios"] }, { "slot": "compat", "in": ["apple_watch"] } ] }, { "path": "derived.maxPrice", "lt": 30000 } ] },
+      "message": { "ar": "الآيفون في الكتالوج ده بيبدأ فوق الميزانية دي.", "en": "In this catalog iPhones start above this budget." } }
+  ],
+
+  "runningCost": { "type": "none", "reason": { "ar": "استهلاك كهربا الموبايل صغير جداً", "en": "A phone's electricity cost is negligible" } },
+
+  "resale": {
+    "when": { "path": "derived.keepShort", "eq": true },
+    "afterYears": 2,
+    "note": "Share of the reference price a phone resells for after 2 years (technical-design-v4 assumption).",
+    "rules": [
+      { "match": { "brand": "Apple" }, "share": 0.60 },
+      { "match": { "brand": "Samsung", "series": "flagship" }, "share": 0.45 },
+      { "match": { "brand": "Samsung" }, "share": 0.40 },
+      { "match": { "brand": "Xiaomi" }, "share": 0.30 },
+      { "match": {}, "share": 0.25 }
+    ]
+  },
+
+  "installCost": 0,
+
+  "season": {
+    "saleEvents": [
+      { "id": "white_friday", "rule": "last_friday_of_november", "windowWeeks": [1, 10], "savingShare": [0.10, 0.20],
+        "label": { "ar": "الوايت فرايداي", "en": "White Friday" },
+        "note": "Expected 10-20% saving is an assumption from past seasons." }
+    ],
+    "monthAdvice": []
+  },
+
+  "factors": [
+    { "id": "main_use_intensity", "group": "need", "name": "Main use and intensity", "status": "covered", "via": [ { "slot": "use" }, { "slot": "intensity" }, { "slot": "gameLevel" }, { "slot": "photoType" }, { "slot": "parentUse" }, { "slot": "storageNeed" } ] },
+    { "id": "who_for", "group": "need", "name": "Who it is for", "status": "covered", "via": [ { "slot": "who" } ] },
+    { "id": "current_device_problem", "group": "need", "name": "Problem with the current device", "status": "covered", "via": [ { "slot": "pain" } ] },
+    { "id": "environment", "group": "need", "name": "Environment (sun, viewing distance, room light)", "status": "out_of_scope", "reason": "Not relevant to phones; used by AC and TV configs." },
+    { "id": "compatibility", "group": "need", "name": "Compatibility", "status": "partial", "via": [ { "slot": "compat" } ], "reason": "Named devices only; no full ecosystem model." },
+    { "id": "physical_fit", "group": "need", "name": "Physical fit", "status": "partial", "via": [ { "attribute": "weight_g" } ], "reason": "No size slot for phones yet; weight is in the catalog." },
+    { "id": "cash_price", "group": "money", "name": "Cash price", "status": "covered", "via": [ { "offerField": "price_egp" }, { "slot": "budget" } ] },
+    { "id": "payment_way", "group": "money", "name": "Payment way: cash, card, finance company", "status": "covered", "via": [ { "slot": "pay" }, { "slot": "provider" } ] },
+    { "id": "budget_monthly_down", "group": "money", "name": "Budget, monthly cap and down payment", "status": "covered", "via": [ { "slot": "budget" }, { "slot": "monthlyCap" }, { "slot": "down" } ] },
+    { "id": "installment_cost", "group": "money", "name": "Real installment cost per retailer", "status": "covered", "via": [ { "planField": "monthly_rate" }, { "planField": "admin_share" }, { "slot": "provider" } ] },
+    { "id": "running_cost", "group": "money", "name": "Running cost (electricity)", "status": "out_of_scope", "reason": "Negligible for phones (runningCost.type = none)." },
+    { "id": "resale_value", "group": "money", "name": "Resale value", "status": "covered", "via": [ { "slot": "keep" }, { "configKey": "resale" } ] },
+    { "id": "timing_sales", "group": "money", "name": "Timing: White Friday, season, promo end", "status": "covered", "via": [ { "configKey": "season" }, { "planField": "valid_until" }, { "slot": "urgentDays" } ] },
+    { "id": "timing_launch_currency", "group": "money", "name": "Timing: new model launch, currency moves", "status": "not_yet", "reason": "Needs a launch calendar and price history." },
+    { "id": "retailer_price", "group": "offer", "name": "Price at each retailer", "status": "covered", "via": [ { "offerField": "price_egp" } ] },
+    { "id": "gifts", "group": "offer", "name": "Gifts: install, warranty, cashback, bundle items", "status": "covered", "via": [ { "offerField": "extras" } ] },
+    { "id": "official_vs_import", "group": "offer", "name": "Official vs imported", "status": "covered", "via": [ { "slot": "acceptImports" }, { "offerField": "official" } ] },
+    { "id": "retailer_trust_returns", "group": "offer", "name": "Retailer trust and returns", "status": "covered", "via": [ { "retailerField": "trust" }, { "retailerField": "return_days" }, { "slot": "shops" } ] },
+    { "id": "stock", "group": "offer", "name": "Stock", "status": "covered", "via": [ { "offerField": "in_stock" } ] },
+    { "id": "delivery_time_fee", "group": "offer", "name": "Delivery time and fee", "status": "covered", "via": [ { "slot": "urgentDays" }, { "slot": "city" }, { "offerField": "delivery" } ] },
+    { "id": "cod", "group": "offer", "name": "Cash on delivery available", "status": "covered", "via": [ { "slot": "cod" }, { "retailerField": "cod" } ] },
+    { "id": "branch_pickup", "group": "offer", "name": "Pickup from a nearby branch", "status": "not_yet", "reason": "Needs branch stock by city." },
+    { "id": "install_wait", "group": "offer", "name": "AC installation wait in summer", "status": "out_of_scope", "reason": "Phones need no installation." },
+    { "id": "warranty_length", "group": "after_sales", "name": "Warranty length", "status": "covered", "via": [ { "attribute": "warranty_months" }, { "offerField": "extras" } ] },
+    { "id": "service_network", "group": "after_sales", "name": "Service network strength in Egypt", "status": "covered", "via": [ { "attribute": "service" } ] },
+    { "id": "spare_parts", "group": "after_sales", "name": "Spare parts availability", "status": "not_yet", "reason": "Not in the catalog yet." },
+    { "id": "software_updates", "group": "after_sales", "name": "Software update years", "status": "covered", "via": [ { "attribute": "updates_years" }, { "slot": "keep" } ] },
+    { "id": "install_quality", "group": "after_sales", "name": "Installation quality", "status": "out_of_scope", "reason": "Phones need no installation." },
+    { "id": "brand_reputation", "group": "trust", "name": "Brand reputation", "status": "covered", "via": [ { "attribute": "service" }, { "slot": "brand" } ] },
+    { "id": "reviews", "group": "trust", "name": "Reviews and real user experience", "status": "not_yet", "reason": "Not collected yet." },
+    { "id": "known_defects", "group": "trust", "name": "Known model defects", "status": "not_yet", "reason": "Planned as expert-curated warnings per model." },
+    { "id": "fakes_used", "group": "trust", "name": "Fear of fakes or used sold as new", "status": "partial", "via": [ { "retailerField": "trust" } ], "reason": "Covered only through retailer trust." },
+    { "id": "brand_status", "group": "social", "name": "Brand as status", "status": "partial", "via": [ { "slot": "brand" }, { "slot": "brandAvoid" }, { "slot": "os" } ] },
+    { "id": "family_opinion", "group": "social", "name": "Family, friends and Facebook group opinion", "status": "out_of_scope", "reason": "Out of scope; a shareable result link helps." },
+    { "id": "model_in_mind", "group": "social", "name": "Model already in mind", "status": "covered", "via": [ { "slot": "modelInMind" } ] },
+    { "id": "look_colour", "group": "social", "name": "Look and colour", "status": "not_yet", "reason": "Colour stock not tracked per offer." },
+    { "id": "urgency", "group": "social", "name": "Urgency", "status": "covered", "via": [ { "slot": "urgentDays" } ] },
+    { "id": "time_limited_offer", "group": "last_mile", "name": "Time-limited offer", "status": "covered", "via": [ { "planField": "valid_until" } ] },
+    { "id": "trade_in", "group": "last_mile", "name": "Trade-in of the old device", "status": "not_yet", "reason": "Not modelled." },
+    { "id": "bundles", "group": "last_mile", "name": "Bundles (phone + case + earphones)", "status": "partial", "via": [ { "offerField": "extras" } ], "reason": "Valued as gifts when the retailer lists them." }
+  ]
+}

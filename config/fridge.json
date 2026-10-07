@@ -1,0 +1,455 @@
+{
+  "id": "fridge",
+  "version": "1.0.0",
+  "aliases": ["refrigerator"],
+  "label": { "ar": "تلاجة", "en": "Fridge" },
+  "note": "Fridge category, built on the mobile template. Every threshold, weight, score basis, electricity price and capacity-by-household rule below is a starting assumption to review with an appliance reviewer (BRD section 8).",
+  "currency": "EGP",
+  "maxMonths": 36,
+  "tcoYears": 5,
+  "freshness": { "priceStockHours": 24, "deliveryGiftsHours": 72, "plansDays": 35, "specsDays": 60 },
+  "zones": {
+    "ids": ["greater_cairo", "alexandria", "other"],
+    "labels": {
+      "greater_cairo": { "ar": "القاهرة الكبرى", "en": "Greater Cairo" },
+      "alexandria": { "ar": "إسكندرية", "en": "Alexandria" },
+      "other": { "ar": "باقي المحافظات", "en": "Other governorates" }
+    },
+    "cities": {
+      "cairo": "greater_cairo",
+      "giza": "greater_cairo",
+      "qalyubia": "greater_cairo",
+      "alexandria": "alexandria",
+      "dakahlia": "other",
+      "gharbia": "other",
+      "sharqia": "other",
+      "monufia": "other",
+      "beheira": "other",
+      "ismailia": "other",
+      "port_said": "other",
+      "suez": "other",
+      "fayoum": "other",
+      "minya": "other",
+      "assiut": "other",
+      "sohag": "other",
+      "qena": "other",
+      "luxor": "other",
+      "aswan": "other",
+      "red_sea": "other",
+      "south_sinai": "other",
+      "other": "other"
+    }
+  },
+
+  "attributes": [
+    { "id": "capacity_l", "label": { "ar": "السعة", "en": "Capacity" }, "unit": "L", "type": "number", "higherIsBetter": true, "basis": { "min": 120, "max": 700 },
+      "explain": { "ar": "سعة {value} لتر", "en": "{value} L capacity" } },
+    { "id": "energy_kwh_year", "label": { "ar": "استهلاك الكهربا", "en": "Electricity use" }, "unit": "kWh/year", "type": "number", "higherIsBetter": false, "basis": { "min": 150, "max": 700 },
+      "explain": { "ar": "بتصرف {value} كيلووات في السنة", "en": "Uses {value} kWh a year" } },
+    { "id": "cooling", "label": { "ar": "قوة التبريد", "en": "Cooling performance" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "تبريد {value} من 10", "en": "Cooling {value}/10" } },
+    { "id": "noise_db", "label": { "ar": "الهدوء", "en": "Quietness" }, "unit": "dB", "type": "number", "higherIsBetter": false, "basis": { "min": 32, "max": 46 },
+      "explain": { "ar": "صوتها {value} ديسيبل", "en": "{value} dB noise" } },
+    { "id": "build", "label": { "ar": "الخامات والأرفف", "en": "Build and shelves" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "خامات وأرفف {value} من 10", "en": "Build and shelves {value}/10" } },
+    { "id": "service", "label": { "ar": "الصيانة والضمان في مصر", "en": "Service network in Egypt" }, "unit": "/10", "type": "number", "higherIsBetter": true, "basis": { "min": 1, "max": 10 },
+      "explain": { "ar": "صيانة في مصر {value} من 10", "en": "Service in Egypt {value}/10" } },
+    { "id": "warranty_months", "label": { "ar": "الضمان", "en": "Warranty" }, "unit": "months", "type": "number", "higherIsBetter": true, "basis": { "min": 12, "max": 120 },
+      "explain": { "ar": "ضمان {value} شهر", "en": "{value}-month warranty" } },
+    { "id": "inverter", "label": { "ar": "موتور إنفرتر", "en": "Inverter compressor" }, "type": "boolean", "higherIsBetter": true, "basis": { "min": 0, "max": 1 },
+      "explain": { "ar": "موتور إنفرتر", "en": "Inverter compressor" } },
+    { "id": "no_frost", "label": { "ar": "نوفروست", "en": "No frost" }, "type": "boolean", "higherIsBetter": true, "basis": { "min": 0, "max": 1 },
+      "explain": { "ar": "نوفروست، مش محتاجة تسييح", "en": "No frost, never needs defrosting" } },
+    { "id": "dispenser", "label": { "ar": "مبرد مياه", "en": "Water dispenser" }, "type": "boolean", "higherIsBetter": true, "basis": { "min": 0, "max": 1 },
+      "explain": { "ar": "فيها مبرد مياه", "en": "Has a water dispenser" } },
+    { "id": "width_cm", "label": { "ar": "العرض", "en": "Width" }, "unit": "cm", "type": "number", "higherIsBetter": false, "basis": { "min": 50, "max": 95 },
+      "explain": { "ar": "عرضها {value} سم", "en": "{value} cm wide" } },
+    { "id": "layout", "label": { "ar": "شكل الأبواب", "en": "Door layout" }, "type": "category", "values": ["single_door", "top_freezer", "bottom_freezer", "side_by_side", "french_door"] },
+    { "id": "series", "label": { "ar": "الفئة", "en": "Series" }, "type": "category", "values": ["entry", "mid", "premium"] }
+  ],
+
+  "baseWeights": {
+    "capacity_l": 0.8, "energy_kwh_year": 0.8, "cooling": 1, "noise_db": 0.3, "build": 0.6, "service": 0.8,
+    "warranty_months": 0.4, "inverter": 0.4, "no_frost": 0.6, "dispenser": 0, "width_cm": 0
+  },
+
+  "slots": [
+    { "id": "household", "group": "who", "always": true, "factors": ["household_size", "who_for"],
+      "note": "No default: a default here would add a capacity must the buyer never stated. Capacity minimums are assumptions to review.",
+      "label": { "ar": "عدد أفراد البيت", "en": "Household size" },
+      "question": { "ar": "التلاجة لكام فرد في البيت؟", "en": "How many people will the fridge serve?" },
+      "options": [
+        { "id": "h2", "label": { "ar": "فرد أو اتنين", "en": "One or two" },
+          "effects": { "weights": { "capacity_l": -0.5, "energy_kwh_year": 0.3 } } },
+        { "id": "h4", "label": { "ar": "3 أو 4 أفراد", "en": "Three or four" },
+          "effects": { "weights": { "capacity_l": 0.2 },
+            "must": [ { "attr": "capacity_l", "op": ">=", "value": 330, "why": { "ar": "أسرة من 3-4 أفراد محتاجة 330 لتر على الأقل", "en": "A family of 3-4 needs at least 330 L" } } ] } },
+        { "id": "h6", "label": { "ar": "5 أو 6 أفراد", "en": "Five or six" },
+          "effects": { "weights": { "capacity_l": 0.6 },
+            "must": [ { "attr": "capacity_l", "op": ">=", "value": 430, "why": { "ar": "أسرة من 5-6 أفراد محتاجة 430 لتر على الأقل", "en": "A family of 5-6 needs at least 430 L" } } ] } },
+        { "id": "h7", "label": { "ar": "7 أفراد أو أكتر", "en": "Seven or more" },
+          "effects": { "weights": { "capacity_l": 1 },
+            "must": [ { "attr": "capacity_l", "op": ">=", "value": 520, "why": { "ar": "أسرة كبيرة من 7 أفراد أو أكتر محتاجة 520 لتر على الأقل", "en": "A household of 7 or more needs at least 520 L" } } ] } }
+      ] },
+
+    { "id": "use", "group": "core", "multi": true, "factors": ["main_use", "cooling_performance"],
+      "label": { "ar": "الاستخدام", "en": "How you use it" },
+      "question": { "ar": "بتستخدم التلاجة في إيه أكتر؟ اختار كل اللي ينطبق", "en": "How do you mostly use the fridge? Pick all that apply" },
+      "options": [
+        { "id": "bulk", "label": { "ar": "بشتري طلبات الشهر وبفرّز لحمة كتير", "en": "Monthly shopping and lots of frozen meat" }, "effects": { "weights": { "capacity_l": 0.8, "cooling": 0.3 } } },
+        { "id": "cooking", "label": { "ar": "طبيخ كتير في البيت", "en": "Lots of home cooking" }, "effects": { "weights": { "cooling": 0.6, "build": 0.3 } } },
+        { "id": "cold_drinks", "label": { "ar": "مياه ساقعة وعصاير طول الوقت", "en": "Cold water and drinks all the time" }, "effects": { "weights": { "dispenser": 1.2, "cooling": 0.3 } } },
+        { "id": "basic", "label": { "ar": "استخدام بسيط", "en": "Light, basic use" }, "effects": { "weights": { "energy_kwh_year": 0.4, "capacity_l": -0.3 } } }
+      ] },
+
+    { "id": "power", "group": "core", "default": "normal", "factors": ["running_cost", "environment", "compressor_tech"],
+      "label": { "ar": "الكهربا عندك", "en": "Electricity at home" },
+      "question": { "ar": "إيه أهم حاجة عندك في الكهربا؟", "en": "What matters most about electricity at home?" },
+      "options": [
+        { "id": "normal", "label": { "ar": "مفيش مشكلة", "en": "No issue" } },
+        { "id": "bills", "label": { "ar": "عايز أوفّر في فاتورة الكهربا", "en": "I want lower electricity bills" }, "effects": { "weights": { "energy_kwh_year": 1.5, "inverter": 0.8 } } },
+        { "id": "cuts", "label": { "ar": "الكهربا بتقطع أو الفولت بيتذبذب", "en": "Power cuts or unstable voltage" }, "effects": { "weights": { "inverter": 0.6, "cooling": 0.6, "service": 0.3 } } }
+      ] },
+
+    { "id": "frost", "group": "core", "default": "any", "factors": ["no_frost_pref"],
+      "label": { "ar": "نوفروست ولا ديفروست", "en": "No frost or manual defrost" },
+      "question": { "ar": "لازم تكون نوفروست، ولا ديفروست عادي؟", "en": "Must it be no-frost, or is manual defrost fine?" },
+      "options": [
+        { "id": "any", "label": { "ar": "مش فارقة", "en": "Either" } },
+        { "id": "no_frost", "label": { "ar": "نوفروست بس", "en": "No frost only" },
+          "effects": { "must": [ { "attr": "no_frost", "op": "==", "value": true, "why": { "ar": "إنت عايزها نوفروست", "en": "You want a no-frost fridge" } } ] } },
+        { "id": "defrost_ok", "label": { "ar": "ديفروست عادي لو أرخص", "en": "Manual defrost is fine if cheaper" }, "effects": { "weights": { "no_frost": -0.6 } } }
+      ] },
+
+    { "id": "space", "group": "core", "default": "any", "factors": ["physical_fit"],
+      "note": "Width only. Height and door swing are not modelled.",
+      "label": { "ar": "المساحة في المطبخ", "en": "Space in the kitchen" },
+      "question": { "ar": "المكان اللي هتتحط فيه عرضه قد إيه؟", "en": "How wide is the space for the fridge?" },
+      "options": [
+        { "id": "any", "label": { "ar": "المساحة مش مشكلة", "en": "Space is not a problem" } },
+        { "id": "w60", "label": { "ar": "لحد 60 سم", "en": "Up to 60 cm" },
+          "effects": { "must": [ { "attr": "width_cm", "op": "<=", "value": 60, "why": { "ar": "المكان عرضه 60 سم بس", "en": "Your space is only 60 cm wide" } } ] } },
+        { "id": "w70", "label": { "ar": "لحد 70 سم", "en": "Up to 70 cm" },
+          "effects": { "must": [ { "attr": "width_cm", "op": "<=", "value": 70, "why": { "ar": "المكان عرضه 70 سم", "en": "Your space is 70 cm wide" } } ] } },
+        { "id": "w80", "label": { "ar": "لحد 80 سم", "en": "Up to 80 cm" },
+          "effects": { "must": [ { "attr": "width_cm", "op": "<=", "value": 80, "why": { "ar": "المكان عرضه 80 سم", "en": "Your space is 80 cm wide" } } ] } },
+        { "id": "w95", "label": { "ar": "لحد 95 سم (ينفع سايد باي سايد)", "en": "Up to 95 cm (fits side-by-side)" },
+          "effects": { "must": [ { "attr": "width_cm", "op": "<=", "value": 95, "why": { "ar": "المكان عرضه 95 سم", "en": "Your space is 95 cm wide" } } ] } }
+      ] },
+
+    { "id": "layout", "group": "preferences", "default": "any", "factors": ["layout_pref"],
+      "label": { "ar": "شكل الأبواب", "en": "Door layout" },
+      "question": { "ar": "عايز الفريزر فين وشكل الأبواب إيه؟", "en": "Which door layout do you want?" },
+      "options": [
+        { "id": "any", "label": { "ar": "مش فارقة", "en": "Any" } },
+        { "id": "top_freezer", "label": { "ar": "فريزر فوق (بابين)", "en": "Freezer on top (two doors)" },
+          "effects": { "must": [ { "attr": "layout", "op": "in", "value": ["top_freezer"], "why": { "ar": "إنت عايز الفريزر فوق", "en": "You want the freezer on top" } } ] } },
+        { "id": "bottom_freezer", "label": { "ar": "فريزر تحت (درج)", "en": "Freezer at the bottom (drawer)" },
+          "effects": { "must": [ { "attr": "layout", "op": "in", "value": ["bottom_freezer"], "why": { "ar": "إنت عايز الفريزر تحت", "en": "You want a bottom freezer" } } ] } },
+        { "id": "side_by_side", "label": { "ar": "سايد باي سايد (بابين جنب بعض)", "en": "Side-by-side" },
+          "effects": { "must": [ { "attr": "layout", "op": "in", "value": ["side_by_side"], "why": { "ar": "إنت عايز سايد باي سايد", "en": "You want a side-by-side" } } ] } },
+        { "id": "french_door", "label": { "ar": "فرنساوي (بابين فوق ودرج تحت)", "en": "French door" },
+          "effects": { "must": [ { "attr": "layout", "op": "in", "value": ["french_door"], "why": { "ar": "إنت عايز تلاجة فرنساوي", "en": "You want a French-door fridge" } } ] } },
+        { "id": "single_door", "label": { "ar": "باب واحد", "en": "Single door" },
+          "effects": { "must": [ { "attr": "layout", "op": "in", "value": ["single_door"], "why": { "ar": "إنت عايز تلاجة باب واحد", "en": "You want a single-door fridge" } } ] } }
+      ] },
+
+    { "id": "placement", "group": "core", "default": "kitchen", "factors": ["noise", "environment"],
+      "label": { "ar": "مكان التلاجة", "en": "Where it will stand" },
+      "question": { "ar": "التلاجة هتتحط فين؟", "en": "Where will the fridge stand?" },
+      "options": [
+        { "id": "kitchen", "label": { "ar": "في مطبخ مقفول", "en": "In a closed kitchen" } },
+        { "id": "open", "label": { "ar": "في الصالة أو مطبخ مفتوح", "en": "In the living room or an open kitchen" }, "effects": { "weights": { "noise_db": 1.5 } } },
+        { "id": "hot", "label": { "ar": "مطبخ حر أو دور أخير", "en": "A hot kitchen or top-floor flat" }, "effects": { "weights": { "cooling": 0.8, "inverter": 0.3 } } }
+      ] },
+
+    { "id": "dispenser", "group": "preferences", "default": "no", "factors": ["water_dispenser"],
+      "label": { "ar": "مبرد مياه", "en": "Water dispenser" },
+      "question": { "ar": "عايز مبرد مياه في الباب؟", "en": "Do you want a water dispenser in the door?" },
+      "options": [
+        { "id": "no", "label": { "ar": "مش محتاج", "en": "Not needed" } },
+        { "id": "nice", "label": { "ar": "يبقى أحسن", "en": "Nice to have" }, "effects": { "weights": { "dispenser": 1.2 } } },
+        { "id": "must", "label": { "ar": "لازم", "en": "Must have" },
+          "effects": { "must": [ { "attr": "dispenser", "op": "==", "value": true, "why": { "ar": "إنت عايز مبرد مياه", "en": "You want a water dispenser" } } ] } }
+      ] },
+
+    { "id": "pain", "group": "followup", "multi": true, "factors": ["current_device_problem"],
+      "label": { "ar": "مشكلة التلاجة الحالية", "en": "Problem with the current fridge" },
+      "question": { "ar": "إيه أكتر حاجة بتضايقك في التلاجة الحالية؟", "en": "What bothers you most about your current fridge?" },
+      "options": [
+        { "id": "ice", "label": { "ar": "التلج بيتكوّم ولازم أسيّحها", "en": "Ice builds up and needs defrosting" },
+          "effects": { "weights": { "no_frost": 1.5 },
+            "prefer": [ { "attr": "no_frost", "op": "==", "value": true, "why": { "ar": "زهقت من التسييح", "en": "You are tired of defrosting" } } ] } },
+        { "id": "bills", "label": { "ar": "بتسحب كهربا كتير", "en": "It uses too much electricity" }, "effects": { "weights": { "energy_kwh_year": 1, "inverter": 0.4 } } },
+        { "id": "small", "label": { "ar": "صغيرة ومش مكفية", "en": "It is too small" }, "effects": { "weights": { "capacity_l": 1 } } },
+        { "id": "noisy", "label": { "ar": "صوتها عالي", "en": "It is noisy" }, "effects": { "weights": { "noise_db": 1 } } },
+        { "id": "weak", "label": { "ar": "التبريد ضعيف", "en": "Cooling is weak" }, "effects": { "weights": { "cooling": 1 } } },
+        { "id": "broke", "label": { "ar": "بتعطل والصيانة وحشة", "en": "It breaks and service is bad" }, "effects": { "weights": { "service": 1.2, "warranty_months": 0.5 } } }
+      ] },
+
+    { "id": "pay", "group": "money", "always": true, "factors": ["payment_way"],
+      "label": { "ar": "طريقة الدفع", "en": "Payment way" },
+      "question": { "ar": "هتدفع إزاي؟", "en": "How will you pay?" },
+      "options": [
+        { "id": "cash", "label": { "ar": "كاش", "en": "Cash" }, "effects": { "set": { "money.pay": "cash" } } },
+        { "id": "card", "label": { "ar": "تقسيط بالكريديت كارد", "en": "Credit card installments" }, "effects": { "set": { "money.pay": "card" } } },
+        { "id": "finance", "label": { "ar": "تقسيط من شركة تمويل", "en": "Consumer-finance company" }, "effects": { "set": { "money.pay": "finance" } } }
+      ] },
+
+    { "id": "provider", "group": "money", "dependsOn": { "pay": ["card", "finance"] }, "askIf": { "signal": "providerMatters" }, "factors": ["payment_way", "installment_cost"],
+      "label": { "ar": "البنك أو شركة التقسيط", "en": "Your bank or finance company" },
+      "question": { "ar": "كارتك من أنهي بنك، أو بتقسّط مع أنهي شركة؟", "en": "Which bank is your card from, or which finance company do you use?" },
+      "optionsSource": "plans.provider",
+      "options": [
+        { "id": "nilebank", "kind": "card", "label": { "ar": "بنك النيل (عينة)", "en": "Nile Bank (sample)" }, "effects": { "set": { "money.provider": "nilebank" } } },
+        { "id": "horusbank", "kind": "card", "label": { "ar": "بنك حورس (عينة)", "en": "Horus Bank (sample)" }, "effects": { "set": { "money.provider": "horusbank" } } },
+        { "id": "sahla", "kind": "finance", "label": { "ar": "سهلة للتمويل (عينة)", "en": "Sahla Finance (sample)" }, "effects": { "set": { "money.provider": "sahla" } } },
+        { "id": "qest", "kind": "finance", "label": { "ar": "قسط باي (عينة)", "en": "Qest Pay (sample)" }, "effects": { "set": { "money.provider": "qest" } } }
+      ] },
+
+    { "id": "budget", "group": "money", "always": true, "dependsOn": { "pay": ["cash"] }, "factors": ["budget_monthly_down", "cash_price"],
+      "numeric": { "path": "money.budget", "unit": "EGP", "min": 3000, "max": 400000 },
+      "label": { "ar": "الميزانية", "en": "Budget" },
+      "question": { "ar": "ميزانيتك للتلاجة في حدود كام؟", "en": "What is your budget for the fridge?" },
+      "options": [
+        { "id": "b15000", "value": 15000, "label": { "ar": "لحد 15,000", "en": "Up to 15,000" } },
+        { "id": "b20000", "value": 20000, "label": { "ar": "لحد 20,000", "en": "Up to 20,000" } },
+        { "id": "b30000", "value": 30000, "label": { "ar": "لحد 30,000", "en": "Up to 30,000" } },
+        { "id": "b45000", "value": 45000, "label": { "ar": "لحد 45,000", "en": "Up to 45,000" } },
+        { "id": "b60000", "value": 60000, "label": { "ar": "لحد 60,000", "en": "Up to 60,000" } },
+        { "id": "b80000", "value": 80000, "label": { "ar": "لحد 80,000", "en": "Up to 80,000" } },
+        { "id": "b120000", "value": 120000, "label": { "ar": "أكتر من 80,000", "en": "Over 80,000" } }
+      ] },
+
+    { "id": "monthlyCap", "group": "money", "always": true, "dependsOn": { "pay": ["card", "finance"] }, "factors": ["budget_monthly_down"],
+      "numeric": { "path": "money.monthlyCap", "unit": "EGP/month", "min": 100, "max": 50000 },
+      "label": { "ar": "القسط الشهري", "en": "Monthly cap" },
+      "question": { "ar": "تقدر تدفع كام في الشهر؟", "en": "How much can you pay per month?" },
+      "options": [
+        { "id": "m750", "value": 750, "label": { "ar": "لحد 750 في الشهر", "en": "Up to 750 a month" } },
+        { "id": "m1000", "value": 1000, "label": { "ar": "لحد 1,000 في الشهر", "en": "Up to 1,000 a month" } },
+        { "id": "m1500", "value": 1500, "label": { "ar": "لحد 1,500 في الشهر", "en": "Up to 1,500 a month" } },
+        { "id": "m2500", "value": 2500, "label": { "ar": "لحد 2,500 في الشهر", "en": "Up to 2,500 a month" } },
+        { "id": "m4000", "value": 4000, "label": { "ar": "لحد 4,000 في الشهر", "en": "Up to 4,000 a month" } }
+      ] },
+
+    { "id": "down", "group": "money", "default": "d0", "dependsOn": { "pay": ["card", "finance"] }, "askIf": { "signal": "downChangesPick" }, "factors": ["budget_monthly_down"],
+      "numeric": { "path": "money.down", "unit": "EGP", "min": 0, "max": 300000 },
+      "label": { "ar": "المقدم", "en": "Down payment" },
+      "question": { "ar": "تقدر تدفع مقدم قد إيه؟", "en": "How much can you pay up front?" },
+      "options": [
+        { "id": "d0", "value": 0, "label": { "ar": "مفيش مقدم", "en": "No down payment" } },
+        { "id": "d3000", "value": 3000, "label": { "ar": "حوالي 3,000", "en": "About 3,000" } },
+        { "id": "d5000", "value": 5000, "label": { "ar": "حوالي 5,000", "en": "About 5,000" } },
+        { "id": "d10000", "value": 10000, "label": { "ar": "حوالي 10,000", "en": "About 10,000" } },
+        { "id": "d20000", "value": 20000, "label": { "ar": "حوالي 20,000", "en": "About 20,000" } }
+      ] },
+
+    { "id": "urgentDays", "group": "logistics", "default": "none",
+      "alwaysIf": { "signal": "saleWeeks", "between": [1, 10] }, "askIf": { "signal": "urgencyMatters" }, "factors": ["urgency", "delivery_time_fee", "timing_sales"],
+      "label": { "ar": "محتاجها إمتى", "en": "Needed by" },
+      "question": { "ar": "محتاج التلاجة توصل إمتى؟", "en": "When do you need the fridge delivered?" },
+      "options": [
+        { "id": "today", "label": { "ar": "النهارده أو بكرة (التلاجة القديمة باظت)", "en": "Today or tomorrow (the old one broke)" }, "effects": { "set": { "logistics.urgentDays": 1 } } },
+        { "id": "week", "label": { "ar": "خلال أسبوع", "en": "Within a week" }, "effects": { "set": { "logistics.urgentDays": 7 } } },
+        { "id": "none", "label": { "ar": "مش مستعجل", "en": "No rush" }, "effects": { "set": { "logistics.urgentDays": null } } }
+      ] },
+
+    { "id": "acceptImports", "group": "logistics", "default": "no", "askIf": { "signal": "importCheaper" }, "factors": ["official_vs_import", "warranty_length"],
+      "label": { "ar": "تلاجات مستوردة", "en": "Imported units" },
+      "question": { "ar": "في تلاجات مستوردة أرخص، بس من غير ضمان الوكيل. تقبل بيها؟", "en": "Imported fridges are cheaper but have no agent warranty. Accept them?" },
+      "options": [
+        { "id": "no", "label": { "ar": "لأ، ضمان الوكيل بس", "en": "No, official warranty only" }, "effects": { "set": { "logistics.acceptImports": false } } },
+        { "id": "yes", "label": { "ar": "أيوه لو أرخص", "en": "Yes, if cheaper" }, "effects": { "set": { "logistics.acceptImports": true } } },
+        { "id": "warranty", "label": { "ar": "لازم ضمان رسمي", "en": "I insist on official warranty" },
+          "effects": { "set": { "logistics.acceptImports": false }, "weights": { "service": 0.5, "warranty_months": 0.5 } } }
+      ] },
+
+    { "id": "city", "group": "logistics", "askIf": { "signal": "zoneMatters" }, "factors": ["delivery_time_fee"],
+      "note": "Missing city = nationwide, shown as assumed (BR-43). The option id is the city key in zones.cities. Heavy-item delivery fees differ more by zone than for phones.",
+      "label": { "ar": "المحافظة", "en": "City" },
+      "question": { "ar": "التلاجة هتتوصل فين؟", "en": "Where should the fridge be delivered?" },
+      "options": [
+        { "id": "cairo", "label": { "ar": "القاهرة", "en": "Cairo" }, "effects": { "set": { "logistics.city": "cairo" } } },
+        { "id": "giza", "label": { "ar": "الجيزة", "en": "Giza" }, "effects": { "set": { "logistics.city": "giza" } } },
+        { "id": "qalyubia", "label": { "ar": "القليوبية", "en": "Qalyubia" }, "effects": { "set": { "logistics.city": "qalyubia" } } },
+        { "id": "alexandria", "label": { "ar": "إسكندرية", "en": "Alexandria" }, "effects": { "set": { "logistics.city": "alexandria" } } },
+        { "id": "dakahlia", "label": { "ar": "الدقهلية", "en": "Dakahlia" }, "effects": { "set": { "logistics.city": "dakahlia" } } },
+        { "id": "gharbia", "label": { "ar": "الغربية", "en": "Gharbia" }, "effects": { "set": { "logistics.city": "gharbia" } } },
+        { "id": "sharqia", "label": { "ar": "الشرقية", "en": "Sharqia" }, "effects": { "set": { "logistics.city": "sharqia" } } },
+        { "id": "monufia", "label": { "ar": "المنوفية", "en": "Monufia" }, "effects": { "set": { "logistics.city": "monufia" } } },
+        { "id": "beheira", "label": { "ar": "البحيرة", "en": "Beheira" }, "effects": { "set": { "logistics.city": "beheira" } } },
+        { "id": "ismailia", "label": { "ar": "الإسماعيلية", "en": "Ismailia" }, "effects": { "set": { "logistics.city": "ismailia" } } },
+        { "id": "port_said", "label": { "ar": "بورسعيد", "en": "Port Said" }, "effects": { "set": { "logistics.city": "port_said" } } },
+        { "id": "suez", "label": { "ar": "السويس", "en": "Suez" }, "effects": { "set": { "logistics.city": "suez" } } },
+        { "id": "fayoum", "label": { "ar": "الفيوم", "en": "Fayoum" }, "effects": { "set": { "logistics.city": "fayoum" } } },
+        { "id": "minya", "label": { "ar": "المنيا", "en": "Minya" }, "effects": { "set": { "logistics.city": "minya" } } },
+        { "id": "assiut", "label": { "ar": "أسيوط", "en": "Assiut" }, "effects": { "set": { "logistics.city": "assiut" } } },
+        { "id": "sohag", "label": { "ar": "سوهاج", "en": "Sohag" }, "effects": { "set": { "logistics.city": "sohag" } } },
+        { "id": "qena", "label": { "ar": "قنا", "en": "Qena" }, "effects": { "set": { "logistics.city": "qena" } } },
+        { "id": "luxor", "label": { "ar": "الأقصر", "en": "Luxor" }, "effects": { "set": { "logistics.city": "luxor" } } },
+        { "id": "aswan", "label": { "ar": "أسوان", "en": "Aswan" }, "effects": { "set": { "logistics.city": "aswan" } } },
+        { "id": "red_sea", "label": { "ar": "البحر الأحمر", "en": "Red Sea" }, "effects": { "set": { "logistics.city": "red_sea" } } },
+        { "id": "south_sinai", "label": { "ar": "جنوب سينا", "en": "South Sinai" }, "effects": { "set": { "logistics.city": "south_sinai" } } },
+        { "id": "other", "label": { "ar": "محافظة تانية", "en": "Another governorate" }, "effects": { "set": { "logistics.city": "other" } } }
+      ] },
+
+    { "id": "cod", "group": "logistics", "manual": true, "default": "no", "factors": ["cod"],
+      "note": "Never asked; set from text or 'Add a detail'. 'must' is a must, 'prefer' is relaxable.",
+      "label": { "ar": "الدفع عند الاستلام", "en": "Cash on delivery" },
+      "question": { "ar": "عايز تدفع عند الاستلام؟", "en": "Do you want to pay on delivery?" },
+      "options": [
+        { "id": "must", "label": { "ar": "أيوه، بس كده", "en": "Yes, only that" }, "effects": { "set": { "logistics.cod": "must" } } },
+        { "id": "prefer", "label": { "ar": "يفضّل", "en": "Preferably" }, "effects": { "set": { "logistics.cod": "prefer" } } },
+        { "id": "no", "label": { "ar": "مش فارقة", "en": "Does not matter" }, "effects": { "set": { "logistics.cod": null } } }
+      ] },
+
+    { "id": "shops", "group": "preferences", "manual": true, "factors": ["retailer_trust_returns"],
+      "valueShape": "shops",
+      "optionsSource": "retailers",
+      "note": "Value is {prefer: [retailerId], avoid: [retailerId]}. Avoided shops are dropped; preferred shops are a prefer-filter M6 can relax.",
+      "label": { "ar": "محلات بتفضّلها أو مش عايزها", "en": "Shops you like or avoid" },
+      "question": { "ar": "في محلات بتفضّلها أو مش عايز تشتري منها؟", "en": "Any shops you prefer or want to avoid?" },
+      "options": [] },
+
+    { "id": "brand", "group": "preferences", "tiebreak": true, "multi": true, "factors": ["brand_status", "brand_reputation"],
+      "note": "Asked only on a near tie (top 2 from different brands, under 3 points apart). Each liked brand gets a +5 score bonus.",
+      "optionsSource": "products.brand",
+      "label": { "ar": "الماركة", "en": "Brand" },
+      "question": { "ar": "الترشيحات قريبة جداً من بعض. تفضّل ماركة معينة؟", "en": "The picks are very close. Do you prefer a brand?" },
+      "options": [
+        { "id": "sharp", "label": { "ar": "شارب", "en": "Sharp" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Sharp"], "points": 5 } ] } },
+        { "id": "toshiba", "label": { "ar": "توشيبا", "en": "Toshiba" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Toshiba"], "points": 5 } ] } },
+        { "id": "samsung", "label": { "ar": "سامسونج", "en": "Samsung" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Samsung"], "points": 5 } ] } },
+        { "id": "lg", "label": { "ar": "إل جي", "en": "LG" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["LG"], "points": 5 } ] } },
+        { "id": "beko", "label": { "ar": "بيكو", "en": "Beko" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Beko"], "points": 5 } ] } },
+        { "id": "fresh", "label": { "ar": "فريش", "en": "Fresh" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Fresh"], "points": 5 } ] } },
+        { "id": "kiriazi", "label": { "ar": "كريازي", "en": "Kiriazi" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Kiriazi"], "points": 5 } ] } },
+        { "id": "zanussi", "label": { "ar": "زانوسي", "en": "Zanussi" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Zanussi"], "points": 5 } ] } },
+        { "id": "white_whale", "label": { "ar": "وايت ويل", "en": "White Whale" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["White Whale"], "points": 5 } ] } },
+        { "id": "unionaire", "label": { "ar": "يونيون إير", "en": "Unionaire" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Unionaire"], "points": 5 } ] } },
+        { "id": "haier", "label": { "ar": "هاير", "en": "Haier" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Haier"], "points": 5 } ] } },
+        { "id": "bosch", "label": { "ar": "بوش", "en": "Bosch" }, "effects": { "bonus": [ { "attr": "brand", "op": "in", "value": ["Bosch"], "points": 5 } ] } }
+      ] },
+
+    { "id": "brandAvoid", "group": "preferences", "manual": true, "multi": true, "factors": ["brand_status"],
+      "note": "Brands the buyer avoids become a prefer-filter (relaxable), not a must.",
+      "optionsSource": "products.brand",
+      "label": { "ar": "ماركة مش عايزها", "en": "Brand to avoid" },
+      "question": { "ar": "في ماركة مش عايزها؟", "en": "Any brand you want to avoid?" },
+      "options": [
+        { "id": "sharp", "label": { "ar": "شارب", "en": "Sharp" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Sharp"], "why": { "ar": "مش عايز شارب", "en": "You avoid Sharp" } } ] } },
+        { "id": "toshiba", "label": { "ar": "توشيبا", "en": "Toshiba" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Toshiba"], "why": { "ar": "مش عايز توشيبا", "en": "You avoid Toshiba" } } ] } },
+        { "id": "samsung", "label": { "ar": "سامسونج", "en": "Samsung" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Samsung"], "why": { "ar": "مش عايز سامسونج", "en": "You avoid Samsung" } } ] } },
+        { "id": "lg", "label": { "ar": "إل جي", "en": "LG" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["LG"], "why": { "ar": "مش عايز إل جي", "en": "You avoid LG" } } ] } },
+        { "id": "beko", "label": { "ar": "بيكو", "en": "Beko" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Beko"], "why": { "ar": "مش عايز بيكو", "en": "You avoid Beko" } } ] } },
+        { "id": "fresh", "label": { "ar": "فريش", "en": "Fresh" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Fresh"], "why": { "ar": "مش عايز فريش", "en": "You avoid Fresh" } } ] } },
+        { "id": "kiriazi", "label": { "ar": "كريازي", "en": "Kiriazi" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Kiriazi"], "why": { "ar": "مش عايز كريازي", "en": "You avoid Kiriazi" } } ] } },
+        { "id": "zanussi", "label": { "ar": "زانوسي", "en": "Zanussi" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Zanussi"], "why": { "ar": "مش عايز زانوسي", "en": "You avoid Zanussi" } } ] } },
+        { "id": "white_whale", "label": { "ar": "وايت ويل", "en": "White Whale" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["White Whale"], "why": { "ar": "مش عايز وايت ويل", "en": "You avoid White Whale" } } ] } },
+        { "id": "unionaire", "label": { "ar": "يونيون إير", "en": "Unionaire" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Unionaire"], "why": { "ar": "مش عايز يونيون إير", "en": "You avoid Unionaire" } } ] } },
+        { "id": "haier", "label": { "ar": "هاير", "en": "Haier" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Haier"], "why": { "ar": "مش عايز هاير", "en": "You avoid Haier" } } ] } },
+        { "id": "bosch", "label": { "ar": "بوش", "en": "Bosch" }, "effects": { "prefer": [ { "attr": "brand", "op": "not_in", "value": ["Bosch"], "why": { "ar": "مش عايز بوش", "en": "You avoid Bosch" } } ] } }
+      ] },
+
+    { "id": "modelInMind", "group": "preferences", "manual": true, "factors": ["model_in_mind"],
+      "valueShape": "product",
+      "optionsSource": "products",
+      "note": "Value is a product id (preferred) or a model name; Layer 2 matches id, name or alias, case-insensitive, and gives a verdict.",
+      "label": { "ar": "موديل في دماغك", "en": "Model in mind" },
+      "question": { "ar": "في موديل معين في دماغك؟", "en": "Do you have a model in mind?" },
+      "options": [] }
+  ],
+
+  "derive": [
+    { "id": "maxPrice", "type": "max_price", "target": "derived.maxPrice",
+      "note": "Rough max price the buyer can reach: cash budget, or down + the most a monthly cap can finance under the reference plans. Used by checks and askIf only; ranking always quotes real plans. Includes a 36-month finance plan because appliances are often financed longer than phones.",
+      "refPlans": [
+        { "kind": "card", "months": 12, "monthlyRate": 0, "adminShare": 0.05 },
+        { "kind": "finance", "months": 24, "monthlyRate": 0.02, "adminShare": 0 },
+        { "kind": "finance", "months": 36, "monthlyRate": 0.02, "adminShare": 0 }
+      ] }
+  ],
+
+  "checks": [
+    { "id": "big_family_low_budget",
+      "when": { "all": [ { "slot": "household", "in": ["h6", "h7"] }, { "path": "derived.maxPrice", "lt": 25000 } ] },
+      "message": { "ar": "التلاجات اللي تكفي 5 أفراد أو أكتر بتبدأ من حوالي 25,000 في الكتالوج ده.", "en": "In this catalog, fridges big enough for 5 or more people start around 25,000." } },
+    { "id": "wide_layout_narrow_space",
+      "when": { "all": [ { "slot": "layout", "in": ["side_by_side", "french_door"] }, { "slot": "space", "in": ["w60", "w70", "w80"] } ] },
+      "message": { "ar": "السايد باي سايد والفرنساوي عرضهم حوالي 90 سم، مش هيدخلوا المساحة دي.", "en": "Side-by-side and French-door fridges are about 90 cm wide and will not fit this space." } },
+    { "id": "wide_layout_low_budget",
+      "when": { "all": [ { "slot": "layout", "in": ["side_by_side", "french_door"] }, { "path": "derived.maxPrice", "lt": 55000 } ] },
+      "message": { "ar": "السايد باي سايد والفرنساوي في الكتالوج ده بيبدأوا فوق الميزانية دي.", "en": "In this catalog side-by-side and French-door fridges start above this budget." } },
+    { "id": "dispenser_low_budget",
+      "when": { "all": [ { "slot": "dispenser", "in": ["must"] }, { "path": "derived.maxPrice", "lt": 30000 } ] },
+      "message": { "ar": "التلاجات اللي فيها مبرد مياه بتبدأ من حوالي 30,000.", "en": "Fridges with a water dispenser start around 30,000." } }
+  ],
+
+  "runningCost": { "type": "attr", "attr": "energy_kwh_year", "factor": 1.8,
+    "note": "Yearly electricity cost = kWh per year x 1.8 EGP per kWh. 1.8 EGP/kWh is an assumed blended household tariff for a mid-consumption Egyptian home; review against the current tariff brackets.",
+    "reason": { "ar": "الكهربا بتتحسب من استهلاك التلاجة في السنة × سعر الكيلووات", "en": "Electricity = the fridge's yearly kWh x the price per kWh" } },
+
+  "resale": null,
+
+  "installCost": 0,
+
+  "season": {
+    "saleEvents": [
+      { "id": "white_friday", "rule": "last_friday_of_november", "windowWeeks": [1, 10], "savingShare": [0.08, 0.15],
+        "label": { "ar": "الوايت فرايداي", "en": "White Friday" },
+        "note": "Expected 8-15% saving on large appliances is an assumption." }
+    ],
+    "monthAdvice": []
+  },
+
+  "factors": [
+    { "id": "household_size", "group": "need", "name": "Household size (capacity needed)", "status": "covered", "via": [ { "slot": "household" }, { "attribute": "capacity_l" } ] },
+    { "id": "who_for", "group": "need", "name": "Who it is for", "status": "covered", "via": [ { "slot": "household" } ], "reason": "For a fridge, 'who' is the household it serves." },
+    { "id": "main_use", "group": "need", "name": "Main use (bulk shopping, cooking, cold drinks)", "status": "covered", "via": [ { "slot": "use" } ] },
+    { "id": "current_device_problem", "group": "need", "name": "Problem with the current fridge", "status": "covered", "via": [ { "slot": "pain" } ] },
+    { "id": "physical_fit", "group": "need", "name": "Physical fit (kitchen width)", "status": "partial", "via": [ { "slot": "space" }, { "attribute": "width_cm" } ], "reason": "Width only; height, depth and door swing are not in the catalog." },
+    { "id": "layout_pref", "group": "need", "name": "Door layout (top/bottom freezer, side-by-side, French, single)", "status": "covered", "via": [ { "slot": "layout" } ] },
+    { "id": "no_frost_pref", "group": "need", "name": "No frost vs manual defrost", "status": "covered", "via": [ { "slot": "frost" }, { "attribute": "no_frost" } ] },
+    { "id": "water_dispenser", "group": "need", "name": "Water dispenser", "status": "covered", "via": [ { "slot": "dispenser" }, { "attribute": "dispenser" } ] },
+    { "id": "noise", "group": "need", "name": "Noise (open kitchen, studio)", "status": "covered", "via": [ { "slot": "placement" }, { "attribute": "noise_db" } ] },
+    { "id": "environment", "group": "need", "name": "Environment (hot kitchen, power cuts, voltage)", "status": "partial", "via": [ { "slot": "placement" }, { "slot": "power" } ], "reason": "Raises cooling and inverter weights; no climate-class or stabiliser data in the catalog." },
+    { "id": "cooling_performance", "group": "need", "name": "Cooling performance", "status": "covered", "via": [ { "attribute": "cooling" }, { "slot": "use" } ] },
+    { "id": "compatibility", "group": "need", "name": "Compatibility with other devices", "status": "out_of_scope", "reason": "A fridge does not pair with other devices; smart-home apps are not modelled." },
+    { "id": "cash_price", "group": "money", "name": "Cash price", "status": "covered", "via": [ { "offerField": "price_egp" }, { "slot": "budget" } ] },
+    { "id": "payment_way", "group": "money", "name": "Payment way: cash, card, finance company", "status": "covered", "via": [ { "slot": "pay" }, { "slot": "provider" } ] },
+    { "id": "budget_monthly_down", "group": "money", "name": "Budget, monthly cap and down payment", "status": "covered", "via": [ { "slot": "budget" }, { "slot": "monthlyCap" }, { "slot": "down" } ] },
+    { "id": "installment_cost", "group": "money", "name": "Real installment cost per retailer", "status": "covered", "via": [ { "planField": "monthly_rate" }, { "planField": "admin_share" }, { "slot": "provider" } ] },
+    { "id": "running_cost", "group": "money", "name": "Running cost (electricity over 5 years)", "status": "covered", "via": [ { "attribute": "energy_kwh_year" }, { "configKey": "runningCost" }, { "slot": "power" } ] },
+    { "id": "compressor_tech", "group": "money", "name": "Inverter compressor", "status": "covered", "via": [ { "attribute": "inverter" }, { "slot": "power" } ] },
+    { "id": "resale_value", "group": "money", "name": "Resale value", "status": "out_of_scope", "reason": "Fridges are kept 10+ years and rarely resold; resale is null." },
+    { "id": "timing_sales", "group": "money", "name": "Timing: White Friday, season, promo end", "status": "covered", "via": [ { "configKey": "season" }, { "planField": "valid_until" }, { "slot": "urgentDays" } ] },
+    { "id": "timing_launch_currency", "group": "money", "name": "Timing: currency moves and price rises", "status": "not_yet", "reason": "Needs price history." },
+    { "id": "retailer_price", "group": "offer", "name": "Price at each retailer", "status": "covered", "via": [ { "offerField": "price_egp" } ] },
+    { "id": "gifts", "group": "offer", "name": "Gifts: stabiliser, warranty, cashback, bundle items", "status": "covered", "via": [ { "offerField": "extras" } ] },
+    { "id": "official_vs_import", "group": "offer", "name": "Official vs imported", "status": "covered", "via": [ { "slot": "acceptImports" }, { "offerField": "official" } ] },
+    { "id": "retailer_trust_returns", "group": "offer", "name": "Retailer trust and returns", "status": "covered", "via": [ { "retailerField": "trust" }, { "retailerField": "return_days" }, { "slot": "shops" } ] },
+    { "id": "stock", "group": "offer", "name": "Stock", "status": "covered", "via": [ { "offerField": "in_stock" } ] },
+    { "id": "delivery_time_fee", "group": "offer", "name": "Heavy-item delivery time and fee", "status": "covered", "via": [ { "slot": "urgentDays" }, { "slot": "city" }, { "offerField": "delivery" } ] },
+    { "id": "stairs_delivery", "group": "offer", "name": "Carrying up stairs / floors without a lift", "status": "not_yet", "reason": "Per-floor carrying fees are not collected." },
+    { "id": "cod", "group": "offer", "name": "Cash on delivery available", "status": "covered", "via": [ { "slot": "cod" }, { "retailerField": "cod" } ] },
+    { "id": "branch_pickup", "group": "offer", "name": "Pickup from a nearby branch", "status": "not_yet", "reason": "Needs branch stock by city." },
+    { "id": "install_quality", "group": "after_sales", "name": "Installation", "status": "out_of_scope", "reason": "A fridge needs delivery only, no installation (installCost 0)." },
+    { "id": "warranty_length", "group": "after_sales", "name": "Warranty length (compressor)", "status": "covered", "via": [ { "attribute": "warranty_months" }, { "offerField": "extras" } ] },
+    { "id": "service_network", "group": "after_sales", "name": "Service network strength in Egypt", "status": "covered", "via": [ { "attribute": "service" } ] },
+    { "id": "spare_parts", "group": "after_sales", "name": "Spare parts availability", "status": "not_yet", "reason": "Not in the catalog yet." },
+    { "id": "build_quality", "group": "trust", "name": "Build, shelves and finish quality", "status": "covered", "via": [ { "attribute": "build" } ] },
+    { "id": "brand_reputation", "group": "trust", "name": "Brand reputation", "status": "covered", "via": [ { "attribute": "service" }, { "slot": "brand" } ] },
+    { "id": "reviews", "group": "trust", "name": "Reviews and real user experience", "status": "not_yet", "reason": "Not collected yet." },
+    { "id": "known_defects", "group": "trust", "name": "Known model defects", "status": "not_yet", "reason": "Planned as expert-curated warnings per model." },
+    { "id": "fakes_used", "group": "trust", "name": "Fear of used or refurbished sold as new", "status": "partial", "via": [ { "retailerField": "trust" } ], "reason": "Covered only through retailer trust." },
+    { "id": "brand_status", "group": "social", "name": "Brand as status", "status": "partial", "via": [ { "slot": "brand" }, { "slot": "brandAvoid" } ] },
+    { "id": "family_opinion", "group": "social", "name": "Family and friends opinion", "status": "out_of_scope", "reason": "Out of scope; a shareable result link helps." },
+    { "id": "model_in_mind", "group": "social", "name": "Model already in mind", "status": "covered", "via": [ { "slot": "modelInMind" } ] },
+    { "id": "look_colour", "group": "social", "name": "Look, colour and finish (glass, steel, silver)", "status": "not_yet", "reason": "Colour and finish stock not tracked per offer." },
+    { "id": "urgency", "group": "social", "name": "Urgency (old fridge broke)", "status": "covered", "via": [ { "slot": "urgentDays" } ] },
+    { "id": "time_limited_offer", "group": "last_mile", "name": "Time-limited offer", "status": "covered", "via": [ { "planField": "valid_until" } ] },
+    { "id": "trade_in", "group": "last_mile", "name": "Trade-in of the old fridge", "status": "not_yet", "reason": "Not modelled." },
+    { "id": "bundles", "group": "last_mile", "name": "Bundles (fridge + stabiliser, kitchen bundles)", "status": "partial", "via": [ { "offerField": "extras" } ], "reason": "Valued as gifts when the retailer lists them." }
+  ]
+}

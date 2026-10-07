@@ -1,0 +1,40 @@
+{
+  "snapshot_id": "synthetic-fridge-2026-10-03",
+  "tenant_id": "wisedo",
+  "category": "fridge",
+  "now": "2026-10-03T12:00:00.000Z",
+  "seed": 20261004,
+  "source": "synthetic",
+  "note": "SAMPLE DATA. Every record is synthetic: prices, specs and scores are invented and must not be presented as real. Retailers and plans are the shared rows in data/synthetic/.",
+  "counts": {
+    "products": 34,
+    "offers": 131,
+    "brands": 12,
+    "retailersUsed": 7
+  },
+  "edgeCases": {
+    "missingSpec": {
+      "product": "fridge-zanussi-zrt-300",
+      "attr": "noise_db"
+    },
+    "allOffersStale": "fridge-fresh-fnt-260",
+    "outOfStock": [
+      "o-fridge-sharp-sj-ge45-lotus"
+    ],
+    "staleOffers": [
+      "o-fridge-toshiba-gr-ef46-pharos"
+    ],
+    "staleExtras": [
+      "o-fridge-lg-gc-b257-oasis"
+    ],
+    "importOffers": "every offer from khan (official: false); khan carries Samsung, LG and Bosch only",
+    "importOnlyProduct": "fridge-bosch-kad93 (sold only by khan, Greater Cairo only)",
+    "sharedPlans": "offers list their retailer's plans from data/synthetic/plans.json in plan_ids (promo ending nile-sahla-promo, expired oasis-horus-promo-18, stale sphinx-qest-18, min-down khan-store and delta-sahla all apply)",
+    "zoneGaps": [
+      "delta: no alexandria",
+      "khan: greater_cairo only",
+      "sphinx: no other governorates"
+    ],
+    "heavyDelivery": "delivery fees 0-350 EGP and 1-7 days by shop and zone"
+  }
+}

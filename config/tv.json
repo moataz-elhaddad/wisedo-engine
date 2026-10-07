@@ -1,0 +1,2974 @@
+{
+  "id": "tv",
+  "version": "1.0.0",
+  "aliases": [
+    "television",
+    "screen"
+  ],
+  "label": {
+    "ar": "تلفزيون",
+    "en": "TV"
+  },
+  "note": "TV category config. Every threshold, weight, size range and score basis below is a starting assumption to review with a TV reviewer (BRD section 8). All catalog data is synthetic.",
+  "currency": "EGP",
+  "maxMonths": 36,
+  "tcoYears": 5,
+  "freshness": {
+    "priceStockHours": 24,
+    "deliveryGiftsHours": 72,
+    "plansDays": 35,
+    "specsDays": 60
+  },
+  "zones": {
+    "ids": [
+      "greater_cairo",
+      "alexandria",
+      "other"
+    ],
+    "labels": {
+      "greater_cairo": {
+        "ar": "القاهرة الكبرى",
+        "en": "Greater Cairo"
+      },
+      "alexandria": {
+        "ar": "إسكندرية",
+        "en": "Alexandria"
+      },
+      "other": {
+        "ar": "باقي المحافظات",
+        "en": "Other governorates"
+      }
+    },
+    "cities": {
+      "cairo": "greater_cairo",
+      "giza": "greater_cairo",
+      "qalyubia": "greater_cairo",
+      "alexandria": "alexandria",
+      "dakahlia": "other",
+      "gharbia": "other",
+      "sharqia": "other",
+      "monufia": "other",
+      "beheira": "other",
+      "ismailia": "other",
+      "port_said": "other",
+      "suez": "other",
+      "fayoum": "other",
+      "minya": "other",
+      "assiut": "other",
+      "sohag": "other",
+      "qena": "other",
+      "luxor": "other",
+      "aswan": "other",
+      "red_sea": "other",
+      "south_sinai": "other",
+      "other": "other"
+    }
+  },
+  "attributes": [
+    {
+      "id": "picture",
+      "label": {
+        "ar": "جودة الصورة",
+        "en": "Picture quality"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "جودة صورة {value} من 10",
+        "en": "Picture quality {value}/10"
+      }
+    },
+    {
+      "id": "brightness_nits",
+      "label": {
+        "ar": "الإضاءة (السطوع)",
+        "en": "Brightness"
+      },
+      "unit": "nits",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 200,
+        "max": 1500
+      },
+      "explain": {
+        "ar": "سطوع {value} نِت",
+        "en": "{value} nits peak brightness"
+      }
+    },
+    {
+      "id": "motion_hz",
+      "label": {
+        "ar": "سلاسة الحركة",
+        "en": "Motion (refresh rate)"
+      },
+      "unit": "Hz",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 50,
+        "max": 144
+      },
+      "explain": {
+        "ar": "شاشة {value} هرتز",
+        "en": "{value} Hz panel"
+      }
+    },
+    {
+      "id": "sound",
+      "label": {
+        "ar": "الصوت",
+        "en": "Sound"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "صوت {value} من 10",
+        "en": "Sound {value}/10"
+      }
+    },
+    {
+      "id": "smart",
+      "label": {
+        "ar": "نظام السمارت والتطبيقات",
+        "en": "Smart platform"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "السمارت والتطبيقات {value} من 10",
+        "en": "Smart platform {value}/10"
+      }
+    },
+    {
+      "id": "gaming",
+      "label": {
+        "ar": "مميزات الألعاب",
+        "en": "Gaming features"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "مميزات ألعاب {value} من 10",
+        "en": "Gaming features {value}/10"
+      }
+    },
+    {
+      "id": "hdmi21",
+      "label": {
+        "ar": "HDMI 2.1 و VRR",
+        "en": "HDMI 2.1 and VRR"
+      },
+      "type": "boolean",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 0,
+        "max": 1
+      },
+      "explain": {
+        "ar": "فيه HDMI 2.1 و VRR",
+        "en": "Has HDMI 2.1 with VRR"
+      }
+    },
+    {
+      "id": "screen_inches",
+      "label": {
+        "ar": "مقاس الشاشة",
+        "en": "Screen size"
+      },
+      "unit": "in",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 32,
+        "max": 85
+      },
+      "explain": {
+        "ar": "شاشة {value} بوصة",
+        "en": "{value}-inch screen"
+      }
+    },
+    {
+      "id": "service",
+      "label": {
+        "ar": "الصيانة والضمان في مصر",
+        "en": "Service network in Egypt"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "صيانة في مصر {value} من 10",
+        "en": "Service in Egypt {value}/10"
+      }
+    },
+    {
+      "id": "warranty_months",
+      "label": {
+        "ar": "الضمان",
+        "en": "Warranty"
+      },
+      "unit": "months",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 12,
+        "max": 60
+      },
+      "explain": {
+        "ar": "ضمان {value} شهر",
+        "en": "{value}-month warranty"
+      }
+    },
+    {
+      "id": "power_kwh_year",
+      "label": {
+        "ar": "توفير الكهربا",
+        "en": "Power efficiency"
+      },
+      "unit": "kWh/year",
+      "type": "number",
+      "higherIsBetter": false,
+      "basis": {
+        "min": 40,
+        "max": 300
+      },
+      "explain": {
+        "ar": "بيصرف حوالي {value} كيلووات ساعة في السنة",
+        "en": "Uses about {value} kWh a year"
+      }
+    },
+    {
+      "id": "ease",
+      "label": {
+        "ar": "سهولة الاستخدام",
+        "en": "Ease of use"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "سهولة استخدام {value} من 10",
+        "en": "Ease of use {value}/10"
+      }
+    },
+    {
+      "id": "bracket_included",
+      "label": {
+        "ar": "حامل الحيطة في العلبة",
+        "en": "Wall bracket in the box"
+      },
+      "type": "boolean",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 0,
+        "max": 1
+      },
+      "explain": {
+        "ar": "معاه حامل حيطة",
+        "en": "Wall bracket included"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "ar": "نوع الشاشة",
+        "en": "Panel type"
+      },
+      "type": "category",
+      "values": [
+        "led",
+        "qled",
+        "oled",
+        "mini_led"
+      ]
+    },
+    {
+      "id": "resolution",
+      "label": {
+        "ar": "الدقة",
+        "en": "Resolution"
+      },
+      "type": "category",
+      "values": [
+        "hd",
+        "fhd",
+        "4k",
+        "8k"
+      ]
+    },
+    {
+      "id": "os",
+      "label": {
+        "ar": "نظام التشغيل",
+        "en": "Operating system"
+      },
+      "type": "category",
+      "values": [
+        "google_tv",
+        "android",
+        "webos",
+        "tizen",
+        "other"
+      ]
+    },
+    {
+      "id": "series",
+      "label": {
+        "ar": "الفئة",
+        "en": "Series"
+      },
+      "type": "category",
+      "values": [
+        "entry",
+        "mid",
+        "premium"
+      ]
+    }
+  ],
+  "baseWeights": {
+    "picture": 1.2,
+    "brightness_nits": 0.4,
+    "motion_hz": 0.3,
+    "sound": 0.4,
+    "smart": 0.6,
+    "gaming": 0,
+    "hdmi21": 0,
+    "screen_inches": 0.8,
+    "service": 0.6,
+    "warranty_months": 0.3,
+    "power_kwh_year": 0.2,
+    "ease": 0,
+    "bracket_included": 0
+  },
+  "slots": [
+    {
+      "id": "who",
+      "group": "who",
+      "default": "family",
+      "factors": [
+        "who_for"
+      ],
+      "note": "Not always asked: most TVs are for the household. Asked only when the answer changes the pick (gain).",
+      "label": {
+        "ar": "لمين",
+        "en": "Who it is for"
+      },
+      "question": {
+        "ar": "التلفزيون ده للبيت كله ولا لحد معين؟",
+        "en": "Is the TV for the whole household or someone in particular?"
+      },
+      "options": [
+        {
+          "id": "family",
+          "label": {
+            "ar": "للبيت كله",
+            "en": "The whole household"
+          }
+        },
+        {
+          "id": "me",
+          "label": {
+            "ar": "ليّا أنا",
+            "en": "Just me"
+          }
+        },
+        {
+          "id": "kid",
+          "label": {
+            "ar": "لأوضة الأولاد",
+            "en": "The kids' room"
+          },
+          "effects": {
+            "weights": {
+              "service": 0.4,
+              "warranty_months": 0.3,
+              "ease": 0.3
+            }
+          }
+        },
+        {
+          "id": "parent",
+          "label": {
+            "ar": "لحد كبير في السن",
+            "en": "An older relative"
+          },
+          "effects": {
+            "weights": {
+              "ease": 1.5,
+              "service": 0.8,
+              "smart": -0.3,
+              "gaming": -1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "room",
+      "group": "core",
+      "always": true,
+      "factors": [
+        "viewing_distance"
+      ],
+      "note": "Viewing distance -> screen size range (hard filter). Ranges are rules of thumb for 4K at a comfortable angle; review with a TV reviewer.",
+      "label": {
+        "ar": "المسافة والمقاس",
+        "en": "Room and viewing distance"
+      },
+      "question": {
+        "ar": "هتقعد بعيد عن الشاشة قد إيه؟",
+        "en": "How far will you sit from the screen?"
+      },
+      "options": [
+        {
+          "id": "small",
+          "label": {
+            "ar": "أقل من 2 متر (أوضة نوم أو مطبخ)",
+            "en": "Under 2 m (bedroom or kitchen)"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": "between",
+                "value": [
+                  24,
+                  43
+                ],
+                "why": {
+                  "ar": "المسافة قصيرة، فالمقاس المناسب لحد 43 بوصة",
+                  "en": "At under 2 m, up to 43 inches fits"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "medium",
+          "label": {
+            "ar": "من 2 لـ 3 متر (ريسبشن عادي)",
+            "en": "2 to 3 m (a normal living room)"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": "between",
+                "value": [
+                  43,
+                  55
+                ],
+                "why": {
+                  "ar": "على 2-3 متر، المقاس المناسب من 43 لـ 55 بوصة",
+                  "en": "At 2-3 m, 43 to 55 inches fits"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "large",
+          "label": {
+            "ar": "من 3 لـ 4 متر (ريسبشن كبير)",
+            "en": "3 to 4 m (a large living room)"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": "between",
+                "value": [
+                  55,
+                  75
+                ],
+                "why": {
+                  "ar": "على 3-4 متر، المقاس المناسب من 55 لـ 75 بوصة",
+                  "en": "At 3-4 m, 55 to 75 inches fits"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "xlarge",
+          "label": {
+            "ar": "أكتر من 4 متر (صالة كبيرة جداً)",
+            "en": "Over 4 m (a very large hall)"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": ">=",
+                "value": 65,
+                "why": {
+                  "ar": "على أكتر من 4 متر، محتاج 65 بوصة أو أكبر",
+                  "en": "Over 4 m you need 65 inches or more"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "group": "core",
+      "always": true,
+      "multi": true,
+      "factors": [
+        "main_use_intensity",
+        "picture_quality",
+        "motion_sports",
+        "smart_platform"
+      ],
+      "label": {
+        "ar": "الاستخدام",
+        "en": "Main use"
+      },
+      "question": {
+        "ar": "هتتفرج عليه في إيه أكتر؟ اختار كل اللي ينطبق",
+        "en": "What will you watch most? Pick all that apply"
+      },
+      "options": [
+        {
+          "id": "series",
+          "label": {
+            "ar": "مسلسلات وأفلام ونتفليكس",
+            "en": "Series, films and streaming"
+          },
+          "effects": {
+            "weights": {
+              "picture": 0.8,
+              "smart": 0.8,
+              "sound": 0.3
+            }
+          }
+        },
+        {
+          "id": "sports",
+          "label": {
+            "ar": "ماتشات كورة ورياضة",
+            "en": "Football and sports"
+          },
+          "effects": {
+            "weights": {
+              "motion_hz": 1.2,
+              "brightness_nits": 0.4,
+              "screen_inches": 0.4,
+              "picture": 0.2
+            }
+          }
+        },
+        {
+          "id": "gaming",
+          "label": {
+            "ar": "بلايستيشن أو إكس بوكس",
+            "en": "PlayStation or Xbox gaming"
+          },
+          "effects": {
+            "weights": {
+              "gaming": 1.5,
+              "motion_hz": 0.6
+            }
+          }
+        },
+        {
+          "id": "kids",
+          "label": {
+            "ar": "كرتون ويوتيوب للأولاد",
+            "en": "Cartoons and YouTube for kids"
+          },
+          "effects": {
+            "weights": {
+              "smart": 0.4,
+              "service": 0.4,
+              "warranty_months": 0.3
+            }
+          }
+        },
+        {
+          "id": "general",
+          "label": {
+            "ar": "قنوات وأخبار بالريسيفر",
+            "en": "TV channels and news via a receiver"
+          },
+          "effects": {
+            "weights": {
+              "ease": 0.5,
+              "picture": -0.3,
+              "smart": -0.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "console",
+      "group": "followup",
+      "always": true,
+      "dependsOn": {
+        "use": [
+          "gaming"
+        ]
+      },
+      "factors": [
+        "gaming_features",
+        "main_use_intensity"
+      ],
+      "label": {
+        "ar": "نوع الجهاز",
+        "en": "Console"
+      },
+      "question": {
+        "ar": "بتلعب على إيه؟",
+        "en": "Which console do you play on?"
+      },
+      "options": [
+        {
+          "id": "next_gen",
+          "label": {
+            "ar": "PS5 أو Xbox Series وعايز 120 فريم",
+            "en": "PS5 or Xbox Series, and I want 120 fps"
+          },
+          "effects": {
+            "weights": {
+              "gaming": 1,
+              "motion_hz": 0.5
+            },
+            "must": [
+              {
+                "attr": "hdmi21",
+                "op": "==",
+                "value": true,
+                "why": {
+                  "ar": "الـ 120 فريم محتاجة HDMI 2.1",
+                  "en": "120 fps needs HDMI 2.1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "casual",
+          "label": {
+            "ar": "PS4 أو لعب عادي",
+            "en": "PS4 or casual play"
+          },
+          "effects": {
+            "weights": {
+              "gaming": 0.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "light",
+      "group": "core",
+      "default": "normal",
+      "factors": [
+        "environment"
+      ],
+      "label": {
+        "ar": "إضاءة الأوضة",
+        "en": "Room light"
+      },
+      "question": {
+        "ar": "الأوضة منورة قد إيه وقت ما بتتفرج؟",
+        "en": "How bright is the room when you watch?"
+      },
+      "options": [
+        {
+          "id": "dark",
+          "label": {
+            "ar": "ضلمة أو إضاءة خفيفة",
+            "en": "Dark or dim"
+          },
+          "effects": {
+            "weights": {
+              "picture": 0.6
+            }
+          }
+        },
+        {
+          "id": "normal",
+          "label": {
+            "ar": "عادية",
+            "en": "Normal"
+          }
+        },
+        {
+          "id": "bright",
+          "label": {
+            "ar": "منورة جداً، شمس وشبابيك كتير",
+            "en": "Very bright, sun and big windows"
+          },
+          "effects": {
+            "weights": {
+              "brightness_nits": 1.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "wallMount",
+      "group": "logistics",
+      "default": "stand",
+      "factors": [
+        "wall_mount_install"
+      ],
+      "note": "Wall mounting is an offer-level service (install extras); here it only values a bracket in the box. A per-buyer install charge needs a core change (see docs/tv-NOTES.md).",
+      "label": {
+        "ar": "على الحيطة ولا ترابيزة",
+        "en": "Wall or stand"
+      },
+      "question": {
+        "ar": "هتعلّقه على الحيطة ولا هتحطه على ترابيزة؟",
+        "en": "Will you hang it on the wall or put it on a stand?"
+      },
+      "options": [
+        {
+          "id": "wall",
+          "label": {
+            "ar": "على الحيطة",
+            "en": "On the wall"
+          },
+          "effects": {
+            "weights": {
+              "bracket_included": 0.3
+            }
+          }
+        },
+        {
+          "id": "stand",
+          "label": {
+            "ar": "على ترابيزة",
+            "en": "On a stand"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pain",
+      "group": "followup",
+      "multi": true,
+      "manual": true,
+      "note": "Set from text or \"Add a detail\" (buyers volunteer it); not asked, to keep the flow at 3-4 questions.",
+      "factors": [
+        "current_device_problem",
+        "sound_quality"
+      ],
+      "label": {
+        "ar": "مشكلة التلفزيون الحالي",
+        "en": "Problem with the current TV"
+      },
+      "question": {
+        "ar": "إيه أكتر حاجة بتضايقك في التلفزيون الحالي؟",
+        "en": "What bothers you most about your current TV?"
+      },
+      "options": [
+        {
+          "id": "small",
+          "label": {
+            "ar": "صغير",
+            "en": "It is too small"
+          },
+          "effects": {
+            "weights": {
+              "screen_inches": 1
+            }
+          }
+        },
+        {
+          "id": "not_smart",
+          "label": {
+            "ar": "مش سمارت أو التطبيقات تقيلة",
+            "en": "Not smart, or apps are slow"
+          },
+          "effects": {
+            "weights": {
+              "smart": 1
+            }
+          }
+        },
+        {
+          "id": "sound",
+          "label": {
+            "ar": "الصوت ضعيف",
+            "en": "The sound is weak"
+          },
+          "effects": {
+            "weights": {
+              "sound": 1
+            }
+          }
+        },
+        {
+          "id": "blurry",
+          "label": {
+            "ar": "الكورة بتشوّش والحركة مش ناعمة",
+            "en": "Football looks blurry"
+          },
+          "effects": {
+            "weights": {
+              "motion_hz": 0.8
+            }
+          }
+        },
+        {
+          "id": "broke",
+          "label": {
+            "ar": "بيعطل والصيانة وحشة",
+            "en": "It breaks and service is bad"
+          },
+          "effects": {
+            "weights": {
+              "service": 1.2,
+              "warranty_months": 0.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "panel",
+      "group": "preferences",
+      "default": "any",
+      "askIf": {
+        "path": "derived.maxPrice",
+        "gte": 40000
+      },
+      "factors": [
+        "picture_quality"
+      ],
+      "label": {
+        "ar": "نوع الشاشة",
+        "en": "Panel type"
+      },
+      "question": {
+        "ar": "عايز نوع شاشة معين؟",
+        "en": "Do you want a particular panel type?"
+      },
+      "options": [
+        {
+          "id": "any",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Any"
+          }
+        },
+        {
+          "id": "oled",
+          "label": {
+            "ar": "OLED بس",
+            "en": "OLED only"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "panel",
+                "op": "in",
+                "value": [
+                  "oled"
+                ],
+                "why": {
+                  "ar": "إنت عايز OLED",
+                  "en": "You want OLED"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "qled_mini",
+          "label": {
+            "ar": "QLED أو Mini LED",
+            "en": "QLED or Mini LED"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "panel",
+                "op": "in",
+                "value": [
+                  "qled",
+                  "mini_led"
+                ],
+                "why": {
+                  "ar": "إنت عايز QLED أو Mini LED",
+                  "en": "You want QLED or Mini LED"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "group": "preferences",
+      "manual": true,
+      "default": "any",
+      "factors": [
+        "smart_platform"
+      ],
+      "note": "Set from text only (\"Google TV\", \"webOS\"). Prefer-filter so it can be relaxed.",
+      "label": {
+        "ar": "نظام التشغيل",
+        "en": "Smart TV system"
+      },
+      "question": {
+        "ar": "عايز نظام سمارت معين؟",
+        "en": "Do you want a particular smart system?"
+      },
+      "options": [
+        {
+          "id": "any",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Any"
+          }
+        },
+        {
+          "id": "google_tv",
+          "label": {
+            "ar": "جوجل تي في / أندرويد",
+            "en": "Google TV / Android TV"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "google_tv",
+                  "android"
+                ],
+                "why": {
+                  "ar": "إنت عايز جوجل تي في أو أندرويد",
+                  "en": "You want Google TV or Android TV"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "webos",
+          "label": {
+            "ar": "webOS بتاع إل جي",
+            "en": "LG webOS"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "webos"
+                ],
+                "why": {
+                  "ar": "إنت عايز webOS",
+                  "en": "You want webOS"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "tizen",
+          "label": {
+            "ar": "Tizen بتاع سامسونج",
+            "en": "Samsung Tizen"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "tizen"
+                ],
+                "why": {
+                  "ar": "إنت عايز Tizen",
+                  "en": "You want Tizen"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pay",
+      "group": "money",
+      "always": true,
+      "factors": [
+        "payment_way"
+      ],
+      "label": {
+        "ar": "طريقة الدفع",
+        "en": "Payment way"
+      },
+      "question": {
+        "ar": "هتدفع إزاي؟",
+        "en": "How will you pay?"
+      },
+      "options": [
+        {
+          "id": "cash",
+          "label": {
+            "ar": "كاش",
+            "en": "Cash"
+          },
+          "effects": {
+            "set": {
+              "money.pay": "cash"
+            }
+          }
+        },
+        {
+          "id": "card",
+          "label": {
+            "ar": "تقسيط بالكريديت كارد",
+            "en": "Credit card installments"
+          },
+          "effects": {
+            "set": {
+              "money.pay": "card"
+            }
+          }
+        },
+        {
+          "id": "finance",
+          "label": {
+            "ar": "تقسيط من شركة تمويل",
+            "en": "Consumer-finance company"
+          },
+          "effects": {
+            "set": {
+              "money.pay": "finance"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "provider",
+      "group": "money",
+      "dependsOn": {
+        "pay": [
+          "card",
+          "finance"
+        ]
+      },
+      "askIf": {
+        "signal": "providerMatters"
+      },
+      "factors": [
+        "payment_way",
+        "installment_cost"
+      ],
+      "label": {
+        "ar": "البنك أو شركة التقسيط",
+        "en": "Your bank or finance company"
+      },
+      "question": {
+        "ar": "كارتك من أنهي بنك، أو بتقسّط مع أنهي شركة؟",
+        "en": "Which bank is your card from, or which finance company do you use?"
+      },
+      "optionsSource": "plans.provider",
+      "options": [
+        {
+          "id": "nilebank",
+          "kind": "card",
+          "label": {
+            "ar": "بنك النيل (عينة)",
+            "en": "Nile Bank (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "nilebank"
+            }
+          }
+        },
+        {
+          "id": "horusbank",
+          "kind": "card",
+          "label": {
+            "ar": "بنك حورس (عينة)",
+            "en": "Horus Bank (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "horusbank"
+            }
+          }
+        },
+        {
+          "id": "sahla",
+          "kind": "finance",
+          "label": {
+            "ar": "سهلة للتمويل (عينة)",
+            "en": "Sahla Finance (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "sahla"
+            }
+          }
+        },
+        {
+          "id": "qest",
+          "kind": "finance",
+          "label": {
+            "ar": "قسط باي (عينة)",
+            "en": "Qest Pay (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "qest"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "group": "money",
+      "always": true,
+      "dependsOn": {
+        "pay": [
+          "cash"
+        ]
+      },
+      "factors": [
+        "budget_monthly_down",
+        "cash_price"
+      ],
+      "numeric": {
+        "path": "money.budget",
+        "unit": "EGP",
+        "min": 1000,
+        "max": 300000
+      },
+      "label": {
+        "ar": "الميزانية",
+        "en": "Budget"
+      },
+      "question": {
+        "ar": "ميزانيتك في حدود كام؟",
+        "en": "What is your budget?"
+      },
+      "options": [
+        {
+          "id": "b10000",
+          "value": 10000,
+          "label": {
+            "ar": "لحد 10,000",
+            "en": "Up to 10,000"
+          }
+        },
+        {
+          "id": "b15000",
+          "value": 15000,
+          "label": {
+            "ar": "لحد 15,000",
+            "en": "Up to 15,000"
+          }
+        },
+        {
+          "id": "b20000",
+          "value": 20000,
+          "label": {
+            "ar": "لحد 20,000",
+            "en": "Up to 20,000"
+          }
+        },
+        {
+          "id": "b30000",
+          "value": 30000,
+          "label": {
+            "ar": "لحد 30,000",
+            "en": "Up to 30,000"
+          }
+        },
+        {
+          "id": "b45000",
+          "value": 45000,
+          "label": {
+            "ar": "لحد 45,000",
+            "en": "Up to 45,000"
+          }
+        },
+        {
+          "id": "b60000",
+          "value": 60000,
+          "label": {
+            "ar": "لحد 60,000",
+            "en": "Up to 60,000"
+          }
+        },
+        {
+          "id": "b90000",
+          "value": 90000,
+          "label": {
+            "ar": "أكتر من 60,000",
+            "en": "Over 60,000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "monthlyCap",
+      "group": "money",
+      "always": true,
+      "dependsOn": {
+        "pay": [
+          "card",
+          "finance"
+        ]
+      },
+      "factors": [
+        "budget_monthly_down"
+      ],
+      "numeric": {
+        "path": "money.monthlyCap",
+        "unit": "EGP/month",
+        "min": 100,
+        "max": 50000
+      },
+      "label": {
+        "ar": "القسط الشهري",
+        "en": "Monthly cap"
+      },
+      "question": {
+        "ar": "تقدر تدفع كام في الشهر؟",
+        "en": "How much can you pay per month?"
+      },
+      "options": [
+        {
+          "id": "m750",
+          "value": 750,
+          "label": {
+            "ar": "لحد 750 في الشهر",
+            "en": "Up to 750 a month"
+          }
+        },
+        {
+          "id": "m1000",
+          "value": 1000,
+          "label": {
+            "ar": "لحد 1,000 في الشهر",
+            "en": "Up to 1,000 a month"
+          }
+        },
+        {
+          "id": "m1500",
+          "value": 1500,
+          "label": {
+            "ar": "لحد 1,500 في الشهر",
+            "en": "Up to 1,500 a month"
+          }
+        },
+        {
+          "id": "m2500",
+          "value": 2500,
+          "label": {
+            "ar": "لحد 2,500 في الشهر",
+            "en": "Up to 2,500 a month"
+          }
+        },
+        {
+          "id": "m4000",
+          "value": 4000,
+          "label": {
+            "ar": "لحد 4,000 في الشهر",
+            "en": "Up to 4,000 a month"
+          }
+        }
+      ]
+    },
+    {
+      "id": "down",
+      "group": "money",
+      "default": "d0",
+      "dependsOn": {
+        "pay": [
+          "card",
+          "finance"
+        ]
+      },
+      "askIf": {
+        "signal": "downChangesPick"
+      },
+      "factors": [
+        "budget_monthly_down"
+      ],
+      "numeric": {
+        "path": "money.down",
+        "unit": "EGP",
+        "min": 0,
+        "max": 200000
+      },
+      "label": {
+        "ar": "المقدم",
+        "en": "Down payment"
+      },
+      "question": {
+        "ar": "تقدر تدفع مقدم قد إيه؟",
+        "en": "How much can you pay up front?"
+      },
+      "options": [
+        {
+          "id": "d0",
+          "value": 0,
+          "label": {
+            "ar": "مفيش مقدم",
+            "en": "No down payment"
+          }
+        },
+        {
+          "id": "d3000",
+          "value": 3000,
+          "label": {
+            "ar": "حوالي 3,000",
+            "en": "About 3,000"
+          }
+        },
+        {
+          "id": "d5000",
+          "value": 5000,
+          "label": {
+            "ar": "حوالي 5,000",
+            "en": "About 5,000"
+          }
+        },
+        {
+          "id": "d10000",
+          "value": 10000,
+          "label": {
+            "ar": "حوالي 10,000",
+            "en": "About 10,000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urgentDays",
+      "group": "logistics",
+      "default": "none",
+      "alwaysIf": {
+        "signal": "saleWeeks",
+        "between": [
+          1,
+          10
+        ]
+      },
+      "askIf": {
+        "signal": "urgencyMatters"
+      },
+      "factors": [
+        "urgency",
+        "delivery_time_fee",
+        "timing_sales"
+      ],
+      "label": {
+        "ar": "محتاجه إمتى",
+        "en": "Needed by"
+      },
+      "question": {
+        "ar": "محتاجه إمتى؟",
+        "en": "When do you need it?"
+      },
+      "options": [
+        {
+          "id": "today",
+          "label": {
+            "ar": "النهارده أو بكرة",
+            "en": "Today or tomorrow"
+          },
+          "effects": {
+            "set": {
+              "logistics.urgentDays": 1
+            }
+          }
+        },
+        {
+          "id": "week",
+          "label": {
+            "ar": "خلال أسبوع",
+            "en": "Within a week"
+          },
+          "effects": {
+            "set": {
+              "logistics.urgentDays": 7
+            }
+          }
+        },
+        {
+          "id": "none",
+          "label": {
+            "ar": "مش مستعجل",
+            "en": "No rush"
+          },
+          "effects": {
+            "set": {
+              "logistics.urgentDays": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "acceptImports",
+      "group": "logistics",
+      "default": "no",
+      "askIf": {
+        "signal": "importCheaper"
+      },
+      "factors": [
+        "official_vs_import",
+        "warranty_length"
+      ],
+      "label": {
+        "ar": "نسخ مستوردة",
+        "en": "Imported units"
+      },
+      "question": {
+        "ar": "في نسخ مستوردة أرخص، بس من غير ضمان الوكيل. تقبل بيها؟",
+        "en": "Imported units are cheaper but have no agent warranty. Accept them?"
+      },
+      "options": [
+        {
+          "id": "no",
+          "label": {
+            "ar": "لأ، ضمان الوكيل بس",
+            "en": "No, official warranty only"
+          },
+          "effects": {
+            "set": {
+              "logistics.acceptImports": false
+            }
+          }
+        },
+        {
+          "id": "yes",
+          "label": {
+            "ar": "أيوه لو أرخص",
+            "en": "Yes, if cheaper"
+          },
+          "effects": {
+            "set": {
+              "logistics.acceptImports": true
+            }
+          }
+        },
+        {
+          "id": "warranty",
+          "label": {
+            "ar": "لازم ضمان رسمي",
+            "en": "I insist on official warranty"
+          },
+          "effects": {
+            "set": {
+              "logistics.acceptImports": false
+            },
+            "weights": {
+              "service": 0.5,
+              "warranty_months": 0.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "city",
+      "group": "logistics",
+      "askIf": {
+        "signal": "zoneMatters"
+      },
+      "factors": [
+        "delivery_time_fee"
+      ],
+      "note": "Missing city = nationwide, shown as assumed (BR-43). The option id is the city key in zones.cities.",
+      "label": {
+        "ar": "المحافظة",
+        "en": "City"
+      },
+      "question": {
+        "ar": "هيتوصل فين؟",
+        "en": "Where should it be delivered?"
+      },
+      "options": [
+        {
+          "id": "cairo",
+          "label": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "cairo"
+            }
+          }
+        },
+        {
+          "id": "giza",
+          "label": {
+            "ar": "الجيزة",
+            "en": "Giza"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "giza"
+            }
+          }
+        },
+        {
+          "id": "qalyubia",
+          "label": {
+            "ar": "القليوبية",
+            "en": "Qalyubia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "qalyubia"
+            }
+          }
+        },
+        {
+          "id": "alexandria",
+          "label": {
+            "ar": "إسكندرية",
+            "en": "Alexandria"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "alexandria"
+            }
+          }
+        },
+        {
+          "id": "dakahlia",
+          "label": {
+            "ar": "الدقهلية",
+            "en": "Dakahlia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "dakahlia"
+            }
+          }
+        },
+        {
+          "id": "gharbia",
+          "label": {
+            "ar": "الغربية",
+            "en": "Gharbia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "gharbia"
+            }
+          }
+        },
+        {
+          "id": "sharqia",
+          "label": {
+            "ar": "الشرقية",
+            "en": "Sharqia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "sharqia"
+            }
+          }
+        },
+        {
+          "id": "monufia",
+          "label": {
+            "ar": "المنوفية",
+            "en": "Monufia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "monufia"
+            }
+          }
+        },
+        {
+          "id": "beheira",
+          "label": {
+            "ar": "البحيرة",
+            "en": "Beheira"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "beheira"
+            }
+          }
+        },
+        {
+          "id": "ismailia",
+          "label": {
+            "ar": "الإسماعيلية",
+            "en": "Ismailia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "ismailia"
+            }
+          }
+        },
+        {
+          "id": "port_said",
+          "label": {
+            "ar": "بورسعيد",
+            "en": "Port Said"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "port_said"
+            }
+          }
+        },
+        {
+          "id": "suez",
+          "label": {
+            "ar": "السويس",
+            "en": "Suez"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "suez"
+            }
+          }
+        },
+        {
+          "id": "fayoum",
+          "label": {
+            "ar": "الفيوم",
+            "en": "Fayoum"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "fayoum"
+            }
+          }
+        },
+        {
+          "id": "minya",
+          "label": {
+            "ar": "المنيا",
+            "en": "Minya"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "minya"
+            }
+          }
+        },
+        {
+          "id": "assiut",
+          "label": {
+            "ar": "أسيوط",
+            "en": "Assiut"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "assiut"
+            }
+          }
+        },
+        {
+          "id": "sohag",
+          "label": {
+            "ar": "سوهاج",
+            "en": "Sohag"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "sohag"
+            }
+          }
+        },
+        {
+          "id": "qena",
+          "label": {
+            "ar": "قنا",
+            "en": "Qena"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "qena"
+            }
+          }
+        },
+        {
+          "id": "luxor",
+          "label": {
+            "ar": "الأقصر",
+            "en": "Luxor"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "luxor"
+            }
+          }
+        },
+        {
+          "id": "aswan",
+          "label": {
+            "ar": "أسوان",
+            "en": "Aswan"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "aswan"
+            }
+          }
+        },
+        {
+          "id": "red_sea",
+          "label": {
+            "ar": "البحر الأحمر",
+            "en": "Red Sea"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "red_sea"
+            }
+          }
+        },
+        {
+          "id": "south_sinai",
+          "label": {
+            "ar": "جنوب سينا",
+            "en": "South Sinai"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "south_sinai"
+            }
+          }
+        },
+        {
+          "id": "other",
+          "label": {
+            "ar": "محافظة تانية",
+            "en": "Another governorate"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "other"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "cod",
+      "group": "logistics",
+      "manual": true,
+      "default": "no",
+      "factors": [
+        "cod"
+      ],
+      "note": "Never asked; set from text or 'Add a detail'. 'only' is a must, 'prefer' is relaxable.",
+      "label": {
+        "ar": "الدفع عند الاستلام",
+        "en": "Cash on delivery"
+      },
+      "question": {
+        "ar": "عايز تدفع عند الاستلام؟",
+        "en": "Do you want to pay on delivery?"
+      },
+      "options": [
+        {
+          "id": "must",
+          "label": {
+            "ar": "أيوه، بس كده",
+            "en": "Yes, only that"
+          },
+          "effects": {
+            "set": {
+              "logistics.cod": "must"
+            }
+          }
+        },
+        {
+          "id": "prefer",
+          "label": {
+            "ar": "يفضّل",
+            "en": "Preferably"
+          },
+          "effects": {
+            "set": {
+              "logistics.cod": "prefer"
+            }
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Does not matter"
+          },
+          "effects": {
+            "set": {
+              "logistics.cod": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "shops",
+      "group": "preferences",
+      "manual": true,
+      "factors": [
+        "retailer_trust_returns"
+      ],
+      "valueShape": "shops",
+      "optionsSource": "retailers",
+      "note": "Value is {prefer: [retailerId], avoid: [retailerId]}. Avoided shops are dropped; preferred shops are a prefer-filter M6 can relax.",
+      "label": {
+        "ar": "محلات بتفضّلها أو مش عايزها",
+        "en": "Shops you like or avoid"
+      },
+      "question": {
+        "ar": "في محلات بتفضّلها أو مش عايز تشتري منها؟",
+        "en": "Any shops you prefer or want to avoid?"
+      },
+      "options": []
+    },
+    {
+      "id": "brand",
+      "group": "preferences",
+      "tiebreak": true,
+      "multi": true,
+      "factors": [
+        "brand_status",
+        "brand_reputation"
+      ],
+      "note": "Asked only on a near tie (top 2 from different brands, under 3 points apart). Each liked brand gets a +5 score bonus.",
+      "optionsSource": "products.brand",
+      "label": {
+        "ar": "البراند",
+        "en": "Brand"
+      },
+      "question": {
+        "ar": "الترشيحات قريبة جداً من بعض. تفضّل براند معين؟",
+        "en": "The picks are very close. Do you prefer a brand?"
+      },
+      "options": [
+        {
+          "id": "samsung",
+          "label": {
+            "ar": "سامسونج",
+            "en": "Samsung"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Samsung"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "lg",
+          "label": {
+            "ar": "إل جي",
+            "en": "LG"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "LG"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "sony",
+          "label": {
+            "ar": "سوني",
+            "en": "Sony"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Sony"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "tcl",
+          "label": {
+            "ar": "تي سي إل",
+            "en": "TCL"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "TCL"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "hisense",
+          "label": {
+            "ar": "هايسنس",
+            "en": "Hisense"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Hisense"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "xiaomi",
+          "label": {
+            "ar": "شاومي",
+            "en": "Xiaomi"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Xiaomi"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "toshiba",
+          "label": {
+            "ar": "توشيبا",
+            "en": "Toshiba"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Toshiba"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "sharp",
+          "label": {
+            "ar": "شارب",
+            "en": "Sharp"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Sharp"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "tornado",
+          "label": {
+            "ar": "تورنيدو",
+            "en": "Tornado"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Tornado"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "brandAvoid",
+      "group": "preferences",
+      "manual": true,
+      "multi": true,
+      "factors": [
+        "brand_status"
+      ],
+      "note": "Brands the buyer avoids become a prefer-filter (relaxable), not a must.",
+      "optionsSource": "products.brand",
+      "label": {
+        "ar": "براند مش عايزه",
+        "en": "Brand to avoid"
+      },
+      "question": {
+        "ar": "في براند مش عايزه؟",
+        "en": "Any brand you want to avoid?"
+      },
+      "options": [
+        {
+          "id": "samsung",
+          "label": {
+            "ar": "سامسونج",
+            "en": "Samsung"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Samsung"
+                ],
+                "why": {
+                  "ar": "مش عايز سامسونج",
+                  "en": "You avoid Samsung"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "lg",
+          "label": {
+            "ar": "إل جي",
+            "en": "LG"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "LG"
+                ],
+                "why": {
+                  "ar": "مش عايز إل جي",
+                  "en": "You avoid LG"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "sony",
+          "label": {
+            "ar": "سوني",
+            "en": "Sony"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Sony"
+                ],
+                "why": {
+                  "ar": "مش عايز سوني",
+                  "en": "You avoid Sony"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "tcl",
+          "label": {
+            "ar": "تي سي إل",
+            "en": "TCL"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "TCL"
+                ],
+                "why": {
+                  "ar": "مش عايز تي سي إل",
+                  "en": "You avoid TCL"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "hisense",
+          "label": {
+            "ar": "هايسنس",
+            "en": "Hisense"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Hisense"
+                ],
+                "why": {
+                  "ar": "مش عايز هايسنس",
+                  "en": "You avoid Hisense"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "xiaomi",
+          "label": {
+            "ar": "شاومي",
+            "en": "Xiaomi"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Xiaomi"
+                ],
+                "why": {
+                  "ar": "مش عايز شاومي",
+                  "en": "You avoid Xiaomi"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "toshiba",
+          "label": {
+            "ar": "توشيبا",
+            "en": "Toshiba"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Toshiba"
+                ],
+                "why": {
+                  "ar": "مش عايز توشيبا",
+                  "en": "You avoid Toshiba"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "sharp",
+          "label": {
+            "ar": "شارب",
+            "en": "Sharp"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Sharp"
+                ],
+                "why": {
+                  "ar": "مش عايز شارب",
+                  "en": "You avoid Sharp"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "tornado",
+          "label": {
+            "ar": "تورنيدو",
+            "en": "Tornado"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Tornado"
+                ],
+                "why": {
+                  "ar": "مش عايز تورنيدو",
+                  "en": "You avoid Tornado"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "modelInMind",
+      "group": "preferences",
+      "manual": true,
+      "factors": [
+        "model_in_mind"
+      ],
+      "valueShape": "product",
+      "optionsSource": "products",
+      "note": "Value is a product id (preferred) or a model name; Layer 2 matches id, name or alias, case-insensitive, and gives a verdict.",
+      "label": {
+        "ar": "موديل في دماغك",
+        "en": "Model in mind"
+      },
+      "question": {
+        "ar": "في موديل معين في دماغك؟",
+        "en": "Do you have a model in mind?"
+      },
+      "options": []
+    }
+  ],
+  "derive": [
+    {
+      "id": "maxPrice",
+      "type": "max_price",
+      "target": "derived.maxPrice",
+      "note": "Rough max price the buyer can reach: cash budget, or down + the most a monthly cap can finance under the reference plans. Used by checks and askIf only.",
+      "refPlans": [
+        {
+          "kind": "card",
+          "months": 12,
+          "monthlyRate": 0,
+          "adminShare": 0.05
+        },
+        {
+          "kind": "finance",
+          "months": 18,
+          "monthlyRate": 0.02,
+          "adminShare": 0
+        },
+        {
+          "kind": "finance",
+          "months": 24,
+          "monthlyRate": 0.02,
+          "adminShare": 0
+        },
+        {
+          "kind": "finance",
+          "months": 36,
+          "monthlyRate": 0.02,
+          "adminShare": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "big_room_low_budget",
+      "when": {
+        "all": [
+          {
+            "slot": "room",
+            "in": [
+              "xlarge"
+            ]
+          },
+          {
+            "path": "derived.maxPrice",
+            "lte": 25000
+          }
+        ]
+      },
+      "message": {
+        "ar": "شاشات 65 بوصة وأكبر في الكتالوج ده بتبدأ فوق الميزانية دي تقريباً.",
+        "en": "In this catalog 65-inch and larger TVs start around or above this budget."
+      }
+    },
+    {
+      "id": "next_gen_gaming_low_budget",
+      "when": {
+        "all": [
+          {
+            "slot": "console",
+            "in": [
+              "next_gen"
+            ]
+          },
+          {
+            "path": "derived.maxPrice",
+            "lt": 30000
+          }
+        ]
+      },
+      "message": {
+        "ar": "شاشات HDMI 2.1 و 120 هرتز بتبدأ من حوالي 33,000 في الكتالوج ده.",
+        "en": "HDMI 2.1 / 120 Hz TVs start around 33,000 in this catalog."
+      }
+    },
+    {
+      "id": "oled_bright_room",
+      "when": {
+        "all": [
+          {
+            "slot": "panel",
+            "in": [
+              "oled"
+            ]
+          },
+          {
+            "slot": "light",
+            "in": [
+              "bright"
+            ]
+          }
+        ]
+      },
+      "message": {
+        "ar": "الـ OLED صورته ممتازة بس سطوعه أقل؛ في أوضة منورة جداً الـ Mini LED بيبان أحسن.",
+        "en": "OLED has superb contrast but less brightness; in a very bright room Mini LED often looks better."
+      }
+    },
+    {
+      "id": "sports_low_budget",
+      "when": {
+        "all": [
+          {
+            "slot": "use",
+            "in": [
+              "sports"
+            ]
+          },
+          {
+            "path": "derived.maxPrice",
+            "lte": 15000
+          }
+        ]
+      },
+      "message": {
+        "ar": "الشاشات 100/120 هرتز اللي بتخلي الكورة ناعمة بتبدأ من الفئة المتوسطة.",
+        "en": "The 100/120 Hz panels that make football smoother start in the mid tier."
+      }
+    }
+  ],
+  "runningCost": {
+    "type": "attr",
+    "attr": "power_kwh_year",
+    "factor": 2,
+    "note": "Yearly electricity = kWh/year x 2 EGP/kWh (assumed average household tariff; review against current EEHC tiers).",
+    "reason": {
+      "ar": "استهلاك كهربا التلفزيون في السنة",
+      "en": "Yearly electricity use of the TV"
+    }
+  },
+  "resale": null,
+  "installCost": 0,
+  "season": {
+    "saleEvents": [
+      {
+        "id": "white_friday",
+        "rule": "last_friday_of_november",
+        "windowWeeks": [
+          1,
+          10
+        ],
+        "savingShare": [
+          0.1,
+          0.2
+        ],
+        "label": {
+          "ar": "الوايت فرايداي",
+          "en": "White Friday"
+        },
+        "note": "Expected 10-20% saving is an assumption from past seasons."
+      }
+    ],
+    "monthAdvice": []
+  },
+  "factors": [
+    {
+      "id": "main_use_intensity",
+      "group": "need",
+      "name": "Main use (series, sports, gaming, kids, channels)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "use"
+        },
+        {
+          "slot": "console"
+        }
+      ]
+    },
+    {
+      "id": "who_for",
+      "group": "need",
+      "name": "Who it is for",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "who"
+        }
+      ]
+    },
+    {
+      "id": "current_device_problem",
+      "group": "need",
+      "name": "Problem with the current TV",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "pain"
+        }
+      ]
+    },
+    {
+      "id": "viewing_distance",
+      "group": "need",
+      "name": "Room size and viewing distance (screen size fit)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "room"
+        },
+        {
+          "attribute": "screen_inches"
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "group": "need",
+      "name": "Room light (sun, windows, dark room)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "light"
+        },
+        {
+          "attribute": "brightness_nits"
+        }
+      ]
+    },
+    {
+      "id": "picture_quality",
+      "group": "need",
+      "name": "Picture quality and panel type",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "picture"
+        },
+        {
+          "slot": "panel"
+        },
+        {
+          "slot": "use"
+        }
+      ]
+    },
+    {
+      "id": "motion_sports",
+      "group": "need",
+      "name": "Smooth motion for football (refresh rate)",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "motion_hz"
+        },
+        {
+          "slot": "use"
+        },
+        {
+          "slot": "pain"
+        }
+      ]
+    },
+    {
+      "id": "sound_quality",
+      "group": "need",
+      "name": "Built-in sound",
+      "status": "partial",
+      "via": [
+        {
+          "attribute": "sound"
+        },
+        {
+          "slot": "pain"
+        }
+      ],
+      "reason": "No soundbar question; sound is a 1-10 editorial score."
+    },
+    {
+      "id": "smart_platform",
+      "group": "need",
+      "name": "Smart system and apps (Netflix, Shahid, YouTube)",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "smart"
+        },
+        {
+          "slot": "os"
+        },
+        {
+          "slot": "use"
+        }
+      ]
+    },
+    {
+      "id": "gaming_features",
+      "group": "need",
+      "name": "Console gaming features (HDMI 2.1, VRR, 120 Hz)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "console"
+        },
+        {
+          "attribute": "hdmi21"
+        },
+        {
+          "attribute": "gaming"
+        }
+      ]
+    },
+    {
+      "id": "cash_price",
+      "group": "money",
+      "name": "Cash price",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "price_egp"
+        },
+        {
+          "slot": "budget"
+        }
+      ]
+    },
+    {
+      "id": "payment_way",
+      "group": "money",
+      "name": "Payment way: cash, card, finance company",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "pay"
+        },
+        {
+          "slot": "provider"
+        }
+      ]
+    },
+    {
+      "id": "budget_monthly_down",
+      "group": "money",
+      "name": "Budget, monthly cap and down payment",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "budget"
+        },
+        {
+          "slot": "monthlyCap"
+        },
+        {
+          "slot": "down"
+        }
+      ]
+    },
+    {
+      "id": "installment_cost",
+      "group": "money",
+      "name": "Real installment cost per retailer",
+      "status": "covered",
+      "via": [
+        {
+          "planField": "monthly_rate"
+        },
+        {
+          "planField": "admin_share"
+        },
+        {
+          "slot": "provider"
+        }
+      ]
+    },
+    {
+      "id": "running_cost",
+      "group": "money",
+      "name": "Running cost (electricity)",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "power_kwh_year"
+        },
+        {
+          "configKey": "runningCost"
+        }
+      ]
+    },
+    {
+      "id": "timing_sales",
+      "group": "money",
+      "name": "Timing: White Friday, promo end",
+      "status": "covered",
+      "via": [
+        {
+          "configKey": "season"
+        },
+        {
+          "planField": "valid_until"
+        },
+        {
+          "slot": "urgentDays"
+        }
+      ]
+    },
+    {
+      "id": "timing_launch_currency",
+      "group": "money",
+      "name": "Timing: new model year, currency moves, big football tournaments",
+      "status": "not_yet",
+      "reason": "Needs a launch calendar and price history."
+    },
+    {
+      "id": "retailer_price",
+      "group": "offer",
+      "name": "Price at each retailer",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "price_egp"
+        }
+      ]
+    },
+    {
+      "id": "gifts",
+      "group": "offer",
+      "name": "Gifts: free installation, extra warranty, cashback, soundbar bundles",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "extras"
+        }
+      ]
+    },
+    {
+      "id": "official_vs_import",
+      "group": "offer",
+      "name": "Official vs imported",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "acceptImports"
+        },
+        {
+          "offerField": "official"
+        }
+      ]
+    },
+    {
+      "id": "retailer_trust_returns",
+      "group": "offer",
+      "name": "Retailer trust and returns",
+      "status": "covered",
+      "via": [
+        {
+          "retailerField": "trust"
+        },
+        {
+          "retailerField": "return_days"
+        },
+        {
+          "slot": "shops"
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "group": "offer",
+      "name": "Stock",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "in_stock"
+        }
+      ]
+    },
+    {
+      "id": "delivery_time_fee",
+      "group": "offer",
+      "name": "Delivery time and fee (bulky item)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "urgentDays"
+        },
+        {
+          "slot": "city"
+        },
+        {
+          "offerField": "delivery"
+        }
+      ]
+    },
+    {
+      "id": "cod",
+      "group": "offer",
+      "name": "Cash on delivery available",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "cod"
+        },
+        {
+          "retailerField": "cod"
+        }
+      ]
+    },
+    {
+      "id": "branch_pickup",
+      "group": "offer",
+      "name": "Pickup from a nearby branch",
+      "status": "not_yet",
+      "reason": "Needs branch stock by city."
+    },
+    {
+      "id": "wall_mount_install",
+      "group": "offer",
+      "name": "Wall mounting: bracket, installation service and its wait",
+      "status": "partial",
+      "via": [
+        {
+          "slot": "wallMount"
+        },
+        {
+          "attribute": "bracket_included"
+        },
+        {
+          "offerField": "extras"
+        }
+      ],
+      "reason": "Bracket in the box is scored; a free-installation extra shows as a perk. Installation charge per buyer and installer wait/quality are not modelled."
+    },
+    {
+      "id": "warranty_length",
+      "group": "after_sales",
+      "name": "Warranty length",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "warranty_months"
+        },
+        {
+          "offerField": "extras"
+        }
+      ]
+    },
+    {
+      "id": "service_network",
+      "group": "after_sales",
+      "name": "Service network strength in Egypt",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "service"
+        }
+      ]
+    },
+    {
+      "id": "spare_parts",
+      "group": "after_sales",
+      "name": "Spare parts (a panel replacement can cost most of the TV)",
+      "status": "not_yet",
+      "reason": "Not in the catalog yet."
+    },
+    {
+      "id": "brand_reputation",
+      "group": "trust",
+      "name": "Brand reputation",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "service"
+        },
+        {
+          "slot": "brand"
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "group": "trust",
+      "name": "Reviews and real user experience",
+      "status": "not_yet",
+      "reason": "Not collected yet."
+    },
+    {
+      "id": "known_defects",
+      "group": "trust",
+      "name": "Known model defects (backlight bleed, OLED burn-in)",
+      "status": "not_yet",
+      "reason": "Planned as expert-curated warnings per model."
+    },
+    {
+      "id": "fakes_used",
+      "group": "trust",
+      "name": "Fear of refurbished or open-box sold as new",
+      "status": "partial",
+      "via": [
+        {
+          "retailerField": "trust"
+        }
+      ],
+      "reason": "Covered only through retailer trust."
+    },
+    {
+      "id": "brand_status",
+      "group": "social",
+      "name": "Brand as status",
+      "status": "partial",
+      "via": [
+        {
+          "slot": "brand"
+        },
+        {
+          "slot": "brandAvoid"
+        }
+      ]
+    },
+    {
+      "id": "family_opinion",
+      "group": "social",
+      "name": "Family, friends and Facebook group opinion",
+      "status": "out_of_scope",
+      "reason": "Out of scope; a shareable result link helps."
+    },
+    {
+      "id": "model_in_mind",
+      "group": "social",
+      "name": "Model already in mind",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "modelInMind"
+        }
+      ]
+    },
+    {
+      "id": "look_colour",
+      "group": "social",
+      "name": "Look and design (thin bezels, stand)",
+      "status": "not_yet",
+      "reason": "Design is not scored yet."
+    },
+    {
+      "id": "urgency",
+      "group": "social",
+      "name": "Urgency (e.g. before a match or Ramadan)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "urgentDays"
+        }
+      ]
+    },
+    {
+      "id": "time_limited_offer",
+      "group": "last_mile",
+      "name": "Time-limited offer",
+      "status": "covered",
+      "via": [
+        {
+          "planField": "valid_until"
+        }
+      ]
+    },
+    {
+      "id": "trade_in",
+      "group": "last_mile",
+      "name": "Trade-in of the old TV",
+      "status": "not_yet",
+      "reason": "Not modelled."
+    }
+  ]
+}

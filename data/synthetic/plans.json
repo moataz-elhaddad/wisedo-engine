@@ -1,0 +1,404 @@
+[
+  {
+    "id": "nile-nilebank-card",
+    "tenant_id": "wisedo",
+    "provider": "nilebank",
+    "provider_name": "Nile Bank",
+    "kind": "card",
+    "months": [
+      6,
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0.05,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "nile",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "nile-sahla-promo",
+    "tenant_id": "wisedo",
+    "provider": "sahla",
+    "provider_name": "Sahla Finance",
+    "kind": "finance",
+    "months": [
+      6
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": true,
+    "valid_until": "2026-10-12",
+    "retailer_id": "nile",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "nile-sahla",
+    "tenant_id": "wisedo",
+    "provider": "sahla",
+    "provider_name": "Sahla Finance",
+    "kind": "finance",
+    "months": [
+      12,
+      18,
+      24,
+      36
+    ],
+    "monthly_rate": 0.02,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "nile",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "nile-qest",
+    "tenant_id": "wisedo",
+    "provider": "qest",
+    "provider_name": "Qest Pay",
+    "kind": "finance",
+    "months": [
+      12,
+      24
+    ],
+    "monthly_rate": 0.019,
+    "admin_share": 0.02,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "nile",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "pharos-horus-card-6",
+    "tenant_id": "wisedo",
+    "provider": "horusbank",
+    "provider_name": "Horus Bank",
+    "kind": "card",
+    "months": [
+      6
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0.07,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "pharos",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "pharos-horus-card-12",
+    "tenant_id": "wisedo",
+    "provider": "horusbank",
+    "provider_name": "Horus Bank",
+    "kind": "card",
+    "months": [
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0.12,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "pharos",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "pharos-horus-samsung",
+    "tenant_id": "wisedo",
+    "provider": "horusbank",
+    "provider_name": "Horus Bank",
+    "kind": "card",
+    "months": [
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": true,
+    "valid_until": "2026-11-30",
+    "retailer_id": "pharos",
+    "product_override": [
+      "samsung-a06",
+      "samsung-a16",
+      "samsung-a26",
+      "samsung-a36",
+      "samsung-a56",
+      "samsung-s25-fe",
+      "samsung-s25",
+      "samsung-s25-ultra"
+    ],
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "pharos-qest",
+    "tenant_id": "wisedo",
+    "provider": "qest",
+    "provider_name": "Qest Pay",
+    "kind": "finance",
+    "months": [
+      12,
+      18,
+      24
+    ],
+    "monthly_rate": 0.022,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "pharos",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "lotus-nilebank-card",
+    "tenant_id": "wisedo",
+    "provider": "nilebank",
+    "provider_name": "Nile Bank",
+    "kind": "card",
+    "months": [
+      6,
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0.06,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "lotus",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "lotus-sahla",
+    "tenant_id": "wisedo",
+    "provider": "sahla",
+    "provider_name": "Sahla Finance",
+    "kind": "finance",
+    "months": [
+      12,
+      24
+    ],
+    "monthly_rate": 0.022,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "lotus",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "oasis-horus-card",
+    "tenant_id": "wisedo",
+    "provider": "horusbank",
+    "provider_name": "Horus Bank",
+    "kind": "card",
+    "months": [
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0.05,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "oasis",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "oasis-sahla-promo",
+    "tenant_id": "wisedo",
+    "provider": "sahla",
+    "provider_name": "Sahla Finance",
+    "kind": "finance",
+    "months": [
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": true,
+    "valid_until": "2026-12-31",
+    "retailer_id": "oasis",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "oasis-horus-promo-18",
+    "tenant_id": "wisedo",
+    "provider": "horusbank",
+    "provider_name": "Horus Bank",
+    "kind": "card",
+    "months": [
+      18
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": true,
+    "valid_until": "2026-09-30",
+    "retailer_id": "oasis",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "oasis-sahla",
+    "tenant_id": "wisedo",
+    "provider": "sahla",
+    "provider_name": "Sahla Finance",
+    "kind": "finance",
+    "months": [
+      24
+    ],
+    "monthly_rate": 0.02,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "oasis",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "delta-qest",
+    "tenant_id": "wisedo",
+    "provider": "qest",
+    "provider_name": "Qest Pay",
+    "kind": "finance",
+    "months": [
+      12,
+      24
+    ],
+    "monthly_rate": 0.023,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "delta",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "delta-sahla",
+    "tenant_id": "wisedo",
+    "provider": "sahla",
+    "provider_name": "Sahla Finance",
+    "kind": "finance",
+    "months": [
+      12,
+      24
+    ],
+    "monthly_rate": 0.02,
+    "admin_share": 0,
+    "min_down_share": 0.2,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "delta",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "khan-store",
+    "tenant_id": "wisedo",
+    "provider": "khanstore",
+    "provider_name": "Khan store installments",
+    "kind": "finance",
+    "months": [
+      6,
+      12
+    ],
+    "monthly_rate": 0.03,
+    "admin_share": 0,
+    "min_down_share": 0.3,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "khan",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "sphinx-nilebank",
+    "tenant_id": "wisedo",
+    "provider": "nilebank",
+    "provider_name": "Nile Bank",
+    "kind": "card",
+    "months": [
+      12
+    ],
+    "monthly_rate": 0,
+    "admin_share": 0.05,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "sphinx",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "sphinx-qest",
+    "tenant_id": "wisedo",
+    "provider": "qest",
+    "provider_name": "Qest Pay",
+    "kind": "finance",
+    "months": [
+      12,
+      24
+    ],
+    "monthly_rate": 0.02,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "sphinx",
+    "product_override": null,
+    "checked_at": "2026-09-28T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "sphinx-qest-18",
+    "tenant_id": "wisedo",
+    "provider": "qest",
+    "provider_name": "Qest Pay",
+    "kind": "finance",
+    "months": [
+      18
+    ],
+    "monthly_rate": 0.018,
+    "admin_share": 0,
+    "min_down_share": 0,
+    "promo": false,
+    "valid_until": null,
+    "retailer_id": "sphinx",
+    "product_override": null,
+    "checked_at": "2026-08-24T12:00:00.000Z",
+    "source": "synthetic"
+  }
+]

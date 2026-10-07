@@ -1,0 +1,40 @@
+{
+  "snapshot_id": "synthetic-tv-2026-10-03",
+  "tenant_id": "wisedo",
+  "category": "tv",
+  "now": "2026-10-03T12:00:00.000Z",
+  "seed": 20261004,
+  "source": "synthetic",
+  "note": "SAMPLE DATA. Every record is synthetic: prices, specs, offers and gifts are invented and must not be presented as real. Retailers and plans are the shared data/synthetic/{retailers,plans}.json.",
+  "counts": {
+    "products": 36,
+    "offers": 136,
+    "brands": 9
+  },
+  "edgeCases": {
+    "missingSpec": {
+      "product": "tv-xiaomi-q2-55",
+      "attr": "brightness_nits"
+    },
+    "allOffersStale": "tv-sharp-32-smart",
+    "noOffers": "tv-sony-75-x85l",
+    "specsStale": "tv-hisense-43-a6 (checked_at 70 days ago: not ranked)",
+    "outOfStock": [
+      "o-tv-lg-55-ut80-lotus"
+    ],
+    "staleOffers": [
+      "o-tv-samsung-43-cu7000-pharos"
+    ],
+    "staleExtras": [
+      "o-tv-tornado-55-qled-sphinx"
+    ],
+    "importOffers": "every offer from khan (official: false; Samsung, LG, Sony, Xiaomi only)",
+    "installExtras": "nile offers on TVs of 25,000+ carry a free wall-mounting install extra",
+    "zoneGaps": [
+      "delta: no alexandria",
+      "khan: greater_cairo only",
+      "sphinx: no other governorates"
+    ],
+    "sharedPlans": "plans are the shared data/synthetic/plans.json rows (promo ending, expired promo, stale plan, min-down plans apply here too; pharos-horus-samsung is limited to Samsung phones, so it never applies to TVs)"
+  }
+}

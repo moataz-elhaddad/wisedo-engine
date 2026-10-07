@@ -1,0 +1,3833 @@
+[
+  {
+    "id": "o-tv-tornado-32-hd-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-32-hd",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tornado-32-hd",
+    "price_egp": 7850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 393,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-32-hd-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-32-hd",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-tornado-32-hd",
+    "price_egp": 7750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-32-hd-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-32-hd",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tornado-32-hd",
+    "price_egp": 8100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-32-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-32",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-xiaomi-a-32",
+    "price_egp": 8550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-32-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-32",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-xiaomi-a-32",
+    "price_egp": 8700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-32-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-32",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-xiaomi-a-32",
+    "price_egp": 8750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sharp-32-smart-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sharp-32-smart",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-sharp-32-smart",
+    "price_egp": 9400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sharp-32-smart-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sharp-32-smart",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-sharp-32-smart",
+    "price_egp": 9350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sharp-32-smart-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sharp-32-smart",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-sharp-32-smart",
+    "price_egp": 9150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 458,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-32-t5300-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-32-t5300",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-samsung-32-t5300",
+    "price_egp": 11000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-32-t5300-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-32-t5300",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-samsung-32-t5300",
+    "price_egp": 10800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-32-t5300-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-32-t5300",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-samsung-32-t5300",
+    "price_egp": 10650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-32-t5300-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-32-t5300",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-samsung-32-t5300",
+    "price_egp": 10250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T09:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-32-lq63-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-32-lq63",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-lg-32-lq63",
+    "price_egp": 11300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-32-lq63-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-32-lq63",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-lg-32-lq63",
+    "price_egp": 11650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-32-lq63-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-32-lq63",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-lg-32-lq63",
+    "price_egp": 11400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-03T09:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-32-lq63-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-32-lq63",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-lg-32-lq63",
+    "price_egp": 11300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 565,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T22:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-32-lq63-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-32-lq63",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-lg-32-lq63",
+    "price_egp": 11500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-40-s5400-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-40-s5400",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-tcl-40-s5400",
+    "price_egp": 11300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-40-s5400-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-40-s5400",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tcl-40-s5400",
+    "price_egp": 11500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-40-s5400-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-40-s5400",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tcl-40-s5400",
+    "price_egp": 11400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 570,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T17:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-40-s5400-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-40-s5400",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-tcl-40-s5400",
+    "price_egp": 11400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-03T10:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-43-a6-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-43-a6",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-hisense-43-a6",
+    "price_egp": 12950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-03T06:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-43-a6-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-43-a6",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-hisense-43-a6",
+    "price_egp": 12650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 633,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T02:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-43-a6-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-43-a6",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-hisense-43-a6",
+    "price_egp": 13300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-43-a6-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-43-a6",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-hisense-43-a6",
+    "price_egp": 13000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-43-4k-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-43-4k",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tornado-43-4k",
+    "price_egp": 13750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-43-4k-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-43-4k",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-tornado-43-4k",
+    "price_egp": 13000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-43-4k-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-43-4k",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-tornado-43-4k",
+    "price_egp": 13650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-02T16:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-43-4k-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-43-4k",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tornado-43-4k",
+    "price_egp": 13100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 655,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T03:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-43-4k-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-43-4k",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-tornado-43-4k",
+    "price_egp": 13350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-43-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-43",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-xiaomi-a-43",
+    "price_egp": 13550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 678,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-43-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-43",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-xiaomi-a-43",
+    "price_egp": 13900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-02T17:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-43-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-43",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-xiaomi-a-43",
+    "price_egp": 13700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-43-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-43",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-xiaomi-a-43",
+    "price_egp": 14000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-43-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-43",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-xiaomi-a-43",
+    "price_egp": 12900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T19:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-43-ur78-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-43-ur78",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-lg-43-ur78",
+    "price_egp": 16600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-03T04:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-43-ur78-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-43-ur78",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-lg-43-ur78",
+    "price_egp": 17500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-43-ur78-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-43-ur78",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-lg-43-ur78",
+    "price_egp": 16850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-43-ur78-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-43-ur78",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-lg-43-ur78",
+    "price_egp": 16500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-43-ur78-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-43-ur78",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-lg-43-ur78",
+    "price_egp": 15550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T21:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-43-cu7000-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-43-cu7000",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-samsung-43-cu7000",
+    "price_egp": 17500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-43-cu7000-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-43-cu7000",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-samsung-43-cu7000",
+    "price_egp": 17250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-02T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-43-cu7000-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-43-cu7000",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-samsung-43-cu7000",
+    "price_egp": 17400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-toshiba-50-c350-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-toshiba-50-c350",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-toshiba-50-c350",
+    "price_egp": 17450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-toshiba-50-c350-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-toshiba-50-c350",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-toshiba-50-c350",
+    "price_egp": 17700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-toshiba-50-c350-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-toshiba-50-c350",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-toshiba-50-c350",
+    "price_egp": 18000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "HDMI cable and wall bracket",
+        "value_egp": 300
+      }
+    ],
+    "checked_at": "2026-10-02T18:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-toshiba-50-c350-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-toshiba-50-c350",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-toshiba-50-c350",
+    "price_egp": 17700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 885,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-50-p755-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-50-p755",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tcl-50-p755",
+    "price_egp": 18550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-50-p755-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-50-p755",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tcl-50-p755",
+    "price_egp": 17650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 883,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-01T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-50-p755-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-50-p755",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-tcl-50-p755",
+    "price_egp": 18250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-55-a7-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-55-a7",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-hisense-55-a7",
+    "price_egp": 20450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-55-a7-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-55-a7",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-hisense-55-a7",
+    "price_egp": 20900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-55-a7-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-55-a7",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-hisense-55-a7",
+    "price_egp": 20950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T21:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-50-du8000-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-50-du8000",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-samsung-50-du8000",
+    "price_egp": 22900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T16:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-50-du8000-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-50-du8000",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-samsung-50-du8000",
+    "price_egp": 22850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-50-du8000-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-50-du8000",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-samsung-50-du8000",
+    "price_egp": 21500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": false,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T10:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-50-du8000-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-50-du8000",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-samsung-50-du8000",
+    "price_egp": 21850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1093,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T02:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c655-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c655",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-tcl-55-c655",
+    "price_egp": 23450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c655-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c655",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-tcl-55-c655",
+    "price_egp": 23400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c655-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c655",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tcl-55-c655",
+    "price_egp": 23400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1170,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T03:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c655-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c655",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tcl-55-c655",
+    "price_egp": 23900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c655-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c655",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tcl-55-c655",
+    "price_egp": 23750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T18:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-q2-55-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-q2-55",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-xiaomi-q2-55",
+    "price_egp": 24350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-q2-55-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-q2-55",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-xiaomi-q2-55",
+    "price_egp": 24900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T09:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-q2-55-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-q2-55",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-xiaomi-q2-55",
+    "price_egp": 24150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1208,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T19:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-55-qled-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-55-qled",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tornado-55-qled",
+    "price_egp": 25400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T01:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tornado-55-qled-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-55-qled",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tornado-55-qled",
+    "price_egp": 25000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T02:00:00.000Z",
+    "source": "synthetic",
+    "extras_checked_at": "2026-09-29T08:00:00.000Z"
+  },
+  {
+    "id": "o-tv-tornado-55-qled-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tornado-55-qled",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-tornado-55-qled",
+    "price_egp": 24700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-ut80-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-ut80",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-lg-55-ut80",
+    "price_egp": 26750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-ut80-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-ut80",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-lg-55-ut80",
+    "price_egp": 26350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1318,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-ut80-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-ut80",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-lg-55-ut80",
+    "price_egp": 26950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-pro-65-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-pro-65",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-xiaomi-a-pro-65",
+    "price_egp": 28400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-pro-65-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-pro-65",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-xiaomi-a-pro-65",
+    "price_egp": 28850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-pro-65-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-pro-65",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-xiaomi-a-pro-65",
+    "price_egp": 29350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-xiaomi-a-pro-65-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-xiaomi-a-pro-65",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-xiaomi-a-pro-65",
+    "price_egp": 27200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T06:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-65-a7-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-65-a7",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-hisense-65-a7",
+    "price_egp": 30400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T18:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-65-a7-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-65-a7",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-hisense-65-a7",
+    "price_egp": 29400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-65-a7-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-65-a7",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-hisense-65-a7",
+    "price_egp": 29450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1473,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-65-a7-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-65-a7",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-hisense-65-a7",
+    "price_egp": 28950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-65-a7-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-65-a7",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-hisense-65-a7",
+    "price_egp": 29800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-q60d-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-q60d",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-samsung-55-q60d",
+    "price_egp": 32000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T06:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-q60d-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-q60d",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-samsung-55-q60d",
+    "price_egp": 29150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T22:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-q60d-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-q60d",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-samsung-55-q60d",
+    "price_egp": 31100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-q60d-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-q60d",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-samsung-55-q60d",
+    "price_egp": 31050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1553,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T22:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c755-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c755",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-tcl-55-c755",
+    "price_egp": 32150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c755-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c755",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tcl-55-c755",
+    "price_egp": 33500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T18:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c755-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c755",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tcl-55-c755",
+    "price_egp": 33050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T07:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-55-c755-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-55-c755",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-tcl-55-c755",
+    "price_egp": 32050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-55-x77l-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-55-x77l",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-sony-55-x77l",
+    "price_egp": 35400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T06:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-55-x77l-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-55-x77l",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-sony-55-x77l",
+    "price_egp": 35300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-55-x77l-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-55-x77l",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-sony-55-x77l",
+    "price_egp": 34800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1740,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-55-x77l-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-55-x77l",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-sony-55-x77l",
+    "price_egp": 36200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T20:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-65-du8000-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-65-du8000",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-samsung-65-du8000",
+    "price_egp": 32400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T01:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-65-du8000-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-65-du8000",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-samsung-65-du8000",
+    "price_egp": 35750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-65-du8000-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-65-du8000",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-samsung-65-du8000",
+    "price_egp": 35500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-qned80-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-qned80",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-lg-55-qned80",
+    "price_egp": 37550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T07:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-qned80-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-qned80",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-lg-55-qned80",
+    "price_egp": 37150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-qned80-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-qned80",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-lg-55-qned80",
+    "price_egp": 38850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T03:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-qned80-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-qned80",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-lg-55-qned80",
+    "price_egp": 36950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1848,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-65-c755-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-65-c755",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tcl-65-c755",
+    "price_egp": 42050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T09:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-65-c755-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-65-c755",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tcl-65-c755",
+    "price_egp": 41250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2063,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T16:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-65-c755-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-65-c755",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-tcl-65-c755",
+    "price_egp": 40950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-65-c755-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-65-c755",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tcl-65-c755",
+    "price_egp": 42350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T10:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-65-c755-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-65-c755",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-tcl-65-c755",
+    "price_egp": 41750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T05:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-75-du8000-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-75-du8000",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-samsung-75-du8000",
+    "price_egp": 52950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-75-du8000-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-75-du8000",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-samsung-75-du8000",
+    "price_egp": 50000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2500,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T10:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-75-du8000-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-75-du8000",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-samsung-75-du8000",
+    "price_egp": 51700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-75-du8000-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-75-du8000",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-samsung-75-du8000",
+    "price_egp": 51450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T05:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-75-du8000-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-75-du8000",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-samsung-75-du8000",
+    "price_egp": 51850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Soundbar",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T02:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-65-qned85-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-65-qned85",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-lg-65-qned85",
+    "price_egp": 54050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T10:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-65-qned85-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-65-qned85",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-lg-65-qned85",
+    "price_egp": 55100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-65-qned85-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-65-qned85",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-lg-65-qned85",
+    "price_egp": 53550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2678,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T01:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-75-u7-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-75-u7",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-hisense-75-u7",
+    "price_egp": 59600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-75-u7-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-75-u7",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-hisense-75-u7",
+    "price_egp": 58500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-hisense-75-u7-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-hisense-75-u7",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-hisense-75-u7",
+    "price_egp": 59250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 150,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2963,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T11:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-qn90d-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-qn90d",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-samsung-55-qn90d",
+    "price_egp": 61500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-qn90d-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-qn90d",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-samsung-55-qn90d",
+    "price_egp": 62550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-qn90d-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-qn90d",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-samsung-55-qn90d",
+    "price_egp": 62300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-55-qn90d-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-55-qn90d",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-samsung-55-qn90d",
+    "price_egp": 63300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T22:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-c4-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-c4",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-lg-55-c4",
+    "price_egp": 64400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-c4-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-c4",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-lg-55-c4",
+    "price_egp": 65900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T21:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-c4-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-c4",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-lg-55-c4",
+    "price_egp": 62600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T03:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-lg-55-c4-khan",
+    "tenant_id": "wisedo",
+    "product_id": "tv-lg-55-c4",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/tv-lg-55-c4",
+    "price_egp": 59800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-01T16:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-65-x90l-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-65-x90l",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tv-sony-65-x90l",
+    "price_egp": 68400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-65-x90l-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-65-x90l",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-sony-65-x90l",
+    "price_egp": 70650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-01T21:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-65-x90l-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-65-x90l",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-sony-65-x90l",
+    "price_egp": 68300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T05:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-sony-65-x90l-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-sony-65-x90l",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-sony-65-x90l",
+    "price_egp": 70850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-65-s90d-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-65-s90d",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-samsung-65-s90d",
+    "price_egp": 80500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-65-s90d-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-65-s90d",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-samsung-65-s90d",
+    "price_egp": 80900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-samsung-65-s90d-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-samsung-65-s90d",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-samsung-65-s90d",
+    "price_egp": 79350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T03:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-85-c755-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-85-c755",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tv-tcl-85-c755",
+    "price_egp": 89500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 75,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-85-c755-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-85-c755",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/tv-tcl-85-c755",
+    "price_egp": 86700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 150,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 4335,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T18:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-85-c755-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-85-c755",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tv-tcl-85-c755",
+    "price_egp": 87450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 150,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free wall mounting and installation",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T04:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-85-c755-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-85-c755",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tv-tcl-85-c755",
+    "price_egp": 87300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tv-tcl-85-c755-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "tv-tcl-85-c755",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/tv-tcl-85-c755",
+    "price_egp": 86700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T03:12:00.000Z",
+    "source": "synthetic"
+  }
+]

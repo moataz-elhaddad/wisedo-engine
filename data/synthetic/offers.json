@@ -1,0 +1,3660 @@
+[
+  {
+    "id": "o-samsung-a06-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a06",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/samsung-a06",
+    "price_egp": 5500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-03T01:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a06-nile",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a06",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/samsung-a06",
+    "price_egp": 5500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a06-delta",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a06",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/samsung-a06",
+    "price_egp": 5300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a06-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a06",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/samsung-a06",
+    "price_egp": 5400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 270,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-hmd-pulse-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "hmd-pulse-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/hmd-pulse-pro",
+    "price_egp": 6150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-hmd-pulse-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "hmd-pulse-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/hmd-pulse-pro",
+    "price_egp": 6050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-14c-nile",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-14c",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/xiaomi-redmi-14c",
+    "price_egp": 6550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-14c-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-14c",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/xiaomi-redmi-14c",
+    "price_egp": 6450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tecno-spark-30-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "tecno-spark-30",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/tecno-spark-30",
+    "price_egp": 6700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tecno-spark-30-delta",
+    "tenant_id": "wisedo",
+    "product_id": "tecno-spark-30",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/tecno-spark-30",
+    "price_egp": 6700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x6c-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x6c",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/honor-x6c",
+    "price_egp": 6750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T20:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x6c-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x6c",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/honor-x6c",
+    "price_egp": 6650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 333,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x6c-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x6c",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/honor-x6c",
+    "price_egp": 6750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x6c-delta",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x6c",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/honor-x6c",
+    "price_egp": 6750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T07:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x6c-nile",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x6c",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/honor-x6c",
+    "price_egp": 7000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-hot-50-nile",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-hot-50",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/infinix-hot-50",
+    "price_egp": 7050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-hot-50-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-hot-50",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/infinix-hot-50",
+    "price_egp": 6750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 338,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T17:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-hot-50-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-hot-50",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/infinix-hot-50",
+    "price_egp": 6900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-y19s-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-y19s",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/vivo-y19s",
+    "price_egp": 7400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-y19s-delta",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-y19s",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/vivo-y19s",
+    "price_egp": 7300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-y19s-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-y19s",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/vivo-y19s",
+    "price_egp": 7550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T19:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-g35-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-g35",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/motorola-g35",
+    "price_egp": 8150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-g35-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-g35",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/motorola-g35",
+    "price_egp": 7700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 385,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T21:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-c75-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "realme-c75",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/realme-c75",
+    "price_egp": 8200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 410,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-c75-nile",
+    "tenant_id": "wisedo",
+    "product_id": "realme-c75",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/realme-c75",
+    "price_egp": 8600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-c75-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "realme-c75",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/realme-c75",
+    "price_egp": 8500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-c75-delta",
+    "tenant_id": "wisedo",
+    "product_id": "realme-c75",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/realme-c75",
+    "price_egp": 8250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-c75-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "realme-c75",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/realme-c75",
+    "price_egp": 8400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-a3-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-a3",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/oppo-a3",
+    "price_egp": 8450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 423,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T16:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-a3-nile",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-a3",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/oppo-a3",
+    "price_egp": 8800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a16-nile",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a16",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/samsung-a16",
+    "price_egp": 9550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a16-delta",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a16",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/samsung-a16",
+    "price_egp": 9150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a16-khan",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a16",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/samsung-a16",
+    "price_egp": 8400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-note-40-nile",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-note-40",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/infinix-note-40",
+    "price_egp": 10150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-note-40-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-note-40",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/infinix-note-40",
+    "price_egp": 9700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-note-40-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-note-40",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/infinix-note-40",
+    "price_egp": 9800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-note-40-delta",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-note-40",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/infinix-note-40",
+    "price_egp": 9850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-note-14-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-note-14",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/xiaomi-redmi-note-14",
+    "price_egp": 10250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-note-14-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-note-14",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/xiaomi-redmi-note-14",
+    "price_egp": 10150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 508,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-note-14-delta",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-note-14",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/xiaomi-redmi-note-14",
+    "price_egp": 10250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-12-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "realme-12",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/realme-12",
+    "price_egp": 11350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-12-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "realme-12",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/realme-12",
+    "price_egp": 11500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-03T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tecno-camon-30-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "tecno-camon-30",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/tecno-camon-30",
+    "price_egp": 12800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T17:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-tecno-camon-30-nile",
+    "tenant_id": "wisedo",
+    "product_id": "tecno-camon-30",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/tecno-camon-30",
+    "price_egp": 13000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a26-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a26",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/samsung-a26",
+    "price_egp": 13450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a26-delta",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a26",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/samsung-a26",
+    "price_egp": 13300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a26-khan",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a26",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/samsung-a26",
+    "price_egp": 11850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-v40-lite-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-v40-lite",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/vivo-v40-lite",
+    "price_egp": 14100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T21:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-v40-lite-delta",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-v40-lite",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/vivo-v40-lite",
+    "price_egp": 14000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-gt-20-pro-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-gt-20-pro",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/infinix-gt-20-pro",
+    "price_egp": 14900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 745,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T04:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-gt-20-pro-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-gt-20-pro",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/infinix-gt-20-pro",
+    "price_egp": 15200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Wireless earphones",
+        "value_egp": 400
+      }
+    ],
+    "checked_at": "2026-10-03T07:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-gt-20-pro-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-gt-20-pro",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/infinix-gt-20-pro",
+    "price_egp": 15500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T18:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-gt-20-pro-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-gt-20-pro",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/infinix-gt-20-pro",
+    "price_egp": 15100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-infinix-gt-20-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "infinix-gt-20-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/infinix-gt-20-pro",
+    "price_egp": 15000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13f-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13f",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/oppo-reno-13f",
+    "price_egp": 16150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Wireless earphones",
+        "value_egp": 400
+      }
+    ],
+    "checked_at": "2026-10-02T19:48:00.000Z",
+    "source": "synthetic",
+    "extras_checked_at": "2026-09-29T08:00:00.000Z"
+  },
+  {
+    "id": "o-oppo-reno-13f-nile",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13f",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/oppo-reno-13f",
+    "price_egp": 16050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13f-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13f",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/oppo-reno-13f",
+    "price_egp": 15650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-note-14-pro-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-note-14-pro",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/xiaomi-redmi-note-14-pro",
+    "price_egp": 17000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Wireless earphones",
+        "value_egp": 400
+      }
+    ],
+    "checked_at": "2026-10-02T17:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-redmi-note-14-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-redmi-note-14-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/xiaomi-redmi-note-14-pro",
+    "price_egp": 16850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a36-nile",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a36",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/samsung-a36",
+    "price_egp": 18250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a36-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a36",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/samsung-a36",
+    "price_egp": 17700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 885,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T04:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a36-delta",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a36",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/samsung-a36",
+    "price_egp": 17600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a36-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a36",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/samsung-a36",
+    "price_egp": 18100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Wireless earphones",
+        "value_egp": 400
+      }
+    ],
+    "checked_at": "2026-10-03T09:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x9c-delta",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x9c",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/honor-x9c",
+    "price_egp": 17850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x9c-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x9c",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/honor-x9c",
+    "price_egp": 17650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 883,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T01:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-x9c-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "honor-x9c",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/honor-x9c",
+    "price_egp": 17800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-poco-x7-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "poco-x7-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/poco-x7-pro",
+    "price_egp": 19600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-poco-x7-pro-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "poco-x7-pro",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/poco-x7-pro",
+    "price_egp": 19300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T21:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-poco-x7-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "poco-x7-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/poco-x7-pro",
+    "price_egp": 19000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-14-pro-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "realme-14-pro",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/realme-14-pro",
+    "price_egp": 19750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Wireless earphones",
+        "value_egp": 400
+      }
+    ],
+    "checked_at": "2026-10-03T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-14-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "realme-14-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/realme-14-pro",
+    "price_egp": 19400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-14-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "realme-14-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/realme-14-pro",
+    "price_egp": 20200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-14-pro-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "realme-14-pro",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/realme-14-pro",
+    "price_egp": 19000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 950,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T08:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-realme-14-pro-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "realme-14-pro",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/realme-14-pro",
+    "price_egp": 19850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-edge-50-neo-delta",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-edge-50-neo",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/motorola-edge-50-neo",
+    "price_egp": 20500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-edge-50-neo-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-edge-50-neo",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/motorola-edge-50-neo",
+    "price_egp": 20300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1015,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T08:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-12-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-12",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/oppo-reno-12",
+    "price_egp": 21350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-03T08:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-12-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-12",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/oppo-reno-12",
+    "price_egp": 21350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-12-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-12",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/oppo-reno-12",
+    "price_egp": 20900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1045,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T23:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-12-delta",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-12",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/oppo-reno-12",
+    "price_egp": 21300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a56-delta",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a56",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/samsung-a56",
+    "price_egp": 22650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a56-khan",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a56",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/samsung-a56",
+    "price_egp": 20350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T05:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a56-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a56",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/samsung-a56",
+    "price_egp": 23100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Wireless earphones",
+        "value_egp": 400
+      }
+    ],
+    "checked_at": "2026-10-01T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-a56-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-a56",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/samsung-a56",
+    "price_egp": 22850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T22:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-14t-delta",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-14t",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/xiaomi-14t",
+    "price_egp": 24050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-14t-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-14t",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/xiaomi-14t",
+    "price_egp": 24150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-14t-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-14t",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/xiaomi-14t",
+    "price_egp": 23750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Case and screen protector",
+        "value_egp": 250
+      }
+    ],
+    "checked_at": "2026-10-02T00:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-14t-khan",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-14t",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/xiaomi-14t",
+    "price_egp": 21750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T10:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-13-nile",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-13",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/apple-iphone-13",
+    "price_egp": 32550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-13-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-13",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/apple-iphone-13",
+    "price_egp": 31950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-13-khan",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-13",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/apple-iphone-13",
+    "price_egp": 26000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T08:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-razr-50-nile",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-razr-50",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/motorola-razr-50",
+    "price_egp": 33350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-razr-50-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-razr-50",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/motorola-razr-50",
+    "price_egp": 32500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-razr-50-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-razr-50",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/motorola-razr-50",
+    "price_egp": 32150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1608,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-motorola-razr-50-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "motorola-razr-50",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/motorola-razr-50",
+    "price_egp": 32100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T06:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-fe-nile",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-fe",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/samsung-s25-fe",
+    "price_egp": 35000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-fe-delta",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-fe",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/samsung-s25-fe",
+    "price_egp": 34150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-fe-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-fe",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/samsung-s25-fe",
+    "price_egp": 34900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T10:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-fe-khan",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-fe",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/samsung-s25-fe",
+    "price_egp": 31450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T18:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-fe-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-fe",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/samsung-s25-fe",
+    "price_egp": 34050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13-pro-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13-pro",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/oppo-reno-13-pro",
+    "price_egp": 35750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T05:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13-pro-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13-pro",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/oppo-reno-13-pro",
+    "price_egp": 34900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1745,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T23:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13-pro-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13-pro",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/oppo-reno-13-pro",
+    "price_egp": 35350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/oppo-reno-13-pro",
+    "price_egp": 36100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-oppo-reno-13-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "oppo-reno-13-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/oppo-reno-13-pro",
+    "price_egp": 34900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T00:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-15-khan",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-15",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/apple-iphone-15",
+    "price_egp": 37500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T21:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/apple-iphone-15",
+    "price_egp": 45450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/apple-iphone-15",
+    "price_egp": 43800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T22:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/apple-iphone-15",
+    "price_egp": 44150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-x200-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-x200",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/vivo-x200",
+    "price_egp": 43350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2168,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T23:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-x200-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-x200",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/vivo-x200",
+    "price_egp": 44400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-vivo-x200-delta",
+    "tenant_id": "wisedo",
+    "product_id": "vivo-x200",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/vivo-x200",
+    "price_egp": 44350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/samsung-s25",
+    "price_egp": 46950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/samsung-s25",
+    "price_egp": 47350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T10:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-khan",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/samsung-s25",
+    "price_egp": 42800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-01T20:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/samsung-s25",
+    "price_egp": 48200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/xiaomi-15",
+    "price_egp": 51400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-xiaomi-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "xiaomi-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/xiaomi-15",
+    "price_egp": 51600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T09:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-nile",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/apple-iphone-16",
+    "price_egp": 54600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-delta",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/apple-iphone-16",
+    "price_egp": 53750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/apple-iphone-16",
+    "price_egp": 53550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2678,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/apple-iphone-16",
+    "price_egp": 53800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-magic-7-pro-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "honor-magic-7-pro",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/honor-magic-7-pro",
+    "price_egp": 58550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-honor-magic-7-pro-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "honor-magic-7-pro",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/honor-magic-7-pro",
+    "price_egp": 58400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-ultra-nile",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-ultra",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/samsung-s25-ultra",
+    "price_egp": 76700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-ultra-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-ultra",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/samsung-s25-ultra",
+    "price_egp": 75050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T17:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-ultra-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-ultra",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/samsung-s25-ultra",
+    "price_egp": 74600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T17:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-ultra-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-ultra",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/samsung-s25-ultra",
+    "price_egp": 73450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 3673,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T08:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-samsung-s25-ultra-khan",
+    "tenant_id": "wisedo",
+    "product_id": "samsung-s25-ultra",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/samsung-s25-ultra",
+    "price_egp": 66400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T10:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-pro-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16-pro",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/apple-iphone-16-pro",
+    "price_egp": 75700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 3785,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T19:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-pro-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16-pro",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/apple-iphone-16-pro",
+    "price_egp": 77800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/apple-iphone-16-pro",
+    "price_egp": 74950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/apple-iphone-16-pro",
+    "price_egp": 77400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-apple-iphone-16-pro-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "apple-iphone-16-pro",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/apple-iphone-16-pro",
+    "price_egp": 77450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:18:00.000Z",
+    "source": "synthetic"
+  }
+]

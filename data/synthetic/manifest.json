@@ -1,0 +1,46 @@
+{
+  "snapshot_id": "synthetic-mobile-2026-10-03",
+  "tenant_id": "wisedo",
+  "category": "mobile",
+  "now": "2026-10-03T12:00:00.000Z",
+  "seed": 20261003,
+  "source": "synthetic",
+  "note": "SAMPLE DATA. Every record is synthetic: prices, specs, retailers, banks and finance companies are invented and must not be presented as real.",
+  "counts": {
+    "products": 40,
+    "retailers": 7,
+    "offers": 134,
+    "plans": 20,
+    "brands": 11
+  },
+  "edgeCases": {
+    "missingSpec": {
+      "product": "tecno-camon-30",
+      "attr": "camera"
+    },
+    "allOffersStale": "hmd-pulse-pro",
+    "outOfStock": [
+      "o-samsung-a36-lotus"
+    ],
+    "staleOffers": [
+      "o-xiaomi-redmi-note-14-pharos"
+    ],
+    "staleExtras": [
+      "o-oppo-reno-13f-sphinx"
+    ],
+    "importOffers": "every offer from khan (official: false)",
+    "promoEndingSoon": "nile-sahla-promo (valid_until 2026-10-12)",
+    "expiredPromo": "oasis-horus-promo-18 (valid_until 2026-09-30)",
+    "stalePlan": "sphinx-qest-18 (checked 40 days ago)",
+    "minDownPlans": [
+      "khan-store (30%)",
+      "delta-sahla (20%)"
+    ],
+    "zoneGaps": [
+      "delta: no alexandria",
+      "khan: greater_cairo only",
+      "sphinx: no other governorates"
+    ],
+    "productOverridePlan": "pharos-horus-samsung (Samsung products only)"
+  }
+}

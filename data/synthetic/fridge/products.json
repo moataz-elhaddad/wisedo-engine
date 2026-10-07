@@ -1,0 +1,999 @@
+[
+  {
+    "id": "fridge-white-whale-ws-150",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "White Whale",
+    "name": "White Whale WS-150 Single Door 150L",
+    "ref_price_egp": 12000,
+    "popular": false,
+    "aliases": [
+      "ws-150",
+      "white whale 150"
+    ],
+    "attrs": {
+      "capacity_l": 150,
+      "energy_kwh_year": 230,
+      "cooling": 5,
+      "noise_db": 38,
+      "build": 4.5,
+      "service": 6,
+      "warranty_months": 24,
+      "inverter": false,
+      "no_frost": false,
+      "dispenser": false,
+      "width_cm": 55,
+      "layout": "single_door",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-kiriazi-e230",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Kiriazi",
+    "name": "Kiriazi E230 Defrost 230L",
+    "ref_price_egp": 12800,
+    "popular": false,
+    "aliases": [
+      "e230",
+      "kiriazi 230"
+    ],
+    "attrs": {
+      "capacity_l": 230,
+      "energy_kwh_year": 380,
+      "cooling": 5,
+      "noise_db": 42,
+      "build": 5,
+      "service": 7,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": false,
+      "dispenser": false,
+      "width_cm": 56,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-fresh-fnt-260",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Fresh",
+    "name": "Fresh FNT-260 Defrost 260L",
+    "ref_price_egp": 13800,
+    "popular": false,
+    "aliases": [
+      "fnt-260",
+      "fresh 260"
+    ],
+    "attrs": {
+      "capacity_l": 260,
+      "energy_kwh_year": 400,
+      "cooling": 5.5,
+      "noise_db": 41,
+      "build": 5,
+      "service": 7,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": false,
+      "dispenser": false,
+      "width_cm": 58,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-white-whale-wr-280",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "White Whale",
+    "name": "White Whale WR-280 No Frost 280L",
+    "ref_price_egp": 15500,
+    "popular": false,
+    "aliases": [
+      "wr-280"
+    ],
+    "attrs": {
+      "capacity_l": 280,
+      "energy_kwh_year": 390,
+      "cooling": 5.5,
+      "noise_db": 40,
+      "build": 5,
+      "service": 6,
+      "warranty_months": 36,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-zanussi-zrt-300",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Zanussi",
+    "name": "Zanussi ZRT-300 Defrost 300L",
+    "ref_price_egp": 16200,
+    "popular": false,
+    "aliases": [
+      "zrt-300"
+    ],
+    "attrs": {
+      "capacity_l": 300,
+      "energy_kwh_year": 410,
+      "cooling": 5.5,
+      "build": 5.5,
+      "service": 6,
+      "warranty_months": 36,
+      "inverter": false,
+      "no_frost": false,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-unionaire-ur-310",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Unionaire",
+    "name": "Unionaire UR-310 No Frost 310L",
+    "ref_price_egp": 17500,
+    "popular": false,
+    "aliases": [
+      "ur-310"
+    ],
+    "attrs": {
+      "capacity_l": 310,
+      "energy_kwh_year": 380,
+      "cooling": 6,
+      "noise_db": 40,
+      "build": 5.5,
+      "service": 6,
+      "warranty_months": 36,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 62,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-sharp-sj-ge35",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Sharp",
+    "name": "Sharp SJ-GE35 No Frost 335L",
+    "ref_price_egp": 19500,
+    "popular": true,
+    "aliases": [
+      "sj-ge35",
+      "sharp 335"
+    ],
+    "attrs": {
+      "capacity_l": 335,
+      "energy_kwh_year": 360,
+      "cooling": 6.5,
+      "noise_db": 39,
+      "build": 6,
+      "service": 9,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 62,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-kiriazi-e400",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Kiriazi",
+    "name": "Kiriazi E400 No Frost 400L",
+    "ref_price_egp": 20500,
+    "popular": false,
+    "aliases": [
+      "e400",
+      "kiriazi 400"
+    ],
+    "attrs": {
+      "capacity_l": 400,
+      "energy_kwh_year": 430,
+      "cooling": 6,
+      "noise_db": 41,
+      "build": 5.5,
+      "service": 7,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 68,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-toshiba-gr-ef33",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Toshiba",
+    "name": "Toshiba GR-EF33 No Frost 340L",
+    "ref_price_egp": 21000,
+    "popular": true,
+    "aliases": [
+      "gr-ef33",
+      "toshiba 340"
+    ],
+    "attrs": {
+      "capacity_l": 340,
+      "energy_kwh_year": 350,
+      "cooling": 6.5,
+      "noise_db": 39,
+      "build": 6,
+      "service": 9,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 63,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-haier-hrf-320i",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Haier",
+    "name": "Haier HRF-320i Inverter No Frost 320L",
+    "ref_price_egp": 22000,
+    "popular": false,
+    "aliases": [
+      "hrf-320i"
+    ],
+    "attrs": {
+      "capacity_l": 320,
+      "energy_kwh_year": 260,
+      "cooling": 6.5,
+      "noise_db": 37,
+      "build": 6,
+      "service": 5,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-fresh-fnt-400",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Fresh",
+    "name": "Fresh FNT-400 No Frost 400L",
+    "ref_price_egp": 22500,
+    "popular": false,
+    "aliases": [
+      "fnt-400",
+      "fresh 400"
+    ],
+    "attrs": {
+      "capacity_l": 400,
+      "energy_kwh_year": 420,
+      "cooling": 6,
+      "noise_db": 41,
+      "build": 5.5,
+      "service": 7,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 68,
+      "layout": "top_freezer",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-beko-rdne-350",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Beko",
+    "name": "Beko RDNE-350 Inverter No Frost 350L",
+    "ref_price_egp": 23800,
+    "popular": false,
+    "aliases": [
+      "rdne-350"
+    ],
+    "attrs": {
+      "capacity_l": 350,
+      "energy_kwh_year": 270,
+      "cooling": 6.5,
+      "noise_db": 38,
+      "build": 6.5,
+      "service": 6,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-kiriazi-e560",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Kiriazi",
+    "name": "Kiriazi E560 No Frost 560L",
+    "ref_price_egp": 27500,
+    "popular": false,
+    "aliases": [
+      "e560",
+      "kiriazi 560"
+    ],
+    "attrs": {
+      "capacity_l": 560,
+      "energy_kwh_year": 480,
+      "cooling": 6.5,
+      "noise_db": 42,
+      "build": 5.5,
+      "service": 7,
+      "warranty_months": 60,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 78,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-sharp-sj-ge45",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Sharp",
+    "name": "Sharp SJ-GE45 Inverter No Frost 450L",
+    "ref_price_egp": 29500,
+    "popular": true,
+    "aliases": [
+      "sj-ge45",
+      "sharp 450"
+    ],
+    "attrs": {
+      "capacity_l": 450,
+      "energy_kwh_year": 300,
+      "cooling": 7,
+      "noise_db": 38,
+      "build": 6.5,
+      "service": 9,
+      "warranty_months": 60,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 70,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-samsung-rt38",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Samsung",
+    "name": "Samsung RT38 Digital Inverter 380L",
+    "ref_price_egp": 30500,
+    "popular": false,
+    "aliases": [
+      "rt38"
+    ],
+    "attrs": {
+      "capacity_l": 380,
+      "energy_kwh_year": 250,
+      "cooling": 7,
+      "noise_db": 37,
+      "build": 7,
+      "service": 8,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-unionaire-ur-530d",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Unionaire",
+    "name": "Unionaire UR-530D No Frost Dispenser 530L",
+    "ref_price_egp": 31000,
+    "popular": false,
+    "aliases": [
+      "ur-530d"
+    ],
+    "attrs": {
+      "capacity_l": 530,
+      "energy_kwh_year": 470,
+      "cooling": 6.5,
+      "noise_db": 41,
+      "build": 6,
+      "service": 6,
+      "warranty_months": 36,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 77,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-toshiba-gr-ef46",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Toshiba",
+    "name": "Toshiba GR-EF46 Inverter No Frost 460L",
+    "ref_price_egp": 31500,
+    "popular": true,
+    "aliases": [
+      "gr-ef46",
+      "toshiba 460"
+    ],
+    "attrs": {
+      "capacity_l": 460,
+      "energy_kwh_year": 295,
+      "cooling": 7,
+      "noise_db": 38,
+      "build": 6.5,
+      "service": 9,
+      "warranty_months": 60,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 70,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-lg-gn-b392",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "LG",
+    "name": "LG GN-B392 Smart Inverter 393L",
+    "ref_price_egp": 33000,
+    "popular": false,
+    "aliases": [
+      "gn-b392"
+    ],
+    "attrs": {
+      "capacity_l": 393,
+      "energy_kwh_year": 240,
+      "cooling": 7.5,
+      "noise_db": 36,
+      "build": 7,
+      "service": 8,
+      "warranty_months": 120,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-white-whale-wr-560d",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "White Whale",
+    "name": "White Whale WR-560D No Frost Dispenser 560L",
+    "ref_price_egp": 33500,
+    "popular": false,
+    "aliases": [
+      "wr-560d"
+    ],
+    "attrs": {
+      "capacity_l": 560,
+      "energy_kwh_year": 490,
+      "cooling": 6.5,
+      "noise_db": 42,
+      "build": 5.5,
+      "service": 6,
+      "warranty_months": 36,
+      "inverter": false,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 80,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-samsung-rb34",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Samsung",
+    "name": "Samsung RB34 Bottom Freezer 340L",
+    "ref_price_egp": 34500,
+    "popular": false,
+    "aliases": [
+      "rb34"
+    ],
+    "attrs": {
+      "capacity_l": 340,
+      "energy_kwh_year": 230,
+      "cooling": 7.5,
+      "noise_db": 36,
+      "build": 7.5,
+      "service": 8,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 60,
+      "layout": "bottom_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-haier-hrb-450",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Haier",
+    "name": "Haier HRB-450 Bottom Freezer 450L",
+    "ref_price_egp": 35000,
+    "popular": false,
+    "aliases": [
+      "hrb-450"
+    ],
+    "attrs": {
+      "capacity_l": 450,
+      "energy_kwh_year": 280,
+      "cooling": 7,
+      "noise_db": 37,
+      "build": 6.5,
+      "service": 5,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 70,
+      "layout": "bottom_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-beko-rcne-460",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Beko",
+    "name": "Beko RCNE-460 Bottom Freezer 460L",
+    "ref_price_egp": 36500,
+    "popular": false,
+    "aliases": [
+      "rcne-460"
+    ],
+    "attrs": {
+      "capacity_l": 460,
+      "energy_kwh_year": 290,
+      "cooling": 7,
+      "noise_db": 37,
+      "build": 7,
+      "service": 6,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 70,
+      "layout": "bottom_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-zanussi-zbb-450",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Zanussi",
+    "name": "Zanussi ZBB-450 Bottom Freezer 450L",
+    "ref_price_egp": 39000,
+    "popular": false,
+    "aliases": [
+      "zbb-450"
+    ],
+    "attrs": {
+      "capacity_l": 450,
+      "energy_kwh_year": 300,
+      "cooling": 7,
+      "noise_db": 38,
+      "build": 6.5,
+      "service": 6,
+      "warranty_months": 36,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 70,
+      "layout": "bottom_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-lg-gn-h702",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "LG",
+    "name": "LG GN-H702 Inverter Dispenser 506L",
+    "ref_price_egp": 44000,
+    "popular": false,
+    "aliases": [
+      "gn-h702"
+    ],
+    "attrs": {
+      "capacity_l": 506,
+      "energy_kwh_year": 300,
+      "cooling": 8,
+      "noise_db": 37,
+      "build": 7.5,
+      "service": 8,
+      "warranty_months": 120,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 78,
+      "layout": "top_freezer",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-bosch-kgn56",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Bosch",
+    "name": "Bosch KGN56 Bottom Freezer 505L",
+    "ref_price_egp": 47000,
+    "popular": false,
+    "aliases": [
+      "kgn56"
+    ],
+    "attrs": {
+      "capacity_l": 505,
+      "energy_kwh_year": 260,
+      "cooling": 8,
+      "noise_db": 36,
+      "build": 8.5,
+      "service": 7,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 70,
+      "layout": "bottom_freezer",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-haier-hrf-520fd",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Haier",
+    "name": "Haier HRF-520FD French Door 520L",
+    "ref_price_egp": 55000,
+    "popular": false,
+    "aliases": [
+      "hrf-520fd"
+    ],
+    "attrs": {
+      "capacity_l": 520,
+      "energy_kwh_year": 330,
+      "cooling": 7.5,
+      "noise_db": 38,
+      "build": 7,
+      "service": 5,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 83,
+      "layout": "french_door",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-sharp-sj-sbs62",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Sharp",
+    "name": "Sharp SJ-SBS62 Side by Side 620L",
+    "ref_price_egp": 58000,
+    "popular": false,
+    "aliases": [
+      "sj-sbs62"
+    ],
+    "attrs": {
+      "capacity_l": 620,
+      "energy_kwh_year": 420,
+      "cooling": 7.5,
+      "noise_db": 40,
+      "build": 7,
+      "service": 9,
+      "warranty_months": 60,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 91,
+      "layout": "side_by_side",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-beko-gne-560fd",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Beko",
+    "name": "Beko GNE-560 French Door 560L",
+    "ref_price_egp": 62000,
+    "popular": false,
+    "aliases": [
+      "gne-560"
+    ],
+    "attrs": {
+      "capacity_l": 560,
+      "energy_kwh_year": 340,
+      "cooling": 8,
+      "noise_db": 38,
+      "build": 7.5,
+      "service": 6,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 84,
+      "layout": "french_door",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-toshiba-gr-rf600",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Toshiba",
+    "name": "Toshiba GR-RF600 French Door 600L",
+    "ref_price_egp": 68000,
+    "popular": false,
+    "aliases": [
+      "gr-rf600"
+    ],
+    "attrs": {
+      "capacity_l": 600,
+      "energy_kwh_year": 360,
+      "cooling": 8,
+      "noise_db": 38,
+      "build": 7.5,
+      "service": 9,
+      "warranty_months": 60,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": false,
+      "width_cm": 84,
+      "layout": "french_door",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-samsung-rs64",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Samsung",
+    "name": "Samsung RS64 Side by Side 635L",
+    "ref_price_egp": 72000,
+    "popular": true,
+    "aliases": [
+      "rs64"
+    ],
+    "attrs": {
+      "capacity_l": 635,
+      "energy_kwh_year": 390,
+      "cooling": 8.5,
+      "noise_db": 37,
+      "build": 8,
+      "service": 8,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 91,
+      "layout": "side_by_side",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-lg-gc-b257",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "LG",
+    "name": "LG GC-B257 Side by Side 641L",
+    "ref_price_egp": 78000,
+    "popular": false,
+    "aliases": [
+      "gc-b257"
+    ],
+    "attrs": {
+      "capacity_l": 641,
+      "energy_kwh_year": 380,
+      "cooling": 8.5,
+      "noise_db": 36,
+      "build": 8.5,
+      "service": 8,
+      "warranty_months": 120,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 91,
+      "layout": "side_by_side",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-lg-gr-x24",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "LG",
+    "name": "LG GR-X24 InstaView French Door 616L",
+    "ref_price_egp": 92000,
+    "popular": false,
+    "aliases": [
+      "gr-x24",
+      "instaview"
+    ],
+    "attrs": {
+      "capacity_l": 616,
+      "energy_kwh_year": 350,
+      "cooling": 9,
+      "noise_db": 35,
+      "build": 9,
+      "service": 8,
+      "warranty_months": 120,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 91,
+      "layout": "french_door",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-bosch-kad93",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Bosch",
+    "name": "Bosch KAD93 Side by Side 560L",
+    "ref_price_egp": 98000,
+    "popular": false,
+    "aliases": [
+      "kad93"
+    ],
+    "attrs": {
+      "capacity_l": 560,
+      "energy_kwh_year": 350,
+      "cooling": 9,
+      "noise_db": 36,
+      "build": 9,
+      "service": 7,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 91,
+      "layout": "side_by_side",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "fridge-samsung-rf65",
+    "tenant_id": "wisedo",
+    "category": "fridge",
+    "brand": "Samsung",
+    "name": "Samsung RF65 Family Hub French Door 650L",
+    "ref_price_egp": 108000,
+    "popular": false,
+    "aliases": [
+      "rf65",
+      "family hub"
+    ],
+    "attrs": {
+      "capacity_l": 650,
+      "energy_kwh_year": 400,
+      "cooling": 9.5,
+      "noise_db": 36,
+      "build": 9.5,
+      "service": 8,
+      "warranty_months": 24,
+      "inverter": true,
+      "no_frost": true,
+      "dispenser": true,
+      "width_cm": 91,
+      "layout": "french_door",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-23T12:00:00.000Z",
+    "source": "synthetic"
+  }
+]

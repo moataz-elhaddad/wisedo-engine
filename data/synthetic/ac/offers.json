@@ -1,0 +1,3899 @@
+[
+  {
+    "id": "o-ac-fresh-smart-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-fresh-smart-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-fresh-smart-15",
+    "price_egp": 15200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-fresh-smart-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-fresh-smart-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-fresh-smart-15",
+    "price_egp": 14750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 738,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-fresh-smart-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-fresh-smart-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-fresh-smart-15",
+    "price_egp": 15600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-unionaire-artify-15",
+    "price_egp": 15800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-unionaire-artify-15",
+    "price_egp": 15550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-01T19:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-unionaire-artify-15",
+    "price_egp": 16100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T17:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-unionaire-artify-15",
+    "price_egp": 15250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T00:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-unionaire-artify-15",
+    "price_egp": 15350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 768,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T10:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-tornado-classic-15",
+    "price_egp": 15850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-tornado-classic-15",
+    "price_egp": 16750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-tornado-classic-15",
+    "price_egp": 16050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-midea-mission-15",
+    "price_egp": 17450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T23:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-midea-mission-15",
+    "price_egp": 17200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 860,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-01T17:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-midea-mission-15",
+    "price_egp": 17950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-midea-mission-15",
+    "price_egp": 17450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T17:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-sharp-standard-15",
+    "price_egp": 17650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-sharp-standard-15",
+    "price_egp": 18200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-sharp-standard-15",
+    "price_egp": 17550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T16:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-sharp-standard-15",
+    "price_egp": 17850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-01T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-sharp-standard-15",
+    "price_egp": 17100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-carrier-optimax-15",
+    "price_egp": 19050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-carrier-optimax-15",
+    "price_egp": 18600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T20:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-carrier-optimax-15",
+    "price_egp": 18200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 910,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-inverter-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-inverter-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-tornado-inverter-15",
+    "price_egp": 22250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T02:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-inverter-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-inverter-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-tornado-inverter-15",
+    "price_egp": 23050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T16:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-inverter-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-inverter-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-tornado-inverter-15",
+    "price_egp": 22200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T04:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-inverter-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-inverter-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-tornado-inverter-15",
+    "price_egp": 23000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-15-khan",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-15",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/ac-gree-pular-15",
+    "price_egp": 21550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 300,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T05:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-gree-pular-15",
+    "price_egp": 23450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-gree-pular-15",
+    "price_egp": 22750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-gree-pular-15",
+    "price_egp": 23250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T02:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-sharp-inverter-15",
+    "price_egp": 24350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-sharp-inverter-15",
+    "price_egp": 25100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-sharp-inverter-15",
+    "price_egp": 24000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 8
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1200,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-sharp-inverter-15",
+    "price_egp": 24500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T00:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-carrier-optimax-inv-15",
+    "price_egp": 26850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T04:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-carrier-optimax-inv-15",
+    "price_egp": 27750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-carrier-optimax-inv-15",
+    "price_egp": 27600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T21:06:00.000Z",
+    "source": "synthetic",
+    "extras_checked_at": "2026-09-29T08:00:00.000Z"
+  },
+  {
+    "id": "o-ac-lg-dualcool-15-khan",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-15",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/ac-lg-dualcool-15",
+    "price_egp": 27800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 300,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T05:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-lg-dualcool-15",
+    "price_egp": 31200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-lg-dualcool-15",
+    "price_egp": 29400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-02T19:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-lg-dualcool-15",
+    "price_egp": 30350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T10:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-samsung-windfree-15",
+    "price_egp": 33650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T07:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-samsung-windfree-15",
+    "price_egp": 32500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 5
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1625,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T00:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-samsung-windfree-15",
+    "price_egp": 32300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-samsung-windfree-15",
+    "price_egp": 32200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T05:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-225-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-225",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-unionaire-artify-225",
+    "price_egp": 20350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T22:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-unionaire-artify-225",
+    "price_egp": 21300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-225-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-225",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-unionaire-artify-225",
+    "price_egp": 20700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T22:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-225-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-225",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-unionaire-artify-225",
+    "price_egp": 20600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1030,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-tornado-classic-225",
+    "price_egp": 21450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-225-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-225",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-tornado-classic-225",
+    "price_egp": 21150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T02:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-225-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-225",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-tornado-classic-225",
+    "price_egp": 21300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T03:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-225-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-225",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-sharp-standard-225",
+    "price_egp": 22700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T18:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-225-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-225",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-sharp-standard-225",
+    "price_egp": 22200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T07:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-sharp-standard-225",
+    "price_egp": 23350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-225-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-225",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-sharp-standard-225",
+    "price_egp": 22550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1128,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T10:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-standard-225-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-standard-225",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-sharp-standard-225",
+    "price_egp": 22850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T23:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-carrier-optimax-225",
+    "price_egp": 25100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-225-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-225",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-carrier-optimax-225",
+    "price_egp": 24450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T16:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-225-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-225",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-carrier-optimax-225",
+    "price_egp": 24500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T03:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-225-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-225",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-carrier-optimax-225",
+    "price_egp": 24000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-225-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-225",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-carrier-optimax-225",
+    "price_egp": 24000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1200,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T10:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-225-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-225",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-gree-pular-225",
+    "price_egp": 26000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 5
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1300,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-225-khan",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-225",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/ac-gree-pular-225",
+    "price_egp": 24850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 300,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T20:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-225-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-225",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-gree-pular-225",
+    "price_egp": 26600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-01T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-gree-pular-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-gree-pular-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-gree-pular-225",
+    "price_egp": 26750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T16:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-inv-225-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-inv-225",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-midea-mission-inv-225",
+    "price_egp": 28200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T04:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-inv-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-inv-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-midea-mission-inv-225",
+    "price_egp": 28450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T21:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-midea-mission-inv-225-khan",
+    "tenant_id": "wisedo",
+    "product_id": "ac-midea-mission-inv-225",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/ac-midea-mission-inv-225",
+    "price_egp": 26700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 300,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T03:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-225-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-225",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-sharp-inverter-225",
+    "price_egp": 30350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T20:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-225-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-225",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-sharp-inverter-225",
+    "price_egp": 30200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 5
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1510,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T19:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-225-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-225",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-sharp-inverter-225",
+    "price_egp": 30650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T04:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-225-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-225",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-sharp-inverter-225",
+    "price_egp": 29950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T02:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-225-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-225",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-sharp-inverter-225",
+    "price_egp": 30000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-225-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-225",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-lg-dualcool-225",
+    "price_egp": 38450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T09:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-225-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-225",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-lg-dualcool-225",
+    "price_egp": 38000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-02T18:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-lg-dualcool-225",
+    "price_egp": 38150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T20:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-225-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-225",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-lg-dualcool-225",
+    "price_egp": 37150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-225-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-225",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-samsung-windfree-225",
+    "price_egp": 40750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T02:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-225-khan",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-225",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/ac-samsung-windfree-225",
+    "price_egp": 38100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 300,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T21:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-225-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-225",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-samsung-windfree-225",
+    "price_egp": 39350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-225-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-225",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-samsung-windfree-225",
+    "price_egp": 40900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T18:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-samsung-windfree-225-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-samsung-windfree-225",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-samsung-windfree-225",
+    "price_egp": 39850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T01:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-3-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-3",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-unionaire-artify-3",
+    "price_egp": 27750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-3-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-3",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-unionaire-artify-3",
+    "price_egp": 26000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-unionaire-artify-3-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-unionaire-artify-3",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-unionaire-artify-3",
+    "price_egp": 25850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 5
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1293,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-3-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-3",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-tornado-classic-3",
+    "price_egp": 28200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T03:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-3-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-3",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-tornado-classic-3",
+    "price_egp": 28300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-3-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-3",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-tornado-classic-3",
+    "price_egp": 27000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T01:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-3-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-3",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-tornado-classic-3",
+    "price_egp": 27000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1350,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-3-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-3",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-carrier-optimax-3",
+    "price_egp": 31300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T16:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-3-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-3",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-carrier-optimax-3",
+    "price_egp": 31750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-3-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-3",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-carrier-optimax-3",
+    "price_egp": 30800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-02T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-3-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-3",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-sharp-inverter-3",
+    "price_egp": 39450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T16:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-3-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-3",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-sharp-inverter-3",
+    "price_egp": 39300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T19:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-3-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-3",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-sharp-inverter-3",
+    "price_egp": 38400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-02T21:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-3-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-3",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-carrier-optimax-inv-3",
+    "price_egp": 43850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T07:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-3-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-3",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-carrier-optimax-inv-3",
+    "price_egp": 44300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T01:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-3-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-3",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-carrier-optimax-inv-3",
+    "price_egp": 42550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-03T06:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-3-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-3",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-carrier-optimax-inv-3",
+    "price_egp": 44000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-inv-3-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-inv-3",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-carrier-optimax-inv-3",
+    "price_egp": 42550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-02T16:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-3-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-3",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-lg-dualcool-3",
+    "price_egp": 48100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2405,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T23:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-3-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-3",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-lg-dualcool-3",
+    "price_egp": 48350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-02T22:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-dualcool-3-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-dualcool-3",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-lg-dualcool-3",
+    "price_egp": 48650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T03:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-4-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-4",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-tornado-classic-4",
+    "price_egp": 37100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-03T03:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-4-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-4",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-tornado-classic-4",
+    "price_egp": 37250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-4-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-4",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-tornado-classic-4",
+    "price_egp": 37600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 8
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1880,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T16:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-classic-4-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-classic-4",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-tornado-classic-4",
+    "price_egp": 37250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-4-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-4",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-carrier-optimax-4",
+    "price_egp": 45700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T19:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-4-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-4",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-carrier-optimax-4",
+    "price_egp": 44400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T01:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-optimax-4-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-optimax-4",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-carrier-optimax-4",
+    "price_egp": 43100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2155,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T08:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-4-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-4",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-sharp-inverter-4",
+    "price_egp": 50600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T03:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-4-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-4",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-sharp-inverter-4",
+    "price_egp": 50000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 5
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2500,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-4-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-4",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-sharp-inverter-4",
+    "price_egp": 51150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-03T05:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-4-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-4",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-sharp-inverter-4",
+    "price_egp": 52050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-sharp-inverter-4-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-sharp-inverter-4",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-sharp-inverter-4",
+    "price_egp": 51200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T10:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-floor-5-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-floor-5",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-tornado-floor-5",
+    "price_egp": 50350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T02:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-floor-5-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-floor-5",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-tornado-floor-5",
+    "price_egp": 48850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-floor-5-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-floor-5",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-tornado-floor-5",
+    "price_egp": 47750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2388,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T01:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-tornado-floor-5-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-tornado-floor-5",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-tornado-floor-5",
+    "price_egp": 47900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T04:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-floor-5-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-floor-5",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/ac-carrier-floor-5",
+    "price_egp": 53300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 5
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2665,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T02:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-floor-5-delta",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-floor-5",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/ac-carrier-floor-5",
+    "price_egp": 52400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Extra 2 m of copper pipe",
+        "value_egp": 450
+      }
+    ],
+    "checked_at": "2026-10-02T18:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-carrier-floor-5-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "ac-carrier-floor-5",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/ac-carrier-floor-5",
+    "price_egp": 54850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 100,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-floor-inv-5-nile",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-floor-inv-5",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/ac-lg-floor-inv-5",
+    "price_egp": 61950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 250,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-02T21:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-floor-inv-5-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-floor-inv-5",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/ac-lg-floor-inv-5",
+    "price_egp": 62550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 200,
+        "days": 5
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      }
+    ],
+    "checked_at": "2026-10-03T09:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-floor-inv-5-khan",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-floor-inv-5",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/ac-lg-floor-inv-5",
+    "price_egp": 57650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 300,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-ac-lg-floor-inv-5-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "ac-lg-floor-inv-5",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/ac-lg-floor-inv-5",
+    "price_egp": 60550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 250,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "install",
+        "label": "Free standard installation",
+        "value_egp": 700
+      },
+      {
+        "type": "warranty",
+        "label": "Extra year of full warranty",
+        "value_egp": 900
+      }
+    ],
+    "checked_at": "2026-10-03T10:06:00.000Z",
+    "source": "synthetic"
+  }
+]

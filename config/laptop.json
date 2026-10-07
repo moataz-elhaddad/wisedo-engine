@@ -1,0 +1,3044 @@
+{
+  "id": "laptop",
+  "version": "1.0.0",
+  "aliases": [
+    "notebook"
+  ],
+  "label": {
+    "ar": "لابتوب",
+    "en": "Laptop"
+  },
+  "note": "Laptop category config, built from the mobile template. Every threshold, weight, score basis and preset below is a starting assumption to review with a laptop reviewer (see docs/laptop-NOTES.md).",
+  "currency": "EGP",
+  "maxMonths": 24,
+  "tcoYears": 5,
+  "freshness": {
+    "priceStockHours": 24,
+    "deliveryGiftsHours": 72,
+    "plansDays": 35,
+    "specsDays": 60
+  },
+  "zones": {
+    "ids": [
+      "greater_cairo",
+      "alexandria",
+      "other"
+    ],
+    "labels": {
+      "greater_cairo": {
+        "ar": "القاهرة الكبرى",
+        "en": "Greater Cairo"
+      },
+      "alexandria": {
+        "ar": "إسكندرية",
+        "en": "Alexandria"
+      },
+      "other": {
+        "ar": "باقي المحافظات",
+        "en": "Other governorates"
+      }
+    },
+    "cities": {
+      "cairo": "greater_cairo",
+      "giza": "greater_cairo",
+      "qalyubia": "greater_cairo",
+      "alexandria": "alexandria",
+      "dakahlia": "other",
+      "gharbia": "other",
+      "sharqia": "other",
+      "monufia": "other",
+      "beheira": "other",
+      "ismailia": "other",
+      "port_said": "other",
+      "suez": "other",
+      "fayoum": "other",
+      "minya": "other",
+      "assiut": "other",
+      "sohag": "other",
+      "qena": "other",
+      "luxor": "other",
+      "aswan": "other",
+      "red_sea": "other",
+      "south_sinai": "other",
+      "other": "other"
+    }
+  },
+  "attributes": [
+    {
+      "id": "cpu",
+      "label": {
+        "ar": "قوة المعالج",
+        "en": "Processor performance"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "معالج {value} من 10",
+        "en": "Processor {value}/10"
+      }
+    },
+    {
+      "id": "gpu",
+      "label": {
+        "ar": "كارت الشاشة",
+        "en": "Graphics performance"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "جرافيك {value} من 10",
+        "en": "Graphics {value}/10"
+      }
+    },
+    {
+      "id": "ram_gb",
+      "label": {
+        "ar": "الرامات",
+        "en": "RAM"
+      },
+      "unit": "GB",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 4,
+        "max": 32
+      },
+      "explain": {
+        "ar": "رامات {value} جيجا",
+        "en": "{value} GB RAM"
+      }
+    },
+    {
+      "id": "storage_gb",
+      "label": {
+        "ar": "المساحة",
+        "en": "Storage"
+      },
+      "unit": "GB",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 128,
+        "max": 1024
+      },
+      "explain": {
+        "ar": "مساحة {value} جيجا SSD",
+        "en": "{value} GB SSD"
+      }
+    },
+    {
+      "id": "screen",
+      "label": {
+        "ar": "جودة الشاشة",
+        "en": "Screen quality"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "شاشة {value} من 10",
+        "en": "Screen {value}/10"
+      }
+    },
+    {
+      "id": "battery_hours",
+      "label": {
+        "ar": "البطارية",
+        "en": "Battery life"
+      },
+      "unit": "h",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 4,
+        "max": 20
+      },
+      "explain": {
+        "ar": "بطارية حوالي {value} ساعة استخدام خفيف",
+        "en": "About {value} h of light use on battery"
+      }
+    },
+    {
+      "id": "weight_kg",
+      "label": {
+        "ar": "الخفة",
+        "en": "Lightness"
+      },
+      "unit": "kg",
+      "type": "number",
+      "higherIsBetter": false,
+      "basis": {
+        "min": 1,
+        "max": 2.6
+      },
+      "explain": {
+        "ar": "وزنه {value} كيلو",
+        "en": "Weighs {value} kg"
+      }
+    },
+    {
+      "id": "build",
+      "label": {
+        "ar": "جودة الخامة",
+        "en": "Build quality"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "خامة {value} من 10",
+        "en": "Build {value}/10"
+      }
+    },
+    {
+      "id": "service",
+      "label": {
+        "ar": "الصيانة والضمان في مصر",
+        "en": "Service network in Egypt"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "صيانة في مصر {value} من 10",
+        "en": "Service in Egypt {value}/10"
+      }
+    },
+    {
+      "id": "warranty_months",
+      "label": {
+        "ar": "الضمان",
+        "en": "Warranty"
+      },
+      "unit": "months",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 12,
+        "max": 36
+      },
+      "explain": {
+        "ar": "ضمان {value} شهر",
+        "en": "{value}-month warranty"
+      }
+    },
+    {
+      "id": "keyboard",
+      "label": {
+        "ar": "الكيبورد",
+        "en": "Keyboard"
+      },
+      "unit": "/10",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 1,
+        "max": 10
+      },
+      "explain": {
+        "ar": "كيبورد {value} من 10",
+        "en": "Keyboard {value}/10"
+      }
+    },
+    {
+      "id": "screen_inches",
+      "label": {
+        "ar": "مقاس الشاشة",
+        "en": "Screen size"
+      },
+      "unit": "in",
+      "type": "number",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 11,
+        "max": 18
+      },
+      "explain": {
+        "ar": "شاشة {value} بوصة",
+        "en": "{value}-inch screen"
+      },
+      "note": "Filter only: base weight 0, used by the screenSize slot."
+    },
+    {
+      "id": "os",
+      "label": {
+        "ar": "نظام التشغيل",
+        "en": "Operating system"
+      },
+      "type": "category",
+      "values": [
+        "windows",
+        "macos",
+        "chromeos"
+      ]
+    },
+    {
+      "id": "series",
+      "label": {
+        "ar": "الفئة",
+        "en": "Series"
+      },
+      "type": "category",
+      "values": [
+        "entry",
+        "mid",
+        "flagship"
+      ]
+    },
+    {
+      "id": "has_dedicated_gpu",
+      "label": {
+        "ar": "كارت شاشة منفصل",
+        "en": "Dedicated graphics card"
+      },
+      "type": "boolean",
+      "higherIsBetter": true,
+      "basis": {
+        "min": 0,
+        "max": 1
+      },
+      "explain": {
+        "ar": "فيه كارت شاشة منفصل",
+        "en": "Has a dedicated graphics card"
+      },
+      "note": "Filter only: base weight 0, used by gameLevel."
+    }
+  ],
+  "baseWeights": {
+    "cpu": 1,
+    "gpu": 0.3,
+    "ram_gb": 0.6,
+    "storage_gb": 0.4,
+    "screen": 0.6,
+    "battery_hours": 0.6,
+    "weight_kg": 0.3,
+    "build": 0.4,
+    "service": 0.6,
+    "warranty_months": 0.2,
+    "keyboard": 0.3,
+    "screen_inches": 0,
+    "has_dedicated_gpu": 0
+  },
+  "slots": [
+    {
+      "id": "who",
+      "group": "who",
+      "always": true,
+      "default": "me",
+      "factors": [
+        "who_for"
+      ],
+      "label": {
+        "ar": "لمين",
+        "en": "Who it is for"
+      },
+      "question": {
+        "ar": "اللابتوب ده ليك ولا لحد تاني؟",
+        "en": "Is the laptop for you or someone else?"
+      },
+      "options": [
+        {
+          "id": "me",
+          "label": {
+            "ar": "ليّا",
+            "en": "For me"
+          }
+        },
+        {
+          "id": "kid",
+          "label": {
+            "ar": "لابني أو بنتي (مدرسة أو جامعة)",
+            "en": "For my child (school or university)"
+          },
+          "effects": {
+            "weights": {
+              "build": 0.6,
+              "service": 0.5,
+              "battery_hours": 0.4
+            }
+          }
+        },
+        {
+          "id": "parent",
+          "label": {
+            "ar": "لحد كبير في السن",
+            "en": "For an older relative"
+          },
+          "effects": {
+            "weights": {
+              "service": 1.2,
+              "keyboard": 0.4,
+              "screen": 0.6,
+              "cpu": -0.5,
+              "gpu": -0.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "group": "core",
+      "always": true,
+      "multi": true,
+      "dependsOn": {
+        "who": [
+          "me",
+          "kid"
+        ]
+      },
+      "factors": [
+        "main_use_intensity",
+        "screen_quality",
+        "keyboard_typing"
+      ],
+      "label": {
+        "ar": "الاستخدام",
+        "en": "Main use"
+      },
+      "question": {
+        "ar": "هيتستخدم في إيه أكتر؟ اختار كل اللي ينطبق",
+        "en": "What will it be used for most? Pick all that apply"
+      },
+      "options": [
+        {
+          "id": "study",
+          "label": {
+            "ar": "مذاكرة وأونلاين كلاسات",
+            "en": "Study and online classes"
+          },
+          "effects": {
+            "weights": {
+              "battery_hours": 0.6,
+              "weight_kg": 0.4,
+              "build": 0.2
+            }
+          }
+        },
+        {
+          "id": "office",
+          "label": {
+            "ar": "شغل مكتب: إيميل وإكسل وميتنجات",
+            "en": "Office work: email, Excel, meetings"
+          },
+          "effects": {
+            "weights": {
+              "keyboard": 0.6,
+              "battery_hours": 0.4,
+              "screen": 0.3,
+              "service": 0.3
+            }
+          }
+        },
+        {
+          "id": "programming",
+          "label": {
+            "ar": "برمجة",
+            "en": "Programming"
+          },
+          "effects": {
+            "weights": {
+              "cpu": 1,
+              "ram_gb": 1,
+              "keyboard": 0.5,
+              "screen": 0.3
+            },
+            "prefer": [
+              {
+                "attr": "ram_gb",
+                "op": ">=",
+                "value": 16,
+                "why": {
+                  "ar": "البرمجة مريحة أكتر بـ 16 جيجا رامات",
+                  "en": "Programming is smoother with 16 GB RAM"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gaming",
+          "label": {
+            "ar": "ألعاب",
+            "en": "Gaming"
+          },
+          "effects": {
+            "weights": {
+              "gpu": 2,
+              "cpu": 0.8,
+              "ram_gb": 0.4,
+              "screen": 0.3
+            }
+          }
+        },
+        {
+          "id": "design",
+          "label": {
+            "ar": "تصميم وفوتوشوب",
+            "en": "Graphic design and photo editing"
+          },
+          "effects": {
+            "weights": {
+              "screen": 1.5,
+              "cpu": 0.6,
+              "gpu": 0.6,
+              "ram_gb": 0.5
+            }
+          }
+        },
+        {
+          "id": "video",
+          "label": {
+            "ar": "مونتاج فيديو",
+            "en": "Video editing"
+          },
+          "effects": {
+            "weights": {
+              "cpu": 1.2,
+              "gpu": 1,
+              "ram_gb": 0.8,
+              "storage_gb": 0.8,
+              "screen": 0.6
+            },
+            "must": [
+              {
+                "attr": "ram_gb",
+                "op": ">=",
+                "value": 16,
+                "why": {
+                  "ar": "المونتاج محتاج 16 جيجا رامات على الأقل",
+                  "en": "Video editing needs at least 16 GB RAM"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "basic",
+          "label": {
+            "ar": "نت وأفلام بس",
+            "en": "Browsing and movies only"
+          },
+          "effects": {
+            "weights": {
+              "battery_hours": 0.4,
+              "screen": 0.3,
+              "cpu": -0.4,
+              "gpu": -0.2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gameLevel",
+      "group": "followup",
+      "always": true,
+      "dependsOn": {
+        "use": [
+          "gaming"
+        ]
+      },
+      "factors": [
+        "main_use_intensity"
+      ],
+      "label": {
+        "ar": "نوع الألعاب",
+        "en": "Game level"
+      },
+      "question": {
+        "ar": "بتلعب ألعاب تقيلة؟",
+        "en": "Do you play heavy games?"
+      },
+      "options": [
+        {
+          "id": "heavy",
+          "label": {
+            "ar": "أيوه، ألعاب جديدة تقيلة على جرافيك عالي",
+            "en": "Yes, new heavy games on high graphics"
+          },
+          "effects": {
+            "weights": {
+              "gpu": 2,
+              "cpu": 0.5
+            },
+            "must": [
+              {
+                "attr": "has_dedicated_gpu",
+                "op": "==",
+                "value": true,
+                "why": {
+                  "ar": "الألعاب التقيلة محتاجة كارت شاشة منفصل",
+                  "en": "Heavy games need a dedicated graphics card"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "light",
+          "label": {
+            "ar": "لأ، ألعاب خفيفة زي فالورانت وفيفا",
+            "en": "No, lighter games like Valorant or FIFA"
+          },
+          "effects": {
+            "weights": {
+              "gpu": 0.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "pain",
+      "group": "followup",
+      "multi": true,
+      "dependsOn": {
+        "who": [
+          "me",
+          "kid"
+        ]
+      },
+      "factors": [
+        "current_device_problem"
+      ],
+      "label": {
+        "ar": "مشكلة اللابتوب الحالي",
+        "en": "Problem with the current laptop"
+      },
+      "question": {
+        "ar": "إيه أكتر حاجة بتضايقك في اللابتوب الحالي؟",
+        "en": "What bothers you most about your current laptop?"
+      },
+      "options": [
+        {
+          "id": "slow",
+          "label": {
+            "ar": "بقى بطيء وبيهنّج",
+            "en": "It is slow and hangs"
+          },
+          "effects": {
+            "weights": {
+              "cpu": 1,
+              "ram_gb": 0.5
+            }
+          }
+        },
+        {
+          "id": "battery",
+          "label": {
+            "ar": "البطارية مبتقعدش",
+            "en": "The battery does not last"
+          },
+          "effects": {
+            "weights": {
+              "battery_hours": 1.2
+            }
+          }
+        },
+        {
+          "id": "heavy",
+          "label": {
+            "ar": "تقيل في الشيل",
+            "en": "It is heavy to carry"
+          },
+          "effects": {
+            "weights": {
+              "weight_kg": 1.2
+            }
+          }
+        },
+        {
+          "id": "broke",
+          "label": {
+            "ar": "بيعطل والصيانة وحشة",
+            "en": "It breaks and service is bad"
+          },
+          "effects": {
+            "weights": {
+              "service": 1,
+              "build": 0.6,
+              "warranty_months": 0.4
+            }
+          }
+        },
+        {
+          "id": "screen",
+          "label": {
+            "ar": "الشاشة وحشة أو صغيرة",
+            "en": "The screen is poor or small"
+          },
+          "effects": {
+            "weights": {
+              "screen": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "portability",
+      "group": "core",
+      "default": "sometimes",
+      "factors": [
+        "portability",
+        "physical_fit"
+      ],
+      "note": "Asked by gain only. The default adds nothing, so assuming it changes no weights.",
+      "label": {
+        "ar": "هتشيله كتير؟",
+        "en": "How much you carry it"
+      },
+      "question": {
+        "ar": "هتشيله معاك كتير ولا هيقعد على المكتب؟",
+        "en": "Will you carry it around a lot, or will it stay on a desk?"
+      },
+      "options": [
+        {
+          "id": "daily",
+          "label": {
+            "ar": "بشيله كل يوم (جامعة أو شغل)",
+            "en": "I carry it every day (university or work)"
+          },
+          "effects": {
+            "weights": {
+              "weight_kg": 1.5,
+              "battery_hours": 1,
+              "build": 0.3
+            },
+            "prefer": [
+              {
+                "attr": "weight_kg",
+                "op": "<=",
+                "value": 1.7,
+                "why": {
+                  "ar": "هتشيله كل يوم، فالأخف أحسن",
+                  "en": "You carry it daily, so lighter is better"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "sometimes",
+          "label": {
+            "ar": "أحياناً",
+            "en": "Sometimes"
+          }
+        },
+        {
+          "id": "desk",
+          "label": {
+            "ar": "على المكتب أغلب الوقت",
+            "en": "On a desk most of the time"
+          },
+          "effects": {
+            "weights": {
+              "weight_kg": -0.3,
+              "battery_hours": -0.3,
+              "screen": 0.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "screenSize",
+      "group": "core",
+      "default": "any",
+      "factors": [
+        "physical_fit"
+      ],
+      "label": {
+        "ar": "مقاس الشاشة",
+        "en": "Screen size"
+      },
+      "question": {
+        "ar": "عايز الشاشة مقاس قد إيه؟",
+        "en": "What screen size do you want?"
+      },
+      "options": [
+        {
+          "id": "any",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Any"
+          }
+        },
+        {
+          "id": "small",
+          "label": {
+            "ar": "صغيرة 13 أو 14 بوصة",
+            "en": "Compact, 13 or 14 inches"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": "<=",
+                "value": 14.5,
+                "why": {
+                  "ar": "إنت عايز شاشة 13 أو 14 بوصة",
+                  "en": "You asked for a 13 or 14 inch screen"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "medium",
+          "label": {
+            "ar": "15 أو 16 بوصة",
+            "en": "15 or 16 inches"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": "between",
+                "value": [
+                  15,
+                  16.2
+                ],
+                "why": {
+                  "ar": "إنت عايز شاشة 15 أو 16 بوصة",
+                  "en": "You asked for a 15 or 16 inch screen"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "large",
+          "label": {
+            "ar": "16 بوصة أو أكبر",
+            "en": "16 inches or more"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "screen_inches",
+                "op": ">=",
+                "value": 16,
+                "why": {
+                  "ar": "إنت عايز شاشة 16 بوصة أو أكبر",
+                  "en": "You asked for 16 inches or more"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "storageNeed",
+      "group": "core",
+      "default": "any",
+      "factors": [
+        "main_use_intensity",
+        "storage_ram"
+      ],
+      "label": {
+        "ar": "المساحة المطلوبة",
+        "en": "Storage needed"
+      },
+      "question": {
+        "ar": "محتاج مساحة قد إيه؟",
+        "en": "How much storage do you need?"
+      },
+      "options": [
+        {
+          "id": "any",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Any"
+          }
+        },
+        {
+          "id": "s512",
+          "label": {
+            "ar": "512 جيجا أو أكتر",
+            "en": "512 GB or more"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "storage_gb",
+                "op": ">=",
+                "value": 512,
+                "why": {
+                  "ar": "إنت عايز 512 جيجا أو أكتر",
+                  "en": "You asked for 512 GB or more"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "s1tb",
+          "label": {
+            "ar": "1 تيرا أو أكتر",
+            "en": "1 TB or more"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "storage_gb",
+                "op": ">=",
+                "value": 1024,
+                "why": {
+                  "ar": "إنت عايز 1 تيرا أو أكتر",
+                  "en": "You asked for 1 TB or more"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "compat",
+      "group": "who",
+      "manual": true,
+      "multi": true,
+      "default": "none",
+      "factors": [
+        "compatibility"
+      ],
+      "note": "Asked only when the text names a device or a Windows-only program. No full software compatibility model.",
+      "label": {
+        "ar": "أجهزة أو برامج لازم يشتغل معاها",
+        "en": "Devices or programs it must work with"
+      },
+      "question": {
+        "ar": "في أجهزة أو برامج لازم اللابتوب يشتغل معاها؟",
+        "en": "Are there devices or programs the laptop must work with?"
+      },
+      "options": [
+        {
+          "id": "none",
+          "label": {
+            "ar": "لأ",
+            "en": "No"
+          }
+        },
+        {
+          "id": "iphone",
+          "label": {
+            "ar": "عندي آيفون أو آيباد",
+            "en": "I use an iPhone or iPad"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "macos"
+                ],
+                "why": {
+                  "ar": "عندك آيفون، والماك بيشتغل معاه أسهل",
+                  "en": "You use an iPhone; a Mac works with it more easily"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "windows_apps",
+          "label": {
+            "ar": "برامج شغالة على ويندوز بس (زي برامج هندسة أو محاسبة)",
+            "en": "Windows-only programs (engineering or accounting software)"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "windows"
+                ],
+                "why": {
+                  "ar": "برامجك شغالة على ويندوز بس",
+                  "en": "Your programs run on Windows only"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "keep",
+      "group": "core",
+      "factors": [
+        "resale_value",
+        "build_quality"
+      ],
+      "label": {
+        "ar": "هتقعد بيه قد إيه",
+        "en": "How long you will keep it"
+      },
+      "question": {
+        "ar": "ناوي تقعد بيه قد إيه؟",
+        "en": "How long will you keep it?"
+      },
+      "options": [
+        {
+          "id": "short",
+          "label": {
+            "ar": "سنتين أو أقل",
+            "en": "Two years or less"
+          },
+          "effects": {
+            "set": {
+              "derived.keepShort": true
+            }
+          }
+        },
+        {
+          "id": "long",
+          "label": {
+            "ar": "4 سنين أو أكتر",
+            "en": "Four years or more"
+          },
+          "effects": {
+            "weights": {
+              "build": 0.6,
+              "cpu": 0.4,
+              "ram_gb": 0.4,
+              "service": 0.4,
+              "warranty_months": 0.3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "group": "preferences",
+      "default": "any",
+      "dependsOn": {
+        "who": [
+          "me",
+          "kid"
+        ]
+      },
+      "askIf": {
+        "path": "derived.maxPrice",
+        "gte": 45000
+      },
+      "factors": [
+        "brand_status",
+        "compatibility"
+      ],
+      "label": {
+        "ar": "ويندوز ولا ماك",
+        "en": "Windows or Mac"
+      },
+      "question": {
+        "ar": "ويندوز ولا ماك؟",
+        "en": "Windows or Mac?"
+      },
+      "options": [
+        {
+          "id": "any",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Either"
+          }
+        },
+        {
+          "id": "windows",
+          "label": {
+            "ar": "ويندوز بس",
+            "en": "Windows only"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "windows"
+                ],
+                "why": {
+                  "ar": "إنت عايز ويندوز",
+                  "en": "You want Windows"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "macos",
+          "label": {
+            "ar": "ماك بس",
+            "en": "Mac only"
+          },
+          "effects": {
+            "must": [
+              {
+                "attr": "os",
+                "op": "in",
+                "value": [
+                  "macos"
+                ],
+                "why": {
+                  "ar": "إنت عايز ماك",
+                  "en": "You want a Mac"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pay",
+      "group": "money",
+      "always": true,
+      "factors": [
+        "payment_way"
+      ],
+      "label": {
+        "ar": "طريقة الدفع",
+        "en": "Payment way"
+      },
+      "question": {
+        "ar": "هتدفع إزاي؟",
+        "en": "How will you pay?"
+      },
+      "options": [
+        {
+          "id": "cash",
+          "label": {
+            "ar": "كاش",
+            "en": "Cash"
+          },
+          "effects": {
+            "set": {
+              "money.pay": "cash"
+            }
+          }
+        },
+        {
+          "id": "card",
+          "label": {
+            "ar": "تقسيط بالكريديت كارد",
+            "en": "Credit card installments"
+          },
+          "effects": {
+            "set": {
+              "money.pay": "card"
+            }
+          }
+        },
+        {
+          "id": "finance",
+          "label": {
+            "ar": "تقسيط من شركة تمويل",
+            "en": "Consumer-finance company"
+          },
+          "effects": {
+            "set": {
+              "money.pay": "finance"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "provider",
+      "group": "money",
+      "dependsOn": {
+        "pay": [
+          "card",
+          "finance"
+        ]
+      },
+      "askIf": {
+        "signal": "providerMatters"
+      },
+      "factors": [
+        "payment_way",
+        "installment_cost"
+      ],
+      "label": {
+        "ar": "البنك أو شركة التقسيط",
+        "en": "Your bank or finance company"
+      },
+      "question": {
+        "ar": "كارتك من أنهي بنك، أو بتقسّط مع أنهي شركة؟",
+        "en": "Which bank is your card from, or which finance company do you use?"
+      },
+      "optionsSource": "plans.provider",
+      "options": [
+        {
+          "id": "nilebank",
+          "kind": "card",
+          "label": {
+            "ar": "بنك النيل (عينة)",
+            "en": "Nile Bank (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "nilebank"
+            }
+          }
+        },
+        {
+          "id": "horusbank",
+          "kind": "card",
+          "label": {
+            "ar": "بنك حورس (عينة)",
+            "en": "Horus Bank (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "horusbank"
+            }
+          }
+        },
+        {
+          "id": "sahla",
+          "kind": "finance",
+          "label": {
+            "ar": "سهلة للتمويل (عينة)",
+            "en": "Sahla Finance (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "sahla"
+            }
+          }
+        },
+        {
+          "id": "qest",
+          "kind": "finance",
+          "label": {
+            "ar": "قسط باي (عينة)",
+            "en": "Qest Pay (sample)"
+          },
+          "effects": {
+            "set": {
+              "money.provider": "qest"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "group": "money",
+      "always": true,
+      "dependsOn": {
+        "pay": [
+          "cash"
+        ]
+      },
+      "factors": [
+        "budget_monthly_down",
+        "cash_price"
+      ],
+      "numeric": {
+        "path": "money.budget",
+        "unit": "EGP",
+        "min": 5000,
+        "max": 400000
+      },
+      "label": {
+        "ar": "الميزانية",
+        "en": "Budget"
+      },
+      "question": {
+        "ar": "ميزانيتك في حدود كام؟",
+        "en": "What is your budget?"
+      },
+      "options": [
+        {
+          "id": "b15000",
+          "value": 15000,
+          "label": {
+            "ar": "لحد 15,000",
+            "en": "Up to 15,000"
+          }
+        },
+        {
+          "id": "b20000",
+          "value": 20000,
+          "label": {
+            "ar": "لحد 20,000",
+            "en": "Up to 20,000"
+          }
+        },
+        {
+          "id": "b30000",
+          "value": 30000,
+          "label": {
+            "ar": "لحد 30,000",
+            "en": "Up to 30,000"
+          }
+        },
+        {
+          "id": "b40000",
+          "value": 40000,
+          "label": {
+            "ar": "لحد 40,000",
+            "en": "Up to 40,000"
+          }
+        },
+        {
+          "id": "b55000",
+          "value": 55000,
+          "label": {
+            "ar": "لحد 55,000",
+            "en": "Up to 55,000"
+          }
+        },
+        {
+          "id": "b75000",
+          "value": 75000,
+          "label": {
+            "ar": "لحد 75,000",
+            "en": "Up to 75,000"
+          }
+        },
+        {
+          "id": "b120000",
+          "value": 120000,
+          "label": {
+            "ar": "أكتر من 75,000",
+            "en": "Over 75,000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "monthlyCap",
+      "group": "money",
+      "always": true,
+      "dependsOn": {
+        "pay": [
+          "card",
+          "finance"
+        ]
+      },
+      "factors": [
+        "budget_monthly_down"
+      ],
+      "numeric": {
+        "path": "money.monthlyCap",
+        "unit": "EGP/month",
+        "min": 300,
+        "max": 50000
+      },
+      "label": {
+        "ar": "القسط الشهري",
+        "en": "Monthly cap"
+      },
+      "question": {
+        "ar": "تقدر تدفع كام في الشهر؟",
+        "en": "How much can you pay per month?"
+      },
+      "options": [
+        {
+          "id": "m1000",
+          "value": 1000,
+          "label": {
+            "ar": "لحد 1,000 في الشهر",
+            "en": "Up to 1,000 a month"
+          }
+        },
+        {
+          "id": "m1500",
+          "value": 1500,
+          "label": {
+            "ar": "لحد 1,500 في الشهر",
+            "en": "Up to 1,500 a month"
+          }
+        },
+        {
+          "id": "m2500",
+          "value": 2500,
+          "label": {
+            "ar": "لحد 2,500 في الشهر",
+            "en": "Up to 2,500 a month"
+          }
+        },
+        {
+          "id": "m4000",
+          "value": 4000,
+          "label": {
+            "ar": "لحد 4,000 في الشهر",
+            "en": "Up to 4,000 a month"
+          }
+        },
+        {
+          "id": "m6000",
+          "value": 6000,
+          "label": {
+            "ar": "لحد 6,000 في الشهر",
+            "en": "Up to 6,000 a month"
+          }
+        }
+      ]
+    },
+    {
+      "id": "down",
+      "group": "money",
+      "default": "d0",
+      "dependsOn": {
+        "pay": [
+          "card",
+          "finance"
+        ]
+      },
+      "askIf": {
+        "signal": "downChangesPick"
+      },
+      "factors": [
+        "budget_monthly_down"
+      ],
+      "numeric": {
+        "path": "money.down",
+        "unit": "EGP",
+        "min": 0,
+        "max": 300000
+      },
+      "label": {
+        "ar": "المقدم",
+        "en": "Down payment"
+      },
+      "question": {
+        "ar": "تقدر تدفع مقدم قد إيه؟",
+        "en": "How much can you pay up front?"
+      },
+      "options": [
+        {
+          "id": "d0",
+          "value": 0,
+          "label": {
+            "ar": "مفيش مقدم",
+            "en": "No down payment"
+          }
+        },
+        {
+          "id": "d5000",
+          "value": 5000,
+          "label": {
+            "ar": "حوالي 5,000",
+            "en": "About 5,000"
+          }
+        },
+        {
+          "id": "d10000",
+          "value": 10000,
+          "label": {
+            "ar": "حوالي 10,000",
+            "en": "About 10,000"
+          }
+        },
+        {
+          "id": "d20000",
+          "value": 20000,
+          "label": {
+            "ar": "حوالي 20,000",
+            "en": "About 20,000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "urgentDays",
+      "group": "logistics",
+      "default": "none",
+      "alwaysIf": {
+        "signal": "saleWeeks",
+        "between": [
+          1,
+          10
+        ]
+      },
+      "askIf": {
+        "signal": "urgencyMatters"
+      },
+      "factors": [
+        "urgency",
+        "delivery_time_fee",
+        "timing_sales"
+      ],
+      "label": {
+        "ar": "محتاجه إمتى",
+        "en": "Needed by"
+      },
+      "question": {
+        "ar": "محتاجه إمتى؟",
+        "en": "When do you need it?"
+      },
+      "options": [
+        {
+          "id": "today",
+          "label": {
+            "ar": "النهارده أو بكرة",
+            "en": "Today or tomorrow"
+          },
+          "effects": {
+            "set": {
+              "logistics.urgentDays": 1
+            }
+          }
+        },
+        {
+          "id": "week",
+          "label": {
+            "ar": "خلال أسبوع",
+            "en": "Within a week"
+          },
+          "effects": {
+            "set": {
+              "logistics.urgentDays": 7
+            }
+          }
+        },
+        {
+          "id": "none",
+          "label": {
+            "ar": "مش مستعجل",
+            "en": "No rush"
+          },
+          "effects": {
+            "set": {
+              "logistics.urgentDays": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "acceptImports",
+      "group": "logistics",
+      "default": "no",
+      "askIf": {
+        "signal": "importCheaper"
+      },
+      "factors": [
+        "official_vs_import",
+        "warranty_length"
+      ],
+      "label": {
+        "ar": "نسخ مستوردة",
+        "en": "Imported units"
+      },
+      "question": {
+        "ar": "في لابتوبات مستوردة أرخص، بس من غير ضمان الوكيل. تقبل بيها؟",
+        "en": "Imported laptops are cheaper but have no agent warranty. Accept them?"
+      },
+      "options": [
+        {
+          "id": "no",
+          "label": {
+            "ar": "لأ، ضمان الوكيل بس",
+            "en": "No, official warranty only"
+          },
+          "effects": {
+            "set": {
+              "logistics.acceptImports": false
+            }
+          }
+        },
+        {
+          "id": "yes",
+          "label": {
+            "ar": "أيوه لو أرخص",
+            "en": "Yes, if cheaper"
+          },
+          "effects": {
+            "set": {
+              "logistics.acceptImports": true
+            }
+          }
+        },
+        {
+          "id": "warranty",
+          "label": {
+            "ar": "لازم ضمان رسمي",
+            "en": "I insist on official warranty"
+          },
+          "effects": {
+            "set": {
+              "logistics.acceptImports": false
+            },
+            "weights": {
+              "service": 0.5,
+              "warranty_months": 0.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "city",
+      "group": "logistics",
+      "askIf": {
+        "signal": "zoneMatters"
+      },
+      "factors": [
+        "delivery_time_fee"
+      ],
+      "note": "Missing city = nationwide, shown as assumed (BR-43). The option id is the city key in zones.cities.",
+      "label": {
+        "ar": "المحافظة",
+        "en": "City"
+      },
+      "question": {
+        "ar": "هيتوصل فين؟",
+        "en": "Where should it be delivered?"
+      },
+      "options": [
+        {
+          "id": "cairo",
+          "label": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "cairo"
+            }
+          }
+        },
+        {
+          "id": "giza",
+          "label": {
+            "ar": "الجيزة",
+            "en": "Giza"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "giza"
+            }
+          }
+        },
+        {
+          "id": "qalyubia",
+          "label": {
+            "ar": "القليوبية",
+            "en": "Qalyubia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "qalyubia"
+            }
+          }
+        },
+        {
+          "id": "alexandria",
+          "label": {
+            "ar": "إسكندرية",
+            "en": "Alexandria"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "alexandria"
+            }
+          }
+        },
+        {
+          "id": "dakahlia",
+          "label": {
+            "ar": "الدقهلية",
+            "en": "Dakahlia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "dakahlia"
+            }
+          }
+        },
+        {
+          "id": "gharbia",
+          "label": {
+            "ar": "الغربية",
+            "en": "Gharbia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "gharbia"
+            }
+          }
+        },
+        {
+          "id": "sharqia",
+          "label": {
+            "ar": "الشرقية",
+            "en": "Sharqia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "sharqia"
+            }
+          }
+        },
+        {
+          "id": "monufia",
+          "label": {
+            "ar": "المنوفية",
+            "en": "Monufia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "monufia"
+            }
+          }
+        },
+        {
+          "id": "beheira",
+          "label": {
+            "ar": "البحيرة",
+            "en": "Beheira"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "beheira"
+            }
+          }
+        },
+        {
+          "id": "ismailia",
+          "label": {
+            "ar": "الإسماعيلية",
+            "en": "Ismailia"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "ismailia"
+            }
+          }
+        },
+        {
+          "id": "port_said",
+          "label": {
+            "ar": "بورسعيد",
+            "en": "Port Said"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "port_said"
+            }
+          }
+        },
+        {
+          "id": "suez",
+          "label": {
+            "ar": "السويس",
+            "en": "Suez"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "suez"
+            }
+          }
+        },
+        {
+          "id": "fayoum",
+          "label": {
+            "ar": "الفيوم",
+            "en": "Fayoum"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "fayoum"
+            }
+          }
+        },
+        {
+          "id": "minya",
+          "label": {
+            "ar": "المنيا",
+            "en": "Minya"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "minya"
+            }
+          }
+        },
+        {
+          "id": "assiut",
+          "label": {
+            "ar": "أسيوط",
+            "en": "Assiut"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "assiut"
+            }
+          }
+        },
+        {
+          "id": "sohag",
+          "label": {
+            "ar": "سوهاج",
+            "en": "Sohag"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "sohag"
+            }
+          }
+        },
+        {
+          "id": "qena",
+          "label": {
+            "ar": "قنا",
+            "en": "Qena"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "qena"
+            }
+          }
+        },
+        {
+          "id": "luxor",
+          "label": {
+            "ar": "الأقصر",
+            "en": "Luxor"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "luxor"
+            }
+          }
+        },
+        {
+          "id": "aswan",
+          "label": {
+            "ar": "أسوان",
+            "en": "Aswan"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "aswan"
+            }
+          }
+        },
+        {
+          "id": "red_sea",
+          "label": {
+            "ar": "البحر الأحمر",
+            "en": "Red Sea"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "red_sea"
+            }
+          }
+        },
+        {
+          "id": "south_sinai",
+          "label": {
+            "ar": "جنوب سينا",
+            "en": "South Sinai"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "south_sinai"
+            }
+          }
+        },
+        {
+          "id": "other",
+          "label": {
+            "ar": "محافظة تانية",
+            "en": "Another governorate"
+          },
+          "effects": {
+            "set": {
+              "logistics.city": "other"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "cod",
+      "group": "logistics",
+      "manual": true,
+      "default": "no",
+      "factors": [
+        "cod"
+      ],
+      "note": "Never asked; set from text or 'Add a detail'. 'only' is a must, 'prefer' is relaxable.",
+      "label": {
+        "ar": "الدفع عند الاستلام",
+        "en": "Cash on delivery"
+      },
+      "question": {
+        "ar": "عايز تدفع عند الاستلام؟",
+        "en": "Do you want to pay on delivery?"
+      },
+      "options": [
+        {
+          "id": "must",
+          "label": {
+            "ar": "أيوه، بس كده",
+            "en": "Yes, only that"
+          },
+          "effects": {
+            "set": {
+              "logistics.cod": "must"
+            }
+          }
+        },
+        {
+          "id": "prefer",
+          "label": {
+            "ar": "يفضّل",
+            "en": "Preferably"
+          },
+          "effects": {
+            "set": {
+              "logistics.cod": "prefer"
+            }
+          }
+        },
+        {
+          "id": "no",
+          "label": {
+            "ar": "مش فارقة",
+            "en": "Does not matter"
+          },
+          "effects": {
+            "set": {
+              "logistics.cod": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "shops",
+      "group": "preferences",
+      "manual": true,
+      "factors": [
+        "retailer_trust_returns"
+      ],
+      "valueShape": "shops",
+      "optionsSource": "retailers",
+      "note": "Value is {prefer: [retailerId], avoid: [retailerId]}. Avoided shops are dropped; preferred shops are a prefer-filter M6 can relax.",
+      "label": {
+        "ar": "محلات بتفضّلها أو مش عايزها",
+        "en": "Shops you like or avoid"
+      },
+      "question": {
+        "ar": "في محلات بتفضّلها أو مش عايز تشتري منها؟",
+        "en": "Any shops you prefer or want to avoid?"
+      },
+      "options": []
+    },
+    {
+      "id": "brand",
+      "group": "preferences",
+      "tiebreak": true,
+      "multi": true,
+      "factors": [
+        "brand_status",
+        "brand_reputation"
+      ],
+      "note": "Asked only on a near tie (top 2 from different brands, under 3 points apart). Each liked brand gets a +5 score bonus.",
+      "optionsSource": "products.brand",
+      "label": {
+        "ar": "البراند",
+        "en": "Brand"
+      },
+      "question": {
+        "ar": "الترشيحات قريبة جداً من بعض. تفضّل براند معين؟",
+        "en": "The picks are very close. Do you prefer a brand?"
+      },
+      "options": [
+        {
+          "id": "lenovo",
+          "label": {
+            "ar": "لينوفو",
+            "en": "Lenovo"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Lenovo"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "hp",
+          "label": {
+            "ar": "HP",
+            "en": "HP"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "HP"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "dell",
+          "label": {
+            "ar": "ديل",
+            "en": "Dell"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Dell"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "asus",
+          "label": {
+            "ar": "أسوس",
+            "en": "Asus"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Asus"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "acer",
+          "label": {
+            "ar": "أيسر",
+            "en": "Acer"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Acer"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "apple",
+          "label": {
+            "ar": "أبل",
+            "en": "Apple"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Apple"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "msi",
+          "label": {
+            "ar": "MSI",
+            "en": "MSI"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "MSI"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "huawei",
+          "label": {
+            "ar": "هواوي",
+            "en": "Huawei"
+          },
+          "effects": {
+            "bonus": [
+              {
+                "attr": "brand",
+                "op": "in",
+                "value": [
+                  "Huawei"
+                ],
+                "points": 5
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "brandAvoid",
+      "group": "preferences",
+      "manual": true,
+      "multi": true,
+      "factors": [
+        "brand_status"
+      ],
+      "note": "Brands the buyer avoids become a prefer-filter (relaxable), not a must.",
+      "optionsSource": "products.brand",
+      "label": {
+        "ar": "براند مش عايزه",
+        "en": "Brand to avoid"
+      },
+      "question": {
+        "ar": "في براند مش عايزه؟",
+        "en": "Any brand you want to avoid?"
+      },
+      "options": [
+        {
+          "id": "lenovo",
+          "label": {
+            "ar": "لينوفو",
+            "en": "Lenovo"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Lenovo"
+                ],
+                "why": {
+                  "ar": "مش عايز لينوفو",
+                  "en": "You avoid Lenovo"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "hp",
+          "label": {
+            "ar": "HP",
+            "en": "HP"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "HP"
+                ],
+                "why": {
+                  "ar": "مش عايز HP",
+                  "en": "You avoid HP"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "dell",
+          "label": {
+            "ar": "ديل",
+            "en": "Dell"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Dell"
+                ],
+                "why": {
+                  "ar": "مش عايز ديل",
+                  "en": "You avoid Dell"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "asus",
+          "label": {
+            "ar": "أسوس",
+            "en": "Asus"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Asus"
+                ],
+                "why": {
+                  "ar": "مش عايز أسوس",
+                  "en": "You avoid Asus"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "acer",
+          "label": {
+            "ar": "أيسر",
+            "en": "Acer"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Acer"
+                ],
+                "why": {
+                  "ar": "مش عايز أيسر",
+                  "en": "You avoid Acer"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "apple",
+          "label": {
+            "ar": "أبل",
+            "en": "Apple"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Apple"
+                ],
+                "why": {
+                  "ar": "مش عايز أبل",
+                  "en": "You avoid Apple"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "msi",
+          "label": {
+            "ar": "MSI",
+            "en": "MSI"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "MSI"
+                ],
+                "why": {
+                  "ar": "مش عايز MSI",
+                  "en": "You avoid MSI"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "huawei",
+          "label": {
+            "ar": "هواوي",
+            "en": "Huawei"
+          },
+          "effects": {
+            "prefer": [
+              {
+                "attr": "brand",
+                "op": "not_in",
+                "value": [
+                  "Huawei"
+                ],
+                "why": {
+                  "ar": "مش عايز هواوي",
+                  "en": "You avoid Huawei"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "modelInMind",
+      "group": "preferences",
+      "manual": true,
+      "factors": [
+        "model_in_mind"
+      ],
+      "valueShape": "product",
+      "optionsSource": "products",
+      "note": "Value is a product id (preferred) or a model name; Layer 2 matches id, name or alias, case-insensitive, and gives a verdict.",
+      "label": {
+        "ar": "موديل في دماغك",
+        "en": "Model in mind"
+      },
+      "question": {
+        "ar": "في موديل لابتوب معين في دماغك؟",
+        "en": "Do you have a laptop model in mind?"
+      },
+      "options": []
+    }
+  ],
+  "derive": [
+    {
+      "id": "maxPrice",
+      "type": "max_price",
+      "target": "derived.maxPrice",
+      "note": "Rough max price the buyer can reach: cash budget, or down + the most a monthly cap can finance under the reference plans. Used by checks and askIf only; ranking always quotes real plans.",
+      "refPlans": [
+        {
+          "kind": "card",
+          "months": 12,
+          "monthlyRate": 0,
+          "adminShare": 0.05
+        },
+        {
+          "kind": "finance",
+          "months": 18,
+          "monthlyRate": 0.02,
+          "adminShare": 0
+        },
+        {
+          "kind": "finance",
+          "months": 24,
+          "monthlyRate": 0.02,
+          "adminShare": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "heavy_gaming_low_budget",
+      "when": {
+        "all": [
+          {
+            "slot": "gameLevel",
+            "in": [
+              "heavy"
+            ]
+          },
+          {
+            "path": "derived.maxPrice",
+            "lte": 35000
+          }
+        ]
+      },
+      "message": {
+        "ar": "اللابتوبات اللي فيها كارت شاشة منفصل بتبدأ من حوالي 35 ألف في الكتالوج ده. تحت كده الألعاب التقيلة هتشتغل على جرافيك واطي.",
+        "en": "In this catalog laptops with a dedicated graphics card start around 35,000. Below that, heavy games run on low graphics."
+      }
+    },
+    {
+      "id": "video_low_budget",
+      "when": {
+        "all": [
+          {
+            "slot": "use",
+            "in": [
+              "video"
+            ]
+          },
+          {
+            "path": "derived.maxPrice",
+            "lte": 25000
+          }
+        ]
+      },
+      "message": {
+        "ar": "المونتاج محتاج 16 جيجا رامات ومعالج قوي، ودول نادراً ما بيكونوا تحت 25 ألف.",
+        "en": "Video editing needs 16 GB RAM and a strong processor, rarely found under 25,000."
+      }
+    },
+    {
+      "id": "mac_low_budget",
+      "when": {
+        "all": [
+          {
+            "slot": "os",
+            "in": [
+              "macos"
+            ]
+          },
+          {
+            "path": "derived.maxPrice",
+            "lt": 45000
+          }
+        ]
+      },
+      "message": {
+        "ar": "الماك بوك في الكتالوج ده بيبدأ فوق الميزانية دي.",
+        "en": "In this catalog MacBooks start above this budget."
+      }
+    },
+    {
+      "id": "gaming_and_carry",
+      "when": {
+        "all": [
+          {
+            "slot": "gameLevel",
+            "in": [
+              "heavy"
+            ]
+          },
+          {
+            "slot": "portability",
+            "in": [
+              "daily"
+            ]
+          }
+        ]
+      },
+      "message": {
+        "ar": "لابتوبات الجيمنج تقيلة (أكتر من 2 كيلو) وبطاريتها قصيرة؛ الشيل كل يوم هيبقى متعب.",
+        "en": "Gaming laptops are heavy (over 2 kg) with short battery life; carrying one daily is tiring."
+      }
+    }
+  ],
+  "runningCost": {
+    "type": "none",
+    "reason": {
+      "ar": "استهلاك كهربا اللابتوب صغير مقارنة بسعره",
+      "en": "A laptop's electricity cost is small next to its price"
+    }
+  },
+  "resale": {
+    "when": {
+      "path": "derived.keepShort",
+      "eq": true
+    },
+    "afterYears": 2,
+    "note": "Share of the reference price a laptop resells for after 2 years. Assumption: MacBooks hold value best in Egypt; everything else drops fast.",
+    "rules": [
+      {
+        "match": {
+          "brand": "Apple"
+        },
+        "share": 0.55
+      },
+      {
+        "match": {
+          "series": "flagship"
+        },
+        "share": 0.35
+      },
+      {
+        "match": {},
+        "share": 0.25
+      }
+    ]
+  },
+  "installCost": 0,
+  "season": {
+    "saleEvents": [
+      {
+        "id": "white_friday",
+        "rule": "last_friday_of_november",
+        "windowWeeks": [
+          1,
+          10
+        ],
+        "savingShare": [
+          0.1,
+          0.2
+        ],
+        "label": {
+          "ar": "الوايت فرايداي",
+          "en": "White Friday"
+        },
+        "note": "Expected 10-20% saving is an assumption from past seasons."
+      }
+    ],
+    "monthAdvice": []
+  },
+  "factors": [
+    {
+      "id": "main_use_intensity",
+      "group": "need",
+      "name": "Main use and intensity (study, office, programming, gaming, design, video)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "use"
+        },
+        {
+          "slot": "gameLevel"
+        },
+        {
+          "slot": "storageNeed"
+        }
+      ]
+    },
+    {
+      "id": "who_for",
+      "group": "need",
+      "name": "Who it is for (me, child, parent)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "who"
+        }
+      ]
+    },
+    {
+      "id": "current_device_problem",
+      "group": "need",
+      "name": "Problem with the current laptop",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "pain"
+        }
+      ]
+    },
+    {
+      "id": "portability",
+      "group": "need",
+      "name": "Portability: weight and battery away from a socket",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "portability"
+        },
+        {
+          "attribute": "weight_kg"
+        },
+        {
+          "attribute": "battery_hours"
+        }
+      ]
+    },
+    {
+      "id": "physical_fit",
+      "group": "need",
+      "name": "Physical fit: screen size and bag size",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "screenSize"
+        },
+        {
+          "attribute": "screen_inches"
+        },
+        {
+          "slot": "portability"
+        }
+      ]
+    },
+    {
+      "id": "storage_ram",
+      "group": "need",
+      "name": "Storage and RAM needed",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "storageNeed"
+        },
+        {
+          "attribute": "storage_gb"
+        },
+        {
+          "attribute": "ram_gb"
+        }
+      ]
+    },
+    {
+      "id": "compatibility",
+      "group": "need",
+      "name": "Compatibility (OS, phone ecosystem, Windows-only programs)",
+      "status": "partial",
+      "via": [
+        {
+          "slot": "compat"
+        },
+        {
+          "slot": "os"
+        }
+      ],
+      "reason": "Named devices and Windows-only programs only; no software compatibility database."
+    },
+    {
+      "id": "screen_quality",
+      "group": "need",
+      "name": "Screen quality (panel, colour, brightness)",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "screen"
+        },
+        {
+          "slot": "use"
+        }
+      ]
+    },
+    {
+      "id": "keyboard_typing",
+      "group": "need",
+      "name": "Keyboard and typing comfort",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "keyboard"
+        },
+        {
+          "slot": "use"
+        }
+      ]
+    },
+    {
+      "id": "upgradeability",
+      "group": "need",
+      "name": "Upgradeable RAM and SSD",
+      "status": "not_yet",
+      "reason": "Upgrade slots are not in the catalog yet."
+    },
+    {
+      "id": "cash_price",
+      "group": "money",
+      "name": "Cash price",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "price_egp"
+        },
+        {
+          "slot": "budget"
+        }
+      ]
+    },
+    {
+      "id": "payment_way",
+      "group": "money",
+      "name": "Payment way: cash, card, finance company",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "pay"
+        },
+        {
+          "slot": "provider"
+        }
+      ]
+    },
+    {
+      "id": "budget_monthly_down",
+      "group": "money",
+      "name": "Budget, monthly cap and down payment",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "budget"
+        },
+        {
+          "slot": "monthlyCap"
+        },
+        {
+          "slot": "down"
+        }
+      ]
+    },
+    {
+      "id": "installment_cost",
+      "group": "money",
+      "name": "Real installment cost per retailer",
+      "status": "covered",
+      "via": [
+        {
+          "planField": "monthly_rate"
+        },
+        {
+          "planField": "admin_share"
+        },
+        {
+          "slot": "provider"
+        }
+      ]
+    },
+    {
+      "id": "running_cost",
+      "group": "money",
+      "name": "Running cost (electricity)",
+      "status": "out_of_scope",
+      "reason": "Small for laptops (runningCost.type = none)."
+    },
+    {
+      "id": "software_cost",
+      "group": "money",
+      "name": "Windows and Office licence included or not",
+      "status": "not_yet",
+      "reason": "Licence status is not tracked per product or offer."
+    },
+    {
+      "id": "resale_value",
+      "group": "money",
+      "name": "Resale value",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "keep"
+        },
+        {
+          "configKey": "resale"
+        }
+      ]
+    },
+    {
+      "id": "timing_sales",
+      "group": "money",
+      "name": "Timing: White Friday, back to school, promo end",
+      "status": "partial",
+      "via": [
+        {
+          "configKey": "season"
+        },
+        {
+          "planField": "valid_until"
+        },
+        {
+          "slot": "urgentDays"
+        }
+      ],
+      "reason": "White Friday only; a back-to-school season is not modelled yet."
+    },
+    {
+      "id": "timing_launch_currency",
+      "group": "money",
+      "name": "Timing: new generation launch, currency moves",
+      "status": "not_yet",
+      "reason": "Needs a launch calendar and price history."
+    },
+    {
+      "id": "retailer_price",
+      "group": "offer",
+      "name": "Price at each retailer",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "price_egp"
+        }
+      ]
+    },
+    {
+      "id": "gifts",
+      "group": "offer",
+      "name": "Gifts: bag, mouse, extra warranty, cashback",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "extras"
+        }
+      ]
+    },
+    {
+      "id": "official_vs_import",
+      "group": "offer",
+      "name": "Official vs imported",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "acceptImports"
+        },
+        {
+          "offerField": "official"
+        }
+      ]
+    },
+    {
+      "id": "arabic_keyboard",
+      "group": "offer",
+      "name": "Arabic keyboard layout (imports often ship English only)",
+      "status": "not_yet",
+      "reason": "Keyboard layout is not tracked per offer."
+    },
+    {
+      "id": "retailer_trust_returns",
+      "group": "offer",
+      "name": "Retailer trust and returns",
+      "status": "covered",
+      "via": [
+        {
+          "retailerField": "trust"
+        },
+        {
+          "retailerField": "return_days"
+        },
+        {
+          "slot": "shops"
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "group": "offer",
+      "name": "Stock",
+      "status": "covered",
+      "via": [
+        {
+          "offerField": "in_stock"
+        }
+      ]
+    },
+    {
+      "id": "delivery_time_fee",
+      "group": "offer",
+      "name": "Delivery time and fee",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "urgentDays"
+        },
+        {
+          "slot": "city"
+        },
+        {
+          "offerField": "delivery"
+        }
+      ]
+    },
+    {
+      "id": "cod",
+      "group": "offer",
+      "name": "Cash on delivery available",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "cod"
+        },
+        {
+          "retailerField": "cod"
+        }
+      ]
+    },
+    {
+      "id": "warranty_length",
+      "group": "after_sales",
+      "name": "Warranty length",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "warranty_months"
+        },
+        {
+          "offerField": "extras"
+        }
+      ]
+    },
+    {
+      "id": "service_network",
+      "group": "after_sales",
+      "name": "Service network strength in Egypt",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "service"
+        }
+      ]
+    },
+    {
+      "id": "spare_parts",
+      "group": "after_sales",
+      "name": "Spare parts (battery, screen, charger) availability",
+      "status": "not_yet",
+      "reason": "Not in the catalog yet."
+    },
+    {
+      "id": "build_quality",
+      "group": "after_sales",
+      "name": "Build quality and durability",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "build"
+        },
+        {
+          "slot": "keep"
+        }
+      ]
+    },
+    {
+      "id": "brand_reputation",
+      "group": "trust",
+      "name": "Brand reputation",
+      "status": "covered",
+      "via": [
+        {
+          "attribute": "service"
+        },
+        {
+          "slot": "brand"
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "group": "trust",
+      "name": "Reviews and real user experience",
+      "status": "not_yet",
+      "reason": "Not collected yet."
+    },
+    {
+      "id": "known_defects",
+      "group": "trust",
+      "name": "Known model defects (overheating, hinges)",
+      "status": "not_yet",
+      "reason": "Planned as expert-curated warnings per model."
+    },
+    {
+      "id": "fakes_used",
+      "group": "trust",
+      "name": "Fear of refurbished or used sold as new",
+      "status": "partial",
+      "via": [
+        {
+          "retailerField": "trust"
+        }
+      ],
+      "reason": "Covered only through retailer trust."
+    },
+    {
+      "id": "brand_status",
+      "group": "social",
+      "name": "Brand as status (MacBook)",
+      "status": "partial",
+      "via": [
+        {
+          "slot": "brand"
+        },
+        {
+          "slot": "brandAvoid"
+        },
+        {
+          "slot": "os"
+        }
+      ]
+    },
+    {
+      "id": "family_opinion",
+      "group": "social",
+      "name": "Family, friends and Facebook group opinion",
+      "status": "out_of_scope",
+      "reason": "Out of scope; a shareable result link helps."
+    },
+    {
+      "id": "model_in_mind",
+      "group": "social",
+      "name": "Model already in mind",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "modelInMind"
+        }
+      ]
+    },
+    {
+      "id": "look_colour",
+      "group": "social",
+      "name": "Look and colour",
+      "status": "not_yet",
+      "reason": "Colour stock not tracked per offer."
+    },
+    {
+      "id": "urgency",
+      "group": "social",
+      "name": "Urgency (term starts, new job)",
+      "status": "covered",
+      "via": [
+        {
+          "slot": "urgentDays"
+        }
+      ]
+    },
+    {
+      "id": "trade_in",
+      "group": "last_mile",
+      "name": "Trade-in of the old laptop",
+      "status": "not_yet",
+      "reason": "Not modelled."
+    },
+    {
+      "id": "bundles",
+      "group": "last_mile",
+      "name": "Bundles (laptop + bag + mouse + Office)",
+      "status": "partial",
+      "via": [
+        {
+          "offerField": "extras"
+        }
+      ],
+      "reason": "Valued as gifts when the retailer lists them."
+    }
+  ]
+}

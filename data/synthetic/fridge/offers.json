@@ -1,0 +1,4376 @@
+[
+  {
+    "id": "o-fridge-white-whale-ws-150-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-ws-150",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-white-whale-ws-150",
+    "price_egp": 12200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T20:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-ws-150-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-ws-150",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-white-whale-ws-150",
+    "price_egp": 11800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T23:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-ws-150-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-ws-150",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-white-whale-ws-150",
+    "price_egp": 11800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e230-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e230",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-kiriazi-e230",
+    "price_egp": 12400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T03:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e230-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e230",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-kiriazi-e230",
+    "price_egp": 12700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e230-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e230",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-kiriazi-e230",
+    "price_egp": 12300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 615,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T10:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-260-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-260",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-fresh-fnt-260",
+    "price_egp": 13900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-260-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-260",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-fresh-fnt-260",
+    "price_egp": 13700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-260-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-260",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-fresh-fnt-260",
+    "price_egp": 13400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 670,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-280-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-280",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-white-whale-wr-280",
+    "price_egp": 15300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T00:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-280-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-280",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-white-whale-wr-280",
+    "price_egp": 15400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-280-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-280",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-white-whale-wr-280",
+    "price_egp": 14900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-01T09:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-280-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-280",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-white-whale-wr-280",
+    "price_egp": 15400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T17:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zrt-300-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zrt-300",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-zanussi-zrt-300",
+    "price_egp": 15500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 775,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T02:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zrt-300-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zrt-300",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-zanussi-zrt-300",
+    "price_egp": 15900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T00:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zrt-300-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zrt-300",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-zanussi-zrt-300",
+    "price_egp": 16300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zrt-300-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zrt-300",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-zanussi-zrt-300",
+    "price_egp": 16000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T02:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zrt-300-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zrt-300",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-zanussi-zrt-300",
+    "price_egp": 16100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T09:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-310-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-310",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-unionaire-ur-310",
+    "price_egp": 17800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-310-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-310",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-unionaire-ur-310",
+    "price_egp": 17400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T08:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-310-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-310",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-unionaire-ur-310",
+    "price_egp": 17000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T22:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-310-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-310",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-unionaire-ur-310",
+    "price_egp": 17000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T16:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge35-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge35",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-sharp-sj-ge35",
+    "price_egp": 19300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge35-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge35",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-sharp-sj-ge35",
+    "price_egp": 19600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T20:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge35-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge35",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-sharp-sj-ge35",
+    "price_egp": 19000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T01:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e400-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e400",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-kiriazi-e400",
+    "price_egp": 20700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e400-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e400",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-kiriazi-e400",
+    "price_egp": 19900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 995,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T10:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e400-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e400",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-kiriazi-e400",
+    "price_egp": 20000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T04:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e400-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e400",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-kiriazi-e400",
+    "price_egp": 20000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T01:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e400-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e400",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-kiriazi-e400",
+    "price_egp": 20300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T21:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef33-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef33",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-toshiba-gr-ef33",
+    "price_egp": 21000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T01:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef33-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef33",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-toshiba-gr-ef33",
+    "price_egp": 21300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T00:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef33-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef33",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-toshiba-gr-ef33",
+    "price_egp": 20300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T10:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef33-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef33",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-toshiba-gr-ef33",
+    "price_egp": 20600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T05:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-320i-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-320i",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-haier-hrf-320i",
+    "price_egp": 21600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T01:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-320i-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-320i",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-haier-hrf-320i",
+    "price_egp": 22000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T10:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-320i-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-320i",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-haier-hrf-320i",
+    "price_egp": 21300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1065,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T02:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-320i-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-320i",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-haier-hrf-320i",
+    "price_egp": 21700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-320i-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-320i",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-haier-hrf-320i",
+    "price_egp": 21800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-400-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-400",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-fresh-fnt-400",
+    "price_egp": 21900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1095,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T00:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-400-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-400",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-fresh-fnt-400",
+    "price_egp": 22400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T07:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-400-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-400",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-fresh-fnt-400",
+    "price_egp": 21800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-02T05:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-400-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-400",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-fresh-fnt-400",
+    "price_egp": 22500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T01:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-fresh-fnt-400-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-fresh-fnt-400",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-fresh-fnt-400",
+    "price_egp": 22600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T08:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rdne-350-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rdne-350",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-beko-rdne-350",
+    "price_egp": 24200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T19:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rdne-350-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rdne-350",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-beko-rdne-350",
+    "price_egp": 23500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T07:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rdne-350-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rdne-350",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-beko-rdne-350",
+    "price_egp": 23300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T09:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rdne-350-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rdne-350",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-beko-rdne-350",
+    "price_egp": 23000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1150,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T04:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rdne-350-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rdne-350",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-beko-rdne-350",
+    "price_egp": 23700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T02:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e560-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e560",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-kiriazi-e560",
+    "price_egp": 28000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T00:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e560-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e560",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-kiriazi-e560",
+    "price_egp": 27200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T21:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-kiriazi-e560-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-kiriazi-e560",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-kiriazi-e560",
+    "price_egp": 26800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1340,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T10:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge45-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge45",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-sharp-sj-ge45",
+    "price_egp": 29300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T10:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge45-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge45",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-sharp-sj-ge45",
+    "price_egp": 28700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 5
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1435,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T01:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge45-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge45",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-sharp-sj-ge45",
+    "price_egp": 28900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T10:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-ge45-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-ge45",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-sharp-sj-ge45",
+    "price_egp": 30000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T10:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rt38-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rt38",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-samsung-rt38",
+    "price_egp": 29300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T18:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rt38-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rt38",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-samsung-rt38",
+    "price_egp": 30200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T16:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rt38-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rt38",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-samsung-rt38",
+    "price_egp": 30700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T19:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-530d-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-530d",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-unionaire-ur-530d",
+    "price_egp": 30200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1510,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T03:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-530d-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-530d",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-unionaire-ur-530d",
+    "price_egp": 30600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T03:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-unionaire-ur-530d-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-unionaire-ur-530d",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-unionaire-ur-530d",
+    "price_egp": 30100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T01:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef46-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef46",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-toshiba-gr-ef46",
+    "price_egp": 32300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T18:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef46-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef46",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-toshiba-gr-ef46",
+    "price_egp": 30900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef46-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef46",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-toshiba-gr-ef46",
+    "price_egp": 30700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-02T18:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-ef46-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-ef46",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-toshiba-gr-ef46",
+    "price_egp": 30300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T01:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-b392-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-b392",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-lg-gn-b392",
+    "price_egp": 32600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T16:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-b392-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-b392",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-lg-gn-b392",
+    "price_egp": 32900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T19:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-b392-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-b392",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-lg-gn-b392",
+    "price_egp": 33100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T02:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-b392-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-b392",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-lg-gn-b392",
+    "price_egp": 32500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T02:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-b392-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-b392",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-lg-gn-b392",
+    "price_egp": 32500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1625,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-02T18:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-560d-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-560d",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-white-whale-wr-560d",
+    "price_egp": 32800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1640,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T04:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-560d-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-560d",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-white-whale-wr-560d",
+    "price_egp": 34300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T09:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-white-whale-wr-560d-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-white-whale-wr-560d",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-white-whale-wr-560d",
+    "price_egp": 33500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T09:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rb34-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rb34",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-samsung-rb34",
+    "price_egp": 33900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rb34-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rb34",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-samsung-rb34",
+    "price_egp": 34200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T16:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rb34-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rb34",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-samsung-rb34",
+    "price_egp": 33600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-02T19:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rb34-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rb34",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-samsung-rb34",
+    "price_egp": 33300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T07:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rb34-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rb34",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-samsung-rb34",
+    "price_egp": 34900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T23:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrb-450-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrb-450",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-haier-hrb-450",
+    "price_egp": 33900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-02T18:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrb-450-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrb-450",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-haier-hrb-450",
+    "price_egp": 34300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T09:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrb-450-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrb-450",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-haier-hrb-450",
+    "price_egp": 35500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T01:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrb-450-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrb-450",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-haier-hrb-450",
+    "price_egp": 34200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1710,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T04:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrb-450-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrb-450",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-haier-hrb-450",
+    "price_egp": 34000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T22:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rcne-460-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rcne-460",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-beko-rcne-460",
+    "price_egp": 35800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rcne-460-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rcne-460",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-beko-rcne-460",
+    "price_egp": 36600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T21:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rcne-460-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rcne-460",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-beko-rcne-460",
+    "price_egp": 35400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-02T23:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rcne-460-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rcne-460",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-beko-rcne-460",
+    "price_egp": 36200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T22:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-rcne-460-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-rcne-460",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-beko-rcne-460",
+    "price_egp": 36200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Voltage stabiliser",
+        "value_egp": 600
+      }
+    ],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T23:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zbb-450-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zbb-450",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-zanussi-zbb-450",
+    "price_egp": 37300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 350,
+        "days": 7
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1865,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T06:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zbb-450-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zbb-450",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-zanussi-zbb-450",
+    "price_egp": 37700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T10:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zbb-450-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zbb-450",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-zanussi-zbb-450",
+    "price_egp": 39300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T17:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-zanussi-zbb-450-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-zanussi-zbb-450",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-zanussi-zbb-450",
+    "price_egp": 38700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T16:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-h702-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-h702",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-lg-gn-h702",
+    "price_egp": 44300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T23:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-h702-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-h702",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-lg-gn-h702",
+    "price_egp": 43000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T01:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-h702-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-h702",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-lg-gn-h702",
+    "price_egp": 43700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T09:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-h702-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-h702",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-lg-gn-h702",
+    "price_egp": 42900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T18:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gn-h702-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gn-h702",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-lg-gn-h702",
+    "price_egp": 43700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T16:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-bosch-kgn56-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-bosch-kgn56",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-bosch-kgn56",
+    "price_egp": 47400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T20:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-bosch-kgn56-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-bosch-kgn56",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-bosch-kgn56",
+    "price_egp": 47600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T09:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-bosch-kgn56-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-bosch-kgn56",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-bosch-kgn56",
+    "price_egp": 46400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T16:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-bosch-kgn56-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-bosch-kgn56",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-bosch-kgn56",
+    "price_egp": 46800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 6
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T07:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-520fd-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-520fd",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-haier-hrf-520fd",
+    "price_egp": 56500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-520fd-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-520fd",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-haier-hrf-520fd",
+    "price_egp": 53700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-520fd-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-520fd",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-haier-hrf-520fd",
+    "price_egp": 54400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 4
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2720,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-03T09:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-520fd-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-520fd",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-haier-hrf-520fd",
+    "price_egp": 55700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Fridge stand and water filter jug",
+        "value_egp": 450
+      }
+    ],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T19:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-haier-hrf-520fd-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-haier-hrf-520fd",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-haier-hrf-520fd",
+    "price_egp": 54100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T03:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-sbs62-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-sbs62",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-sharp-sj-sbs62",
+    "price_egp": 55900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T08:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-sbs62-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-sbs62",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-sharp-sj-sbs62",
+    "price_egp": 57800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-01T08:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-sharp-sj-sbs62-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-sharp-sj-sbs62",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-sharp-sj-sbs62",
+    "price_egp": 58000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T04:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-gne-560fd-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-gne-560fd",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-beko-gne-560fd",
+    "price_egp": 61500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T19:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-gne-560fd-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-gne-560fd",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-beko-gne-560fd",
+    "price_egp": 61300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 2
+      },
+      "other": {
+        "fee": 300,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T01:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-beko-gne-560fd-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-beko-gne-560fd",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-beko-gne-560fd",
+    "price_egp": 59800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T23:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-rf600-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-rf600",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-toshiba-gr-rf600",
+    "price_egp": 67900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T19:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-rf600-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-rf600",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-toshiba-gr-rf600",
+    "price_egp": 64600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 3230,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-02T16:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-toshiba-gr-rf600-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-toshiba-gr-rf600",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-toshiba-gr-rf600",
+    "price_egp": 67600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rs64-khan",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rs64",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/fridge-samsung-rs64",
+    "price_egp": 62600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "plan_ids": [
+      "khan-store"
+    ],
+    "checked_at": "2026-10-02T23:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rs64-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rs64",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-samsung-rs64",
+    "price_egp": 72200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T09:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rs64-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rs64",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-samsung-rs64",
+    "price_egp": 71000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rs64-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rs64",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-samsung-rs64",
+    "price_egp": 71300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gc-b257-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gc-b257",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-lg-gc-b257",
+    "price_egp": 79500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T16:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gc-b257-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gc-b257",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-lg-gc-b257",
+    "price_egp": 76100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-01T06:00:00.000Z",
+    "source": "synthetic",
+    "extras_checked_at": "2026-09-29T08:00:00.000Z"
+  },
+  {
+    "id": "o-fridge-lg-gc-b257-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gc-b257",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/fridge-lg-gc-b257",
+    "price_egp": 79400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "sphinx-nilebank",
+      "sphinx-qest",
+      "sphinx-qest-18"
+    ],
+    "checked_at": "2026-10-03T02:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gr-x24-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gr-x24",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-lg-gr-x24",
+    "price_egp": 90800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gr-x24-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gr-x24",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/fridge-lg-gr-x24",
+    "price_egp": 87800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 100,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 350,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 4390,
+        "card_only": true
+      }
+    ],
+    "plan_ids": [
+      "lotus-nilebank-card",
+      "lotus-sahla"
+    ],
+    "checked_at": "2026-10-02T19:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gr-x24-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gr-x24",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-lg-gr-x24",
+    "price_egp": 94100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 4
+      },
+      "other": {
+        "fee": 300,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-02T20:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-lg-gr-x24-delta",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-lg-gr-x24",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/fridge-lg-gr-x24",
+    "price_egp": 90700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 200,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "delta-qest",
+      "delta-sahla"
+    ],
+    "checked_at": "2026-10-03T10:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-bosch-kad93-khan",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-bosch-kad93",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/fridge-bosch-kad93",
+    "price_egp": 84100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 150,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "plan_ids": [
+      "khan-store"
+    ],
+    "checked_at": "2026-10-03T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rf65-nile",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rf65",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/fridge-samsung-rf65",
+    "price_egp": 107800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 150,
+        "days": 3
+      },
+      "other": {
+        "fee": 300,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "nile-nilebank-card",
+      "nile-qest",
+      "nile-sahla",
+      "nile-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T03:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rf65-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rf65",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/fridge-samsung-rf65",
+    "price_egp": 107900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 250,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "plan_ids": [
+      "pharos-horus-card-12",
+      "pharos-horus-card-6",
+      "pharos-qest"
+    ],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-fridge-samsung-rf65-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "fridge-samsung-rf65",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/fridge-samsung-rf65",
+    "price_egp": 105700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 200,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "plan_ids": [
+      "oasis-horus-card",
+      "oasis-horus-promo-18",
+      "oasis-sahla",
+      "oasis-sahla-promo"
+    ],
+    "checked_at": "2026-10-03T08:24:00.000Z",
+    "source": "synthetic"
+  }
+]

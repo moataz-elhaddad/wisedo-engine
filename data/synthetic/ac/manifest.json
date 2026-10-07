@@ -1,0 +1,39 @@
+{
+  "snapshot_id": "synthetic-ac-2026-10-03",
+  "tenant_id": "wisedo",
+  "category": "ac",
+  "now": "2026-10-03T12:00:00.000Z",
+  "seed": 20261104,
+  "source": "synthetic",
+  "note": "SAMPLE DATA. Every record is synthetic: prices, specs, kWh figures and offers are invented and must not be presented as real. Retailers and plans are the shared synthetic rows in data/synthetic/.",
+  "counts": {
+    "products": 33,
+    "offers": 128,
+    "brands": 9
+  },
+  "edgeCases": {
+    "missingSpec": {
+      "product": "ac-gree-pular-15",
+      "attr": "warranty_months"
+    },
+    "allOffersStale": "ac-unionaire-artify-3",
+    "outOfStock": [
+      "o-ac-sharp-inverter-15-lotus"
+    ],
+    "staleOffers": [
+      "o-ac-tornado-classic-15-nile"
+    ],
+    "staleExtras": [
+      "o-ac-carrier-optimax-inv-15-sphinx"
+    ],
+    "importOffers": "every offer from khan (official: false, no free installation); khan carries LG, Samsung, Gree and Midea only",
+    "freeInstall": "pharos and oasis always include installation; nile includes it from a reference price of 25,000; the others charge config.installCost (700)",
+    "cardOnlyCashback": "lotus: 5% cashback with Nile Bank cards (card buyers only)",
+    "zoneGaps": [
+      "delta: no alexandria",
+      "khan: greater_cairo only",
+      "sphinx: no other governorates"
+    ],
+    "sharedPlans": "plans are the shared rows of data/synthetic/plans.json (retailer-wide); pharos-horus-samsung is limited to Samsung phones, so it never applies to ACs"
+  }
+}

@@ -1,0 +1,3931 @@
+[
+  {
+    "id": "o-laptop-acer-chromebook-314-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-chromebook-314",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-acer-chromebook-314",
+    "price_egp": 12500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-chromebook-314-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-chromebook-314",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-acer-chromebook-314",
+    "price_egp": 12150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 608,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-chromebook-314-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-chromebook-314",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-acer-chromebook-314",
+    "price_egp": 12550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-1-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-1",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-lenovo-ideapad-1",
+    "price_egp": 13450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-1-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-1",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-lenovo-ideapad-1",
+    "price_egp": 13750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T10:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-1-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-1",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-ideapad-1",
+    "price_egp": 13650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-1-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-1",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-ideapad-1",
+    "price_egp": 14150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-15-celeron-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-15-celeron",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-hp-15-celeron",
+    "price_egp": 14700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T00:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-15-celeron-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-15-celeron",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-hp-15-celeron",
+    "price_egp": 14700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T00:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-15-celeron-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-15-celeron",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-hp-15-celeron",
+    "price_egp": 14800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-go-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-go-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-asus-vivobook-go-15",
+    "price_egp": 16650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-go-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-go-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-asus-vivobook-go-15",
+    "price_egp": 16450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-go-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-go-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-asus-vivobook-go-15",
+    "price_egp": 16100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T02:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-aspire-3-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-aspire-3",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-acer-aspire-3",
+    "price_egp": 17900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-aspire-3-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-aspire-3",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-acer-aspire-3",
+    "price_egp": 18000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T22:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-aspire-3-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-aspire-3",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-acer-aspire-3",
+    "price_egp": 17600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-aspire-3-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-aspire-3",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-acer-aspire-3",
+    "price_egp": 17150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 858,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-inspiron-3520-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-inspiron-3520",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-dell-inspiron-3520",
+    "price_egp": 19800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-inspiron-3520-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-inspiron-3520",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-dell-inspiron-3520",
+    "price_egp": 18950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-inspiron-3520-khan",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-inspiron-3520",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/laptop-dell-inspiron-3520",
+    "price_egp": 16800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T01:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-v15-g4-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-v15-g4",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-v15-g4",
+    "price_egp": 20600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-v15-g4-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-v15-g4",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-v15-g4",
+    "price_egp": 20500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1025,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-v15-g4-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-v15-g4",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-lenovo-v15-g4",
+    "price_egp": 21250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-asus-vivobook-15",
+    "price_egp": 21500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1075,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T03:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-asus-vivobook-15",
+    "price_egp": 22600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-asus-vivobook-15",
+    "price_egp": 22150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-asus-vivobook-15",
+    "price_egp": 21250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-asus-vivobook-15",
+    "price_egp": 21650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-03T02:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-3-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-3",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-lenovo-ideapad-slim-3",
+    "price_egp": 22800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "bundle",
+        "label": "Laptop bag and wireless mouse",
+        "value_egp": 600
+      }
+    ],
+    "checked_at": "2026-10-02T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-3-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-3",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-ideapad-slim-3",
+    "price_egp": 22500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1125,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T02:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-3-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-3",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-ideapad-slim-3",
+    "price_egp": 22550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-250-g10-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-250-g10",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-hp-250-g10",
+    "price_egp": 24200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-250-g10-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-250-g10",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-hp-250-g10",
+    "price_egp": 23450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-250-g10-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-250-g10",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-hp-250-g10",
+    "price_egp": 23700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1185,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-01T10:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-d15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-d15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-huawei-matebook-d15",
+    "price_egp": 24150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1208,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-d15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-d15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-huawei-matebook-d15",
+    "price_egp": 24550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-d15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-d15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-huawei-matebook-d15",
+    "price_egp": 23700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-d15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-d15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-huawei-matebook-d15",
+    "price_egp": 25250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-thin-gf63-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-thin-gf63",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-msi-thin-gf63",
+    "price_egp": 32150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-thin-gf63-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-thin-gf63",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-msi-thin-gf63",
+    "price_egp": 32650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-thin-gf63-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-thin-gf63",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-msi-thin-gf63",
+    "price_egp": 31850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1593,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T19:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-thin-gf63-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-thin-gf63",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-msi-thin-gf63",
+    "price_egp": 33450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T09:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-5-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-5",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-ideapad-slim-5",
+    "price_egp": 32500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1625,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-5-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-5",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-lenovo-ideapad-slim-5",
+    "price_egp": 32800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-5-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-5",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-lenovo-ideapad-slim-5",
+    "price_egp": 34150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-5-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-5",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-ideapad-slim-5",
+    "price_egp": 34400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-02T18:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-ideapad-slim-5-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-ideapad-slim-5",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-ideapad-slim-5",
+    "price_egp": 32850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-swift-go-14-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-swift-go-14",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-acer-swift-go-14",
+    "price_egp": 35150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T05:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-swift-go-14-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-swift-go-14",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-acer-swift-go-14",
+    "price_egp": 33400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1670,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-01T18:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-swift-go-14-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-swift-go-14",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-acer-swift-go-14",
+    "price_egp": 34500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-inspiron-14-5440-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-inspiron-14-5440",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-dell-inspiron-14-5440",
+    "price_egp": 34650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T08:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-inspiron-14-5440-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-inspiron-14-5440",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-dell-inspiron-14-5440",
+    "price_egp": 36400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-inspiron-14-5440-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-inspiron-14-5440",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-dell-inspiron-14-5440",
+    "price_egp": 35450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-14-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-14",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-huawei-matebook-14",
+    "price_egp": 36800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T09:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-14-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-14",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-huawei-matebook-14",
+    "price_egp": 36300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1815,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T18:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-14-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-14",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-huawei-matebook-14",
+    "price_egp": 37300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-14-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-14",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-huawei-matebook-14",
+    "price_egp": 36150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-victus-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-victus-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-hp-victus-15",
+    "price_egp": 39100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-victus-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-victus-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-hp-victus-15",
+    "price_egp": 37300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1865,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T02:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-victus-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-victus-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-hp-victus-15",
+    "price_egp": 36900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-victus-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-victus-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-hp-victus-15",
+    "price_egp": 37750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-01T20:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-s14-oled-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-s14-oled",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-asus-vivobook-s14-oled",
+    "price_egp": 38950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-02T20:36:00.000Z",
+    "source": "synthetic",
+    "extras_checked_at": "2026-09-29T08:00:00.000Z"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-s14-oled-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-s14-oled",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-asus-vivobook-s14-oled",
+    "price_egp": 39450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-vivobook-s14-oled-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-vivobook-s14-oled",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-asus-vivobook-s14-oled",
+    "price_egp": 37550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-nitro-v15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-nitro-v15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-acer-nitro-v15",
+    "price_egp": 40600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-nitro-v15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-nitro-v15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-acer-nitro-v15",
+    "price_egp": 39200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 1960,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T00:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-nitro-v15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-nitro-v15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-acer-nitro-v15",
+    "price_egp": 38450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-nitro-v15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-nitro-v15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-acer-nitro-v15",
+    "price_egp": 38500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-acer-nitro-v15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-acer-nitro-v15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-acer-nitro-v15",
+    "price_egp": 39200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-02T21:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-pavilion-plus-14-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-pavilion-plus-14",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-hp-pavilion-plus-14",
+    "price_egp": 43100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-pavilion-plus-14-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-pavilion-plus-14",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-hp-pavilion-plus-14",
+    "price_egp": 41400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T02:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-pavilion-plus-14-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-pavilion-plus-14",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-hp-pavilion-plus-14",
+    "price_egp": 41800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T07:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-pavilion-plus-14-khan",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-pavilion-plus-14",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/laptop-hp-pavilion-plus-14",
+    "price_egp": 36650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T18:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-e14-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-e14",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-lenovo-thinkpad-e14",
+    "price_egp": 43600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T03:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-e14-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-e14",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-lenovo-thinkpad-e14",
+    "price_egp": 45250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T05:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-e14-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-e14",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-thinkpad-e14",
+    "price_egp": 42900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-e14-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-e14",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-thinkpad-e14",
+    "price_egp": 41850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2093,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T16:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-e14-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-e14",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-thinkpad-e14",
+    "price_egp": 43900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-02T19:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-loq-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-loq-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-loq-15",
+    "price_egp": 43050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2153,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T23:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-loq-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-loq-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-lenovo-loq-15",
+    "price_egp": 45200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-loq-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-loq-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-loq-15",
+    "price_egp": 43900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-loq-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-loq-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-loq-15",
+    "price_egp": 44600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T09:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-loq-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-loq-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-lenovo-loq-15",
+    "price_egp": 44350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-tuf-a15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-tuf-a15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-asus-tuf-a15",
+    "price_egp": 46250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-tuf-a15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-tuf-a15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-asus-tuf-a15",
+    "price_egp": 47250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T01:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-tuf-a15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-tuf-a15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-asus-tuf-a15",
+    "price_egp": 48150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-tuf-a15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-tuf-a15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-asus-tuf-a15",
+    "price_egp": 45300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2265,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T21:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-tuf-a15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-tuf-a15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-asus-tuf-a15",
+    "price_egp": 45550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m2-khan",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m2",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/laptop-apple-macbook-air-m2",
+    "price_egp": 39800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-02T19:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m2-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m2",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-apple-macbook-air-m2",
+    "price_egp": 48950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m2-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m2",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-apple-macbook-air-m2",
+    "price_egp": 47850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m2-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m2",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-apple-macbook-air-m2",
+    "price_egp": 48250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-zenbook-14-oled-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-zenbook-14-oled",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-asus-zenbook-14-oled",
+    "price_egp": 53300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T19:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-zenbook-14-oled-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-zenbook-14-oled",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-asus-zenbook-14-oled",
+    "price_egp": 54300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T21:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-zenbook-14-oled-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-zenbook-14-oled",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-asus-zenbook-14-oled",
+    "price_egp": 54150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2708,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-zenbook-14-oled-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-zenbook-14-oled",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-asus-zenbook-14-oled",
+    "price_egp": 56050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T02:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-zenbook-14-oled-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-zenbook-14-oled",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-asus-zenbook-14-oled",
+    "price_egp": 54900,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-katana-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-katana-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-msi-katana-15",
+    "price_egp": 58000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "gift",
+        "label": "Headset and mouse pad",
+        "value_egp": 800
+      }
+    ],
+    "checked_at": "2026-10-03T03:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-katana-15-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-katana-15",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-msi-katana-15",
+    "price_egp": 57550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-katana-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-katana-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-msi-katana-15",
+    "price_egp": 57100,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:42:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-katana-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-katana-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-msi-katana-15",
+    "price_egp": 55800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 2790,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T09:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-msi-katana-15-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-msi-katana-15",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-msi-katana-15",
+    "price_egp": 59300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T16:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-yoga-slim-7-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-yoga-slim-7",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-lenovo-yoga-slim-7",
+    "price_egp": 60250,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-yoga-slim-7-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-yoga-slim-7",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-lenovo-yoga-slim-7",
+    "price_egp": 61650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T05:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-yoga-slim-7-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-yoga-slim-7",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-yoga-slim-7",
+    "price_egp": 60550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 3028,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-yoga-slim-7-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-yoga-slim-7",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-yoga-slim-7",
+    "price_egp": 62500,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-omen-16-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-omen-16",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-hp-omen-16",
+    "price_egp": 69400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-omen-16-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-omen-16",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-hp-omen-16",
+    "price_egp": 69200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T17:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-omen-16-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-omen-16",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-hp-omen-16",
+    "price_egp": 66950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 30,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 3348,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T04:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-hp-omen-16-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-hp-omen-16",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-hp-omen-16",
+    "price_egp": 68400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": false,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T01:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m3-15-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m3-15",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-apple-macbook-air-m3-15",
+    "price_egp": 69200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m3-15-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m3-15",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-apple-macbook-air-m3-15",
+    "price_egp": 69850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T03:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m3-15-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m3-15",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-apple-macbook-air-m3-15",
+    "price_egp": 72050,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m3-15-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m3-15",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-apple-macbook-air-m3-15",
+    "price_egp": 68700,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 6
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 3435,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T05:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-air-m3-15-khan",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-air-m3-15",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/laptop-apple-macbook-air-m3-15",
+    "price_egp": 58550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T00:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-x-pro-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-x-pro",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-huawei-matebook-x-pro",
+    "price_egp": 84650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T18:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-x-pro-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-x-pro",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-huawei-matebook-x-pro",
+    "price_egp": 81600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T11:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-x-pro-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-x-pro",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-huawei-matebook-x-pro",
+    "price_egp": 83800,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T04:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-x-pro-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-x-pro",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-huawei-matebook-x-pro",
+    "price_egp": 83400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T21:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-huawei-matebook-x-pro-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-huawei-matebook-x-pro",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-huawei-matebook-x-pro",
+    "price_egp": 86650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T23:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-legion-pro-5-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-legion-pro-5",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-lenovo-legion-pro-5",
+    "price_egp": 86850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T06:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-legion-pro-5-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-legion-pro-5",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-legion-pro-5",
+    "price_egp": 85750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 4288,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T23:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-legion-pro-5-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-legion-pro-5",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-legion-pro-5",
+    "price_egp": 89300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-legion-pro-5-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-legion-pro-5",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-lenovo-legion-pro-5",
+    "price_egp": 89350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-pro-14-m4-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-pro-14-m4",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-apple-macbook-pro-14-m4",
+    "price_egp": 96600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T19:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-pro-14-m4-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-pro-14-m4",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-apple-macbook-pro-14-m4",
+    "price_egp": 93450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 4673,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-03T06:36:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-pro-14-m4-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-pro-14-m4",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-apple-macbook-pro-14-m4",
+    "price_egp": 92550,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-03T00:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-pro-14-m4-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-pro-14-m4",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-apple-macbook-pro-14-m4",
+    "price_egp": 94350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-apple-macbook-pro-14-m4-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-apple-macbook-pro-14-m4",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-apple-macbook-pro-14-m4",
+    "price_egp": 97600,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 50,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T06:54:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-rog-strix-g16-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-rog-strix-g16",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-asus-rog-strix-g16",
+    "price_egp": 96850,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T09:24:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-rog-strix-g16-nile",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-rog-strix-g16",
+    "retailer_id": "nile",
+    "url": "https://nile.example.invalid/p/laptop-asus-rog-strix-g16",
+    "price_egp": 97300,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 50,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T01:48:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-rog-strix-g16-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-rog-strix-g16",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-asus-rog-strix-g16",
+    "price_egp": 91350,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 2
+      },
+      "other": {
+        "fee": 0,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T23:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-rog-strix-g16-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-rog-strix-g16",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-asus-rog-strix-g16",
+    "price_egp": 91950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 3
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T10:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-asus-rog-strix-g16-pharos",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-asus-rog-strix-g16",
+    "retailer_id": "pharos",
+    "url": "https://pharos.example.invalid/p/laptop-asus-rog-strix-g16",
+    "price_egp": 93750,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 3
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T22:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-xps-14-khan",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-xps-14",
+    "retailer_id": "khan",
+    "url": "https://khan.example.invalid/p/laptop-dell-xps-14",
+    "price_egp": 91650,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 0
+      }
+    },
+    "in_stock": true,
+    "official": false,
+    "extras": [],
+    "checked_at": "2026-10-03T08:18:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-xps-14-oasis",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-xps-14",
+    "retailer_id": "oasis",
+    "url": "https://oasis.example.invalid/p/laptop-dell-xps-14",
+    "price_egp": 100950,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      },
+      "other": {
+        "fee": 0,
+        "days": 2
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "warranty",
+        "label": "Extra year of warranty",
+        "value_egp": 1500
+      }
+    ],
+    "checked_at": "2026-10-02T23:06:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-xps-14-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-xps-14",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-dell-xps-14",
+    "price_egp": 103450,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 1
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:12:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-dell-xps-14-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-dell-xps-14",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-dell-xps-14",
+    "price_egp": 102150,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 5
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 5108,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T17:30:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-x1-carbon-sphinx",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-x1-carbon",
+    "retailer_id": "sphinx",
+    "url": "https://sphinx.example.invalid/p/laptop-lenovo-thinkpad-x1-carbon",
+    "price_egp": 120200,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 25,
+        "days": 2
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 1
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-02T20:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-x1-carbon-lotus",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-x1-carbon",
+    "retailer_id": "lotus",
+    "url": "https://lotus.example.invalid/p/laptop-lenovo-thinkpad-x1-carbon",
+    "price_egp": 114400,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 0,
+        "days": 3
+      },
+      "alexandria": {
+        "fee": 0,
+        "days": 4
+      },
+      "other": {
+        "fee": 30,
+        "days": 3
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [
+      {
+        "type": "cashback",
+        "label": "5% cashback with Nile Bank cards",
+        "value_egp": 5720,
+        "card_only": true
+      }
+    ],
+    "checked_at": "2026-10-02T06:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "o-laptop-lenovo-thinkpad-x1-carbon-delta",
+    "tenant_id": "wisedo",
+    "product_id": "laptop-lenovo-thinkpad-x1-carbon",
+    "retailer_id": "delta",
+    "url": "https://delta.example.invalid/p/laptop-lenovo-thinkpad-x1-carbon",
+    "price_egp": 115000,
+    "delivery": {
+      "greater_cairo": {
+        "fee": 40,
+        "days": 2
+      },
+      "other": {
+        "fee": 40,
+        "days": 4
+      }
+    },
+    "in_stock": true,
+    "official": true,
+    "extras": [],
+    "checked_at": "2026-10-03T07:54:00.000Z",
+    "source": "synthetic"
+  }
+]

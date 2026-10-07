@@ -1,0 +1,963 @@
+[
+  {
+    "id": "ac-fresh-smart-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Fresh",
+    "name": "Fresh Smart 1.5 HP Cool Only",
+    "ref_price_egp": 15500,
+    "popular": false,
+    "aliases": [
+      "fresh smart 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": false,
+      "kwh_year": 1520,
+      "noise_db": 42,
+      "cooling_speed": 5.5,
+      "service": 7,
+      "warranty_months": 36,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-unionaire-artify-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Unionaire",
+    "name": "Unionaire Artify 1.5 HP Cool Only",
+    "ref_price_egp": 15900,
+    "popular": false,
+    "aliases": [
+      "artify 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": false,
+      "kwh_year": 1550,
+      "noise_db": 41,
+      "cooling_speed": 6,
+      "service": 7,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-tornado-classic-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Tornado",
+    "name": "Tornado Classic 1.5 HP Cool Only",
+    "ref_price_egp": 16500,
+    "popular": true,
+    "aliases": [
+      "tornado 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": false,
+      "kwh_year": 1500,
+      "noise_db": 40,
+      "cooling_speed": 6,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-midea-mission-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Midea",
+    "name": "Midea Mission 1.5 HP Cool/Heat",
+    "ref_price_egp": 17500,
+    "popular": false,
+    "aliases": [
+      "mission 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": false,
+      "kwh_year": 1480,
+      "noise_db": 40,
+      "cooling_speed": 6.5,
+      "service": 7,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-sharp-standard-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Sharp",
+    "name": "Sharp Standard 1.5 HP Cool Only",
+    "ref_price_egp": 17800,
+    "popular": true,
+    "aliases": [
+      "sharp 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": false,
+      "kwh_year": 1450,
+      "noise_db": 38,
+      "cooling_speed": 6.5,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-optimax-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Optimax 1.5 HP Cool/Heat",
+    "ref_price_egp": 18900,
+    "popular": false,
+    "aliases": [
+      "optimax 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": false,
+      "kwh_year": 1430,
+      "noise_db": 38,
+      "cooling_speed": 7,
+      "service": 9,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-tornado-inverter-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Tornado",
+    "name": "Tornado Inverter 1.5 HP Cool Only",
+    "ref_price_egp": 22800,
+    "popular": false,
+    "aliases": [
+      "tornado inverter 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": true,
+      "kwh_year": 1000,
+      "noise_db": 33,
+      "cooling_speed": 7,
+      "service": 8,
+      "warranty_months": 72,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-gree-pular-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Gree",
+    "name": "Gree Pular Inverter 1.5 HP Cool/Heat",
+    "ref_price_egp": 23500,
+    "popular": false,
+    "aliases": [
+      "pular 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": true,
+      "kwh_year": 990,
+      "noise_db": 32,
+      "cooling_speed": 7.5,
+      "service": 6,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-sharp-inverter-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Sharp",
+    "name": "Sharp Inverter 1.5 HP Cool Only",
+    "ref_price_egp": 24500,
+    "popular": true,
+    "aliases": [
+      "sharp inverter 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": true,
+      "kwh_year": 960,
+      "noise_db": 30,
+      "cooling_speed": 7.5,
+      "service": 8,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-optimax-inv-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Optimax Inverter 1.5 HP Cool/Heat",
+    "ref_price_egp": 27500,
+    "popular": false,
+    "aliases": [
+      "optimax inverter 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": true,
+      "kwh_year": 920,
+      "noise_db": 28,
+      "cooling_speed": 8,
+      "service": 9,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-lg-dualcool-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "LG",
+    "name": "LG DualCool Inverter 1.5 HP Cool/Heat",
+    "ref_price_egp": 30500,
+    "popular": false,
+    "aliases": [
+      "dualcool 1.5",
+      "dual cool 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": true,
+      "kwh_year": 820,
+      "noise_db": 22,
+      "cooling_speed": 8.5,
+      "service": 8,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-samsung-windfree-15",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Samsung",
+    "name": "Samsung WindFree Inverter 1.5 HP Cool/Heat",
+    "ref_price_egp": 33000,
+    "popular": false,
+    "aliases": [
+      "windfree 1.5",
+      "wind free 1.5"
+    ],
+    "attrs": {
+      "cooling_hp": 1.5,
+      "inverter": true,
+      "kwh_year": 850,
+      "noise_db": 19,
+      "cooling_speed": 8,
+      "service": 8,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-unionaire-artify-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Unionaire",
+    "name": "Unionaire Artify 2.25 HP Cool Only",
+    "ref_price_egp": 20900,
+    "popular": false,
+    "aliases": [
+      "artify 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": false,
+      "kwh_year": 2200,
+      "noise_db": 43,
+      "cooling_speed": 6,
+      "service": 7,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-tornado-classic-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Tornado",
+    "name": "Tornado Classic 2.25 HP Cool Only",
+    "ref_price_egp": 21500,
+    "popular": true,
+    "aliases": [
+      "tornado 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": false,
+      "kwh_year": 2150,
+      "noise_db": 42,
+      "cooling_speed": 6.5,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-sharp-standard-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Sharp",
+    "name": "Sharp Standard 2.25 HP Cool Only",
+    "ref_price_egp": 23000,
+    "popular": false,
+    "aliases": [
+      "sharp 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": false,
+      "kwh_year": 2100,
+      "noise_db": 40,
+      "cooling_speed": 7,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-optimax-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Optimax 2.25 HP Cool/Heat",
+    "ref_price_egp": 24800,
+    "popular": false,
+    "aliases": [
+      "optimax 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": false,
+      "kwh_year": 2050,
+      "noise_db": 40,
+      "cooling_speed": 7.5,
+      "service": 9,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-gree-pular-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Gree",
+    "name": "Gree Pular Inverter 2.25 HP Cool/Heat",
+    "ref_price_egp": 27000,
+    "popular": false,
+    "aliases": [
+      "pular 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": true,
+      "kwh_year": 1450,
+      "noise_db": 34,
+      "cooling_speed": 7.5,
+      "service": 6,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-midea-mission-inv-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Midea",
+    "name": "Midea Mission Inverter 2.25 HP Cool/Heat",
+    "ref_price_egp": 28500,
+    "popular": false,
+    "aliases": [
+      "mission inverter 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": true,
+      "kwh_year": 1400,
+      "noise_db": 33,
+      "cooling_speed": 7.5,
+      "service": 7,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-sharp-inverter-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Sharp",
+    "name": "Sharp Inverter 2.25 HP Cool Only",
+    "ref_price_egp": 31000,
+    "popular": true,
+    "aliases": [
+      "sharp inverter 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": true,
+      "kwh_year": 1350,
+      "noise_db": 32,
+      "cooling_speed": 8,
+      "service": 8,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-lg-dualcool-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "LG",
+    "name": "LG DualCool Inverter 2.25 HP Cool/Heat",
+    "ref_price_egp": 38500,
+    "popular": false,
+    "aliases": [
+      "dualcool 2.25",
+      "dual cool 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": true,
+      "kwh_year": 1200,
+      "noise_db": 25,
+      "cooling_speed": 8.5,
+      "service": 8,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-samsung-windfree-225",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Samsung",
+    "name": "Samsung WindFree Inverter 2.25 HP Cool/Heat",
+    "ref_price_egp": 41000,
+    "popular": false,
+    "aliases": [
+      "windfree 2.25",
+      "wind free 2.25"
+    ],
+    "attrs": {
+      "cooling_hp": 2.25,
+      "inverter": true,
+      "kwh_year": 1250,
+      "noise_db": 21,
+      "cooling_speed": 8.5,
+      "service": 8,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-unionaire-artify-3",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Unionaire",
+    "name": "Unionaire Artify 3 HP Cool Only",
+    "ref_price_egp": 27000,
+    "popular": false,
+    "aliases": [
+      "artify 3"
+    ],
+    "attrs": {
+      "cooling_hp": 3,
+      "inverter": false,
+      "kwh_year": 2900,
+      "noise_db": 45,
+      "cooling_speed": 6.5,
+      "service": 7,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-tornado-classic-3",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Tornado",
+    "name": "Tornado Classic 3 HP Cool Only",
+    "ref_price_egp": 28000,
+    "popular": true,
+    "aliases": [
+      "tornado 3"
+    ],
+    "attrs": {
+      "cooling_hp": 3,
+      "inverter": false,
+      "kwh_year": 2850,
+      "noise_db": 45,
+      "cooling_speed": 7,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-optimax-3",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Optimax 3 HP Cool/Heat",
+    "ref_price_egp": 31500,
+    "popular": false,
+    "aliases": [
+      "optimax 3"
+    ],
+    "attrs": {
+      "cooling_hp": 3,
+      "inverter": false,
+      "kwh_year": 2750,
+      "noise_db": 43,
+      "cooling_speed": 7.5,
+      "service": 9,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-sharp-inverter-3",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Sharp",
+    "name": "Sharp Inverter 3 HP Cool Only",
+    "ref_price_egp": 39000,
+    "popular": false,
+    "aliases": [
+      "sharp inverter 3"
+    ],
+    "attrs": {
+      "cooling_hp": 3,
+      "inverter": true,
+      "kwh_year": 1850,
+      "noise_db": 35,
+      "cooling_speed": 8,
+      "service": 8,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-optimax-inv-3",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Optimax Inverter 3 HP Cool/Heat",
+    "ref_price_egp": 43500,
+    "popular": false,
+    "aliases": [
+      "optimax inverter 3"
+    ],
+    "attrs": {
+      "cooling_hp": 3,
+      "inverter": true,
+      "kwh_year": 1800,
+      "noise_db": 34,
+      "cooling_speed": 8.5,
+      "service": 9,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-lg-dualcool-3",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "LG",
+    "name": "LG DualCool Inverter 3 HP Cool/Heat",
+    "ref_price_egp": 49000,
+    "popular": false,
+    "aliases": [
+      "dualcool 3",
+      "dual cool 3"
+    ],
+    "attrs": {
+      "cooling_hp": 3,
+      "inverter": true,
+      "kwh_year": 1650,
+      "noise_db": 28,
+      "cooling_speed": 9,
+      "service": 8,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "wall_split",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-tornado-classic-4",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Tornado",
+    "name": "Tornado Classic 4 HP Cool Only",
+    "ref_price_egp": 38000,
+    "popular": false,
+    "aliases": [
+      "tornado 4"
+    ],
+    "attrs": {
+      "cooling_hp": 4,
+      "inverter": false,
+      "kwh_year": 3600,
+      "noise_db": 46,
+      "cooling_speed": 7,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "entry"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-optimax-4",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Optimax 4 HP Cool/Heat",
+    "ref_price_egp": 45000,
+    "popular": false,
+    "aliases": [
+      "optimax 4"
+    ],
+    "attrs": {
+      "cooling_hp": 4,
+      "inverter": false,
+      "kwh_year": 3500,
+      "noise_db": 46,
+      "cooling_speed": 7.5,
+      "service": 9,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-sharp-inverter-4",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Sharp",
+    "name": "Sharp Inverter 4 HP Cool Only",
+    "ref_price_egp": 52000,
+    "popular": false,
+    "aliases": [
+      "sharp inverter 4"
+    ],
+    "attrs": {
+      "cooling_hp": 4,
+      "inverter": true,
+      "kwh_year": 2450,
+      "noise_db": 38,
+      "cooling_speed": 8.5,
+      "service": 8,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "wall_split",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-tornado-floor-5",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Tornado",
+    "name": "Tornado Floor Standing 5 HP Cool Only",
+    "ref_price_egp": 49000,
+    "popular": false,
+    "aliases": [
+      "tornado 5"
+    ],
+    "attrs": {
+      "cooling_hp": 5,
+      "inverter": false,
+      "kwh_year": 4400,
+      "noise_db": 52,
+      "cooling_speed": 7.5,
+      "service": 8,
+      "warranty_months": 60,
+      "wifi": false,
+      "heating": false,
+      "low_voltage": true,
+      "t3_rated": true,
+      "type": "floor_standing",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-carrier-floor-5",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "Carrier",
+    "name": "Carrier Floor Standing 5 HP Cool/Heat",
+    "ref_price_egp": 54000,
+    "popular": false,
+    "aliases": [
+      "carrier 5"
+    ],
+    "attrs": {
+      "cooling_hp": 5,
+      "inverter": false,
+      "kwh_year": 4300,
+      "noise_db": 50,
+      "cooling_speed": 8,
+      "service": 9,
+      "warranty_months": 84,
+      "wifi": false,
+      "heating": true,
+      "low_voltage": false,
+      "t3_rated": true,
+      "type": "floor_standing",
+      "series": "mid"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  },
+  {
+    "id": "ac-lg-floor-inv-5",
+    "tenant_id": "wisedo",
+    "category": "ac",
+    "brand": "LG",
+    "name": "LG Floor Standing Inverter 5 HP Cool/Heat",
+    "ref_price_egp": 62000,
+    "popular": false,
+    "aliases": [
+      "lg 5"
+    ],
+    "attrs": {
+      "cooling_hp": 5,
+      "inverter": true,
+      "kwh_year": 3000,
+      "noise_db": 42,
+      "cooling_speed": 9,
+      "service": 8,
+      "warranty_months": 120,
+      "wifi": true,
+      "heating": true,
+      "low_voltage": true,
+      "t3_rated": false,
+      "type": "floor_standing",
+      "series": "premium"
+    },
+    "checked_at": "2026-09-21T12:00:00.000Z",
+    "source": "synthetic"
+  }
+]
