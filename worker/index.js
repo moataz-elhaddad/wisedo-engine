@@ -4,7 +4,7 @@
 // B2B style: the tenant manages its SKUs, and the engine (Layer 1 + Layer 2) recommends from them.
 //
 // Public (no token):  GET /api/health, /api/categories, /api/snapshot, /api/skus, /api/skus/:id, /api/retailers,
-//                     /api/plans, /api/export.csv; POST /api/session
+//                     /api/plans, /api/export.csv; POST /api/session, /api/parse
 // Admin (token):      POST/PUT/DELETE /api/skus[/:id], /api/offers[/:id]; POST /api/import, /api/admin/reset
 // The admin token is the WISEDO_ADMIN_TOKEN secret, sent as `Authorization: Bearer <token>` or `X-Admin-Token`.
 import { step } from '../src/layer1/session.js';
@@ -12,6 +12,10 @@ import { ENGINE_VERSION } from '../src/layer2/constants.js';
 import { CONFIGS } from './bundle.js';
 import * as store from './store.js';
 import { exportCsv, importCsv, slug } from './csv.js';
+import { llmFor, llmProviders, allowLlmCall } from './llm.js';
+import { buildExtractionRequest } from '../src/layer1/u2-extract.js';
+import { buildCategoryRequest } from '../src/layer1/u1-category.js';
+import { MAX_TEXT_LENGTH } from '../src/layer1/session.js';
 
 const DEFAULT_TENANT = 'demo-b2b';
 const MAX_BODY = 2_000_000;
@@ -150,13 +154,49 @@ async function importHandler(env, tenant, request, url) {
   return json({ ok: true, applied: !dry, ...summary });
 }
 
+// The free LLM chain (Gemini, then Workers AI), limited per client IP. Null when no provider is configured.
+// When it is null or fails, Layer 1 reads free text with its keyword rules.
+function llmForRequest(env, request) {
+  const chain = llmFor(env);
+  if (!chain) return null;
+  const ip = request.headers.get('cf-connecting-ip') || 'local';
+  return async (req) => {
+    if (!allowLlmCall(ip, Number(env.LLM_RATE_PER_MIN) || 20)) throw new Error('rate_limited');
+    return chain(req);
+  };
+}
+const LLM_TIMEOUT_MS = 13_000; // the whole chain: two providers at up to 6 s each
+
 async function sessionHandler(env, tenant, request) {
   const body = await readJson(request);
   if (!isObj(body) || !isObj(body.event)) throw new HttpError(400, 'body must be {state, event}');
   const snapshot = await store.loadSnapshot(env, tenant);
-  // No live parser in the demo: without an llm adapter Layer 1 reads free text with its rules and asks questions.
-  const out = await step(body.state || null, body.event, { snapshot, now: snapshot.now });
+  const llm = llmForRequest(env, request);
+  const out = await step(body.state || null, body.event, { snapshot, now: snapshot.now, ...(llm ? { llm, llmTimeoutMs: LLM_TIMEOUT_MS } : {}) });
   return json({ ...out, snapshot_id: snapshot.snapshot_id });
+}
+
+// The parser for a browser-run engine (the try-out page): the server builds the prompt itself from
+// {kind, category, text}, so this is not an open LLM proxy. 503 when no provider answers; the page then uses the rules.
+async function parseHandler(env, tenant, request) {
+  const body = await readJson(request);
+  if (!isObj(body) || typeof body.text !== 'string' || !body.text.trim()) throw new HttpError(400, 'body must be {kind, category, text}');
+  const text = body.text.slice(0, MAX_TEXT_LENGTH);
+  let req;
+  if (body.kind === 'category') req = buildCategoryRequest(text);
+  else if (body.kind === 'extract') {
+    const config = categoryOrThrow(body.category);
+    req = buildExtractionRequest(config, text, { retailers: await store.listRetailers(env, tenant) });
+  } else throw new HttpError(400, 'kind must be "extract" or "category"');
+  const llm = llmForRequest(env, request);
+  if (!llm) return json({ ok: false, error: 'no_llm' }, 503);
+  try {
+    const res = await llm(req);
+    return json({ ok: true, stopReason: res.stopReason, output: res.output, model: res.model });
+  } catch (e) {
+    const msg = e && e.message ? String(e.message) : 'error';
+    return json({ ok: false, error: msg === 'rate_limited' ? 'rate_limited' : 'llm_failed', detail: msg.slice(0, 300) }, msg === 'rate_limited' ? 429 : 503);
+  }
 }
 
 async function route(request, env, url) {
@@ -167,7 +207,7 @@ async function route(request, env, url) {
   const [a, b] = parts.map(decodeURIComponent);
 
   if (m === 'GET' && a === 'health') {
-    return json({ ok: true, tenant, engine: ENGINE_VERSION, clock: env.CLOCK === 'real' ? 'real' : 'demo', data_now: await store.dataNow(env, tenant), llm: false, writes: String(env.WISEDO_ADMIN_TOKEN || '').trim().length >= 24, counts: await store.counts(env, tenant) });
+    return json({ ok: true, tenant, engine: ENGINE_VERSION, clock: env.CLOCK === 'real' ? 'real' : 'demo', data_now: await store.dataNow(env, tenant), llm: llmProviders(env).map((p) => p.name), text_rules: true, writes: String(env.WISEDO_ADMIN_TOKEN || '').trim().length >= 24, counts: await store.counts(env, tenant) });
   }
   if (m === 'GET' && a === 'categories') return json(categories());
   if (m === 'GET' && a === 'snapshot') {
@@ -178,6 +218,7 @@ async function route(request, env, url) {
   if (m === 'GET' && a === 'retailers') return json(await store.listRetailers(env, tenant));
   if (m === 'GET' && a === 'plans') return json(await store.listPlans(env, tenant));
   if (m === 'POST' && a === 'session') return sessionHandler(env, tenant, request);
+  if (m === 'POST' && a === 'parse') return parseHandler(env, tenant, request);
   if (m === 'GET' && a === 'export.csv') {
     const config = categoryOrThrow(url.searchParams.get('category'));
     const snap = await store.loadSnapshot(env, tenant);

@@ -11,8 +11,13 @@
   },
   "vars": {
     "TENANT": "demo-b2b",
-    "CLOCK": "demo"
+    "CLOCK": "demo",
+    // Free text reading: free LLMs in this order, then keyword rules. Gemini needs the GEMINI_API_KEY secret.
+    "LLM_ORDER": "gemini,workers-ai",
+    "LLM_RATE_PER_MIN": "20"
   },
+  // Cloudflare Workers AI (free daily allocation, no key).
+  "ai": { "binding": "AI" },
   "d1_databases": [
     {
       "binding": "DB",

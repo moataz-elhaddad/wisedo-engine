@@ -3,6 +3,7 @@ name: Deploy demo to Cloudflare
 # loads the sample catalog when the store is empty (or when asked), then checks the live API.
 # Repository secrets: CLOUDFLARE_API_TOKEN (Workers Scripts Edit + D1 Edit), CLOUDFLARE_ACCOUNT_ID,
 # WISEDO_ADMIN_TOKEN (24+ characters; signs in on the SKU page).
+# Optional: GEMINI_API_KEY (free key from Google AI Studio) adds Gemini in front of Workers AI for reading free text.
 on:
   workflow_dispatch:
     inputs:
@@ -57,6 +58,12 @@ jobs:
         env:
           ADMIN: ${{ secrets.WISEDO_ADMIN_TOKEN }}
         run: printf '%s' "$ADMIN" | tr -d '[:space:]' | npx wrangler secret put WISEDO_ADMIN_TOKEN
+      - name: Set Gemini key (optional)
+        env:
+          GEMINI: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -n "$GEMINI" ]; then printf '%s' "$GEMINI" | tr -d '[:space:]' | npx wrangler secret put GEMINI_API_KEY
+          else echo "No GEMINI_API_KEY secret: free text uses Workers AI, then the keyword rules."; fi
       - name: Load sample catalog and verify
         env:
           URL: ${{ steps.deploy.outputs.url }}
@@ -89,6 +96,9 @@ jobs:
           echo "laptop SKUs: $laptops"; [ "$laptops" -gt 0 ]
           curl -sf -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","tile":"laptop"}}' "$URL/api/session" -o s.json
           python3 -c 'import json;d=json.load(open("s.json"));print("session screen:", d["ui"]["screen"]);assert d["ui"]["screen"]!="error"'
+          # Free text: which reader answered (an LLM, or the keyword rules) and what it filled.
+          curl -sf -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","text":"عايز لابتوب للبرمجة في حدود 40 ألف كاش في القاهرة"}}' "$URL/api/session" -o t.json
+          python3 -c 'import json;d=json.load(open("t.json"));s=d["state"];print("text reader:", s["texts"][0]["status"], s["texts"][0].get("llm",""));print("filled:", {k:v["value"] for k,v in s["values"].items()});assert s["values"].get("budget")'
           echo "### Deployed: $URL" >> "$GITHUB_STEP_SUMMARY"
           echo "- Try-out: $URL/" >> "$GITHUB_STEP_SUMMARY"
           echo "- SKU catalog: $URL/skus.html" >> "$GITHUB_STEP_SUMMARY"

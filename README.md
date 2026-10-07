@@ -29,7 +29,7 @@ One tenant (`demo-b2b`) with its own SKU catalog, B2B style: the engine recommen
 - `web/index.html` try-out page; when served by the Worker it reads the catalog from `api/snapshot`
 - Deploy: GitHub Actions, workflow "Deploy demo to Cloudflare" (manual). Repository secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `WISEDO_ADMIN_TOKEN` (24+ characters). The first deploy loads the sample data.
 - Clock: the demo runs on the sample data's frozen clock (`CLOCK=demo`) so the synthetic prices stay fresh; set `CLOCK=real` for real data.
-- No live parser yet (no API key): free text picks the category by rules and the engine asks its questions.
+- Free text reading, all free: Google Gemini (optional `GEMINI_API_KEY` secret, free from Google AI Studio), then Cloudflare Workers AI (the `AI` binding, no key), then keyword rules (`src/layer1/u2-rules.js`) when both fail or none is set. Order in `LLM_ORDER`; `/api/health` lists the active providers. The two LLM adapters (`worker/llm.js`) are unverified until the first deploy.
 
 | Method | Path | Token |
 |---|---|---|
@@ -37,6 +37,7 @@ One tenant (`demo-b2b`) with its own SKU catalog, B2B style: the engine recommen
 | GET | `/api/skus?category=laptop`, `/api/skus/:id` (product with offers) | no |
 | GET | `/api/export.csv?category=laptop` | no |
 | POST | `/api/session` body `{state, event}` (Layer 1 events, see src/layer1/session.js) | no |
+| POST | `/api/parse` body `{kind: "extract"\|"category", category, text}` (the try-out page's parser; prompt built on the server; 20 calls a minute per IP) | no |
 | POST, PUT, DELETE | `/api/skus[/:id]`, `/api/offers[/:id]` | yes |
 | POST | `/api/import?category=laptop[&dry_run=1]` (CSV body; all or nothing) | yes |
 | POST | `/api/admin/reset` (replace the catalog with the sample data) | yes |
@@ -44,4 +45,4 @@ One tenant (`demo-b2b`) with its own SKU catalog, B2B style: the engine recommen
 The token goes in `Authorization: Bearer <token>`.
 
 ## Not built yet
-Live Claude parser, ingestion from the catalog engine, mapping of arbitrary B2B Excel layouts.
+Live check of the LLM parsers against an eval set, ingestion from the catalog engine, mapping of arbitrary B2B Excel layouts.
