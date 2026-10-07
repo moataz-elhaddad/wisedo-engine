@@ -27,6 +27,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Clean Cloudflare secrets (strip spaces, newlines, quotes, a "Bearer" prefix)
+        run: |
+          set -eu
+          tok=$(printf '%s' "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]"'"'"); tok=${tok#Bearer}
+          acc=$(printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | tr -d '[:space:]"'"'")
+          if [ -n "$tok" ]; then echo "::add-mask::$tok"; fi
+          if [ -n "$acc" ]; then echo "::add-mask::$acc"; fi
+          echo "CLOUDFLARE_API_TOKEN=$tok" >> "$GITHUB_ENV"
+          echo "CLOUDFLARE_ACCOUNT_ID=$acc" >> "$GITHUB_ENV"
+          # Shape checks only (values are never printed): API tokens are 40+ letters, digits, _ or -; account ids are 32 hex.
+          printf '%s' "$tok" | grep -Eq '^[A-Za-z0-9_-]{40,}$' || echo "::warning::CLOUDFLARE_API_TOKEN does not look like an API token (length ${#tok}). Use a token from My Profile > API Tokens, not the Global API Key."
+          printf '%s' "$acc" | grep -Eq '^[0-9a-f]{32}$' || echo "::warning::CLOUDFLARE_ACCOUNT_ID does not look like an account id (expected 32 hex characters, got ${#acc})."
       - name: Check required secrets exist (values are never printed)
         env:
           ADMIN: ${{ secrets.WISEDO_ADMIN_TOKEN }}
