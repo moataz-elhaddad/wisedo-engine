@@ -338,19 +338,39 @@ async function loadData() {
     if (!r.ok) throw new Error(`${p}: ${r.status}`);
     return r.json();
   };
-  const [config, products, retailers, offers, plans, manifest] = await Promise.all([
-    j('config/mobile.json'), j('data/synthetic/products.json'), j('data/synthetic/retailers.json'),
-    j('data/synthetic/offers.json'), j('data/synthetic/plans.json'), j('data/synthetic/manifest.json'),
-  ]);
-  // The other categories are optional: a category appears once its config and data files are published.
-  const extra = { configs: {}, products: [], offers: [] };
-  await Promise.all(cats.filter((c) => c.id !== 'mobile').map(async (c) => {
-    try {
-      const [cfg, ps, os] = await Promise.all([j(`config/${c.id}.json`), j(`data/synthetic/${c.id}/products.json`), j(`data/synthetic/${c.id}/offers.json`)]);
-      extra.configs[c.id] = cfg; extra.products.push(...ps); extra.offers.push(...os); c.on = true;
-    } catch { c.on = false; }
-  }));
-  S.base = { config, data: { products, retailers, offers, plans, manifest }, extra };
+  // Served by the Worker: the catalog comes from the SKU store (api/snapshot), so edits on the SKU page show up here.
+  // Published as an artifact (no API): the bundled synthetic files.
+  let api = null;
+  try { api = await j('api/snapshot'); } catch { api = null; }
+  if (api && Array.isArray(api.products)) {
+    const config = await j('config/mobile.json');
+    const extra = { configs: {}, products: [], offers: [] };
+    await Promise.all(cats.filter((c) => c.id !== 'mobile').map(async (c) => {
+      try { extra.configs[c.id] = await j(`config/${c.id}.json`); } catch { /* category off */ }
+    }));
+    const isMobile = (p) => p.category === 'mobile';
+    const mobileIds = new Set(api.products.filter(isMobile).map((p) => p.id));
+    for (const c of cats) c.on = (c.id === 'mobile' || !!extra.configs[c.id]) && api.products.some((p) => p.category === c.id);
+    extra.products = api.products.filter((p) => !isMobile(p));
+    extra.offers = api.offers.filter((o) => !mobileIds.has(o.product_id));
+    const manifest = { snapshot_id: api.snapshot_id, tenant_id: api.tenant_id, now: api.now };
+    S.base = { config, data: { products: api.products.filter(isMobile), retailers: api.retailers, offers: api.offers.filter((o) => mobileIds.has(o.product_id)), plans: api.plans, manifest }, extra };
+  } else {
+    const [config, products, retailers, offers, plans, manifest] = await Promise.all([
+      j('config/mobile.json'), j('data/synthetic/products.json'), j('data/synthetic/retailers.json'),
+      j('data/synthetic/offers.json'), j('data/synthetic/plans.json'), j('data/synthetic/manifest.json'),
+    ]);
+    // The other categories are optional: a category appears once its config and data files are published.
+    const extra = { configs: {}, products: [], offers: [] };
+    await Promise.all(cats.filter((c) => c.id !== 'mobile').map(async (c) => {
+      try {
+        const [cfg, ps, os] = await Promise.all([j(`config/${c.id}.json`), j(`data/synthetic/${c.id}/products.json`), j(`data/synthetic/${c.id}/offers.json`)]);
+        extra.configs[c.id] = cfg; extra.products.push(...ps); extra.offers.push(...os); c.on = true;
+      } catch { c.on = false; }
+    }));
+    S.base = { config, data: { products, retailers, offers, plans, manifest }, extra };
+  }
+  const { data: { products, retailers }, extra } = S.base;
   S.lib.products = new Map([...products, ...extra.products].map((p) => [p.id, p]));
   S.lib.retailers = new Map(retailers.map((r) => [r.id, r]));
   await S.store.init();

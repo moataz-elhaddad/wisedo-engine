@@ -1,0 +1,95 @@
+name: Deploy demo to Cloudflare
+# Manual only. Runs the tests, applies D1 migrations, builds the pages, deploys the Worker, sets the admin token,
+# loads the sample catalog when the store is empty (or when asked), then checks the live API.
+# Repository secrets: CLOUDFLARE_API_TOKEN (Workers Scripts Edit + D1 Edit), CLOUDFLARE_ACCOUNT_ID,
+# WISEDO_ADMIN_TOKEN (24+ characters; signs in on the SKU page).
+on:
+  workflow_dispatch:
+    inputs:
+      reset_catalog:
+        description: Replace the SKU store with the sample data (edits are lost)
+        type: boolean
+        default: false
+concurrency: deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check required secrets exist (values are never printed)
+        env:
+          ADMIN: ${{ secrets.WISEDO_ADMIN_TOKEN }}
+        run: |
+          set -eu
+          ADMIN=$(printf '%s' "$ADMIN" | tr -d '[:space:]')
+          missing=""
+          [ -n "$CLOUDFLARE_API_TOKEN" ] || missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -n "$CLOUDFLARE_ACCOUNT_ID" ] || missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          [ ${#ADMIN} -ge 24 ] || missing="$missing WISEDO_ADMIN_TOKEN(missing or shorter than 24 chars)"
+          if [ -n "$missing" ]; then echo "Missing or invalid secrets:$missing" >&2; exit 1; fi
+      - name: Tests
+        run: node --test test/
+      - name: Build pages
+        run: sh web/build.sh dist
+      - name: Install wrangler
+        run: npm install --no-audit --no-fund
+      - name: Apply D1 migrations (remote)
+        run: npx wrangler d1 migrations apply wisedo-engine-demo --remote
+      - name: Deploy Worker and pages
+        id: deploy
+        run: |
+          set -o pipefail
+          npx wrangler deploy 2>&1 | tee deploy.log
+          url=$(grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' deploy.log | head -1)
+          [ -n "$url" ] || { echo "No workers.dev URL in deploy output" >&2; exit 1; }
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+      - name: Set Worker secret
+        env:
+          ADMIN: ${{ secrets.WISEDO_ADMIN_TOKEN }}
+        run: printf '%s' "$ADMIN" | tr -d '[:space:]' | npx wrangler secret put WISEDO_ADMIN_TOKEN
+      - name: Load sample catalog and verify
+        env:
+          URL: ${{ steps.deploy.outputs.url }}
+          ADMIN: ${{ secrets.WISEDO_ADMIN_TOKEN }}
+          RESET: ${{ inputs.reset_catalog }}
+        run: |
+          set -eu
+          ADMIN=$(printf '%s' "$ADMIN" | tr -d '[:space:]')
+          code() { curl -s -o /dev/null -w '%{http_code}' "$@"; }
+          for i in $(seq 1 36); do
+            if curl -sf "$URL/api/health" -o health.json; then break; fi
+            echo "waiting for $URL ($i/36)"; sleep 10
+          done
+          cat health.json; echo
+          # The secret can take a few seconds to reach the Worker.
+          for i in $(seq 1 12); do
+            [ "$(code -H "Authorization: Bearer $ADMIN" "$URL/api/admin/check")" = 200 ] && break
+            echo "waiting for the admin token ($i/12)"; sleep 5
+          done
+          [ "$(code -H "Authorization: Bearer $ADMIN" "$URL/api/admin/check")" = 200 ] && echo "admin token: 200"
+          [ "$(code -X POST "$URL/api/admin/reset")" = 401 ] && echo "reset without token: 401"
+          n=$(python3 -c 'import json;print(json.load(open("health.json"))["counts"]["products"])')
+          if [ "$RESET" = "true" ] || [ "$n" = "0" ]; then
+            curl -sf -X POST -H "Authorization: Bearer $ADMIN" "$URL/api/admin/reset"; echo
+          fi
+          curl -sf "$URL/api/health"; echo
+          [ "$(code "$URL/")" = 200 ] && echo "try-out page: 200"
+          [ "$(code "$URL/skus.html")" = 200 ] && echo "SKU page: 200"
+          laptops=$(curl -sf "$URL/api/skus?category=laptop" | python3 -c 'import json,sys;print(len(json.load(sys.stdin)))')
+          echo "laptop SKUs: $laptops"; [ "$laptops" -gt 0 ]
+          curl -sf -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","tile":"laptop"}}' "$URL/api/session" -o s.json
+          python3 -c 'import json;d=json.load(open("s.json"));print("session screen:", d["ui"]["screen"]);assert d["ui"]["screen"]!="error"'
+          echo "### Deployed: $URL" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Try-out: $URL/" >> "$GITHUB_STEP_SUMMARY"
+          echo "- SKU catalog: $URL/skus.html" >> "$GITHUB_STEP_SUMMARY"
+          echo "DEPLOYED_URL=$URL"
