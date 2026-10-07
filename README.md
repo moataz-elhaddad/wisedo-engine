@@ -21,5 +21,28 @@ All data is synthetic sample data (every record has `source: "synthetic"`); pric
 
 - `web/` try-out page and admin panel (`sh web/build.sh <dir>` assembles it); `src/params.js` the tunable parameters; `src/store.js` published/draft/history of a configuration
 
+## Demo deployment (Cloudflare Worker + D1)
+One tenant (`demo-b2b`) with its own SKU catalog, B2B style: the engine recommends only from the SKUs in D1.
+- `worker/` the Worker: JSON API, static pages from `dist/` (built by `sh web/build.sh dist`)
+- `migrations/` D1 schema; each row keeps the full contract record (docs/CONTRACTS.md) as JSON
+- `web/skus.html` SKU page: list, edit, add, delete products and offers; CSV export and import (the first form of the B2B upload)
+- `web/index.html` try-out page; when served by the Worker it reads the catalog from `api/snapshot`
+- Deploy: GitHub Actions, workflow "Deploy demo to Cloudflare" (manual). Repository secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `WISEDO_ADMIN_TOKEN` (24+ characters). The first deploy loads the sample data.
+- Clock: the demo runs on the sample data's frozen clock (`CLOCK=demo`) so the synthetic prices stay fresh; set `CLOCK=real` for real data.
+- Free text reading, all free: Google Gemini (optional `GEMINI_API_KEY` secret, free from Google AI Studio), then Cloudflare Workers AI (the `AI` binding, no key), then keyword rules (`src/layer1/u2-rules.js`) when both fail or none is set. Order in `LLM_ORDER`; `/api/health` lists the active providers. The two LLM adapters (`worker/llm.js`) are unverified until the first deploy.
+
+| Method | Path | Token |
+|---|---|---|
+| GET | `/api/health`, `/api/categories`, `/api/snapshot`, `/api/retailers`, `/api/plans` | no |
+| GET | `/api/skus?category=laptop`, `/api/skus/:id` (product with offers) | no |
+| GET | `/api/export.csv?category=laptop` | no |
+| POST | `/api/session` body `{state, event}` (Layer 1 events, see src/layer1/session.js) | no |
+| POST | `/api/parse` body `{kind: "extract"\|"category", category, text}` (the try-out page's parser; prompt built on the server; 20 calls a minute per IP) | no |
+| POST, PUT, DELETE | `/api/skus[/:id]`, `/api/offers[/:id]` | yes |
+| POST | `/api/import?category=laptop[&dry_run=1]` (CSV body; all or nothing) | yes |
+| POST | `/api/admin/reset` (replace the catalog with the sample data) | yes |
+
+The token goes in `Authorization: Bearer <token>`.
+
 ## Not built yet
-The HTTP API, the web UI, ingestion, the B2B Excel mapper.
+Live check of the LLM parsers against an eval set, ingestion from the catalog engine, mapping of arbitrary B2B Excel layouts.

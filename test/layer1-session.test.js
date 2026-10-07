@@ -188,19 +188,32 @@ test('layer1 U6: an expectation gap (iPhone only, 8,000 EGP) is a blocking clari
   assert.notEqual(r.state.values.os.value, 'ios');
 });
 
-test('layer1 LLM failure (timeout, refusal, invalid output, error) falls back to the full question flow', async () => {
+test('layer1 LLM failure (timeout, refusal, invalid output, error) falls back to the rules, then to the full flow', async () => {
+  const VAGUE = 'عايز موبايل كويس';
   for (const response of [{ $timeout: true }, { $refusal: 'other' }, { $raw: 'sorry, here is some prose' }, { $error: 'network down' }, { slots: 'nope' }]) {
-    const ctx = { snapshot: SNAPSHOT, now: NOW, llm: createMockLlm([recording(BASE_TEXT, response)]), llmTimeoutMs: 30 };
-    const { state, ui } = await step(null, { type: 'start', text: BASE_TEXT }, ctx);
+    const ctx = { snapshot: SNAPSHOT, now: NOW, llm: createMockLlm([recording(BASE_TEXT, response), recording(VAGUE, response)]), llmTimeoutMs: 30 };
+    // The rule-based extractor reads what keywords can catch.
+    const read = await step(null, { type: 'start', text: BASE_TEXT }, ctx);
+    assert.equal(read.ui.category, 'mobile', 'the category still came from the rules');
+    assert.equal(read.ui.fallback, null, JSON.stringify(response));
+    assert.equal(read.state.values.budget.value, 15000);
+    assert.equal(read.state.values.pay.value, 'cash');
+    assert.deepEqual(read.state.values.use.value, ['photo']);
+    assert.equal(read.state.texts[0].status, 'rules');
+    assert.ok(read.state.texts[0].llm);
+    // Text the rules cannot read either: the full question flow.
+    const { state, ui } = await step(null, { type: 'start', text: VAGUE }, ctx);
     assert.equal(ui.screen, 'question', JSON.stringify(response));
     assert.equal(ui.question.slot, 'who', 'the full flow starts with the first always question');
     assert.equal(ui.fallback.fullFlow, true);
     assert.ok(ui.fallback.reason);
     assert.deepEqual(Object.keys(state.values), []);
-    assert.equal(ui.category, 'mobile', 'the category still came from the rules');
   }
-  // No adapter at all (e.g. no key in a dev environment) behaves the same way.
-  const { ui } = await step(null, { type: 'start', text: BASE_TEXT }, { snapshot: SNAPSHOT, now: NOW });
+  // No adapter at all (e.g. no key in a dev environment): the rules read the text the same way.
+  const noLlm = await step(null, { type: 'start', text: BASE_TEXT }, { snapshot: SNAPSHOT, now: NOW });
+  assert.equal(noLlm.state.values.budget.value, 15000);
+  assert.equal(noLlm.state.texts[0].llm, 'no_llm');
+  const { ui } = await step(null, { type: 'start', text: VAGUE }, { snapshot: SNAPSHOT, now: NOW });
   assert.deepEqual([ui.screen, ui.question.slot, ui.fallback.reason], ['question', 'who', 'no_llm']);
 });
 

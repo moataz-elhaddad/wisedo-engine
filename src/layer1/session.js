@@ -21,6 +21,7 @@ import { paramsOf } from '../params.js';
 import { emptyState, cloneState, answerEntries, isClosed } from './state.js';
 import { detectCategory, categoryMessage, CATEGORIES, CATEGORY_IDS } from './u1-category.js';
 import { extract, DEFAULT_TIMEOUT_MS } from './u2-extract.js';
+import { extractByRules } from './u2-rules.js';
 import { normalizeExtraction, normalizeAnswer } from './u3-normalize.js';
 import { applyExtraction, setBuyerValue, buildChips, PREFILL_THRESHOLD, valueLabel } from './u4-confirm.js';
 import { buildProfile, withDefaults } from './u5-derive.js';
@@ -245,28 +246,36 @@ async function addDetail(s, ctx) {
 
 /**
  * Read one piece of free text: U2 extract -> U3 normalise -> U4 merge (locked values win).
- * On LLM failure the state is unchanged except the record; the first text then falls back to the full flow.
+ * Without an LLM, or when the LLM fails, the rule-based extractor reads the text instead. Only when the rules find
+ * nothing either is the state left unchanged (except the record); the first text then falls back to the full flow.
  */
 async function readText(s, text, ctx) {
   const config = configFor(ctx.snapshot, s.category);
   const identity = identityFor(ctx.snapshot, s.category);
-  if (!ctx.llm) {
-    s.texts.push({ text, status: 'no_llm' });
-    s.flags.llmFailed = 'no_llm';
-    if (s.texts.length === 1) s.flags.fullFlow = true;
-    return { ok: false, error: 'no_llm', prefilled: 0, suggested: 0 };
+  const normCtx = { text, products: identity.products, retailers: identity.retailers };
+  const threshold = layer1Params(config, ctx).prefillThreshold;
+  /** @type {{error: string, detail?: string}} */
+  let failure = { error: 'no_llm' };
+  if (ctx.llm) {
+    const res = await extract(config, text, { llm: ctx.llm, timeoutMs: ctx.llmTimeoutMs ?? DEFAULT_TIMEOUT_MS, retailers: identity.retailers });
+    if (res.ok) {
+      const norm = normalizeExtraction(config, res.extraction, normCtx);
+      const applied = applyExtraction(s, norm, threshold);
+      s.texts.push({ text, status: 'ok' });
+      return { ok: true, prefilled: applied.prefilled.length, suggested: applied.suggested.length };
+    }
+    failure = { error: res.error, ...(res.detail ? { detail: res.detail } : {}) };
   }
-  const res = await extract(config, text, { llm: ctx.llm, timeoutMs: ctx.llmTimeoutMs ?? DEFAULT_TIMEOUT_MS, retailers: identity.retailers });
-  if (!res.ok) {
-    s.texts.push({ text, status: res.error, ...(res.detail ? { detail: res.detail } : {}) });
-    s.flags.llmFailed = res.error;
-    if (s.texts.length === 1) s.flags.fullFlow = true;
-    return { ok: false, error: res.error, prefilled: 0, suggested: 0 };
+  const norm = normalizeExtraction(config, extractByRules(config, text, { retailers: identity.retailers }), normCtx);
+  if (norm.answers.length) {
+    const applied = applyExtraction(s, norm, threshold);
+    s.texts.push({ text, status: 'rules', llm: failure.error, ...(failure.detail ? { detail: failure.detail } : {}) });
+    return { ok: true, reader: 'rules', prefilled: applied.prefilled.length, suggested: applied.suggested.length };
   }
-  const norm = normalizeExtraction(config, res.extraction, { text, products: identity.products, retailers: identity.retailers });
-  const applied = applyExtraction(s, norm, layer1Params(config, ctx).prefillThreshold);
-  s.texts.push({ text, status: 'ok' });
-  return { ok: true, prefilled: applied.prefilled.length, suggested: applied.suggested.length };
+  s.texts.push({ text, status: failure.error, ...(failure.detail ? { detail: failure.detail } : {}) });
+  s.flags.llmFailed = failure.error;
+  if (s.texts.length === 1) s.flags.fullFlow = true;
+  return { ok: false, error: failure.error, prefilled: 0, suggested: 0 };
 }
 
 /** After any change: consistency check, then stop rule, then the next question (or the result). */

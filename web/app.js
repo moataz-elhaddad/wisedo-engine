@@ -44,7 +44,7 @@ const T = {
     addText: 'Tell me more in words',
     next: 'Next',
     showNow: 'Show results now',
-    matchLine: '{n} phones still match',
+    matchLine: '{n} options still match',
     leading: 'Leading now: {name}',
     multiHint: 'Pick all that apply',
     typeAmount: 'Or type an exact amount',
@@ -85,7 +85,7 @@ const T = {
     chosen: 'Chosen',
     fallbackTip: 'I could not read your text, so I switched to questions.',
     fallbackTitle: 'Text reading is off',
-    noLlm: 'Reading free text needs Claude. It is not available here, so I used the question flow.',
+    noLlm: 'I could not pick details out of your text, so I will ask a few quick questions.',
     errTitle: 'Something went wrong',
     back: 'Back',
     pickCat: 'Pick a category',
@@ -160,7 +160,7 @@ const T = {
     addText: 'قولّي أكتر بالكلام',
     next: 'التالي',
     showNow: 'وريني النتيجة دلوقتي',
-    matchLine: '{n} موبايل لسه مناسب',
+    matchLine: '{n} اختيار لسه مناسب',
     leading: 'الأفضل حالياً: {name}',
     multiHint: 'اختار كل اللي ينطبق',
     typeAmount: 'أو اكتب مبلغ بالظبط',
@@ -201,7 +201,7 @@ const T = {
     chosen: 'المختار',
     fallbackTip: 'ماقدرتش أقرأ كلامك، فرجعت للأسئلة.',
     fallbackTitle: 'قراءة النص مش شغالة',
-    noLlm: 'قراءة النص الحر محتاجة Claude، ومش متاحة هنا، فاستخدمت الأسئلة.',
+    noLlm: 'ماعرفتش أطلّع تفاصيل من كلامك، فهسألك كام سؤال سريع.',
     errTitle: 'حصلت مشكلة',
     back: 'رجوع',
     pickCat: 'اختار النوع',
@@ -338,19 +338,40 @@ async function loadData() {
     if (!r.ok) throw new Error(`${p}: ${r.status}`);
     return r.json();
   };
-  const [config, products, retailers, offers, plans, manifest] = await Promise.all([
-    j('config/mobile.json'), j('data/synthetic/products.json'), j('data/synthetic/retailers.json'),
-    j('data/synthetic/offers.json'), j('data/synthetic/plans.json'), j('data/synthetic/manifest.json'),
-  ]);
-  // The other categories are optional: a category appears once its config and data files are published.
-  const extra = { configs: {}, products: [], offers: [] };
-  await Promise.all(cats.filter((c) => c.id !== 'mobile').map(async (c) => {
-    try {
-      const [cfg, ps, os] = await Promise.all([j(`config/${c.id}.json`), j(`data/synthetic/${c.id}/products.json`), j(`data/synthetic/${c.id}/offers.json`)]);
-      extra.configs[c.id] = cfg; extra.products.push(...ps); extra.offers.push(...os); c.on = true;
-    } catch { c.on = false; }
-  }));
-  S.base = { config, data: { products, retailers, offers, plans, manifest }, extra };
+  // Served by the Worker: the catalog comes from the SKU store (api/snapshot), so edits on the SKU page show up here.
+  // Published as an artifact (no API): the bundled synthetic files.
+  let api = null;
+  try { api = await j('api/snapshot'); } catch { api = null; }
+  if (api && Array.isArray(api.products)) {
+    const config = await j('config/mobile.json');
+    const extra = { configs: {}, products: [], offers: [] };
+    await Promise.all(cats.filter((c) => c.id !== 'mobile').map(async (c) => {
+      try { extra.configs[c.id] = await j(`config/${c.id}.json`); } catch { /* category off */ }
+    }));
+    const isMobile = (p) => p.category === 'mobile';
+    const mobileIds = new Set(api.products.filter(isMobile).map((p) => p.id));
+    for (const c of cats) c.on = (c.id === 'mobile' || !!extra.configs[c.id]) && api.products.some((p) => p.category === c.id);
+    extra.products = api.products.filter((p) => !isMobile(p));
+    extra.offers = api.offers.filter((o) => !mobileIds.has(o.product_id));
+    const manifest = { snapshot_id: api.snapshot_id, tenant_id: api.tenant_id, now: api.now };
+    S.served = true;
+    S.base = { config, data: { products: api.products.filter(isMobile), retailers: api.retailers, offers: api.offers.filter((o) => mobileIds.has(o.product_id)), plans: api.plans, manifest }, extra };
+  } else {
+    const [config, products, retailers, offers, plans, manifest] = await Promise.all([
+      j('config/mobile.json'), j('data/synthetic/products.json'), j('data/synthetic/retailers.json'),
+      j('data/synthetic/offers.json'), j('data/synthetic/plans.json'), j('data/synthetic/manifest.json'),
+    ]);
+    // The other categories are optional: a category appears once its config and data files are published.
+    const extra = { configs: {}, products: [], offers: [] };
+    await Promise.all(cats.filter((c) => c.id !== 'mobile').map(async (c) => {
+      try {
+        const [cfg, ps, os] = await Promise.all([j(`config/${c.id}.json`), j(`data/synthetic/${c.id}/products.json`), j(`data/synthetic/${c.id}/offers.json`)]);
+        extra.configs[c.id] = cfg; extra.products.push(...ps); extra.offers.push(...os); c.on = true;
+      } catch { c.on = false; }
+    }));
+    S.base = { config, data: { products, retailers, offers, plans, manifest }, extra };
+  }
+  const { data: { products, retailers }, extra } = S.base;
   S.lib.products = new Map([...products, ...extra.products].map((p) => [p.id, p]));
   S.lib.retailers = new Map(retailers.map((r) => [r.id, r]));
   await S.store.init();
@@ -391,8 +412,17 @@ function getSample() {
   return samplePromise;
 }
 
-// The page's LLM adapter: the engine's request, answered by Claude through the artifact `sample` capability.
+// The page's LLM adapter. Served by the Worker: api/parse (free LLMs; the server builds the prompt from kind,
+// category and text). Published as an artifact: Claude through the `sample` capability. When either fails the
+// engine reads the text with its keyword rules.
 async function llm(req) {
+  if (S.served) {
+    const r = await fetch('api/parse', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ kind: req.kind, category: req.category, text: req.text }) });
+    const out = await r.json().catch(() => null);
+    if (!r.ok || !out || !out.ok) { S.llmState = r.status === 503 && out && out.error === 'no_llm' ? 'off' : S.llmState; throw new Error((out && out.error) || `parse_${r.status}`); }
+    S.llmState = 'on';
+    return { stopReason: out.stopReason, output: out.output, model: out.model };
+  }
   const sample = await getSample();
   if (!sample) { S.llmState = 'off'; throw new Error('sample_unavailable'); }
   const prompt = [

@@ -1,0 +1,30 @@
+{
+  // Wisedo engine demo: Layer 1 + Layer 2 API, the try-out page and the SKU page, over one tenant's catalog in D1.
+  // Static files come from ./dist, built by `sh web/build.sh dist` (the deploy workflow does it).
+  "name": "wisedo-engine-demo",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "TENANT": "demo-b2b",
+    "CLOCK": "demo",
+    // Free text reading: free LLMs in this order, then keyword rules. Gemini needs the GEMINI_API_KEY secret.
+    "LLM_ORDER": "gemini,workers-ai",
+    "LLM_RATE_PER_MIN": "20"
+  },
+  // Cloudflare Workers AI (free daily allocation, no key).
+  "ai": { "binding": "AI" },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wisedo-engine-demo",
+      "database_id": "1855c8d1-7165-4627-90b5-03ccb7d7f2f7",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "observability": { "enabled": true }
+}
