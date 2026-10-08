@@ -75,7 +75,12 @@ export function createGeminiLlm(opts) {
     let res = await call(true);
     // Some models reject parts of a JSON schema: retry once with the schema in the prompt only.
     if (res.status === 400) res = await call(false);
-    if (!res.ok) throw new Error(`gemini: HTTP ${res.status}`);
+    if (!res.ok) {
+      // Google's error message names the problem (bad key, unknown model, quota) and never echoes the key.
+      let msg = '';
+      try { const e = await res.json(); msg = (e && e.error && (e.error.status || '') + ' ' + (e.error.message || '')) || ''; } catch { /* no body */ }
+      throw new Error(`gemini: HTTP ${res.status} ${msg.trim().slice(0, 160)}`.trim());
+    }
     const data = await res.json();
     const cand = data && data.candidates && data.candidates[0];
     if (!cand) {
@@ -142,6 +147,25 @@ export function llmProviders(env) {
     }
     if (name === 'workers-ai' && env.AI && typeof env.AI.run === 'function') {
       out.push({ name, llm: createWorkersAiLlm({ ai: env.AI, model: env.WORKERS_AI_MODEL }) });
+    }
+  }
+  return out;
+}
+
+/**
+ * Try each configured provider on its own with a tiny category request: which ones answer, how fast, and why
+ * not. For the admin check after a deploy; error texts never contain keys.
+ */
+export async function checkProviders(env, request) {
+  const out = [];
+  for (const { name, llm } of llmProviders(env)) {
+    const t0 = Date.now();
+    try {
+      const res = await llm(request);
+      const ok = res && res.stopReason === 'end_turn' && usable(request, res.output);
+      out.push({ name, ok, ms: Date.now() - t0, ...(ok ? { model: res.model } : { error: res ? res.stopReason : 'empty' }) });
+    } catch (e) {
+      out.push({ name, ok: false, ms: Date.now() - t0, error: e && e.message ? String(e.message).slice(0, 200) : 'error' });
     }
   }
   return out;

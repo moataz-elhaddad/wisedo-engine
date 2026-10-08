@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import worker from '../worker/index.js';
 import { createD1 } from './helpers-d1.js';
-import { chainLlms, createGeminiLlm, createWorkersAiLlm, parseJsonObject, llmProviders, allowLlmCall } from '../worker/llm.js';
+import { chainLlms, checkProviders, createGeminiLlm, createWorkersAiLlm, parseJsonObject, llmProviders, allowLlmCall } from '../worker/llm.js';
 import { buildExtractionRequest } from '../src/layer1/u2-extract.js';
 import { CONFIGS } from '../worker/bundle.js';
 
@@ -123,4 +123,18 @@ test('session free text: LLM answer used; failing LLM falls back to the rules', 
   assert.equal(b.state.values.city.value, 'cairo');
   assert.deepEqual(b.state.values.use.value, ['programming']);
   assert.equal(b.ui.fallback, null);
+});
+
+test('Gemini errors carry Google\'s message; the admin check reports each provider', async () => {
+  const fakeFetch = async () => new Response(JSON.stringify({ error: { status: 'NOT_FOUND', message: 'models/x is not found' } }), { status: 404 });
+  await assert.rejects(createGeminiLlm({ apiKey: 'k', fetch: fakeFetch })(REQ), /HTTP 404 NOT_FOUND models\/x is not found/);
+  const env = { AI: { run: async () => ({ response: { category: 'laptop', confidence: 0.9 } }) } };
+  const r = await checkProviders(env, { kind: 'category', system: 's', user: 'u', schema: {} });
+  assert.equal(r.length, 1);
+  assert.equal(r[0].name, 'workers-ai');
+  assert.equal(r[0].ok, true);
+  const { call } = await seeded(env);
+  const h = await call('GET', '/api/admin/llm-check');
+  assert.equal(h.status, 200);
+  assert.equal(h.body.providers[0].ok, true);
 });
