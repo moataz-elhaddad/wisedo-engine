@@ -7,14 +7,14 @@
 //
 // Settings (vars in wrangler.jsonc, all optional):
 //   LLM_ORDER          "gemini,workers-ai" (default); drop a name to turn that provider off
-//   GEMINI_MODEL       "gemini-2.5-flash" (default)
+//   GEMINI_MODEL       "gemini-3.8-flash" (default; Google retired 2.5 Flash for new keys)
 //   WORKERS_AI_MODEL   "@cf/meta/llama-3.3-70b-instruct-fp8-fast" (default; supports JSON mode)
 // Secret: GEMINI_API_KEY (free from Google AI Studio). Without it the chain is Workers AI only.
 // Note: Gemini's free tier may use prompts to improve Google's products; the demo sends only what the buyer types.
 
 import { checkExtractionShape } from '../src/layer1/u2-extract.js';
 
-export const DEFAULT_GEMINI_MODEL = 'gemini-2.5-flash';
+export const DEFAULT_GEMINI_MODEL = 'gemini-3.8-flash';
 export const DEFAULT_WORKERS_AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const PER_PROVIDER_TIMEOUT_MS = 6000;
 
@@ -64,7 +64,7 @@ export function createGeminiLlm(opts) {
         ...(strict ? { responseJsonSchema: req.schema } : {}),
         maxOutputTokens: req.maxTokens || 2048,
         temperature: 0,
-        thinkingConfig: { thinkingBudget: 0 },
+        ...(strict ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
       },
     });
     const call = (strict) => withTimeout(doFetch(url, {
@@ -73,7 +73,7 @@ export function createGeminiLlm(opts) {
       body: JSON.stringify(body(strict)),
     }), timeoutMs, 'gemini');
     let res = await call(true);
-    // Some models reject parts of a JSON schema: retry once with the schema in the prompt only.
+    // Some models reject parts of a JSON schema or the thinking setting: retry once without them (schema in the prompt only).
     if (res.status === 400) res = await call(false);
     if (!res.ok) {
       // Google's error message names the problem (bad key, unknown model, quota) and never echoes the key.

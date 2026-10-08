@@ -14,6 +14,7 @@
     "CLOCK": "demo",
     // Free text reading: free LLMs in this order, then keyword rules. Gemini needs the GEMINI_API_KEY secret.
     "LLM_ORDER": "gemini,workers-ai",
+    "GEMINI_MODEL": "gemini-3.8-flash",
     "LLM_RATE_PER_MIN": "20"
   },
   // Cloudflare Workers AI (free daily allocation, no key).

@@ -42,7 +42,7 @@ test('Gemini adapter: request shape, JSON answer, retry without schema on 400', 
   const gemini = createGeminiLlm({ apiKey: 'k', fetch: fakeFetch });
   const res = await gemini(REQ);
   assert.deepEqual(res.output, EXTRACTION);
-  assert.match(seen[0].url, /models\/gemini-2\.5-flash:generateContent$/);
+  assert.match(seen[0].url, /models\/gemini-3\.8-flash:generateContent$/);
   assert.equal(seen[0].init.headers['x-goog-api-key'], 'k');
   assert.ok(seen[0].body.generationConfig.responseJsonSchema);
   assert.equal(seen[1].body.generationConfig.responseJsonSchema, undefined);
