@@ -247,7 +247,7 @@
       ] },
 
     { "id": "urgentDays", "group": "logistics", "default": "none",
-      "alwaysIf": { "signal": "saleWeeks", "between": [1, 10] }, "askIf": { "signal": "urgencyMatters" }, "factors": ["urgency", "delivery_time_fee", "timing_sales"],
+      "alwaysIf": { "signal": "saleWeeks", "lt": 4 }, "askIf": { "all": [ { "signal": "urgencyMatters" }, { "signal": "saleWeeks", "lt": 4 } ] }, "factors": ["urgency", "delivery_time_fee", "timing_sales"],
       "label": { "ar": "محتاجها إمتى", "en": "Needed by" },
       "question": { "ar": "محتاج التلاجة توصل إمتى؟", "en": "When do you need the fridge delivered?" },
       "options": [

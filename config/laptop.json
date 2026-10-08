@@ -1476,16 +1476,8 @@
       "id": "urgentDays",
       "group": "logistics",
       "default": "none",
-      "alwaysIf": {
-        "signal": "saleWeeks",
-        "between": [
-          1,
-          10
-        ]
-      },
-      "askIf": {
-        "signal": "urgencyMatters"
-      },
+      "alwaysIf": { "signal": "saleWeeks", "lt": 4 },
+      "askIf": { "all": [ { "signal": "urgencyMatters" }, { "signal": "saleWeeks", "lt": 4 } ] },
       "factors": [
         "urgency",
         "delivery_time_fee",
