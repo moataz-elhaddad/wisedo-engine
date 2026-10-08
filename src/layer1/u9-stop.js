@@ -1,6 +1,8 @@
 // U9 Stop rule (tech-spec 4, component U9). Deterministic.
 // Stop when no open slot has gain >= 1 (the planner returns "stop"), at 8 questions, or when the buyer taps
-// "show results now".
+// "show results now". Clarifying questions (U6) do not count toward the cap (founder decision).
+
+import { questionCount } from './state.js';
 
 export const MAX_QUESTIONS = 8;
 
@@ -13,7 +15,7 @@ export const MAX_QUESTIONS = 8;
 export function stopBeforePlanning(state, opts = {}) {
   if (state.stop && state.stop.reason === 'show_now') return { reason: 'show_now' };
   const cap = opts.maxQuestions ?? MAX_QUESTIONS;
-  if (state.asked.filter((q) => q.outcome === 'answered' || q.outcome === 'skipped').length >= cap) return { reason: 'cap' };
+  if (questionCount(state) >= cap) return { reason: 'cap' };
   return null;
 }
 

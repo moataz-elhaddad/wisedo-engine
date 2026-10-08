@@ -18,7 +18,7 @@
 //   {type: 'result'}                 the result: the Need Profile goes to Layer 2 in rank mode
 import { match } from '../layer2/index.js';
 import { paramsOf } from '../params.js';
-import { emptyState, cloneState, answerEntries, isClosed } from './state.js';
+import { emptyState, cloneState, answerEntries, isClosed, questionCount } from './state.js';
 import { detectCategory, categoryMessage, CATEGORIES, CATEGORY_IDS } from './u1-category.js';
 import { extract, DEFAULT_TIMEOUT_MS } from './u2-extract.js';
 import { extractByRules } from './u2-rules.js';
@@ -210,6 +210,9 @@ async function skip(s, event, ctx) {
   if (!slot) return errorUi(s, ctx, 'no question to skip');
   if (!s.values[slot] && !s.skipped.includes(slot)) s.skipped.push(slot);
   s.suggestions = s.suggestions.filter((x) => x.slot !== slot);
+  // A skipped payment way means cash (founder decision), so the budget question still comes. Not locked: a
+  // later text or edit replaces it; the chip shows it as assumed.
+  if (slot === 'pay' && !s.values.pay) s.values.pay = { value: 'cash', source: 'skip_default', locked: false, seq: ++s.seq };
   if (pending && pending.slot === slot) markAsked(s, 'skipped');
   return advance(s, ctx);
 }
@@ -384,7 +387,7 @@ function markAsked(s, outcome) {
 }
 
 function stepInfo(s, config, cap = MAX_QUESTIONS) {
-  const done = s.asked.filter((q) => q.outcome === 'answered' || q.outcome === 'skipped').length;
+  const done = questionCount(s);
   // "of" is an estimate: questions so far, this one, and the always questions still open.
   const eff = withDefaults(config, statedAnswers(s));
   const alwaysOpen = config.slots.filter((x) => x.always && !isClosed(s, x.id) && dependsOnMet(x, eff)).length;
@@ -401,7 +404,7 @@ function common(s, ctx, profile) {
     chips,
     notUsed,
     suggestions: open,
-    questionsAsked: s.asked.filter((q) => q.outcome === 'answered' || q.outcome === 'skipped').length,
+    questionsAsked: questionCount(s),
     fallback: s.flags.llmFailed ? { reason: s.flags.llmFailed, fullFlow: s.flags.fullFlow } : null,
   };
 }

@@ -123,6 +123,7 @@ export function buildChips(config, state, profile, ctx = {}) {
   const chips = [];
   const ordered = Object.entries(state.values).filter(([, v]) => v.value !== null && v.value !== undefined).sort((a, b) => a[1].seq - b[1].seq);
   for (const [slotId, v] of ordered) {
+    if (v.source === 'skip_default') continue; // shown below with the defaults, as assumed
     const slot = slotById.get(slotId);
     /** @type {Chip} */
     const c = { kind: 'value', slot: slotId, label: slot.label, value: v.value, valueLabel: valueLabel(slot, v.value, ctx), source: v.source, locked: v.locked, editable: true };
@@ -143,10 +144,6 @@ export function buildChips(config, state, profile, ctx = {}) {
     const zl = z && config.zones.labels && config.zones.labels[z];
     const vl = zl ? { en: `${zl.en} (assumed)`, ar: `${zl.ar} (افتراض)` } : { en: 'Nationwide (assumed)', ar: 'أي محافظة (افتراض)' };
     chips.push({ kind: 'assumed', slot: 'city', label: slotById.get('city').label, value: null, valueLabel: vl, source: 'default', assumed: true, editable: true });
-  }
-  // Payment way skipped: Layer 2 quotes cash and says so.
-  if (slotById.has('pay') && state.skipped.includes('pay') && !profile.money.pay) {
-    chips.push({ kind: 'assumed', slot: 'pay', label: slotById.get('pay').label, value: null, valueLabel: { en: 'Not given: priced as cash (assumed)', ar: 'مش محدد: محسوب كاش (افتراض)' }, source: 'default', assumed: true, editable: true });
   }
   const notUsed = state.unmapped.map((u) => ({ kind: /** @type {'not_used'} */ ('not_used'), text: u.text, reason: u.reason, reasonLabel: REASON_LABELS[u.reason], factor: u.factor, topic: u.topic, editable: false }));
   const open = state.suggestions
