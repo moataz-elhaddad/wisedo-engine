@@ -114,7 +114,13 @@ jobs:
           curl -sf -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","tile":"laptop"}}' "$URL/api/session" -o s.json
           python3 -c 'import json;d=json.load(open("s.json"));print("session screen:", d["ui"]["screen"]);assert d["ui"]["screen"]!="error"'
           # Free text: which reader answered (an LLM, or the keyword rules) and what it filled.
-          echo "providers: $(curl -s -H "Authorization: Bearer $ADMIN" "$URL/api/admin/llm-check" | head -c 1500)"
+          # The new version can take a few seconds to reach every edge: retry until the check route answers.
+          for i in $(seq 1 12); do
+            prov=$(curl -s -H "Authorization: Bearer $ADMIN" "$URL/api/admin/llm-check")
+            case "$prov" in *providers*) break ;; esac
+            sleep 5
+          done
+          echo "providers: $(printf '%s' "$prov" | head -c 1500)"
           echo "parse: $(curl -s -w ' [HTTP %{http_code}, %{time_total}s]' -X POST -H 'content-type: application/json' -d '{"kind":"extract","category":"laptop","text":"عايز لابتوب للبرمجة في حدود 40 ألف كاش"}' "$URL/api/parse" | head -c 1500)"
           tcode=$(curl -s -o t.json -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","text":"عايز لابتوب للبرمجة في حدود 40 ألف كاش في القاهرة"}}' "$URL/api/session")
           echo "free-text session: HTTP $tcode"; [ "$tcode" = 200 ] || { head -c 1500 t.json; echo; exit 1; }
