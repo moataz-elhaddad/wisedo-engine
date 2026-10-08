@@ -27,6 +27,23 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Clean and check Cloudflare secrets (values are never printed)
+        run: |
+          set -eu
+          raw=$CLOUDFLARE_API_TOKEN
+          # API tokens only contain letters, digits, _ and -: drop anything else (spaces, newlines, quotes,
+          # invisible characters picked up when copying) and a "Bearer" prefix.
+          tok=$(printf '%s' "$raw" | LC_ALL=C tr -cd 'A-Za-z0-9_-'); tok=${tok#Bearer}
+          acc=$(printf '%s' "$CLOUDFLARE_ACCOUNT_ID" | LC_ALL=C tr -cd 'a-fA-F0-9' | tr 'A-F' 'a-f')
+          if [ -n "$tok" ]; then echo "::add-mask::$tok"; fi
+          if [ -n "$acc" ]; then echo "::add-mask::$acc"; fi
+          echo "CLOUDFLARE_API_TOKEN=$tok" >> "$GITHUB_ENV"
+          echo "CLOUDFLARE_ACCOUNT_ID=$acc" >> "$GITHUB_ENV"
+          echo "token: ${#raw} characters stored, ${#tok} after cleaning; account id: ${#acc} hex characters"
+          bad=""
+          [ ${#tok} -ge 40 ] || bad="$bad CLOUDFLARE_API_TOKEN (expected 40+ letters/digits; create one under My Profile > API Tokens, not the Global API Key)"
+          [ ${#acc} -eq 32 ] || bad="$bad CLOUDFLARE_ACCOUNT_ID (expected 32 hex characters)"
+          if [ -n "$bad" ]; then echo "::error::Secret looks wrong:$bad"; exit 1; fi
       - name: Check required secrets exist (values are never printed)
         env:
           ADMIN: ${{ secrets.WISEDO_ADMIN_TOKEN }}
@@ -91,13 +108,15 @@ jobs:
           fi
           curl -sf "$URL/api/health"; echo
           [ "$(code "$URL/")" = 200 ] && echo "try-out page: 200"
-          [ "$(code "$URL/skus.html")" = 200 ] && echo "SKU page: 200"
+          echo "SKU page: $(code -L "$URL/skus.html")"
           laptops=$(curl -sf "$URL/api/skus?category=laptop" | python3 -c 'import json,sys;print(len(json.load(sys.stdin)))')
           echo "laptop SKUs: $laptops"; [ "$laptops" -gt 0 ]
           curl -sf -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","tile":"laptop"}}' "$URL/api/session" -o s.json
           python3 -c 'import json;d=json.load(open("s.json"));print("session screen:", d["ui"]["screen"]);assert d["ui"]["screen"]!="error"'
           # Free text: which reader answered (an LLM, or the keyword rules) and what it filled.
-          curl -sf -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","text":"عايز لابتوب للبرمجة في حدود 40 ألف كاش في القاهرة"}}' "$URL/api/session" -o t.json
+          echo "parse: $(curl -s -w ' [HTTP %{http_code}, %{time_total}s]' -X POST -H 'content-type: application/json' -d '{"kind":"extract","category":"laptop","text":"عايز لابتوب للبرمجة في حدود 40 ألف كاش"}' "$URL/api/parse" | head -c 1500)"
+          tcode=$(curl -s -o t.json -w '%{http_code}' -X POST -H 'content-type: application/json' -d '{"event":{"type":"start","text":"عايز لابتوب للبرمجة في حدود 40 ألف كاش في القاهرة"}}' "$URL/api/session")
+          echo "free-text session: HTTP $tcode"; [ "$tcode" = 200 ] || { head -c 1500 t.json; echo; exit 1; }
           python3 -c 'import json;d=json.load(open("t.json"));s=d["state"];print("text reader:", s["texts"][0]["status"], s["texts"][0].get("llm",""));print("filled:", {k:v["value"] for k,v in s["values"].items()});assert s["values"].get("budget")'
           echo "### Deployed: $URL" >> "$GITHUB_STEP_SUMMARY"
           echo "- Try-out: $URL/" >> "$GITHUB_STEP_SUMMARY"
