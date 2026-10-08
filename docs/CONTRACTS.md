@@ -125,7 +125,7 @@ The only thing Layer 1 hands to Layer 2. Stored with the session so any result c
 | `money.down` | number | Down payment, EGP (default 0). Ignored for cash. |
 | `logistics.urgentDays` | number or null | Max delivery days. A preference, relaxed last. |
 | `logistics.acceptImports` | boolean | false (default) excludes grey imports. |
-| `logistics.city` | string or null | **New.** A key of `config.zones.cities`. null = nationwide (assumed, warned). |
+| `logistics.city` | string or null | **New.** A key of `config.zones.cities`. null = unknown: the config's `zones.assumedZone` (Greater Cairo), else nationwide; assumed and warned. |
 | `logistics.cod` | `must`/`prefer`/null | **New.** Cash on delivery. must = hard, prefer = relaxable. |
 | `shops.prefer[]`, `shops.avoid[]` | retailer ids | **New.** Avoided shops are dropped (hard); preferred shops are relaxable. |
 | `derived` | object | Derived facts (`maxPrice`, `keepShort`, ...). Used by conditions. |
@@ -252,7 +252,7 @@ const sim    = match(needProfile, catalogSnapshot, now, 'simulate');
   modelVerdict: null | {query, productId, type, role?, text, ...},
   whyNotPopular: null | {productId, name, type, text, ...},
   timing: [{code: "white_friday", date, weeks, savingLow?, savingHigh?, text, source?}],
-  assumptions: {pay: "cash"|null, city: "nationwide"|null},
+  assumptions: {pay: "cash"|null, city: "<zone id>"|"nationwide"|null}   // the assumed zone (greater_cairo), or nationwide without zones.assumedZone,
   counts: {inScope, loaded, meetNeed, eligible, stretch, over},
   trace: [{step: M1|M2|M4|M5|M6|M7|M8|meta, text, count?, removed?, kept?}]
 }

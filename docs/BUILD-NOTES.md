@@ -63,8 +63,8 @@ Ids in brackets are referenced from code comments.
 **Offer resolution (M4)**
 
 10. **[D-plan] Plan formula follows technical-design-v4.** The formula is `total = (P - down)(1 + admin + r*n) + down`, so the admin fee is charged on the financed amount. Tech-spec 5.1 writes `+ admin * P`, charging it on the full price. The two agree when down = 0, which covers the worked example (all four rows reproduced exactly in `test/offers.test.js`). The task names v4 as the formula source. `monthly = ceil((total - down)/n)` in whole EGP; `total` is rounded to 2 decimals.
-11. **Unknown payment way** (`money.pay: null`) is quoted as cash, with a `pay_assumed` warning. `monthlyCap` and `down` are ignored for cash buyers.
-12. **[D-city] Unknown city means nationwide.** An offer is kept if it delivers anywhere, and it is quoted at its highest delivery fee and slowest days across its zones (conservative), with a `city_assumed` warning. A city key not in the config maps to zone `other` in the engine; the profile validator rejects it in rank mode.
+11. **Unknown payment way** (`money.pay: null`) is quoted as cash, with a `pay_assumed` warning. `monthlyCap` and `down` are ignored for cash buyers. When the buyer skips the payment question, Layer 1 sets `pay = cash` itself (founder decision 4), so the budget is still asked.
+12. **[D-city] Unknown city means Greater Cairo** (founder decision, 2026-10-08). The zone comes from the config's `zones.assumedZone` and is shown as assumed, with a `city_assumed` warning; `assumptions.city` names the zone. A config without `assumedZone` falls back to nationwide: an offer is kept if it delivers anywhere, quoted at its highest delivery fee and slowest days across its zones. A city key not in the config maps to zone `other` in the engine; the profile validator rejects it in rank mode.
 13. **Affordability ratio.** Cash buyers: `(price + delivery + install) / budget`. Installment buyers: `monthly / cap`. If an installment buyer also gave a budget, the larger of the two ratios applies. With no limit the ratio is 0.
 14. **Ratios are rounded to 4 decimals, not 2.** With 2 decimals, an offer 0.4% over budget would count as within budget. Money, fit and score are rounded to 2 decimals.
 15. **Best offer when nothing is affordable:** lowest ratio first (closest to affordable), then ranking cost, trust, delivery days, retailer id.
@@ -120,23 +120,42 @@ Ids in brackets are referenced from code comments.
 
 No test is skipped or known to fail.
 
-## Open questions for the founder (most important first)
+## Founder decisions (2026-10-08)
 
-1. **Unknown city (decision 12).** We currently assume nationwide and quote each shop's worst zone. The alternatives are assuming Greater Cairo (most buyers), or requiring nationwide delivery. This changes picks whenever a shop has a Cairo-only offer.
-2. **Stretch-only results (decision 20).** When nothing is within budget but something is within 15%, should we show it as a pick ("slightly over budget") or say "nothing fits, you need X more" (current)? The v4 draft showed stretch picks; BR-12 reads like the current behaviour.
-3. **Admin fee on a down payment (decision 10).** Is the admin share charged on the financed amount (v4) or on the full price (tech-spec 5.1)? Please confirm with valU, Contact and the banks; the two docs disagree.
-4. **The third pick when there is no Best value (decision 21).** Should a buyer get 2 picks, or 3 with Premium and Cheaper together?
-5. **Relax order of shop and COD preferences against need preferences (decision 19).** Is dropping "I prefer shop X" before "I prefer Samsung" right?
-6. **`maxList` (decision 24).** Does "show the rest, up to 10" mean 10 in total (current) or 10 more after the picks?
-7. **Deal bonus for financed buyers.** The deal bonus compares effective cost, which includes financing, with the reference price. A finance buyer's picks therefore lose up to 5 points for interest, as v4 intends ("heavy financing subtracts up to 5"). This also means a trust-10 shop gets a 1% discount (`(9 - 10)%`). Please confirm both.
-8. **Specs older than 60 days are not ranked.** That is right for our crawler; for B2B Excel uploads without dates it would hide the whole catalog unless upload time counts as `checked_at`. Proposal: upload time counts as `checked_at`.
-9. **Real model names in sample data (decision 37).** Is that acceptable, or should the synthetic catalog use invented model names until real data lands?
-10. **Rules of thumb that need an expert** (BRD section 8):
-    - The fixed attribute ranges (`basis`).
-    - The check thresholds (12,000 for heavy gaming or night photos; 30,000 for iPhones).
-    - The resale shares (Apple 60%, Samsung flagship 45%, Samsung 40%, Xiaomi 30%, others 25%).
-    - The White Friday 10-20% saving.
-11. **Provider options in the config are static** (the sample banks and finance companies). Real providers are market data and differ per tenant. Should the `provider` slot's options come from the tenant's plans at question time (`optionsSource: "plans.provider"` is already marked)?
+The open questions below (and those in `docs/LAYER1-NOTES.md`) were answered. "Kept" means the built behaviour was confirmed; "Changed" lists what the code now does.
+
+| # | Topic | Decision | Code |
+|---|---|---|---|
+| 1 | Nothing within budget, something within 15% | No stretch picks: "nothing fits, you need X more", with the closest products | Kept (decision 20) |
+| 2 | Planner policy | Default policy (median 3, max 7 on the personas) | Kept |
+| 3 | "When do you need it?" | Taken from the text first; asked only while White Friday is under 4 weeks away, and only when it changes the pick | Changed: `urgentDays.alwaysIf` is `saleWeeks lt 4` and its `askIf` also requires it |
+| 4 | Payment way skipped | Assume cash and still ask the budget | Changed: a skipped `pay` is set to cash (`source: skip_default`, not locked, shown as an assumed chip) |
+| 5 | Unknown city | Assume Greater Cairo, shown as an assumed chip | Changed: `zones.assumedZone` in every config (decision 12) |
+| 6 | Installment math and admin fee | Keep the math on as built; use each shop's published terms; checking each provider's rules is out of scope for now | Kept (decision 10) |
+| 7 | Third pick without a Best value | Show 3 picks (Premium and Cheaper together) | Kept (decision 21) |
+| 8 | Relax order | Shop and COD preferences before brand and need preferences | Kept (decision 19) |
+| 9 | `maxList` | 10 in total, picks included | Kept (decision 24) |
+| 10 | Provider options | From the tenant's plans at question time | Changed: `optionsSource: "plans.provider"` is resolved in `configFor` |
+| 11 | What to ask an installment buyer | Still ask the monthly cap | Kept |
+| 12 | Special installment offers (0%, no fees) | Count in the ranking | Kept: they lower the effective cost, which drives the deal bonus |
+| 13 | Buyer has only one provider (for example valU) | Exclude shops without that provider on the product | Kept (`no_plan` hard drop) |
+| 14 | B2B uploads without dates | Upload time counts as `checked_at` | Kept: `worker/csv.js` and the SKU API already stamp `checked_at` at write time |
+| 15 | Laptop specs to scores | CPU and GPU lookup tables from public benchmarks give the 1-10 scores | To build with the catalog contract |
+| 16 | Real model names in sample data | Keep them (sample data, labelled) | Kept (decision 37) |
+| 17 | Rules of thumb | Review with an expert now | Open: the list to review is in "Rules of thumb that need an expert" below |
+| 18 | Two LLM calls on an unclear opener | One combined call | Changed: kind `detect` returns the category and the slots |
+| 19 | Clarifying questions and the cap | They do not count toward the cap | Changed: `questionCount` counts slot questions only |
+| 20 | Next build step | Measure how well the LLM reads real Egyptian Arabic phrases | Next |
+
+Each change has a test in `test/decisions.test.js`.
+
+### Rules of thumb that need an expert (decision 17)
+
+- The fixed attribute ranges (`basis`).
+- The check thresholds (12,000 for heavy gaming or night photos; 30,000 for iPhones).
+- The resale shares (Apple 60%, Samsung flagship 45%, Samsung 40%, Xiaomi 30%, others 25%).
+- The White Friday 10-20% saving.
+- The deal bonus for financed buyers (up to 5 points off for interest; a trust-10 shop gets a 1% discount).
 
 ## Notes for the Layer 1 worker
 
