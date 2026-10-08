@@ -200,13 +200,17 @@ async function start(event, ctx) {
 
   const text = String(event.text ?? '').slice(0, MAX_TEXT_LENGTH);
   const productsByCategory = Object.fromEntries(configured.map((c) => [c, identityFor(ctx.snapshot, c).products]));
-  const det = await detectCategory(text, { configured, productsByCategory, llm: ctx.llm, timeoutMs: ctx.llmTimeoutMs ?? DEFAULT_TIMEOUT_MS });
+  const configs = configured.map((c) => configFor(ctx.snapshot, c));
+  const retailers = configured.length ? identityFor(ctx.snapshot, configured[0]).retailers : [];
+  const det = await detectCategory(text, { configured, productsByCategory, llm: ctx.llm, timeoutMs: ctx.llmTimeoutMs ?? DEFAULT_TIMEOUT_MS, configs, retailers });
+  const pre = det.extraction;
+  delete det.extraction;
   s.detection = det;
   if (det.status === 'not_configured' || det.status === 'unsupported') return closedCategory(s, det, configured);
   if (det.status === 'unclear' || det.confidence < PREFILL_THRESHOLD) return tiles(s, det, configured, det.llmError ? 'llm_' + det.llmError : 'unclear_category');
 
   s.category = /** @type {string} */ (det.category);
-  const read = await readText(s, text, ctx);
+  const read = await readText(s, text, ctx, pre);
   // Low confidence on everything: the text was read, but nothing in it reached confidence 0.7. Show the
   // category tiles (tech-spec failure handling) instead of building on guesses; a tile starts the full flow.
   if (read.ok && read.prefilled === 0 && read.suggested > 0) {
@@ -289,11 +293,12 @@ async function addDetail(s, ctx) {
 // ---------------------------------------------------------------------------------------------
 
 /**
- * Read one piece of free text: U2 extract -> U3 normalise -> U4 merge (locked values win).
+ * Read one piece of free text: U2 extract -> U3 normalise -> U4 merge (locked values win). `pre` is the
+ * extraction the combined category call already returned (first text only).
  * Without an LLM, or when the LLM fails, the rule-based extractor reads the text instead. Only when the rules find
  * nothing either is the state left unchanged (except the record); the first text then falls back to the full flow.
  */
-async function readText(s, text, ctx) {
+async function readText(s, text, ctx, pre) {
   const config = configFor(ctx.snapshot, s.category);
   const identity = identityFor(ctx.snapshot, s.category);
   const normCtx = { text, products: identity.products, retailers: identity.retailers };
@@ -301,7 +306,8 @@ async function readText(s, text, ctx) {
   /** @type {{error: string, detail?: string}} */
   let failure = { error: 'no_llm' };
   if (ctx.llm) {
-    const res = await extract(config, text, { llm: ctx.llm, timeoutMs: ctx.llmTimeoutMs ?? DEFAULT_TIMEOUT_MS, retailers: identity.retailers });
+    // The combined category call already read the text: no second call.
+    const res = pre ? { ok: true, extraction: pre } : await extract(config, text, { llm: ctx.llm, timeoutMs: ctx.llmTimeoutMs ?? DEFAULT_TIMEOUT_MS, retailers: identity.retailers });
     if (res.ok) {
       const norm = normalizeExtraction(config, res.extraction, normCtx);
       const applied = applyExtraction(s, norm, threshold);

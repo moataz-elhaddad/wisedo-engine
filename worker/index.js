@@ -14,8 +14,8 @@ import * as store from './store.js';
 import { exportCsv, importCsv, slug } from './csv.js';
 import { llmFor, llmProviders, allowLlmCall, checkProviders } from './llm.js';
 import { buildExtractionRequest } from '../src/layer1/u2-extract.js';
-import { buildCategoryRequest } from '../src/layer1/u1-category.js';
-import { MAX_TEXT_LENGTH } from '../src/layer1/session.js';
+import { buildCategoryRequest, buildDetectRequest } from '../src/layer1/u1-category.js';
+import { MAX_TEXT_LENGTH, configFor } from '../src/layer1/session.js';
 
 const DEFAULT_TENANT = 'demo-b2b';
 const MAX_BODY = 2_000_000;
@@ -178,16 +178,27 @@ async function sessionHandler(env, tenant, request) {
 
 // The parser for a browser-run engine (the try-out page): the server builds the prompt itself from
 // {kind, category, text}, so this is not an open LLM proxy. 503 when no provider answers; the page then uses the rules.
+/** Category configs as the session sees them: provider options come from the tenant's plans (optionsSource). */
+async function marketConfigs(env, tenant, ids) {
+  for (const id of ids) categoryOrThrow(id);
+  const snap = { tenant_id: tenant, configs: CONFIGS, plans: await store.listPlans(env, tenant) };
+  return ids.map((id) => configFor(snap, id));
+}
+
 async function parseHandler(env, tenant, request) {
   const body = await readJson(request);
-  if (!isObj(body) || typeof body.text !== 'string' || !body.text.trim()) throw new HttpError(400, 'body must be {kind, category, text}');
+  if (!isObj(body) || typeof body.text !== 'string' || !body.text.trim()) throw new HttpError(400, 'body must be {kind, category, text} (detect: {kind, categories, text})');
   const text = body.text.slice(0, MAX_TEXT_LENGTH);
   let req;
   if (body.kind === 'category') req = buildCategoryRequest(text);
   else if (body.kind === 'extract') {
-    const config = categoryOrThrow(body.category);
+    const [config] = await marketConfigs(env, tenant, [body.category]);
     req = buildExtractionRequest(config, text, { retailers: await store.listRetailers(env, tenant) });
-  } else throw new HttpError(400, 'kind must be "extract" or "category"');
+  } else if (body.kind === 'detect') {
+    // Category and extraction in one call; the prompt lists the slots of the categories the page has configured.
+    const ids = Array.isArray(body.categories) && body.categories.length ? body.categories : Object.keys(CONFIGS);
+    req = buildDetectRequest(text, await marketConfigs(env, tenant, ids.map(String)), { retailers: await store.listRetailers(env, tenant) });
+  } else throw new HttpError(400, 'kind must be "extract", "category" or "detect"');
   const llm = llmForRequest(env, request);
   if (!llm) return json({ ok: false, error: 'no_llm' }, 503);
   try {

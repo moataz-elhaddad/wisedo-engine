@@ -13,9 +13,10 @@ export const DEFAULT_TIMEOUT_MS = 3000;
 
 /**
  * @typedef {Object} LlmRequest
- * @property {'extract'|'category'} kind
+ * @property {'extract'|'category'|'detect'} kind   detect = category and extraction in one call
  * @property {string} text            the buyer's text (also used by the mock adapter to find a recording)
  * @property {string} [category]      category id (extract only)
+ * @property {string[]} [categories]  detect only: the configured category ids whose slots the prompt lists
  * @property {string} system          system prompt (stable per config version, so it can be cached)
  * @property {string} user            user message content
  * @property {object} schema          JSON schema for structured output (output_config.format)
@@ -71,37 +72,40 @@ export async function callLlm(llm, request, timeoutMs = DEFAULT_TIMEOUT_MS) {
  * @param {any} config
  */
 export function buildExtractionSchema(config) {
-  const slotIds = config.slots.map((s) => s.id);
+  return { type: 'object', additionalProperties: false, required: ['slots', 'unmapped'], properties: extractionProperties([config]) };
+}
+
+/**
+ * The `slots` and `unmapped` properties of the extraction schema; the slot enum is the union over the configs.
+ * @param {any[]} configs
+ */
+export function extractionProperties(configs) {
+  const slotIds = [...new Set(configs.flatMap((c) => c.slots.map((s) => s.id)))];
   return {
-    type: 'object',
-    additionalProperties: false,
-    required: ['slots', 'unmapped'],
-    properties: {
-      slots: {
-        type: 'array',
-        items: {
-          type: 'object',
-          additionalProperties: false,
-          required: ['slot', 'values', 'amountText', 'confidence', 'evidence'],
-          properties: {
-            slot: { type: 'string', enum: slotIds },
-            values: { type: 'array', items: { type: 'string' } },
-            amountText: { anyOf: [{ type: 'string' }, { type: 'null' }] },
-            confidence: { type: 'number' },
-            evidence: { type: 'string' },
-          },
+    slots: {
+      type: 'array',
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['slot', 'values', 'amountText', 'confidence', 'evidence'],
+        properties: {
+          slot: { type: 'string', enum: slotIds },
+          values: { type: 'array', items: { type: 'string' } },
+          amountText: { anyOf: [{ type: 'string' }, { type: 'null' }] },
+          confidence: { type: 'number' },
+          evidence: { type: 'string' },
         },
       },
-      unmapped: {
-        type: 'array',
-        items: {
-          type: 'object',
-          additionalProperties: false,
-          required: ['text', 'factor'],
-          properties: {
-            text: { type: 'string' },
-            factor: { type: 'string', enum: unmappedFactorIds() },
-          },
+    },
+    unmapped: {
+      type: 'array',
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['text', 'factor'],
+        properties: {
+          text: { type: 'string' },
+          factor: { type: 'string', enum: unmappedFactorIds() },
         },
       },
     },
@@ -128,31 +132,47 @@ export function buildExtractionSystemPrompt(config, ctx = {}) {
   const lines = [];
   lines.push(`You read what an Egyptian shopper wrote about the ${config.label.en.toLowerCase()} they want to buy and fill slots of a fixed schema. The text may be Egyptian Arabic, English or a mix, with Arabic-Indic or Western digits.`);
   lines.push('');
-  lines.push('Rules:');
-  lines.push('- Fill a slot only when the text states it or clearly implies it. Leave out every slot the text does not touch. Never guess to be helpful.');
-  lines.push('- values holds option ids from the slot list below, exactly as written there. For a multi slot give every option that applies.');
-  lines.push('- confidence is 0 to 1: 0.9 or more when the text says it outright, 0.7 to 0.9 when it clearly implies it, below 0.7 when it is a weak hint.');
-  lines.push('- evidence is the exact words from the text that support the value, copied character for character (a short quote, not a paraphrase).');
-  lines.push('- Amounts of money: put the shopper\'s own words for the amount in amountText (for example "15 ألف", "١٥٠٠٠", "15k", "1500 في الشهر") and leave values empty. Do not convert or compute amounts. A monthly amount goes to monthlyCap, a total to budget, an amount paid up front to down.');
-  lines.push('- Storage needs: an option id, or the shopper\'s words in amountText (for example "256 جيجا").');
-  lines.push('- modelInMind: values holds the model name exactly as the shopper wrote it.');
-  lines.push('- shops: values items are "prefer:<shop>" or "avoid:<shop>" using the shop names below.');
-  lines.push('- Never invent products, prices or shops. Never rank or recommend.');
-  lines.push('- Anything the shopper cares about that no slot can hold goes to unmapped with the exact quote and the closest factor: look_colour (colour or looks), trade_in (trading in the old device), fakes_used (new versus used or open box), timing_launch_currency (waiting for a sale, a launch or a price drop), family_opinion (what family or friends think), reviews, known_defects, spare_parts, branch_pickup, or other.');
+  lines.push(...extractionRules());
   lines.push('');
   lines.push('Slots (id: meaning. Options):');
-  for (const s of config.slots) {
+  lines.push(...slotLines(config, ctx));
+  lines.push('');
+  lines.push('Return only the JSON object the schema describes.');
+  return lines.join('\n');
+}
+
+/** The slot-filling rules, shared by the extraction prompt and the combined category + extraction prompt. */
+export function extractionRules() {
+  return [
+    'Rules:',
+    '- Fill a slot only when the text states it or clearly implies it. Leave out every slot the text does not touch. Never guess to be helpful.',
+    '- values holds option ids from the slot list below, exactly as written there. For a multi slot give every option that applies.',
+    '- confidence is 0 to 1: 0.9 or more when the text says it outright, 0.7 to 0.9 when it clearly implies it, below 0.7 when it is a weak hint.',
+    '- evidence is the exact words from the text that support the value, copied character for character (a short quote, not a paraphrase).',
+    '- Amounts of money: put the shopper\'s own words for the amount in amountText (for example "15 ألف", "١٥٠٠٠", "15k", "1500 في الشهر") and leave values empty. Do not convert or compute amounts. A monthly amount goes to monthlyCap, a total to budget, an amount paid up front to down.',
+    '- Storage needs: an option id, or the shopper\'s words in amountText (for example "256 جيجا").',
+    '- modelInMind: values holds the model name exactly as the shopper wrote it.',
+    '- shops: values items are "prefer:<shop>" or "avoid:<shop>" using the shop names below.',
+    '- Never invent products, prices or shops. Never rank or recommend.',
+    '- Anything the shopper cares about that no slot can hold goes to unmapped with the exact quote and the closest factor: look_colour (colour or looks), trade_in (trading in the old device), fakes_used (new versus used or open box), timing_launch_currency (waiting for a sale, a launch or a price drop), family_opinion (what family or friends think), reviews, known_defects, spare_parts, branch_pickup, or other.',
+  ];
+}
+
+/**
+ * One line per slot of a config: "- id (flags): meaning. options".
+ * @param {any} config
+ * @param {{retailers?: {id: string, name: string}[]}} [ctx]
+ */
+export function slotLines(config, ctx = {}) {
+  return config.slots.map((s) => {
     const flags = [s.multi ? 'multi' : null, s.numeric ? `amount in ${s.numeric.unit}` : null].filter(Boolean).join(', ');
     let opts;
     if (s.valueShape === 'shops') opts = 'shop names: ' + ((ctx.retailers || []).map((r) => r.name).join(', ') || '(none)');
     else if (s.valueShape === 'product') opts = 'free text: the model name as written';
     else if (s.numeric) opts = 'amountText, or a preset: ' + describeOptions(s);
     else opts = describeOptions(s);
-    lines.push(`- ${s.id}${flags ? ` (${flags})` : ''}: ${s.label.en}. ${opts}`);
-  }
-  lines.push('');
-  lines.push('Return only the JSON object the schema describes.');
-  return lines.join('\n');
+    return `- ${s.id}${flags ? ` (${flags})` : ''}: ${s.label.en}. ${opts}`;
+  });
 }
 
 /**

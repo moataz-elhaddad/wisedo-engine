@@ -101,6 +101,18 @@ test('/api/parse builds the prompt server side and answers from the chain', asyn
   assert.deepEqual(h.llm, ['workers-ai']);
 });
 
+test('/api/parse detect: one call carries the category and the slots of the listed categories', async () => {
+  let input;
+  const answer = { category: 'laptop', confidence: 0.8, ...EXTRACTION };
+  const { call } = await seeded({ AI: { run: async (_m, i) => { input = i; return { response: answer }; } } });
+  const r = await call('POST', '/api/parse', { kind: 'detect', categories: ['laptop', 'mobile'], text: 'عايز حاجة للمذاكرة في حدود 40 ألف' });
+  assert.equal(r.status, 200, JSON.stringify(r.body));
+  assert.deepEqual(r.body.output, answer);
+  const prompt = input.messages.map((m) => m.content).join('\n');
+  assert.ok(prompt.includes('Slots for "laptop"') && prompt.includes('Slots for "mobile"'), 'both slot lists are in the prompt');
+  assert.equal((await call('POST', '/api/parse', { kind: 'detect', categories: ['cars'], text: 'x' })).status, 400);
+});
+
 test('/api/parse without any provider is 503 no_llm', async () => {
   const { call } = await seeded();
   const r = await call('POST', '/api/parse', { kind: 'extract', category: 'laptop', text: 'x' });
