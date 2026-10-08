@@ -12,7 +12,7 @@ import { ENGINE_VERSION } from '../src/layer2/constants.js';
 import { CONFIGS } from './bundle.js';
 import * as store from './store.js';
 import { exportCsv, importCsv, slug } from './csv.js';
-import { llmFor, llmProviders, allowLlmCall } from './llm.js';
+import { llmFor, llmProviders, allowLlmCall, checkProviders } from './llm.js';
 import { buildExtractionRequest } from '../src/layer1/u2-extract.js';
 import { buildCategoryRequest } from '../src/layer1/u1-category.js';
 import { MAX_TEXT_LENGTH } from '../src/layer1/session.js';
@@ -261,6 +261,11 @@ async function route(request, env, url) {
   if (m === 'POST' && a === 'import') { requireAdmin(env, request); return importHandler(env, tenant, request, url); }
   if (m === 'POST' && a === 'admin' && b === 'reset') { requireAdmin(env, request); return json({ ok: true, loaded: await store.resetToSample(env, tenant) }); }
   if (m === 'GET' && a === 'admin' && b === 'check') { requireAdmin(env, request); return json({ ok: true }); }
+  if (m === 'GET' && a === 'admin' && b === 'llm-check') {
+    requireAdmin(env, request);
+    const extractReq = buildExtractionRequest(CONFIGS.laptop, 'عايز لابتوب للبرمجة في حدود 40 ألف كاش في القاهرة', { retailers: await store.listRetailers(env, tenant) });
+    return json({ ok: true, category: await checkProviders(env, buildCategoryRequest('عايز لابتوب للمذاكرة')), extract: await checkProviders(env, extractReq) });
+  }
 
   throw new HttpError(404, `no route ${m} ${url.pathname}`);
 }
