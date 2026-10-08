@@ -9,6 +9,7 @@
   "tcoYears": 5,
   "freshness": { "priceStockHours": 24, "deliveryGiftsHours": 72, "plansDays": 35, "specsDays": 60 },
   "zones": {
+    "assumedZone": "greater_cairo",
     "ids": ["greater_cairo", "alexandria", "other"],
     "labels": {
       "greater_cairo": { "ar": "القاهرة الكبرى", "en": "Greater Cairo" },

@@ -5,8 +5,9 @@
 // - The buyer's word beats the LLM: a value the buyer answered or edited is locked for the session, and a later
 //   extraction (more free text) never overwrites it.
 // - Builds the chips: every value shows where it came from; every default is marked "assumed", never silent;
-//   unknown city shows as "nationwide (assumed)"; unmapped items show as "Not used" chips with the reason.
+//   unknown city shows as "Greater Cairo (assumed)" (the config's assumedZone); unmapped items show as "Not used" chips with the reason.
 import { REASON_LABELS } from './u3-normalize.js';
+import { assumedZone } from '../util.js';
 
 export const PREFILL_THRESHOLD = 0.7;
 
@@ -136,9 +137,12 @@ export function buildChips(config, state, profile, ctx = {}) {
     if (slot.manual) continue; // never-asked slots (cod, compat) stay out of the way unless stated
     chips.push({ kind: 'assumed', slot: n.slot, label: slot.label, value: n.value, valueLabel: valueLabel(slot, n.value, ctx), source: 'default', assumed: true, editable: true });
   }
-  // City: unknown means nationwide, shown as assumed (BR-43).
+  // City: unknown means the config's assumed zone (Greater Cairo), else nationwide; shown as assumed (BR-43).
   if (slotById.has('city') && !profile.logistics.city) {
-    chips.push({ kind: 'assumed', slot: 'city', label: slotById.get('city').label, value: null, valueLabel: { en: 'Nationwide (assumed)', ar: 'أي محافظة (افتراض)' }, source: 'default', assumed: true, editable: true });
+    const z = assumedZone(config);
+    const zl = z && config.zones.labels && config.zones.labels[z];
+    const vl = zl ? { en: `${zl.en} (assumed)`, ar: `${zl.ar} (افتراض)` } : { en: 'Nationwide (assumed)', ar: 'أي محافظة (افتراض)' };
+    chips.push({ kind: 'assumed', slot: 'city', label: slotById.get('city').label, value: null, valueLabel: vl, source: 'default', assumed: true, editable: true });
   }
   // Payment way skipped: Layer 2 quotes cash and says so.
   if (slotById.has('pay') && state.skipped.includes('pay') && !profile.money.pay) {

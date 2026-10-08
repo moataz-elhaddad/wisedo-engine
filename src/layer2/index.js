@@ -120,7 +120,7 @@ function rankResult(prep, run, profile, nowMs, options) {
     timing: timingAdvice(prep, run, best, nowMs),
     assumptions: {
       pay: run.buyer.payAssumed ? 'cash' : null,
-      city: run.buyer.zoneAssumed ? 'nationwide' : null,
+      city: run.buyer.zoneAssumed ? (run.buyer.zone || 'nationwide') : null,
     },
     counts: {
       inScope: prep.products.length,

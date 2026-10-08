@@ -87,3 +87,14 @@ export function lastFridayOfNovember(year) {
   while (d.getUTCDay() !== 5) d.setUTCDate(d.getUTCDate() - 1);
   return d;
 }
+
+/**
+ * The zone assumed when the buyer gives no city: `config.zones.assumedZone` when it is a known zone id, else null
+ * (nationwide).
+ * @param {any} config
+ * @returns {string|null}
+ */
+export function assumedZone(config) {
+  const z = config.zones && config.zones.assumedZone;
+  return z && (config.zones.ids || []).includes(z) ? z : null;
+}

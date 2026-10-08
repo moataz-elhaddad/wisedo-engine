@@ -20,6 +20,7 @@
     "specsDays": 60
   },
   "zones": {
+    "assumedZone": "greater_cairo",
     "ids": [
       "greater_cairo",
       "alexandria",

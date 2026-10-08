@@ -35,6 +35,9 @@ const BASE_SLOTS = [
   item('pay', ['cash'], 'كاش'),
   item('budget', [], 'ميزانيتي 15 ألف', { amountText: '15 ألف' }),
 ];
+// Without a budget, so the flow always has a question left (the budget is an always question).
+const OPEN_TEXT = 'عايز موبايل للتصوير، هدفع كاش';
+const OPEN_SLOTS = [item('use', ['photo'], 'للتصوير'), item('pay', ['cash'], 'كاش')];
 
 test('layer1 U4: confidence >= 0.7 becomes a chip, not a question; below 0.7 stays open and is asked', async () => {
   assert.equal(PREFILL_THRESHOLD, 0.7);
@@ -75,8 +78,8 @@ test('layer1 U4: a buyer edit locks the value; a new extraction does not overwri
 });
 
 test('layer1 U8/U9: skip applies the slot default, shown as assumed', async () => {
-  const ctx = ctxFor(BASE_TEXT, BASE_SLOTS);
-  let { state, ui } = await step(null, { type: 'start', text: BASE_TEXT }, ctx);
+  const ctx = ctxFor(OPEN_TEXT, OPEN_SLOTS);
+  let { state, ui } = await step(null, { type: 'start', text: OPEN_TEXT }, ctx);
   assert.equal(ui.screen, 'question');
   const slot = ui.question.slot;
   const def = mobileConfig.slots.find((s) => s.id === slot).default;
@@ -128,11 +131,11 @@ test('layer1 "Add a detail" lists every slot, including the never-asked ones', a
   assert.equal(s2.values.cod.locked, true);
 });
 
-test('layer1 city: unknown city is shown as "Nationwide (assumed)"', async () => {
+test('layer1 city: unknown city is shown as "Greater Cairo (assumed)"', async () => {
   const ctx = ctxFor(BASE_TEXT, BASE_SLOTS);
   const { ui } = await step(null, { type: 'start', text: BASE_TEXT }, ctx);
   const city = ui.chips.find((c) => c.slot === 'city');
-  assert.deepEqual([city.kind, city.assumed, city.valueLabel.en], ['assumed', true, 'Nationwide (assumed)']);
+  assert.deepEqual([city.kind, city.assumed, city.valueLabel.en], ['assumed', true, 'Greater Cairo (assumed)']);
 });
 
 test('layer1 cod and shops are never asked (any persona, any flow)', async () => {
@@ -240,8 +243,8 @@ test('layer1 low confidence on everything shows the category tiles', async () =>
 });
 
 test('layer1 "show results now" stops and ranks; the profile says what was left open', async () => {
-  const ctx = ctxFor(BASE_TEXT, BASE_SLOTS);
-  const { state } = await step(null, { type: 'start', text: BASE_TEXT }, ctx);
+  const ctx = ctxFor(OPEN_TEXT, OPEN_SLOTS);
+  const { state } = await step(null, { type: 'start', text: OPEN_TEXT }, ctx);
   const { ui, state: s2 } = await step(state, { type: 'showNow' }, ctx);
   assert.equal(ui.screen, 'result');
   assert.equal(ui.stopReason, 'show_now');
