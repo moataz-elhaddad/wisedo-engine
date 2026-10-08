@@ -263,7 +263,8 @@ async function route(request, env, url) {
   if (m === 'GET' && a === 'admin' && b === 'check') { requireAdmin(env, request); return json({ ok: true }); }
   if (m === 'GET' && a === 'admin' && b === 'llm-check') {
     requireAdmin(env, request);
-    return json({ ok: true, providers: await checkProviders(env, buildCategoryRequest('عايز لابتوب للمذاكرة')) });
+    const extractReq = buildExtractionRequest(CONFIGS.laptop, 'عايز لابتوب للبرمجة في حدود 40 ألف كاش في القاهرة', { retailers: await store.listRetailers(env, tenant) });
+    return json({ ok: true, category: await checkProviders(env, buildCategoryRequest('عايز لابتوب للمذاكرة')), extract: await checkProviders(env, extractReq) });
   }
 
   throw new HttpError(404, `no route ${m} ${url.pathname}`);

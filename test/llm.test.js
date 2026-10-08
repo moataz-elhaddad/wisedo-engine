@@ -136,5 +136,6 @@ test('Gemini errors carry Google\'s message; the admin check reports each provid
   const { call } = await seeded(env);
   const h = await call('GET', '/api/admin/llm-check');
   assert.equal(h.status, 200);
-  assert.equal(h.body.providers[0].ok, true);
+  assert.equal(h.body.category[0].ok, true);
+  assert.equal(h.body.extract.length, 1);
 });
