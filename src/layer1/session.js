@@ -90,9 +90,50 @@ export async function replay(events, ctx) {
 /** Config by id or alias from the snapshot (the snapshot's configs decide what is configured). */
 export function configFor(snapshot, category) {
   const configs = (snapshot && snapshot.configs) || {};
-  if (configs[category]) return configs[category];
-  for (const c of Object.values(configs)) if ((/** @type {any} */ (c).aliases || []).includes(category)) return c;
-  return null;
+  let raw = configs[category] || null;
+  if (!raw) for (const c of Object.values(configs)) if ((/** @type {any} */ (c).aliases || []).includes(category)) { raw = c; break; }
+  return raw ? withMarketOptions(snapshot, raw) : null;
+}
+
+/** @type {WeakMap<object, WeakMap<object, any>>} */
+const RESOLVED = new WeakMap();
+
+/**
+ * The config with market-data options filled in from the snapshot (cached per snapshot and config).
+ * `optionsSource: "plans.provider"`: the provider slot offers the providers of this tenant's plans (founder
+ * decision 10). A config option with the same id keeps its label; a new provider is labelled with its
+ * `provider_name`. With no plans in the snapshot the config's own options stay.
+ * @param {any} snapshot
+ * @param {any} config
+ */
+function withMarketOptions(snapshot, config) {
+  if (!config.slots.some((x) => x.optionsSource === 'plans.provider')) return config;
+  let m = RESOLVED.get(snapshot);
+  if (!m) { m = new WeakMap(); RESOLVED.set(snapshot, m); }
+  if (m.has(config)) return m.get(config);
+  const plans = (snapshot.plans || []).filter((p) => p && p.tenant_id === snapshot.tenant_id && p.provider);
+  let out = config;
+  if (plans.length) {
+    /** @type {Map<string, {kind: string, name: string}>} */
+    const providers = new Map();
+    for (const p of [...plans].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))) {
+      if (!providers.has(p.provider)) providers.set(p.provider, { kind: p.kind, name: p.provider_name || p.provider });
+    }
+    out = {
+      ...config,
+      slots: config.slots.map((slot) => {
+        if (slot.optionsSource !== 'plans.provider') return slot;
+        const known = slot.options.filter((o) => providers.has(o.id));
+        const added = [...providers.entries()]
+          .filter(([id]) => !slot.options.some((o) => o.id === id))
+          .sort((a, b) => (a[1].kind === b[1].kind ? (a[1].name < b[1].name ? -1 : a[1].name > b[1].name ? 1 : 0) : a[1].kind < b[1].kind ? -1 : 1))
+          .map(([id, v]) => ({ id, kind: v.kind, label: { ar: v.name, en: v.name }, effects: { set: { 'money.provider': id } } }));
+        return { ...slot, options: [...known, ...added] };
+      }),
+    };
+  }
+  m.set(config, out);
+  return out;
 }
 
 export function configuredCategories(snapshot) {

@@ -3,7 +3,7 @@
 // near tie, tile counts from simulate, and zero-match answers hidden.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { step, planNext, emptyState, setBuyerValue, identityFor, DEFAULT_POLICY, LITERAL_POLICY, MIN_GAIN } from '../src/layer1/index.js';
+import { step, planNext, emptyState, setBuyerValue, identityFor, configFor, DEFAULT_POLICY, LITERAL_POLICY, MIN_GAIN } from '../src/layer1/index.js';
 import { match } from '../src/layer2/index.js';
 import { buildNeedProfile } from '../src/profile/build.js';
 import { mobileConfig, SNAPSHOT, NOW, fixture } from './helpers.js';
@@ -85,7 +85,7 @@ test('layer1 U7: every gain question asked on the personas really changes the #1
       const base = Object.values(state.values).length ? Object.entries(state.values).sort((a, b) => a[1].seq - b[1].seq).map(([slot, v]) => ({ slot, value: v.value, source: 'answer' })) : [];
       const tops = new Set(q.options.map((o) => {
         const value = q.multi ? [o.id] : o.id;
-        const r = match(buildNeedProfile(mobileConfig, [...base, { slot: q.slot, value, source: 'answer' }]), SNAPSHOT, NOW, 'simulate');
+        const r = match(buildNeedProfile(configFor(SNAPSHOT, 'mobile'), [...base, { slot: q.slot, value, source: 'answer' }]), SNAPSHOT, NOW, 'simulate');
         return `${r.top1}@${r.top1Shop}`;
       }));
       assert.ok(tops.size >= 2, `${q.slot}: every answer gives the same #1 pick and shop`);
