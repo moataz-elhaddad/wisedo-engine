@@ -9,6 +9,7 @@
   "tcoYears": 5,
   "freshness": { "priceStockHours": 24, "deliveryGiftsHours": 72, "plansDays": 35, "specsDays": 60 },
   "zones": {
+    "assumedZone": "greater_cairo",
     "ids": ["greater_cairo", "alexandria", "other"],
     "labels": {
       "greater_cairo": { "ar": "القاهرة الكبرى", "en": "Greater Cairo" },
@@ -254,7 +255,7 @@
       ] },
 
     { "id": "urgentDays", "group": "logistics", "default": "none",
-      "alwaysIf": { "signal": "saleWeeks", "between": [1, 10] }, "askIf": { "signal": "urgencyMatters" }, "factors": ["urgency", "delivery_time_fee", "timing_sales", "install_wait"],
+      "alwaysIf": { "signal": "saleWeeks", "lt": 4 }, "askIf": { "all": [ { "signal": "urgencyMatters" }, { "signal": "saleWeeks", "lt": 4 } ] }, "factors": ["urgency", "delivery_time_fee", "timing_sales", "install_wait"],
       "note": "Offer delivery days for ACs count until the unit is delivered AND installed (install appointment included).",
       "label": { "ar": "محتاجه متركب إمتى", "en": "Installed by" },
       "question": { "ar": "محتاج التكييف يتركب إمتى؟", "en": "When do you need it installed?" },

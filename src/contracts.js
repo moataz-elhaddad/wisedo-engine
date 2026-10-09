@@ -65,7 +65,7 @@ export const MODES = /** @type {const} */ (['rank', 'simulate']);
  * @typedef {Object} Logistics
  * @property {number|null} urgentDays      Max delivery days; a preference that M6 relaxes last.
  * @property {boolean} acceptImports       false (default) = grey imports excluded.
- * @property {string|null} city            City key from config.zones.cities; null = nationwide (assumed).
+ * @property {string|null} city            City key from config.zones.cities; null = unknown (config zones.assumedZone, else nationwide).
  * @property {'must'|'prefer'|null} cod    Cash on delivery: must = hard filter, prefer = relaxable.
  */
 
@@ -235,7 +235,7 @@ export function emptyNeedProfile(category) {
  * @property {number} deliveryFee       offer.delivery[zone].fee
  * @property {number|null} deliveryDays
  * @property {string|null} zone
- * @property {boolean} zoneAssumed      true when the buyer's city is unknown (nationwide, worst zone quoted)
+ * @property {boolean} zoneAssumed      true when the buyer's city is unknown (the config's assumedZone, else nationwide with the worst zone quoted)
  * @property {boolean} official
  * @property {number} trust
  * @property {string} checkedAt

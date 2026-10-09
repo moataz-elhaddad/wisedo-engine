@@ -75,7 +75,9 @@ for (const [title, answers, over] of PERSONAS) {
     const model = over.modelInMind ? (resolveProductId(over.modelInMind, PRODUCTS) || over.modelInMind) : undefined;
     // The persona file sets it on the profile directly; Layer 1 sets it through the modelInMind slot (same field).
     const { modelInMind: _raw, ...rest } = over;
-    const expected = profile(model ? { ...answers, modelInMind: model } : answers, rest);
+    // A skipped payment way is taken as cash (and the budget is still asked).
+    const stated = !('pay' in answers) && asked.includes('pay') ? { ...answers, pay: 'cash' } : answers;
+    const expected = profile(model ? { ...stated, modelInMind: model } : stated, rest);
     assert.equal(expected.modelInMind ?? null, model ?? null);
     assert.deepEqual(core(ui.profile), core(expected), `${title}: asked ${asked.join(', ')}`);
     assert.ok(questions <= MAX_QUESTIONS);

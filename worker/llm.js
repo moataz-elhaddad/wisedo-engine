@@ -33,10 +33,10 @@ export function parseJsonObject(text) {
   return null;
 }
 
-/** Is this output usable for the request? Category answers need a category; extractions need the slot shape. */
+/** Is this output usable for the request? Category and detect answers need a category; extractions need the slot shape. */
 function usable(req, out) {
   if (!out || typeof out !== 'object' || Array.isArray(out)) return false;
-  if (req.kind === 'category') return typeof out.category === 'string';
+  if (req.kind === 'category' || req.kind === 'detect') return typeof out.category === 'string';
   return checkExtractionShape(out) === null;
 }
 

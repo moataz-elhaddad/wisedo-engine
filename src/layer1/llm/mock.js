@@ -8,7 +8,8 @@
 //       {"kind": "extract", "category": "mobile", "text": "<buyer text>",
 //        "response": {"slots": [{"slot": "use", "values": ["photo"], "amountText": null, "confidence": 0.92, "evidence": "..."}],
 //                     "unmapped": [{"text": "لونه أزرق", "factor": "look_colour"}]}},
-//       {"kind": "category", "text": "<buyer text>", "response": {"category": "mobile", "confidence": 0.8}}
+//       {"kind": "category", "text": "<buyer text>", "response": {"category": "mobile", "confidence": 0.8}},
+//       {"kind": "detect", "text": "<buyer text>", "response": {"category": "mobile", "confidence": 0.8, "slots": [...], "unmapped": []}}
 //     ]
 //   }
 // A recording is found by kind + category (extract only) + text (trimmed, whitespace collapsed).
@@ -38,7 +39,8 @@ export function createMockLlm(recordings, opts = {}) {
     const rec = list.find((r) => (r.kind || 'extract') === req.kind && (req.kind !== 'extract' || !r.category || r.category === req.category) && key(r.text) === key(req.text));
     if (opts.delayMs) await new Promise((r) => setTimeout(r, opts.delayMs));
     if (!rec) {
-      if (opts.onMissing === 'empty') return { stopReason: 'end_turn', model: 'mock', output: req.kind === 'category' ? { category: 'unclear', confidence: 0 } : { slots: [], unmapped: [] } };
+      const empty = req.kind === 'category' ? { category: 'unclear', confidence: 0 } : req.kind === 'detect' ? { category: 'unclear', confidence: 0, slots: [], unmapped: [] } : { slots: [], unmapped: [] };
+      if (opts.onMissing === 'empty') return { stopReason: 'end_turn', model: 'mock', output: empty };
       throw new Error(`mock llm: no recording for ${req.kind} "${key(req.text).slice(0, 60)}"`);
     }
     const res = rec.response || {};
@@ -56,8 +58,8 @@ export function createMockLlm(recordings, opts = {}) {
  * Build a recording entry (helper for tests and for the eval worker's scripted runs).
  * @param {string} text
  * @param {{slots?: any[], unmapped?: any[]} | Record<string, any>} response
- * @param {{kind?: 'extract'|'category', category?: string}} [o]
+ * @param {{kind?: 'extract'|'category'|'detect', category?: string}} [o]
  */
 export function recording(text, response, o = {}) {
-  return { kind: o.kind || 'extract', ...(o.kind === 'category' ? {} : { category: o.category || 'mobile' }), text, response };
+  return { kind: o.kind || 'extract', ...(o.kind === 'category' || o.kind === 'detect' ? {} : { category: o.category || 'mobile' }), text, response };
 }

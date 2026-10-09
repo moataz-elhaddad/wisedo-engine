@@ -1,11 +1,12 @@
 // U1 Category detector (tech-spec 4, component U1).
 //
 // Rules first: keywords in Arabic and English plus model names (the catalog's product aliases). An LLM call is
-// made only when the rules are unclear. The five categories Wisedo covers are always detected; only those with
+// made only when the rules are unclear. Given the configured categories' configs, that one call also fills the
+// slots of the category it finds ("detect"), so an unclear opener costs one LLM call, not two (founder decision). The five categories Wisedo covers are always detected; only those with
 // a category config in the snapshot are "configured" (today only mobile). The others get an honest
 // "not configured yet" answer that offers the configured ones; anything else gets "not something we cover".
 import { normalizeText, parseSizeInches } from './u3-normalize.js';
-import { callLlm } from './u2-extract.js';
+import { callLlm, checkExtractionShape, extractionProperties, extractionRules, slotLines } from './u2-extract.js';
 
 /** The five categories of the product (tech-spec 1, BRD). Labels for tiles and messages. */
 export const CATEGORIES = [
@@ -75,6 +76,7 @@ function hasWord(padded, kw) {
  * @property {string[]} matched         keywords that matched (for logs)
  * @property {string|null} [product]    unsupported product id (washing_machine, ...)
  * @property {string} [llmError]        when an LLM call was made and failed
+ * @property {{slots: any[], unmapped: any[]}} [extraction]  combined call: the raw slots for this category
  */
 
 /**
@@ -142,9 +144,41 @@ export function buildCategoryRequest(text) {
 }
 
 /**
- * Detect the category of a buyer's text. Rules first; LLM only if unclear and an `llm` is given.
+ * Build the combined request: the category, and for a configured category the extraction too, in one call.
  * @param {string} text
- * @param {{configured: string[], productsByCategory?: Record<string, any[]>, llm?: Function, timeoutMs?: number}} opts
+ * @param {any[]} configs   the configured categories' configs
+ * @param {{retailers?: {id: string, name: string}[]}} [ctx]
+ */
+export function buildDetectRequest(text, configs, ctx = {}) {
+  const lines = [
+    'You read what an Egyptian shopper wrote. The text may be Egyptian Arabic, English or a mix, with Arabic-Indic or Western digits. Do two things.',
+    '',
+    `1. category: what product they want to buy. One id: ${CATEGORIES.map((c) => `"${c.id}" (${c.label.en})`).join(', ')}, "other" for any other product, or "unclear" when the text does not say what they want to buy.`,
+    'confidence is 0 to 1: 0.9 or more when the text names the product, 0.7 to 0.9 when it clearly implies it, below 0.7 when you are guessing.',
+    '',
+    `2. slots and unmapped: only when the category is one of ${configs.map((c) => `"${c.id}"`).join(', ')}, fill that category's slots from the lists below. For any other answer, slots and unmapped are empty lists.`,
+    '',
+    ...extractionRules(),
+  ];
+  for (const c of configs) {
+    lines.push('', `Slots for "${c.id}" (id: meaning. Options):`, ...slotLines(c, ctx));
+  }
+  lines.push('', 'Return only the JSON object the schema describes.');
+  const schema = {
+    type: 'object',
+    additionalProperties: false,
+    required: ['category', 'confidence', 'slots', 'unmapped'],
+    properties: { ...CATEGORY_SCHEMA.properties, ...extractionProperties(configs) },
+  };
+  return { kind: 'detect', categories: configs.map((c) => c.id), text, system: lines.join('\n'), user: `<buyer_text>\n${text}\n</buyer_text>`, schema, maxTokens: 2048 };
+}
+
+/**
+ * Detect the category of a buyer's text. Rules first; LLM only if unclear and an `llm` is given.
+ * With `configs` (the configured categories' configs) the LLM call is the combined one: a configured category
+ * comes back with its `extraction`, so the session does not make a second call.
+ * @param {string} text
+ * @param {{configured: string[], productsByCategory?: Record<string, any[]>, llm?: Function, timeoutMs?: number, configs?: any[], retailers?: any[]}} opts
  * @returns {Promise<CategoryDetection>}
  */
 export async function detectCategory(text, opts) {
@@ -155,12 +189,20 @@ export async function detectCategory(text, opts) {
   if (r.unsupported) return { status: 'unsupported', category: null, product: r.unsupported.id, by: 'rules', confidence: 0.9, matched: r.matched };
   if (!opts.llm) return { status: 'unclear', category: null, by: null, confidence: 0, matched: r.matched };
 
-  const res = await callLlm(opts.llm, buildCategoryRequest(text), opts.timeoutMs);
+  const combined = Array.isArray(opts.configs) && opts.configs.length > 0;
+  const req = combined ? buildDetectRequest(text, /** @type {any[]} */ (opts.configs), { retailers: opts.retailers }) : buildCategoryRequest(text);
+  const res = await callLlm(opts.llm, req, opts.timeoutMs);
   if (!res.ok) return { status: 'unclear', category: null, by: 'llm', confidence: 0, matched: r.matched, llmError: res.error };
   const out = res.output;
   const cat = out && typeof out.category === 'string' ? out.category : 'unclear';
   const conf = out && typeof out.confidence === 'number' ? Math.max(0, Math.min(1, out.confidence)) : 0;
-  if (CATEGORY_IDS.includes(cat)) return { status: status(cat), category: cat, by: 'llm', confidence: conf, matched: r.matched };
+  if (CATEGORY_IDS.includes(cat)) {
+    /** @type {CategoryDetection} */
+    const det = { status: status(cat), category: cat, by: 'llm', confidence: conf, matched: r.matched };
+    // The slots of the combined call; a bad shape just means the session reads the text on its own.
+    if (combined && configured.has(cat) && checkExtractionShape(out) === null) det.extraction = { slots: out.slots, unmapped: out.unmapped || [] };
+    return det;
+  }
   if (cat === 'other' && conf >= 0.7) return { status: 'unsupported', category: null, product: null, by: 'llm', confidence: conf, matched: r.matched };
   return { status: 'unclear', category: null, by: 'llm', confidence: conf, matched: r.matched };
 }

@@ -297,7 +297,10 @@ export function timingAdvice(prep, run, best, nowMs) {
 export function globalWarnings(prep, run, profile, bestPick) {
   const w = [];
   if (run.buyer.payAssumed) w.push({ code: 'pay_assumed', text: T('Payment way not given: prices are quoted for cash.', 'طريقة الدفع مش محددة: الأسعار محسوبة كاش.') });
-  if (run.buyer.zoneAssumed) w.push({ code: 'city_assumed', text: T('City not given: assumed nationwide, using the highest delivery fee and slowest delivery of each shop.', 'المحافظة مش محددة: افترضت أي مكان في مصر، بأعلى مصاريف شحن وأبطأ توصيل لكل محل.') });
+  if (run.buyer.zoneAssumed && run.buyer.zone) {
+    const zl = (prep.config.zones.labels || {})[run.buyer.zone] || { en: run.buyer.zone, ar: run.buyer.zone };
+    w.push({ code: 'city_assumed', text: T(`City not given: assumed ${zl.en}, using its delivery fees and times.`, `المحافظة مش محددة: افترضت ${zl.ar}، بمصاريف ومدة التوصيل بتاعتها.`) });
+  } else if (run.buyer.zoneAssumed) w.push({ code: 'city_assumed', text: T('City not given: assumed nationwide, using the highest delivery fee and slowest delivery of each shop.', 'المحافظة مش محددة: افترضت أي مكان في مصر، بأعلى مصاريف شحن وأبطأ توصيل لكل محل.') });
   for (const ch of prep.config.checks || []) {
     if (evalCondition(ch.when, { profile })) w.push({ code: 'check:' + ch.id, text: ch.message });
   }

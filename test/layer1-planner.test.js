@@ -3,7 +3,7 @@
 // near tie, tile counts from simulate, and zero-match answers hidden.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { step, planNext, emptyState, setBuyerValue, identityFor, DEFAULT_POLICY, LITERAL_POLICY, MIN_GAIN } from '../src/layer1/index.js';
+import { step, planNext, emptyState, setBuyerValue, identityFor, configFor, DEFAULT_POLICY, LITERAL_POLICY, MIN_GAIN } from '../src/layer1/index.js';
 import { match } from '../src/layer2/index.js';
 import { buildNeedProfile } from '../src/profile/build.js';
 import { mobileConfig, SNAPSHOT, NOW, fixture } from './helpers.js';
@@ -85,7 +85,7 @@ test('layer1 U7: every gain question asked on the personas really changes the #1
       const base = Object.values(state.values).length ? Object.entries(state.values).sort((a, b) => a[1].seq - b[1].seq).map(([slot, v]) => ({ slot, value: v.value, source: 'answer' })) : [];
       const tops = new Set(q.options.map((o) => {
         const value = q.multi ? [o.id] : o.id;
-        const r = match(buildNeedProfile(mobileConfig, [...base, { slot: q.slot, value, source: 'answer' }]), SNAPSHOT, NOW, 'simulate');
+        const r = match(buildNeedProfile(configFor(SNAPSHOT, 'mobile'), [...base, { slot: q.slot, value, source: 'answer' }]), SNAPSHOT, NOW, 'simulate');
         return `${r.top1}@${r.top1Shop}`;
       }));
       assert.ok(tops.size >= 2, `${q.slot}: every answer gives the same #1 pick and shop`);
@@ -96,13 +96,13 @@ test('layer1 U7: every gain question asked on the personas really changes the #1
   assert.ok(checked >= 1, 'at least one gain question was checked');
 });
 
-test('layer1 city: assumed nationwide when offers do not differ by zone; asked when they do', async () => {
+test('layer1 city: assumed Greater Cairo when offers do not differ by zone; asked when they do', async () => {
   const products = [{ id: 'p1', ref_price_egp: 10000, attrs: { perf: 9, camera: 9, screen: 9 } }, { id: 'p2', ref_price_egp: 10000 }];
   const same = fixture({ products, offers: [{ product_id: 'p1', retailer_id: 'shopa', price_egp: 10000 }, { product_id: 'p2', retailer_id: 'shopb', price_egp: 10000 }] });
   const a = await flow(same, { pay: 'cash', budget: 25000 });
   assert.ok(!a.asked.some((x) => x.slot === 'city'), a.asked.map((x) => x.slot).join());
   const city = a.ui.chips.find((c) => c.slot === 'city');
-  assert.deepEqual([city.assumed, city.valueLabel.en], [true, 'Nationwide (assumed)']);
+  assert.deepEqual([city.assumed, city.valueLabel.en], [true, 'Greater Cairo (assumed)']);
   assert.equal(a.ui.profile.logistics.city ?? null, null);
 
   // p1 delivers to Greater Cairo only: the city now changes the #1 pick.

@@ -11,7 +11,7 @@
 // Effective cost and ranking cost:
 //   effCost  = paid + deliveryFee + installIfNotIncluded - giftValue
 //   rankCost = effCost * (1 + (9 - trust) * 1%)
-import { toMs, round2, cmpNum, cmpStr, asArray, HOUR_MS, DAY_MS } from '../util.js';
+import { toMs, round2, cmpNum, cmpStr, asArray, HOUR_MS, DAY_MS, assumedZone } from '../util.js';
 import { offerFresh } from './m1-candidates.js';
 
 
@@ -47,7 +47,9 @@ export function buyerFromProfile(profile, prep) {
   const s = profile.shops || {};
   const pay = m.pay === 'card' || m.pay === 'finance' || m.pay === 'cash' ? m.pay : 'cash';
   const city = l.city || null;
-  const zone = city ? (prep.config.zones.cities[city] || 'other') : null;
+  // [D-city] Unknown city: the config's assumedZone (Greater Cairo in every shipped config), else nationwide.
+  const assumed = assumedZone(prep.config);
+  const zone = city ? (prep.config.zones.cities[city] || 'other') : assumed;
   return {
     pay,
     payAssumed: !m.pay,
@@ -67,8 +69,9 @@ export function buyerFromProfile(profile, prep) {
 }
 
 /**
- * Delivery fee and days for the buyer's zone. Unknown city = nationwide: the offer is kept if it delivers
- * anywhere, and the highest fee and slowest days across its zones are quoted (shown as assumed).
+ * Delivery fee and days for the buyer's zone. With no city, the zone is the config's assumedZone (shown as
+ * assumed). With no assumedZone either (nationwide): the offer is kept if it delivers anywhere, and the highest
+ * fee and slowest days across its zones are quoted.
  * @param {any} offer
  * @param {Buyer} buyer
  * @returns {{fee: number, days: number, zone: string|null}|null}
@@ -214,7 +217,7 @@ export function evaluateOffer(prep, buyer, product, offer, nowMs) {
 
   ev.quote = {
     offerId: offer.id, retailerId: retailer.id, retailerName: retailer.name, url: offer.url,
-    price: P, deliveryFee: delivery.fee, deliveryDays: delivery.days, zone: delivery.zone, zoneAssumed: !buyer.zone,
+    price: P, deliveryFee: delivery.fee, deliveryDays: delivery.days, zone: delivery.zone, zoneAssumed: buyer.zoneAssumed,
     official: offer.official, trust: retailer.trust, returnDays: retailer.return_days, cod: codAvailable,
     checkedAt: offer.checked_at, ageHours: round2((nowMs - toMs(offer.checked_at)) / HOUR_MS), source: offer.source,
     plan, gifts, giftValue, giftsStale, installCost, paid, cashOut, effCost, trustPremiumShare, rankCost, ratio,

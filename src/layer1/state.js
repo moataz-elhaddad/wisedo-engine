@@ -6,7 +6,7 @@ export const STATE_VERSION = 1;
 /**
  * @typedef {Object} SlotValue
  * @property {any} value
- * @property {'text'|'answer'|'edit'} source
+ * @property {'text'|'answer'|'edit'|'skip_default'} source   skip_default: the value a skipped question assumes (pay -> cash)
  * @property {number} [confidence]
  * @property {string} [evidence]
  * @property {boolean} locked        the buyer's own word (answer or edit): a later extraction never overwrites it
@@ -69,9 +69,9 @@ export function cloneState(s) {
   return JSON.parse(JSON.stringify(s));
 }
 
-/** Number of questions the buyer has been shown (slot and clarifying questions). */
+/** Slot questions the buyer answered or skipped. Clarifying questions (U6) are outside the question cap. */
 export function questionCount(s) {
-  return s.asked.length;
+  return s.asked.filter((q) => q.kind === 'slot' && (q.outcome === 'answered' || q.outcome === 'skipped')).length;
 }
 
 /** Plain {slot: value} of everything the buyer stated (text, answers, edits), without defaults. */
@@ -89,10 +89,11 @@ export function answerEntries(s) {
     .sort((a, b) => a[1].seq - b[1].seq)
     .map(([slot, v]) => {
       /** @type {any} */
-      const e = { slot, value: v.value, source: v.source };
+      // A skipped question's assumed value (payment way -> cash) reaches the profile as a default.
+      const e = { slot, value: v.value, source: v.source === 'skip_default' ? 'default' : v.source };
       if (v.confidence !== undefined) e.confidence = v.confidence;
       if (v.evidence) e.evidence = v.evidence;
-      if (v.source !== 'text') e.confirmed = true;
+      if (v.source !== 'text' && v.source !== 'skip_default') e.confirmed = true;
       return e;
     });
 }

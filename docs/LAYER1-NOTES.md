@@ -13,7 +13,7 @@ Nothing in `decision-engine/`, `src/layer2/`, `config/`, `eval/` or `test/eval-p
 | `src/layer1/u1-category.js` | **U1 category detector.** <br>• Rules first: Arabic and English keywords, plus model names from the snapshot's product aliases. <br>• Calls the LLM only when the rules are unclear. <br>• Detects all five categories. Only categories with a config in the snapshot count as configured (today, mobile). <br>• Laptop, TV, AC and fridge get an honest "not set up yet" answer. Washing machines and other uncovered products get "not covered". Both answers offer the configured categories as tiles. |
 | `src/layer1/u2-extract.js` | **U2 extractor.** <br>• Builds the system prompt and JSON schema from the config's slots, then calls the injected `llm(request)`. <br>• `callLlm` enforces the 3 s timeout and turns refusal, truncation, invalid output and thrown errors into `{ok:false, error}`. It never throws. |
 | `src/layer1/u3-normalize.js` | **U3 normaliser** (deterministic). <br>• Arabic-Indic digits and Arabic letter forms. <br>• Money in Egyptian Arabic and English: "15 ألف", "١٥٠٠٠", "15k", "حوالي ١٢ الف", "1500 في الشهر", "قسط 1500", "الف و خمسميه", "خمسة وعشرين ألف", "مقدم 5000". <br>• Storage ("نص تيرا") and screen size ("٦٥ بوصة"). <br>• Option ids from ids or labels. City keys, shop ids and product ids from names. <br>• Drops unknown slots and option ids. <br>• Gives every unmapped item its reason. |
-| `src/layer1/u4-confirm.js` | **U4 confirmer.** <br>• Pre-fills a value only at confidence 0.7 or higher; anything lower becomes an open suggestion. <br>• Buyer answers and edits are locked for the session. <br>• Builds the chips: value chips with their source, "assumed" chips for defaults, "Nationwide (assumed)" when the city is unknown, and "Not used" chips with their reason. |
+| `src/layer1/u4-confirm.js` | **U4 confirmer.** <br>• Pre-fills a value only at confidence 0.7 or higher; anything lower becomes an open suggestion. <br>• Buyer answers and edits are locked for the session. <br>• Builds the chips: value chips with their source, "assumed" chips for defaults, "Greater Cairo (assumed)" when the city is unknown, and "Not used" chips with their reason. |
 | `src/layer1/u5-derive.js` | **U5 deriver.** Applies the config's defaults and derive rules through `buildNeedProfile`, the same builder Layer 2's tests use. |
 | `src/layer1/u6-consistency.js` | **U6 consistency checker.** <br>• Contradictions: a brand both liked and avoided, iOS together with an Apple-only need, Android together with an Apple Watch, a shop both preferred and avoided. <br>• Expectation gaps, found through simulate only: a budget gap (for example iPhone only on 8,000 EGP) and a model-in-mind gap. <br>• A blocking item becomes one clarifying question with actions: raise the amount, relax the need, or keep. <br>• Config `checks` become notes. |
 | `src/layer1/u7-planner.js` | **U7 planner.** Gain from simulate, phase order and policy (see "Decisions"). |
@@ -73,7 +73,7 @@ let { state, ui } = await step(null, { type: 'start', text: 'عايز موباي
 2. **"Need before money" means this order** (technical-design v4):
    - (A) always-asked need questions (who, use and their follow-ups), in config order;
    - (B) always-asked money questions: payment way, then budget or monthly cap;
-   - (C) situational `alwaysIf` questions (urgentDays while White Friday is 1–10 weeks away), only if their gain reaches the minimum;
+   - (C) situational `alwaysIf` questions (urgentDays while White Friday is under 4 weeks away; founder decision 3), only if their gain reaches the minimum. Outside that window urgency comes from the buyer's text only;
    - (D) every other open question by gain: need refinements such as pain, keep and storage; money extras such as down payment and provider; city; preferences;
    - (E) the brand tie-break.
 
@@ -81,7 +81,7 @@ let { state, ui } = await step(null, { type: 'start', text: 'عايز موباي
 3. **Always questions while the money is unknown are judged across money scenarios.** These are every budget preset for a cash buyer and every monthly preset for a finance buyer. An always question is asked when 2 or more answers are possible and, in some scenario, the answers give different #1 picks. Otherwise "who" and "use" would look useless, since with no budget the flagship wins for everyone.
 4. **The payment way's gain is the union of outcomes over its amount presets.** It is asked unless the catalog is degenerate. A finance buyer is offered only finance providers, and a card buyer only card banks (provider options carry `kind`).
 5. **Gain signals in `askIf`** (`providerMatters`, `zoneMatters`, `urgencyMatters`, `downChangesPick`, `importCheaper`) are treated as true. The slot's own gain check then decides, as BUILD-NOTES suggests.
-6. **City** is simulated once per delivery zone, because offers differ by zone and not by city. Every city tile shows its zone's count. When the city is unknown, the chip reads "Nationwide (assumed)" and Layer 2 quotes the worst fee and days across zones.
+6. **City** is simulated once per delivery zone, because offers differ by zone and not by city. Every city tile shows its zone's count. When the city is unknown, the chip reads "Greater Cairo (assumed)" and Layer 2 quotes Greater Cairo delivery (founder decision 5; `zones.assumedZone`).
 7. **Pre-fill guards:**
    - Evidence that is not a quote of the buyer's text caps confidence at 0.5; missing evidence caps it at 0.6. Neither becomes a chip.
    - A bare small number ("ميزانيتي 15") is read as thousands, with confidence capped at 0.6. It is shown as an open suggestion and asked.
@@ -95,7 +95,7 @@ let { state, ui } = await step(null, { type: 'start', text: 'عايز موباي
 10. **LLM failure:**
     - On the first text (timeout, error, refusal, truncation, invalid JSON or wrong shape, or no adapter at all), the session keeps the rules-detected category and runs the full question flow from the first question. `ui.fallback = {reason, fullFlow: true}`.
     - On later text, nothing changes and `ui.textNotRead` explains why.
-11. **Clarifying questions** (U6) count toward the cap of 8. Each is asked at most once per session. A skip means "keep".
+11. **Clarifying questions** (U6) do not count toward the cap of 8 (founder decision 19). Each is asked at most once per session. A skip means "keep".
 12. **"Questions I skipped".** The result lists the open askable slots, with their last gain when known.
 13. **The model in mind** is resolved to a catalog id when it matches an alias (for example "Galaxy A56" becomes `samsung-a56`). Otherwise it is kept as the buyer's string, flagged `not_in_catalog`. The persona file sets the raw name; the end-to-end test expects the resolved id.
 14. **Unmapped reasons are decided in U3 from the factor, never by the LLM:**
@@ -117,17 +117,16 @@ let { state, ui } = await step(null, { type: 'start', text: 'عايز موباي
 - **Low-confidence tiles drop the guesses** (decision 9). They are not carried into the full flow.
 - **The live adapter turns on server-side refusal fallback by default** (`fallbacks: "default"`, beta `server-side-fallback-2026-07-01`, Claude API only). Turn it off with `createAnthropicLlm({serverFallback: false})`. This follows current Claude API guidance; the spec did not mention it.
 
-## Open questions for the founder (most important first)
+## Founder decisions (2026-10-08)
 
-1. **Planner policy:** the default (median 3, max 7) or the literal rule (median 5, max 8)? See decision 1.
-   - With the default, when the buyer's first text gives neither the money nor the use, the personas still need a median of 6 questions (max 8). This was measured with a scratch driver, not in the suite.
-2. **"When do you need it?" (urgentDays)** is the most frequent question. Its `alwaysIf saleWeeks between 1 and 10` holds for most of October and November (White Friday is 7.9 weeks after `NOW`).
-   - It is asked in 12 of the 18 persona flows (default policy), because "today" penalises slow-delivery offers and changes the pick.
-   - Should the window be narrower, or should urgency come from text only?
-3. **Skipping the payment way blocks the budget question.** `budget` and `monthlyCap` have `dependsOn pay`, so the buyer gets no amount question and Layer 2 prices as cash with no limit (the chip says so). Should a skipped payment way default to cash and still ask the budget?
-4. **Latency budget.** An unclear opener can make two LLM calls in a row (category, then extraction), so the worst case is 2 × 3 s. Is a single combined call preferred?
-5. **Clarifying questions count toward the 8.** Should they be outside the cap?
-6. **Eval accuracy.** The phrase set is synthetic, and the live parser has never run. The "90 percent slot accuracy" metric is untested until the live check below is run on real beta phrases.
+The six open questions were answered (full list in `docs/BUILD-NOTES.md`, "Founder decisions"):
+
+1. **Planner policy:** the default (median 3, max 7). Kept.
+2. **urgentDays:** taken from the text first; asked only while White Friday is under 4 weeks away. Changed.
+3. **Skipped payment way:** assumed cash, and the budget is still asked. Changed (`source: skip_default`).
+4. **Latency:** one combined LLM call. When the rules cannot tell the category, the `detect` request returns the category and the slots together; the session makes no second call. Worst case is one call, not two. Changed.
+5. **Clarifying questions:** outside the cap. Changed.
+6. **Eval accuracy:** next step. The live parser is measured on real Egyptian Arabic phrases from real people (founder decision 20).
 
 ## The live adapter (`src/layer1/llm/anthropic.js`): UNVERIFIED
 
@@ -212,17 +211,9 @@ console.log({ phrases: phrases.length, failures, slotAccuracy: total ? right / t
 
 ## Needs a change in Layer 2 or config
 
-Nothing here was patched. Layer 1 works around both items.
+Layer 1 works around item 2; item 1 is fixed.
 
-1. **The config's `provider` options lack the finance provider `khanstore`, which exists in the synthetic plans.** A buyer cannot pick "Khan Market Shop installments" as their provider, and an extraction naming it is dropped as `unknown_option`. Workaround: none needed for ranking, since a missing provider means any provider. Repro:
-
-   ```js
-   import { SNAPSHOT, mobileConfig } from './test/helpers.js';
-   new Set(SNAPSHOT.plans.map((p) => p.provider));                               // horusbank, khanstore, nilebank, qest, sahla
-   mobileConfig.slots.find((s) => s.id === 'provider').options.map((o) => o.id); // nilebank, horusbank, sahla, qest
-   ```
-
-   Suggested fix: add `{ "id": "khanstore", "kind": "finance", ... }` to the provider options, or have the generator use only configured providers.
+1. **Fixed (2026-10-08):** the provider options used to lack `khanstore`, which exists in the synthetic plans. The `provider` slot now takes its options from the tenant's plans (`optionsSource: "plans.provider"`, resolved in `configFor`), so every plan provider can be picked or read from text.
 
 2. **Simulate mode returns no scores**, so Layer 1 cannot see a near tie directly. This is a request, not a bug. The brand near-tie rule and the near-tie refinement each cost one extra simulate call with a temporary `bonus` term: a 2.99-point brand bonus, or a 2.99-point bonus on the old #1. Repro of the probe:
 

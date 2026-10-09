@@ -417,7 +417,7 @@ function getSample() {
 // engine reads the text with its keyword rules.
 async function llm(req) {
   if (S.served) {
-    const r = await fetch('api/parse', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ kind: req.kind, category: req.category, text: req.text }) });
+    const r = await fetch('api/parse', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ kind: req.kind, category: req.category, categories: req.categories, text: req.text }) });
     const out = await r.json().catch(() => null);
     if (!r.ok || !out || !out.ok) { S.llmState = r.status === 503 && out && out.error === 'no_llm' ? 'off' : S.llmState; throw new Error((out && out.error) || `parse_${r.status}`); }
     S.llmState = 'on';
