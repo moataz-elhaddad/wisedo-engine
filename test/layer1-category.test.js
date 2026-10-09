@@ -129,3 +129,14 @@ test('layer1 anthropic adapter: settings match the decision (static check; never
   assert.ok(fnStart > 0 && envAt > fnStart, 'process.env is read only inside the call function');
   assert.equal(code.split('process.env').length, 2);
 });
+
+test('layer1 U1: laptop series and parts count as laptop; OLED alone is not a TV (real phrases, 2026-10-09)', () => {
+  assert.equal(detectByRules('محتار بين ASUS V16 وASUS TUF A16، أنهي واحد أفضل؟').category, 'laptop');
+  assert.equal(detectByRules('هل RTX 4050 يستاهل فرق السعر عن RTX 3050؟').category, 'laptop');
+  assert.equal(detectByRules('بدوّر على Lenovo Legion 5 مستعمل').category, 'laptop');
+  assert.equal(detectByRules('هل الشاشة OLED تستاهل فرق السعر عن IPS؟').category, null);
+  assert.equal(detectByRules('عايز تلفزيون OLED').category, 'tv');
+  // Two products in separate clauses: the one named first is wanted. Side by side stays unclear.
+  assert.equal(detectByRules('عايز لابتوب في حدود 30 ألف، واتنصب عليّا قبل كده في موبايل في القاهرة').category, 'laptop');
+  assert.equal(detectByRules('موبايل ولابتوب').category, null);
+});

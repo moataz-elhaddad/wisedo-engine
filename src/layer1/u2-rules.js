@@ -15,12 +15,13 @@ const CONF_WEAK = 0.65; // below the pre-fill threshold: shown as a suggestion, 
 // Keyword lists keyed by "slot.option". A list applies only when the category config has that slot and option.
 // Keywords are normalised at load time; a trailing "*" matches any word that starts with it.
 // Arabic keywords also match with an attached prefix (و، ب، ل، لل، ال، بال، وال، فال، عال).
+// A leading "=" turns the prefix off: "=امان" is the finance company Aman, while "بأمان" means "safely".
 /** @type {Record<string, string[]>} */
 const LEXICON = {
   // payment
   'pay.cash': ['كاش', 'نقدي', 'نقدا', 'دفعه واحده', 'cash', 'pay in full', 'upfront'],
   'pay.card': ['كريديت*', 'فيزا', 'بطاقه ائتمان', 'كارت ائتمان', 'credit card', 'credit', 'card installments', 'بالكارت'],
-  'pay.finance': ['فاليو', 'valu', 'تمويل', 'شركه تمويل', 'finance', 'financing', 'كونتكت', 'contact', 'امان', 'aman', 'سوهولة', 'souhoola', 'premium card'],
+  'pay.finance': ['فاليو', 'valu', 'تمويل', 'شركه تمويل', 'finance', 'financing', 'كونتكت', 'contact', '=امان', 'aman', 'سوهولة', 'souhoola', 'premium card'],
   // delivery and buying constraints
   'cod.must': ['لازم الدفع عند الاستلام', 'كاش عند الاستلام بس', 'cash on delivery only', 'cod only'],
   'cod.prefer': ['الدفع عند الاستلام', 'كاش عند الاستلام', 'دفع عند الاستلام', 'cash on delivery', 'cod'],
@@ -153,10 +154,12 @@ const reCache = new Map();
 function keywordRe(kw) {
   let re = reCache.get(kw);
   if (re) return re;
-  const star = kw.endsWith('*');
-  const body = esc(normalizeText(star ? kw.slice(0, -1) : kw));
+  const exact = kw.startsWith('=');
+  const word = exact ? kw.slice(1) : kw;
+  const star = word.endsWith('*');
+  const body = esc(normalizeText(star ? word.slice(0, -1) : word));
   const tail = star ? '[^ ]*' : '';
-  re = new RegExp(`(?:^| )(${isArabic(kw) ? AR_PREFIX : ''}${body}${tail})(?= |$)`);
+  re = new RegExp(`(?:^| )(${isArabic(word) && !exact ? AR_PREFIX : ''}${body}${tail})(?= |$)`);
   reCache.set(kw, re);
   return re;
 }

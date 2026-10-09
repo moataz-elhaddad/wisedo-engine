@@ -28,14 +28,17 @@ const KEYWORDS = {
     weak: ['سامسونج', 'شاومي', 'اوبو', 'ريلمي', 'فيفو', 'oppo', 'realme', 'vivo', 'xiaomi', 'samsung', 'infinix', 'tecno', 'honor', 'motorola', 'سيلفي', 'selfie', 'واتساب', 'whatsapp', 'ببجي', 'pubg', 'فري فاير'],
   },
   laptop: {
-    strong: ['لابتوب', 'لاب توب', 'لاب', 'laptop', 'laptops', 'notebook', 'macbook', 'ماك بوك', 'ماكبوك', 'thinkpad', 'ideapad', 'vivobook', 'zenbook', 'chromebook', 'كمبيوتر محمول'],
+    // Series names and laptop parts (real buyers name a series or a GPU and never say "laptop"; Reddit check 2026-10-09).
+    strong: ['لابتوب', 'لاب توب', 'لاب', 'laptop', 'laptops', 'notebook', 'macbook', 'ماك بوك', 'ماكبوك', 'thinkpad', 'ideapad', 'vivobook', 'zenbook', 'chromebook', 'كمبيوتر محمول',
+      'legion', 'ليجن', 'loq', 'tuf', 'rog', 'zephyrus', 'nitro', 'نيترو', 'predator', 'aspire', 'swift', 'omen', 'victus', 'pavilion', 'envy', 'elitebook', 'probook', 'inspiron', 'vostro', 'latitude', 'xps', 'alienware', 'yoga', 'aero', 'katana', 'rtx', 'gtx', 'ryzen', 'رايزن', 'core i5', 'core i7', 'core i9', 'كارت شاشه'],
     sub: ['لابتوب'],
-    weak: ['كمبيوتر', 'computer', 'pc', 'ويندوز', 'windows', 'برمجه', 'coding', 'كارت شاشه', 'gpu'],
+    weak: ['كمبيوتر', 'computer', 'pc', 'ويندوز', 'windows', 'برمجه', 'coding', 'gpu', 'رامات', 'ram', 'ips'],
   },
   tv: {
-    strong: ['تلفزيون', 'تليفزيون', 'تلفاز', 'تي في', 'tv', 'tvs', 'television', 'smart tv', 'شاشه سمارت', 'سمارت تي في', 'oled', 'qled'],
+    strong: ['تلفزيون', 'تليفزيون', 'تلفاز', 'تي في', 'tv', 'tvs', 'television', 'smart tv', 'شاشه سمارت', 'سمارت تي في', 'qled'],
     sub: ['تلفزيون', 'تليفزيون'],
-    weak: ['شاشه', 'بوصه', 'inch', 'inches', 'سمارت', 'smart', 'نتفليكس', 'netflix', 'بلايستيشن', 'playstation', 'ps5', '4k'],
+    // OLED is weak: laptops have OLED screens too ("الشاشة OLED تستاهل فرق السعر عن IPS؟").
+    weak: ['شاشه', 'بوصه', 'inch', 'inches', 'سمارت', 'smart', 'نتفليكس', 'netflix', 'بلايستيشن', 'playstation', 'ps5', '4k', 'oled'],
   },
   ac: {
     strong: ['تكييف', 'تكييفات', 'مكيف', 'مكيفات', 'air conditioner', 'air conditioning', 'ac', 'a c', 'btu', 'حصان'],
@@ -91,17 +94,20 @@ export function detectByRules(text, opts = {}) {
   const scores = {};
   /** @type {Record<string, boolean>} */
   const strong = {};
+  /** @type {Record<string, number>} */
+  const firstAt = {}; // where the category's first strong word appears
+  const at = (cat, w) => { const i = padded.indexOf(' ' + w + ' ') >= 0 ? padded.indexOf(' ' + w + ' ') : padded.indexOf(w); if (i >= 0 && !(firstAt[cat] <= i)) firstAt[cat] = i; };
   const matched = [];
   for (const [cat, kw] of Object.entries(KEYWORDS)) {
     let s = 0;
-    for (const w of kw.strong) if (hasWord(padded, w)) { s += 3; strong[cat] = true; matched.push(w); }
-    for (const w of kw.sub || []) if (!hasWord(padded, w) && padded.includes(w)) { s += 3; strong[cat] = true; matched.push(w); }
+    for (const w of kw.strong) if (hasWord(padded, w)) { s += 3; strong[cat] = true; matched.push(w); at(cat, w); }
+    for (const w of kw.sub || []) if (!hasWord(padded, w) && padded.includes(w)) { s += 3; strong[cat] = true; matched.push(w); at(cat, w); }
     for (const w of kw.weak) if (hasWord(padded, w)) { s += 1; matched.push(w); }
     // Model names from the catalog (e.g. "a56", "redmi note 14", "iphone 15") are strong signals.
     for (const p of (opts.productsByCategory && opts.productsByCategory[cat]) || []) {
       for (const a of [p.name, ...(p.aliases || [])]) {
         const n = normalizeText(a);
-        if (n && hasWord(padded, n)) { s += 3; strong[cat] = true; matched.push(n); break; }
+        if (n && hasWord(padded, n)) { s += 3; strong[cat] = true; matched.push(n); at(cat, n); break; }
       }
     }
     // "شاشة 55 بوصة" / "a 50 inch screen": a screen of 24 inches or more is a TV in Egyptian usage.
@@ -114,6 +120,16 @@ export function detectByRules(text, opts = {}) {
   const unsupported = UNSUPPORTED.find((u) => u.words.some((w) => hasWord(padded, w) || (w.length >= 5 && /[؀-ۿ]/.test(w) && padded.includes(w)))) || null;
   if (ranked.length && strong[ranked[0][0]] && (ranked.length === 1 || ranked[0][1] > ranked[1][1])) {
     return { category: ranked[0][0], confidence: 0.95, matched, scores, unsupported: null };
+  }
+  // A tie between two strong categories: the product named first is the one wanted ("عايز لابتوب ... اتنصب عليّا
+  // قبل كده في موبايل"). Lower confidence, still above the pre-fill threshold.
+  if (ranked.length >= 2 && ranked[0][1] === ranked[1][1] && (ranked.length === 2 || ranked[2][1] < ranked[0][1])) {
+    const [a, b] = [ranked[0][0], ranked[1][0]];
+    // Only when the two are far apart (a separate clause); "موبايل ولابتوب" (both at once) stays unclear.
+    const wordsBetween = padded.slice(Math.min(firstAt[a], firstAt[b]), Math.max(firstAt[a], firstAt[b])).trim().split(/\s+/).length;
+    if (strong[a] && strong[b] && firstAt[a] !== firstAt[b] && wordsBetween >= 4) {
+      return { category: firstAt[a] < firstAt[b] ? a : b, confidence: 0.8, matched, scores, unsupported: null };
+    }
   }
   return { category: null, confidence: 0, matched, scores, unsupported: ranked.length ? null : unsupported };
 }

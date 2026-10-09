@@ -45,3 +45,9 @@ test('rules: mobile, TV, AC and fridge specifics', () => {
   const f = read('fridge', 'تلاجة نو فروست احنا 5 افراد والكهربا بتقطع في حدود 35 الف');
   assert.deepEqual([f.budget, f.frost, f.power, f.household], [35000, 'no_frost', 'cuts', 'h6']);
 });
+
+test('rules: "بأمان" (safely) is not the finance company Aman', () => {
+  const pay = (text) => (extractByRules(CONFIGS.laptop, text).slots.find((s) => s.slot === 'pay') || {}).values;
+  assert.equal(pay('أشتري منين بأمان من غير ما أتنصب؟'), undefined);
+  assert.deepEqual(pay('هقسط مع امان'), ['finance']);
+});

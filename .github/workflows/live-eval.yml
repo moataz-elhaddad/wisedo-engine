@@ -1,0 +1,28 @@
+name: Live LLM eval
+# Sends the real phrase set to the deployed demo Worker's /api/parse (its free LLM chain: Gemini, then Workers AI)
+# and prints the scores in the job log. Runs on pull requests that change the eval files, or by hand.
+on:
+  workflow_dispatch:
+    inputs:
+      worker_url:
+        description: Demo Worker base URL
+        default: https://wisedo-engine-demo.wisedo.workers.dev
+  pull_request:
+    paths:
+      - 'eval/phrases-laptop-real.jsonl'
+      - 'eval/live.js'
+      - '.github/workflows/live-eval.yml'
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node eval/live.js eval/phrases-laptop-real.jsonl "${WORKER_URL:-https://wisedo-engine-demo.wisedo.workers.dev}"
+        env:
+          WORKER_URL: ${{ github.event.inputs.worker_url }}
